@@ -13,7 +13,7 @@ openai.api_version = '2023-05-15'
 
 deployment_name='gpt-35-turbo-rfmanrique'
 
-df=pd.read_csv('front/embeddings/embeddings.csv', index_col=0)
+df=pd.read_csv('front/embeddings/embeddings2.csv', index_col=0)
 df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
 
 def create_context(question, df, max_len=1800, size="ada"):
@@ -23,35 +23,33 @@ def create_context(question, df, max_len=1800, size="ada"):
     """
     # Get the embeddings for the question
     q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
-   # print("\n\noui 2 \n\n",q_embeddings)
+
     # Get the distances from the embeddings
     df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
 
-
-    print("oui\n\n",df['text'],df['embeddings'], df['distances'])
-
     returns = []
+    sources = []
     cur_len = 0
 
     # Sort by distance and add the text to the context until the context is too long
     for i, row in df.sort_values('distances', ascending=True).iterrows():
-
         # Add the length of the text to the current length
         cur_len += row['n_tokens'] + 4
 
         # If the context is too long, break
         if cur_len > max_len:
             break
-
         # Else add it to the text that is being returned
         returns.append(row["text"])
+        sources.append(row['title'].split('.txt')[0].split('    ')[1])
 
     # Return the context
-    return "\n\n###\n\n".join(returns)
+    return (("\n\n###\n\n".join(returns)), sources)
 
 def generate_answer(question,df_embeddings, deployment=deployment_name):
-    context = create_context(question, df_embeddings, max_len=1800, size="ada")
-    print("context: \n\n",context)
+    context, sources = create_context(question, df_embeddings, max_len=1800, size="ada")
+    # print("context: \n\n", context)
+    # print("sources: \n\n", sources)
     response = openai.ChatCompletion.create(
         engine= deployment_name, # engine = "deployment_name".
         #prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
@@ -66,5 +64,5 @@ def generate_answer(question,df_embeddings, deployment=deployment_name):
     )
     # print(response)
     # print(response['choices'][0]['message']['content'])
-    return response['choices'][0]['message']['content']
+    return ((response['choices'][0]['message']['content']),sources)
 

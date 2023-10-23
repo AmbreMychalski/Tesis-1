@@ -8,6 +8,7 @@ function App() {
 
   const [query, setQuery] = useState([])
   const [answer, setAnswer] = useState("")
+  const [sources, setSources] = useState([])
   
   const inputHandler = (e) => {
     const userInput = e.target.value;
@@ -39,7 +40,9 @@ function App() {
         
         console.log("message", data.message);
         console.log("answer", data.message.answer);
+        console.log("sources array", data.message.sources);
         setAnswer(data.message.answer);
+        setSources(JSON.parse(data.message.sources));
       })
       .catch(error => {
         console.error('Error while sending the request to the backend: ', error);
@@ -66,7 +69,16 @@ function App() {
       {answer && (
       <div className="answer-container">
       <p className="answer-text">{answer}</p>
-      </div>)}
+      </div>
+      )}
+      <div>Sources:</div>
+      {sources && (
+      <div><ul>
+        {sources.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul></div>
+      )}
     </div>
   );
 }
