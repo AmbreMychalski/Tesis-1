@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Obstetric Chatbot first implementation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ambre MYCHALSKI - 202326682 - 10/10/2023
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This project consist in a ChatBot with a focus on the obstetric medical domain.
 
-### `npm start`
+## How to use it ?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Install
+To launch the project, ensure you have Node.js and Python installed on your computer.
+You will also need the Flask python module, openai, pandas, matplotlib, plotly, scipy, sklearn and the mui material library.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* To install the Flask module run:
+pip install Flask
 
-### `npm test`
+* To install the openai library run:
+pip install openai
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* To install the pandas library run:
+pip install pandas
 
-### `npm run build`
+* To install the matplotlib library run:
+pip install matplotlib
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* To install the plotly library run:
+pip install plotly
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* To install the scipy library run:
+pip install scipy
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* To install the sklearn library run:
+pip install sklearn
 
-### `npm run eject`
+* To install the mui material library run:
+npm install @mui/material
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Launch the project
+To launch the frontend, open a powershell terminal in the APP/front folder, and run the following command:
+    npm start
+A web windows will be automatically opened on the search bar view.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To launch the backend, open a python terminal in the APP folder and run:
+    python3 front/src/app.py
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Use the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To use the project, type a question related to the obstetric field in the search bar and press Enter or click on the Submit button. Wait few seconds and if the answer can be found with the given documents (processed in the backend), the answer will be prompt. If not, the application will return "I don't know."
 
-## Learn More
+Example of questions:
+* What is oxytocin and what is it purpose in obstetric? 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Result: Oxytocin is a hormone that is naturally produced in the body, particularly in the hypothalamus and released by the pituitary gland. In obstetrics, oxytocin is commonly used to induce or augment labor, as it stimulates contractions of the uterus. It is also used after delivery to help prevent postpartum hemorrhage (PPH) by promoting uterine contraction and reducing bleeding.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Can I pass the Tesis class?
 
-### Code Splitting
+Result: I don't know. The given context does not provide any information about passing a "Tesis" class or the requirements for passing it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Limitations
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For now, the application doesn't show from what document it retrieve the answer. It is a functionnality still in development.
