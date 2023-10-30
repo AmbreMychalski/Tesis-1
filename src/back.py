@@ -13,7 +13,7 @@ openai.api_version = '2023-05-15'
 
 deployment_name='gpt-35-turbo-rfmanrique'
 
-df=pd.read_csv('front/embeddings/embeddings3.csv', index_col=0)
+df=pd.read_csv('front/embeddings/embeddings.csv', index_col=0)
 df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
 
 def create_context(question, df, max_len=1800, size="ada"):
@@ -42,7 +42,7 @@ def create_context(question, df, max_len=1800, size="ada"):
             break
         # Else add it to the text that is being returned
         returns.append(row["text"])
-        temp.append(row['title'].split('.txt')[0].split('    ')[1])
+        temp.append(row['title'].split('.txt')[0])#.split('    ')[1])
         temp.append(row['page_number'])
         sources.append(temp)
         #sources.append(row['title'].split('.txt')[0].split('    ')[1])

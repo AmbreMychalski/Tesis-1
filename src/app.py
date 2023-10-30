@@ -12,14 +12,14 @@ def receive_question():
         # Recovering of the question data from front
         data = request.get_json()
         question = data.get('query')
-        print("question:", question)
         if len(question)==0:
             question.append(" ")
         print("question:", question)
 
         # Recovering the embeddings
-        df_embeddings=pd.read_csv('front/embeddings/embeddings3.csv', index_col=0)
+        df_embeddings=pd.read_csv('front/embeddings/embeddings.csv', index_col=0)
         df_embeddings['embeddings'] = df_embeddings['embeddings'].apply(eval).apply(np.array)
+        print(df_embeddings.head())
         # Generation of the answer
         (answer, sources) =  generate_answer(question,df_embeddings, deployment=deployment_name)
         sources_to_print = {}
