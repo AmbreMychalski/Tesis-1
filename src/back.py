@@ -13,7 +13,7 @@ openai.api_version = '2023-05-15'
 
 deployment_name='gpt-35-turbo-rfmanrique'
 
-df=pd.read_csv('front/embeddings/embeddings2.csv', index_col=0)
+df=pd.read_csv('front/embeddings/embeddings3.csv', index_col=0)
 df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
 
 def create_context(question, df, max_len=1800, size="ada"):
@@ -34,6 +34,7 @@ def create_context(question, df, max_len=1800, size="ada"):
     # Sort by distance and add the text to the context until the context is too long
     for i, row in df.sort_values('distances', ascending=True).iterrows():
         # Add the length of the text to the current length
+        temp = []
         cur_len += row['n_tokens'] + 4
 
         # If the context is too long, break
@@ -41,7 +42,10 @@ def create_context(question, df, max_len=1800, size="ada"):
             break
         # Else add it to the text that is being returned
         returns.append(row["text"])
-        sources.append(row['title'].split('.txt')[0].split('    ')[1])
+        temp.append(row['title'].split('.txt')[0].split('    ')[1])
+        temp.append(row['page_number'])
+        sources.append(temp)
+        #sources.append(row['title'].split('.txt')[0].split('    ')[1])
 
     # Return the context
     return (("\n\n###\n\n".join(returns)), sources)
@@ -62,7 +66,6 @@ def generate_answer(question,df_embeddings, deployment=deployment_name):
             {"role": "user", "content": f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:"},
         ]
     )
-    # print(response)
     # print(response['choices'][0]['message']['content'])
     return ((response['choices'][0]['message']['content']),sources)
 

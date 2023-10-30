@@ -50,6 +50,7 @@ function App() {
       console.log(jsonData);
 
   };
+  console.log(sources);
 
   // Front
   return (
@@ -71,13 +72,22 @@ function App() {
       <p className="answer-text">{answer}</p>
       </div>
       )}
-      <div>Sources:</div>
-      {sources && (
-      <div><ul>
-        {sources.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul></div>
+      <h2>Sources:</h2>
+      {Object.keys(sources).length > 0 ? (
+        <ul>
+          {Object.keys(sources).map((key, index) => (
+            <li key={index}>
+              <strong>{key}:</strong> 
+              <ul>
+                {sources[key].map((item, subIndex) => (
+                  <li key={subIndex}>p: {item}</li>
+          ))}
+        </ul>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No sources available</p>
       )}
     </div>
   );
