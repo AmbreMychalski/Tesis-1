@@ -59,4 +59,4 @@ Result: I don't know. The given context does not provide any information about p
 
 ### Limitations
 
-For now, the application doesn't show from what document it retrieve the answer. It is a functionnality still in development.
+For now the application don't have restrictions regarding the number of sources it get its context. We need, somehow, to make a classification by pertinency of the sources.
