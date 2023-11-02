@@ -115,9 +115,9 @@ def scraped_shortened():
     df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
 
     shortened = []
-    temp=[]
     # Loop through the dataframe
     for row in df.iterrows():
+        temp=[]
         # If the text is None, go to the next row
         if row[1]['text'] is None:
             continue
@@ -139,14 +139,15 @@ def scraped_shortened():
 
         # Otherwise, add the text to the list of shortened texts
         else:
-            data=[]
-            page_nb = re.findall(r'###(\d+)###', text)
-            page_nb=list(set(page_nb))
-            text = re.sub(r'###\d+###', '', text)
-            data.append(row[1]['title'])
-            data.append(page_nb)
-            data.append(row[1]['text'] )
-            shortened.append(data)
+            for text in temp:
+                data=[]
+                page_nb = re.findall(r'###(\d+)###', text)
+                page_nb=list(set(page_nb))
+                text = re.sub(r'###\d+###', '', text)
+                data.append(row[1]['title'])
+                data.append(page_nb)
+                data.append(row[1]['text'] )
+                shortened.append(data)
 
     df = pd.DataFrame(shortened, columns = ['title','page_number','text'])
     df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
@@ -157,7 +158,7 @@ def df_to_embed(df):
     df.to_csv(embeddings_directory+'embeddings.csv')
 
 if __name__ == '__main__':
-    #process_to_txt()
+    process_to_txt()
     print('----process to text complete----')
     txt_to_scraped()
     print('----text to scraped complete----')

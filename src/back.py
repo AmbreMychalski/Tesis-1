@@ -26,7 +26,7 @@ def create_context(question, df, max_len=1800, size="ada"):
 
     # Get the distances from the embeddings
     df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
-
+    
     returns = []
     sources = []
     cur_len = 0
@@ -36,7 +36,7 @@ def create_context(question, df, max_len=1800, size="ada"):
         # Add the length of the text to the current length
         temp = []
         cur_len += row['n_tokens'] + 4
-
+        
         # If the context is too long, break
         if cur_len > max_len:
             break
@@ -52,8 +52,8 @@ def create_context(question, df, max_len=1800, size="ada"):
 
 def generate_answer(question,df_embeddings, deployment=deployment_name):
     context, sources = create_context(question, df_embeddings, max_len=1800, size="ada")
-    # print("context: \n\n", context)
-    # print("sources: \n\n", sources)
+    print("context: \n\n", context)
+    print("sources: \n\n", sources)
     response = openai.ChatCompletion.create(
         engine= deployment_name, # engine = "deployment_name".
         #prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
