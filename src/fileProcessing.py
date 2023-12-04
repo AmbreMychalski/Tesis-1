@@ -7,7 +7,7 @@ import PyPDF2
 import pandas as pd
 import tiktoken
 
-openai.api_key = "cf0bd49030ed4aa6a6509be1cd9d604b"
+openai.api_key = ""
 openai.api_base = "https://invuniandesai.openai.azure.com/"
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
