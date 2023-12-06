@@ -37,7 +37,8 @@ pip install sklearn
 npm install @mui/material
 
 ### Launch the project
-Please add your openAI key in the files in the files 'back.py' and 'fileProcessing.py' in the variables 'openai.api_key'. 
+Please add your openAI key in the files in the files 'back.py' and 'fileProcessing.py' in the variables 'openai.api_key'.
+    
 To launch the frontend, open a powershell terminal in the APP/front folder, and run the following command:
     npm start
 A web windows will be automatically opened on the search bar view.
