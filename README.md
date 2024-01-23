@@ -58,7 +58,3 @@ Result: Oxytocin is a hormone that is naturally produced in the body, particular
 * Can I pass the Tesis class?
 
 Result: I don't know. The given context does not provide any information about passing a "Tesis" class or the requirements for passing it.
-
-### Limitations
-
-For now the application don't have restrictions regarding the number of sources it get its context. We need, somehow, to make a classification by pertinency of the sources.
