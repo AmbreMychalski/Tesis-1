@@ -58,3 +58,18 @@ h2 {
 .search-button:hover {
   background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
 }
+
+.history-panel {
+  margin-bottom: 20px; /* Marge en bas pour séparer l'historique de la barre de recherche */
+  color: #333; /* Couleur du texte */
+  background-color: #f0f0f0; /* Couleur de fond */
+  padding: 10px; /* Espacement intérieur */
+  border: 1px solid #ccc; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.history-scroll {
+  max-height: 200px; /* Hauteur maximale de la zone de défilement */
+  overflow-y: auto; /* Activer le défilement vertical lorsque le contenu dépasse la hauteur maximale */
+}

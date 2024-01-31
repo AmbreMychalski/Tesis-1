@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 from back import *
+import json
 
 app = Flask(__name__)
 cors = CORS(app)
 
+History = []
 # Definition of the API returning GPT answer to an obstetric related question
 @app.route('/api/query', methods=['POST'])
 def receive_question():
@@ -28,7 +30,7 @@ def receive_question():
                 sources_to_print[src[0]].append(src[1].replace("[","").replace("]","").replace("'",""))
             else:
                 sources_to_print[src[0]] = [src[1].replace("[","").replace("]","").replace("'","")]
-            
+        
         for key,val in sources_to_print.items():
             print(key, val)
 # Example of question: What is oxytocin and what is it purpose in obstetric?
@@ -41,9 +43,12 @@ def receive_question():
             'answer': f"{answer}",
             'sources':f"{json.dumps(sources_to_print)}",
         }
-        
+        History.append(response)
+        print("\n\nANSWER", History)
+        with open("front/Historic/History.json", "w") as f:
+            json.dump(History, f)
         return jsonify({'message': response})
-
+        
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
