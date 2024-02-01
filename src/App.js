@@ -55,21 +55,23 @@ function App() {
         console.log("message", data.message);
         console.log("answer", data.message.answer);
         console.log("sources array", data.message.sources);
+        const sourcesArray = Object.entries(data.message.sources).map(([sourceName, ids]) => ({ name: sourceName, ids }));
+        console.log(sourcesArray)
         setAnswer(data.message.answer);
-        setSources(JSON.parse(data.message.sources));
+        setSources(sourcesArray);
         setChatHistory(prevHistory => [
           ...prevHistory,
-          { query: query, answer: data.message.answer, sources: data.message.sources }
+          { query: query, answer: data.message.answer, sources: sourcesArray }
         ]);
       })
       .catch(error => {
         console.error('Error while sending the request to the backend: ', error);
       });
-      console.log(jsonData);
+      console.log("jsonData", jsonData);
 
   };
   
-  console.log(sources);
+  console.log("sources", sources);
   console.log("chatHistory", chatHistory);
 
   useEffect(() => {
@@ -77,11 +79,25 @@ function App() {
       chatHistoryRef.current.scrollTop = chatHistoryRef.current.scrollHeight;
     }
   }, [chatHistory]);
+  
+  console.log("chatHistory", chatHistory);
+  useEffect(() => {
+    fetch('./History.json') // Assurez-vous de spécifier le bon chemin d'accès au fichier History.json
+      .then((response) => response.json())
+      .then((data) => {
+        setChatHistory(data); 
+        console.log("chatHistory", chatHistory);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []); 
 
   // Front
   return (
     <div className="main">
       <h1>Obstetric Search</h1>
+      {chatHistory && (
       <div className="history-panel">
         <div className="history-scroll"  ref={chatHistoryRef}>
           <ul>
@@ -89,49 +105,30 @@ function App() {
               <li key={index}>
                 <p><strong>Query:</strong> {item.query}</p>
                 <p><strong>Answer:</strong> {item.answer}</p>
-                <p><strong>Sources:</strong> {Object.keys(sources).length > 0 ? (
-                  <ul>
-                    {Object.keys(sources).map((key, index) => (
-                      <li key={index}>
-                        <strong>{key}:</strong> 
-                        <ul>
-                          {sources[key].map((item, subIndex) => (
-                            <li key={subIndex}>p: {item}</li>
-                    ))}
-                  </ul>
-                      </li>
-                    ))}
-                  </ul>
-                  ) : (
-                    <p>No sources available</p>
-                  )} </p>
+                  <p><strong>Sources:</strong> 
+                    {item.sources.length > 0 ? (
+                      <ul>
+                        {item.sources.map((source, index) => (
+                          <li key={index}>
+                            <strong>{source.name}:</strong> 
+                            <ul>
+                              {source.ids.map((id, subIndex) => (
+                                <li key={subIndex}>p: {id}</li>
+                              ))}
+                            </ul>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>No sources available</p>
+                  )}
+                  </p>
+
               </li>
             ))}
           </ul>
         </div>
-      </div>
-      {/* {answer && (
-      <div className="answer-container">
-      <p className="answer-text">{answer}</p>
-      </div>
-      )}
-      <h2>Sources:</h2>
-      {Object.keys(sources).length > 0 ? (
-        <ul>
-          {Object.keys(sources).map((key, index) => (
-            <li key={index}>
-              <strong>{key}:</strong> 
-              <ul>
-                {sources[key].map((item, subIndex) => (
-                  <li key={subIndex}>p: {item}</li>
-          ))}
-        </ul>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No sources available</p>
-      )}  */}
+      </div>)}
       <div className="search">
         <TextField
           id="outlined-basic"

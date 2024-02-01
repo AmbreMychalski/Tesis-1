@@ -41,7 +41,7 @@ def receive_question():
         response = {
             'message': f"{question}",
             'answer': f"{answer}",
-            'sources':f"{json.dumps(sources_to_print)}",
+            'sources':sources_to_print,
         }
         History.append(response)
         print("\n\nANSWER", History)
