@@ -59,14 +59,13 @@ def receive_question():
         if "I don\'t know" in answer:
             sources_to_print={}
         response = {
-            'message': f"{question}",
+            'query': f"{question}",
             'answer': f"{answer}",
             'sources':sources_to_print,
         }
+        print("RESPONSE---------\n", response)
         History.append(response)
         print("\n\nANSWER", History)
-        # with open("front/public/History.json", "w") as f:
-        #     json.dump(History, f)
         return jsonify({'message': response})
         
     except Exception as e:

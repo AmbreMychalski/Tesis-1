@@ -55,13 +55,13 @@ function App() {
         console.log("message", data.message);
         console.log("answer", data.message.answer);
         console.log("sources array", data.message.sources);
-        const sourcesArray = Object.entries(data.message.sources).map(([sourceName, ids]) => ({ name: sourceName, ids }));
-        console.log(sourcesArray)
+        // const sourcesArray = Object.entries(data.message.sources).map(([sourceName, ids]) => ({ name: sourceName, ids }));
+        //console.log(sourcesArray)
         setAnswer(data.message.answer);
-        setSources(sourcesArray);
+        // setSources(sourcesArray);
         setChatHistory(prevHistory => [
           ...prevHistory,
-          { query: query, answer: data.message.answer, sources: sourcesArray }
+          { query: query, answer: data.message.answer, sources: data.message.sources }
         ]);
       })
       .catch(error => {
@@ -107,24 +107,23 @@ function App() {
                 <p><strong>Query:</strong> {item.query}</p>
                 <p><strong>Answer:</strong> {item.answer}</p>
                   <div><strong>Sources:</strong> 
-                    {item.sources.length > 0 ? (
-                      <ul>
-                        {item.sources.map((source, index) => (
-                          <li key={index}>
-                            <strong>{source.name}:</strong> 
-                            <ul>
-                              {source.ids.map((id, subIndex) => (
-                                <li key={subIndex}>p: {id}</li>
-                              ))}
-                            </ul>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p>No sources available</p>
+                  {Object.entries(item.sources).length > 0 ? (
+                    <ul>
+                      {Object.entries(item.sources).map(([source, ids], sourceIndex) => (
+                        <li key={sourceIndex}>
+                          <strong>{source}:</strong>
+                          <ul>
+                            {ids.map((id, subIndex) => (
+                              <li key={subIndex}>p: {id}</li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>No sources available</p>
                   )}
-                  </div>
-
+                </div>
               </li>
             ))}
           </ul>
