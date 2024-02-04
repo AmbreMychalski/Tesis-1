@@ -53,6 +53,7 @@ def create_context(question, df, max_len=1800, size="ada"):
             ]          
         )
         print(response['choices'][0]['message']['content'].lower())
+        response['choices'][0]['message']['content'] = 'yes'
         if ("yes" in (response['choices'][0]['message']['content'].lower())):
             cur_len += row['n_tokens'] + 4
             returns.append(row["text"])

@@ -80,19 +80,20 @@ function App() {
     }
   }, [chatHistory]);
   
-  console.log("chatHistory", chatHistory);
   useEffect(() => {
-    fetch('./History.json') // Assurez-vous de spécifier le bon chemin d'accès au fichier History.json
-      .then((response) => response.json())
-      .then((data) => {
-        setChatHistory(data); 
-        console.log("chatHistory", chatHistory);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []); 
+    const fetchChatHistory = async () => {
+      try {
+        const response = await fetch('History.json');
+        const data = await response.json();
+        setChatHistory(data);
+      } catch (error) {
+        console.error('Error fetching chat history:', error);
+      }
+    };
 
+    fetchChatHistory();
+  }, []);   
+  console.log("chatHistory", chatHistory);
   // Front
   return (
     <div className="main">
@@ -105,7 +106,7 @@ function App() {
               <li key={index}>
                 <p><strong>Query:</strong> {item.query}</p>
                 <p><strong>Answer:</strong> {item.answer}</p>
-                  <p><strong>Sources:</strong> 
+                  <div><strong>Sources:</strong> 
                     {item.sources.length > 0 ? (
                       <ul>
                         {item.sources.map((source, index) => (
@@ -122,7 +123,7 @@ function App() {
                     ) : (
                       <p>No sources available</p>
                   )}
-                  </p>
+                  </div>
 
               </li>
             ))}

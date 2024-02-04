@@ -2,11 +2,31 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 from back import *
 import json
+import atexit
 
 app = Flask(__name__)
 cors = CORS(app)
 
 History = []
+
+def load_history():
+    global History
+    file_path = "front/public/History.json"
+    if os.path.exists(file_path):
+        with open(file_path, "r") as f:
+            History = json.load(f)
+            print("load history------------")
+            print(History)
+
+def save_history():
+    if (History != []):
+        print("\nSaving history to file...")
+        with open("front/public/History.json", "w") as f:
+            print("-----------------------")
+            print(History)
+            json.dump(History, f)
+        print("History saved successfully.")
+
 # Definition of the API returning GPT answer to an obstetric related question
 @app.route('/api/query', methods=['POST'])
 def receive_question():
@@ -45,12 +65,16 @@ def receive_question():
         }
         History.append(response)
         print("\n\nANSWER", History)
-        with open("front/Historic/History.json", "w") as f:
-            json.dump(History, f)
+        # with open("front/public/History.json", "w") as f:
+        #     json.dump(History, f)
         return jsonify({'message': response})
         
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+# signal.signal(signal.SIGINT, signal_handler)
+
 if __name__ == '__main__':
+    load_history()
+    atexit.register(save_history)
     app.run(port=3001, debug=True) 
