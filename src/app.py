@@ -41,9 +41,10 @@ def receive_question():
         # Recovering the embeddings
         df_embeddings=pd.read_csv('front/embeddings/embeddings.csv', index_col=0)
         df_embeddings['embeddings'] = df_embeddings['embeddings'].apply(eval).apply(np.array)
-        print(df_embeddings.head())
+        #print(df_embeddings.head())
         # Generation of the answer
-        (answer, sources) =  generate_answer(question,df_embeddings, deployment=deployment_name)
+        print(History)
+        (answer, sources) =  generate_answer(question,df_embeddings, History, deployment=deployment_name)
         sources_to_print = {}
         for src in sources:
             if src[0] in sources_to_print:
@@ -51,8 +52,8 @@ def receive_question():
             else:
                 sources_to_print[src[0]] = [src[1].replace("[","").replace("]","").replace("'","")]
         
-        for key,val in sources_to_print.items():
-            print(key, val)
+        #for key,val in sources_to_print.items():
+            #print(key, val)
 # Example of question: What is oxytocin and what is it purpose in obstetric?
         # print(answer,set(sources))
         # Creation of the json answer
