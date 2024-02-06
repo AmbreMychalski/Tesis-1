@@ -94,6 +94,7 @@ function App() {
     fetchChatHistory();
   }, []);   
   console.log("chatHistory", chatHistory);
+
   // Front
   return (
     <div className="main">
@@ -111,7 +112,7 @@ function App() {
                     <ul>
                       {Object.entries(item.sources).map(([source, ids], sourceIndex) => (
                         <li key={sourceIndex}>
-                          <strong>{source}:</strong>
+                          <a href={require(`../public/RawDataset/${source}.pdf`)} target = "_blank" rel="noreferrer"><strong>{source}:</strong></a>
                           <ul>
                             {ids.map((id, subIndex) => (
                               <li key={subIndex}>p: {id}</li>

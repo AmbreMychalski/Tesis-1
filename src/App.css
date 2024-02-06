@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   row-gap: 20px;
+  align-self: flex-start;
 }
 
 h1 {
@@ -20,11 +21,18 @@ h2 {
 }
 
 .search {
-  width: 30%;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.search input {
+  flex-grow: 1; /* Faire en sorte que le champ de recherche occupe tout l'espace disponible */
 }
 
 .answer-container{
-  width: 80%
+  width: 80%;
 }
 
 .answer-text {
@@ -53,6 +61,8 @@ h2 {
   font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-left: 10px;
+  align-self: stretch;
 }
 
 .search-button:hover {
@@ -67,9 +77,10 @@ h2 {
   border: 1px solid #ccc; /* Bordure */
   border-radius: 5px; /* Coins arrondis */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  flex-grow: 0.8; 
 }
 
 .history-scroll {
-  max-height: 200px; /* Hauteur maximale de la zone de défilement */
+  max-height: 500px; /* Hauteur maximale de la zone de défilement */
   overflow-y: auto; /* Activer le défilement vertical lorsque le contenu dépasse la hauteur maximale */
 }
