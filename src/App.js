@@ -3,7 +3,6 @@ import TextField from "@mui/material/TextField";
 import "./App.css";
 import "./app.py";
 
-
 function App() {
 
   const [query, setQuery] = useState([])
@@ -109,15 +108,29 @@ function App() {
                 <p><strong>Answer:</strong> {item.answer}</p>
                   <div><strong>Sources:</strong> 
                   {Object.entries(item.sources).length > 0 ? (
-                    <ul>
+                    <ul> 
                       {Object.entries(item.sources).map(([source, ids], sourceIndex) => (
                         <li key={sourceIndex}>
-                          <a href={require(`../public/RawDataset/${source}.pdf`)} target = "_blank" rel="noreferrer"><strong>{source}:</strong></a>
+                          <a href={require(`../public/RawDataset/${source}.pdf`)+`#page=${ids[0][0]}`} target = "_blank" rel="noreferrer"><strong>{source}:</strong></a>
                           <ul>
                             {ids.map((id, subIndex) => (
-                              <li key={subIndex}>p: {id}</li>
+                              <li key={subIndex}>
+                                p: {Array.isArray(id) ? (
+                                  <span>
+                                  {id.map((subId, nestedIndex) => (
+                                    <a key={nestedIndex} href={require(`../public/RawDataset/${source}.pdf`)+`#page=${subId}`} target = "_blank" rel="noreferrer">
+                                      {nestedIndex > 0 && ', '}
+                                      {subId}
+                                    </a>
+                                  ))}
+                                </span>
+                                ) : (
+                                  id
+                                )}
+                              </li>
                             ))}
                           </ul>
+
                         </li>
                       ))}
                     </ul>

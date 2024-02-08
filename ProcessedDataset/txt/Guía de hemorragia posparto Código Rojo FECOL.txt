@@ -1,0 +1,1614 @@
+###1###Rev Colomb Obstet Ginecol 2013;64:425-452Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • Octubre-Diciembre 2013 • (425-452)
+Artículo  de revisión
+Resumen
+Objetivo:  formular recomendaciones basadas en 
+la mejor evidencia disponible que sirvan como guía 
+para los profesionales de salud en la prevención  
+detección y el manejo de la hemorragia posparto  
+y de las complicaciones asociadas a la misma con 
+el fin de homogeneizar las conductas clínicas y 
+contribuir a la reducción de la morbi-mortalidad materna.
+1 Esta guía y sus secciones hacen parte de un grupo de 25 GAI basadas 
+en la evidencia que incorporan consideraciones económicas y de implementabilidad en el contexto del Sistema General de Seguridad Social en Salud colombiano  y que se desarrollaron por iniciativa del Ministerio de Salud y Protección Social y el Departamento de Ciencia  T ecnología e Innovación (Colciencias) en temas prioritarios y de alta prevalencia en el país mediante contrato otorgado a la Universidad Nacional de Colombia en el año 2010.Guía de práctica clínica para la prevención y el manejO de la hemOrra Gia pOspartO y cOmplicaciOnes 
+del chOque hemOrráGicO
+1
+clinical practice guidelines for the prevention  
+and management of post-partum bleeding and  
+of hemorrhagic shock complications
+Representantes del Grupo Desarrollador de la Guía - Universidad Nacional de  
+Colombia - Alianza Cinets*
+Recibido: agosto 20/13 – Aceptado: noviembre 8/13
+materiales y métodos: el grupo desarrollador de 
+la Guía (GDG) elaboró esta GPC durante 2011-2012 
+acorde con la Guía Metodológica para la elaboración 
+de Guías de Atención Integral en el Sistema General de Seguridad Social en Salud colombiano  basándo -
+se en la evidencia científica disponible y sumando la participación activa de grupos de pacientes  socie -
+dades científicas y grupos de interés. En particular  
+la evidencia de esta Guía fue adaptada de las GPC 
+del Royal College of Obstetricians and Gynaeco -
+logists (RCOG) “Prevention and management of 
+postpartum haemorrhage” (2009) y de la Organiza -
+ción Mundial de la Salud (OMS)  “WHO guidelines 
+for the management of postpartum haemorrhage 
+and retained placenta” (2009)  y actualizada por 
+medio de procedimientos sistemáticos  tanto para la búsqueda y la valoración de la evidencia  como 
+para la generación de recomendaciones. El nivel de 
+###2###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013426
+evidencia y la fuerza de las recomendaciones fueron 
+expresadas por medio del sistema del Scottish In -
+tercollegiate Guidelines Network (SIGN).
+resultados:  se presentan recomendaciones para la 
+prevención  detección y el tratamiento de la hemo -
+rragia posparto a partir de 17 preguntas clínicas.conclusión:  se presenta una versión resumida de 
+las recomendaciones y evidencia de esta Guía  que 
+se espera sea adoptada por los profesionales de la 
+salud encargados de la atención del embarazo en el país para disminuir la morbilidad y mortalidad 
+asociada a la gestación.
+palabras clave:  hemorragia posparto  choque he -
+morrágico  guías de práctica clínica  práctica clínica basada en la evidencia  Colombia.
+AbstRAct
+Objective:  To make recommendations based 
+on the best available evidence designed to guide 
+healthcare professionals in the prevention  detection 
+and management of post-partum bleeding and complications associated with it  in order to arrive 
+at uniform clinical practices and contribute to the 
+reduction of maternal morbidity and mortality. materials and methods: The Guideline 
+Developer Group (GDG) prepared this CPG during 2011-2012  in accordance with the Methodology Guideline for the development of Comprehensive 
+Care Guidelines of the Colombian General System 
+of Social Security  based on the available scientific evidence  and with the active participation of 
+patient groups  scientific societies and stakeholders. 
+In particular  the evidence for these Guidelines was adapted from the CPG of the Royal College 
+of Obstetricians and Gynaecologists (RCOG) 
+“Prevention and management of postpartum haemorrhage” (2009) and of the World Health 
+Organization (WHO)  “WHO guidelines for the 
+management of postpartum haemorrhage and 
+retained placenta” (2009) and updated through 
+systematic procedures for the search and assessment of the evidence as well as for the generation of recommendations. The level of evidence and the power of the recommendations were expressed using the Scottish Intercollegiate Guidelines 
+Network (SIGN) system.
+results:  Recommendations are presented for the 
+prevention  detection and treatment of postpartum haemorrhage based on 17 clinical questions. 
+conclusion:  We present a summarized version of 
+the recommendations and the evidence for these 
+guidelines  which are expected to be adopted by healthcare practitioners in charge of pregnancy 
+care in Colombia  in order to reduce pregnancy-
+associated morbidity and mortality.
+Key words: Postpartum haemorrhage  hemorragic 
+shock   evidence-based clinical practice  Colombia.  
+IntRoduccIón 
+Las complicaciones hemorrágicas asociadas el em -
+barazo continúan como una de las principales causas 
+de muerte materna en el mundo y en Colombia (1). 
+La principal causa de hemorragia obstétrica es la hemorragia posparto. Según la Organización Mun -
+dial de la Salud (OMS)  la incidencia promedio de la hemorragia posparto en el mundo es de 6 09% (IC 95%: 6 06-6 11); esta cifra varía con la metodolo -
+gía objetiva o subjetiva empleada para la medición del sangrado (10 55 y 7 23%  respectivamente). La hemorragia posparto masiva es un evento que se 
+presenta en 1 86% de los partos (IC 95%: 1 82-
+1 9) y es la primera causa de muerte materna en el mundo. La incidencia en América Latina y el Caribe 
+se estima en 8 9% según una revisión sistemática 
+que evaluó este evento en diferentes regiones del 
+mundo (IC 95%: 8 03-9 86) (2). Estos mismos es -
+tudios no confirmaron la influencia de los factores 
+de riesgo asociados tradicionalmente a la hemorra -
+gia posparto como la multiparidad o el embarazo 
+múltiple (3)
+ y  por el contrario  en dos tercios de 
+las mujeres que la sufren no se logra identificar 
+###3###427
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+ningún factor de riesgo asociado (4). En los países 
+en vías de desarrollo el riesgo de morir a causa de 
+una hemorragia posparto es de 1 por cada 1000 nacimientos en un periodo determinado  mientras 
+que en países desarrollados como el Reino Unido  
+el riesgo es 100 veces menor. Cada año en el mundo aproximadamente 14 millones de mujeres sufren de hemorragia posparto y de ellas  125.000 fallecen 
+debido a la falta de reconocimiento de las causas y a 
+deficiencias con el tratamiento oportuno y adecua -
+do (2). La hemorragia obstétrica no es solo la pri -
+mera causa de muerte materna  sino que es también la primera causa de morbilidad obstétrica extrema 
+(5). Las principales complicaciones derivadas de la 
+hemorragia obstétrica incluyen el choque hipovo -
+lémico  la coagulación intravascular diseminada  y 
+la disfunción o falla de órganos como el riñón  el 
+hígado y el pulmón. Las mujeres  además  se ven expuestas a los riesgos derivados de transfusiones masivas y a consecuencias como la realización de 
+cirugías radicales como la histerectomía. 
+La disponibilidad de una Guía de Práctica Clínica 
+(GPC) para la prevención  detección temprana y 
+tratamiento de hemorragia posparto implica estan -
+darizar para Colombia el cuidado de la mujer gestan -
+te  con énfasis en la necesidad de la prevención  la detección temprana y el tratamiento oportuno en todos los niveles de atención  a fin de reducir la 
+morbimortalidad materna asociada y promover la 
+optimización de la salud materna y la calidad de  
+la atención médica en todos los niveles de atención 
+obstétrica.
+En el presente artículo se presenta una versión 
+abreviada de la información contenida en la GPC de Embarazo y Parto referente a la sección de manejo 
+de las complicaciones hemorrágicas asociadas al em -
+barazo  en la que se muestra la evidencia relacionada 
+para cada tema y se presentan las recomendaciones 
+elaboradas por el GDG durante el proceso de de -
+sarrollo de esta GPC. El grupo desarrollador de la 
+Guía (GDG) elaboró esta GPC durante 2011-2012 
+acorde con la Guía Metodológica para la elabora -ción de Guías de Atención Integral en el Sistema 
+General de Seguridad Social en Salud colombiano  
+basándose en la evidencia científica disponible y sumando la participación activa de grupos de pa -
+cientes  sociedades científicas y grupos de interés. En particular  la evidencia de esta sección fue adap -
+tada de las GPC del Royal College of Obstetricians and Gynaecologists (RCOG)  “Prevention and 
+management of postpartum haemorrhage” (2009) 
+(6) y de OMS  “WHO guidelines for the mana -
+gement of postpartum haemorrhage and retained placenta” (2009) (7)  y actualizada por medio de 
+procedimientos sistemáticos  tanto para la búsqueda 
+y valoración de la evidencia como para la genera -
+ción de recomendaciones. El nivel de evidencia y la fuerza de las recomendaciones fueron expresadas por medio del sistema del Scottish Intercollegiate 
+Guidelines Network (SIGN). La versión completa 
+de esta GPC (incluida la búsqueda sistemática de información científica y la presentación detallada 
+de la evidencia científica)  así como la versión para 
+pacientes y sus anexos  están disponibles para la consulta de los interesados por diferentes medios 
+(físicos y electrónicos) (8  9).
+1. ¿cuáles son las intervenciones efectivas 
+para prevenir la hemorragia posparto al 
+finalizar el segundo periodo del parto?
+Se recomienda realizar manejo activo del 
+alumbramiento para disminuir la pérdida de sangre materna y reducir el riesgo de hemorragia posparto. 
+Se recomienda utilizar de forma rutinaria 
+oxitócicos profilácticos en el manejo del 
+alumbramiento en todas las mujeres. 
+Se recomienda la administración de oxito -
+cina 5 UI o 10 UI (según la presentación de 
+oxitocina disponible) por vía intramuscular 
+como medicamento de elección para profi -
+A
+A
+A
+###4###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013428
+laxis durante el alumbramiento en mujeres 
+que tengan parto por vía vaginal. 
+Cuando exista un acceso venoso permea -
+ble  puede administrarse oxitocina 5 UI o 
+10 UI en infusión lenta diluida en 10 mL de cristaloides en un tiempo no inferior a 3 min. 
+Se recomienda el uso de 600 mcg de mi -
+soprostol por vía sublingual para profilaxis 
+durante el alumbramiento cuando la oxito -
+cina no esté disponible. No se recomienda la administración por vía intrarrectal. 
+No se recomienda el uso de ácido tranexá -
+mico para la prevención de la hemorragia 
+posparto.  
+Se recomienda ligar y cortar el cordón um -
+bilical entre el segundo y el tercer minuto después del nacimiento en todos los recién nacidos a término y pretérmino que nazcan vigorosos.  
+Una revisión sistemática realizada en el año 2000 y 
+actualizada en el 2011  que incluyó siete ECC con 8.247 gestantes  encontró que el manejo activo del alumbramiento redujo el riesgo promedio de he -
+morragia primaria de 1.000 mL o más al momento del parto (RR = 0 34; IC 95%: 0 14-0 87) (10  11). Los resultados también mostraron una reducción en la hemorragia de 500 mL o más en la necesidad 
+de transfusión y en el uso de uterotónicos terapéu -
+ticos. Asimismo  hubo un incremento en la presión 
+arterial y el vómito después del manejo activo.Una revisión sistemática
+ que incluyó siete ECC 
+con 5.800 pacientes comparó la profilaxis con 
+oxitocina frente a no administrar uterotónicos. 
+Los autores encontraron que la oxitocina redujo el riesgo de hemorragia posparto alrededor del 60% y la necesidad de uterotónicos terapéuticos 
+alrededor del 50% (12).
+Una revisión sistemática
+ que incluyó tres ECC 
+con 1.671 pacientes evaluó el efecto de la admi -1++nistración de la oxitocina previa a la expulsión  
+de la placenta comparado con la administración de 
+oxitocina después de la expulsión de la placenta en 
+relación con el manejo activo del alumbramiento 
+para prevenir la hemorragia posparto (13). No se encontraron diferencias significativas en la in -
+cidencia de hemorragia posparto (RR = 0 81;  
+IC 95%: 0 62-1 04)  placenta retenida (RR = 1 54; 
+IC 95%: 0 76-3 11)  duración del tercer periodo del 
+parto (DM = -0 30; IC 95%: -0 95 a 0 36)  pér -
+dida de sangre (DM = 22 32 mL; IC 95%: -58 21 
+a 102 68)  necesidad de transfusión sanguínea 
+(RR = 0 79; IC 95%: 0 23-2 73)  uso adicional de uterotónicos (RR = 1 10; IC 95%: 0 80-1 52) e incidencia de hemorragia posparto severa (RR = 0 98; IC 95%: 0 48-1 98). Una revisión sistemática que
+ incluyó seis ECC con 
+9.332 pacientes evaluó la efectividad de la profilaxis con ergometrina-oxitocina comparada con oxito -
+cina en el tercer periodo del parto para prevención 
+de la hemorragia posparto (14). Se encontró que la 
+combinación de ergometrina-oxitocina  oxitocina 5 UI y oxitocina 10 UI tiene eficacia similar en la prevención de la hemorragia posparto de más de 
+1.000 mL (combinación de ergometrina-oxitocina 
+comparada con alguna dosis de oxitocina: OR = 0 78; IC 95%: 0 58-1 03; combinación de ergome -
+trina-oxitocina comparada con 5 UI de oxitocina: 
+OR = 0 14; IC 95%: 0 00-6 85; combinación 
+de ergometrina-oxitocina comparada con 10 UI  de oxitocina: OR = 0 78; IC 95%: 0 59-1 04). En la hemorragia posparto de mínimo 500 mL hubo una leve reducción en el riesgo con la combinación de ergometrina-oxitocina frente a otras dosis de 
+oxitocina (OR = 0 82; IC 95%: 0 71-0 95; combi -
+nación de ergometrina-oxitocina comparada con 5 
+UI de oxitocina: OR = 0 43; IC 95%: 0 23-0 83; 
+combinación de ergometrina-oxitocina compara -
+da con 10 UI de oxitocina: OR = 0 85; IC 95%: 0 73-0 98).
+Una revisión sistemática que incluyó 32 ECC con 42.621 pacientes evaluó el papel de las prostaglan -√
+A
+A
+A
+1++
+1++1++
+1++
+###5###429
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+dinas en la prevención de la hemorragia posparto 
+(15). Se encontró que los uterotónicos inyectables convencionales fueron más efectivos que las pros -
+taglandinas para la profilaxis rutinaria y que la 
+investigación sobre prostaglandinas en el contexto 
+de la hemorragia obstétrica debe focalizarse en el tratamiento más que en la prevención (RR = 1 32; IC 95%: 1 16-1 51). Una revisión sistemática que incluyó 4 ECC evaluó 
+el efecto del misoprostol en la prevención de la 
+hemorragia posparto (16). El estudio concluyó que el misoprostol no es tan efectivo en la prevención 
+de la hemorragia posparto cuando se compara con 
+la oxitocina en dosis de 10 UI por vía intravenosa 
+(RR = 1 34; IC 95%: 1 16-1 55).
+Una revisión sistemática de 6 ECC con 3.941 pacientes evaluó el efecto de los alcaloides del cornezuelo del centeno en la prevención de la hemorragia posparto (17). Se encontró que el uso 
+de estos agentes disminuyó la media de pérdida 
+de sangre (DM = -83 03 mL; IC 95%: -99 39 a 66 66)  así como la hemorragia posparto menor o igual a 500 mL (RR = 0 38; IC 95%: 0 21-0 69) y 
+el uso de uterotónicos terapéuticos (RR = 0 25; IC 
+95%: 0 10-0 66). Los efectos adversos incluyeron elevación de la presión arterial y dolor después del parto que requirió analgesia.Una revisión sistemática enfocada en la efectivi -
+dad del ácido tranexámico en la prevención de la hemorragia posparto incluyó dos ECC con 453 pacientes  y compara el uso de este agente (0 5 g y 1 g) con otros agentes o placebo en el tercer pe -
+riodo del parto (18). La pérdida de sangre mayor a 400 mL fue menor en mujeres que recibieron ácido tranexámico por vía intravenosa después del parto vaginal o cesárea (RR = 0 51; IC 95%: 
+0 36-0 72). A pesar de los resultados  los autores 
+concluyeron que se requieren más estudios para 
+confirmar la eficacia y seguridad del ácido tra -
+nexámico en el escenario de la prevención de la 
+hemorragia posparto.Una revisión sistemática que incluyó cinco ECC 
+con 1.163 pacientes evaluó la carbetocina como 
+agente profiláctico para la prevención de la hemo -
+rragia posparto (19). La carbetocina fue comparada 
+con oxitocina o combinación de ergometrina-oxi -
+tocina y placebo en mujeres con parto por vía va -
+ginal y por cesárea. Se encontró que la carbetocina 
+probablemente es tan efectiva como la oxitocina en 
+la profilaxis del tercer periodo del parto  aunque 
+esta conclusión no está fundamentada en datos objetivos ya que la heterogeneidad de los ensayos 
+incluidos tanto en diseño como en desenlaces no 
+permitió la estimación combinada del efecto.Dos revisiones sistemáticas evaluaron el efecto del corte tardío del cordón umbilical como com -
+ponente del manejo activo del alumbramiento en relación con desenlaces maternos y neonatales.  
+Una de ellas  que incluyó 29 ECC con 2.200 recién nacidos a término y pretérmino  comparó el corte del cordón umbilical dentro de los 30 segundos después del nacimiento  con el corte después de 
+los primeros 30 segundos (20). Solo se encontraron 
+diferencias en términos de la remoción manual de la placenta (RR = 0 45; IC 95%: 0 22-0 94). En -
+tre los recién nacidos pretérmino se encontró un riesgo de hemorragia intraventricular menor que 
+en los recién nacidos a término (RR = 0 52; IC 
+95%: 0 28-0 98). La segunda revisión que incluyó 11 ECC con 2.989 recién nacidos comparó el corte tardío (definido como el corte después del primer minuto del parto) con el corte antes del primer minuto (21). No se encontraron diferencias en 
+relación con la hemorragia posparto (RR = 1 22; 
+IC 95%: 0 96-1 55). Sin embargo  se encontró un incremento significativo en la necesidad de fotote -
+rapia por ictericia en los recién nacidos con corte 
+tardío del cordón (RR = 0 59; IC 95%: 0 38-0 92). 
+De igual forma  hubo un incremento en los niveles de hemoglobina de los recién nacidos con corte tardío del cordón (DM = 2 17g/dL; IC 95%: 0 28 a 4 06)  aunque este efecto no persistió después de 
+seis meses de seguimiento.1++
+1++1++1++
+1++
+1++
+###6###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013430
+Una revisión sistemática evaluó el efecto del masaje 
+uterino en la prevención de la hemorragia posparto  identificando solo un ECC con 200 mujeres que comparó la realización del masaje uterino después 
+del parto y antes de la expulsión de la placenta frente 
+a no realizar ninguno de estos procedimientos (22). No se encontraron diferencias significativas en la pérdida de sangre de más de 500 mL (RR = 0 52; IC 95%: 0 16-1 67)  ni en los casos de placenta re -
+tenida. Se encontraron diferencias en la pérdida de sangre a los 30 min y 60 min en el grupo de masaje uterino (30 min: DM = -41 6 mL; IC 95%: -75 16 a 
+-8 04. 60 min: DM = -77 40 mL; IC 95%: -118 7a 
+-36 09). La necesidad de uterotónicos adicionales 
+se redujo en el grupo del masaje uterino (RR = 
+0 20; IC 95%: 0 08-0 50).  
+La evidencia indica que el manejo activo del 
+alumbramiento disminuye la pérdida de sangre 
+materna y reduce el riesgo de hemorragia pos -
+parto de más de 1.000 mL. El agente de elección 
+para el manejo activo del alumbramiento debe ser  
+la oxitocina en una dosis de 5 UI o 10 UI; aunque la vía de administración más frecuentemente usada es la intramuscular  el GDG consideró importante 
+sugerir la posibilidad de administrar la profilaxis 
+con oxitocina por vía intravenosa cuando exista un acceso venoso permeable  dado que no hay evidencia 
+que favorezca la vía intramuscular (IM) sobre la 
+intravenosa (IV).
+La consideración del uso de otros agentes oxi -
+tócicos diferentes a la oxitocina requiere de mayor evidencia que soporte su uso en la práctica diaria. Aunque el misoprostol no es tan efectivo como la 
+oxitocina para la prevención de la hemorragia pos -
+parto  puede ser usado cuando la oxitocina no esté 
+disponible. El efecto específico del masaje uterino 
+con uterotónicos o sin estos en la prevención de la 
+hemorragia posparto requiere más ensayos con ma -
+yor número de participantes para evaluar su eficacia en estos casos. Por otra parte  retrasar el corte del cordón umbilical por al menos 2 o 3 min parece no incrementar el riesgo de hemorragia posparto.2. ¿cuál es la intervención más efectiva 
+para prevenir la hemorragia posparto en 
+una paciente sometida a cesárea? 
+En mujeres con parto por cesárea se reco -
+mienda la administración de un bolo de 5 
+UI de oxitocina diluidas en cristaloides por vía IV en un tiempo no inferior a 3 min  inmediatamente se extraiga el bebé. 
+En mujeres con parto por cesárea se reco -
+mienda adicionar una infusión de 30 UI de 
+oxitocina en 500 mL de cristaloides para 
+pasar en 4 horas  inmediatamente después de la administración del bolo inicial de 5 
+UI de oxitocina. 
+Cuatro ECC que incluyeron un total de 1.155 
+mujeres evaluaron diferentes uterotónicos para la profilaxis en mujeres con parto por cesárea (23-26). Se encontró que la oxitocina 5 UI por vía 
+intravenosa lenta es la opción recomendada por su 
+disminución de la pérdida sanguínea y la reducción de la necesidad de uterotónicos adicionales (RR = 2 1; IC 95%: 1 4-3 0). Así mismo se encontró que 
+una dosis de carbetocina es al menos tan efectiva 
+como la oxitocina en infusión en la reducción de la pérdida de sangre (RR = 2 03; IC 95%: 1 1-2 08)  pero su uso rutinario no se recomienda 
+actualmente por ser más costosa y por ser aún 
+escasa la información. Se concluyó que el uso de la carbetocina parece asociarse a una disminución en el uso de oxitócicos adicionales  pero no con la disminución de la incidencia de hemorragia pos -
+parto (RR = 0 74; IC 95%: 0 57-0 95).
+Tres ECC que incluyeron 155 pacientes compara -
+ron los diferentes regímenes de dosificación de la 
+oxitocina en la prevención de la hemorragia pos -
+parto en mujeres sometidas a cesárea (27-29). Se 
+encontró que las dosis actuales (siendo estas 5 y 
+10 UI) pueden ser más altas que la dosis efectiva 
+necesaria para prevenir la hemorragia (dosis efec -
+tiva 90%  0 29 UI por min (IC 95%: 0 15-0 43). De A
+A
+1++
+1++1++
+###7###431
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+igual forma  la evidencia demuestra que dosis altas 
+están asociadas con alteraciones hemodinámicas en las gestantes (FC = +28 Lat frente a + 52 Lat; p < 0 001; PAM: -33 mm/Hg frente a -30 mm/
+Hg p < 0 001).
+Cuatro ECC que incluyeron 2.995 pacientes
+ evalua -
+ron los efectos de la infusión continua de oxitocina en un tiempo de cuatro horas después de una dosis inicial de 5 UI (30-33). Se encontró disminución 
+en el uso de uterotónicos adicionales (RR = 0 61 
+IC 95%: 0 48-0 78)  mejoría de la contracción uterina inicial (DP = 2 8 frente a 2 2 p < 0 01)  y reducción de la pérdida de sangre (RR = 0 35; IC 95%: 0 20-0 63); no se encontró alteración de 
+los parámetros hemodinámicos de las mujeres so -
+metidas a cesárea.
+Tres ECC que incluyeron 500 pacientes evaluaron la efectividad del misoprostol en diferentes dosis y por diferentes vías para la prevención de la hemo -
+rragia poscesárea (34-36). Se encontró que en dosis de 200 mcg u 800 mcg por vía intrarrectal  intrauterina o sublingual  el misoprostol tiene una efectividad similar a la oxitocina en la disminución de la pérdida de sangre (608 91 mL frente a 673 9 
+mL; p = 0 048) y en la disminución de uterotó -
+nicos adicionales (34% frente a 14%; p = 0 032). 
+Sin embargo  los autores subrayan que se requieren nuevos ensayos con poblaciones más grandes con el 
+fin de confirmar los hallazgos obtenidos.
+Un ECC que incluyó 90 mujeres sometidas a ce -
+sárea evaluó la efectividad del ácido tranexámico frente a placebo para la prevención de la hemorra -
+gia posparto (37). En dosis de 1 g por vía intrave -
+nosa se encontró una reducción de la pérdida de sangre (28 02 mL frente a 37 12 mL; p = 0 000).Un ECC que incluyó 377 mujeres evaluó la efectivi -
+dad de la carbetocina como agente profiláctico para la prevención de la hemorragia poscesárea (38). Se 
+administraron 100 mcg de carbetocina y se comparó 
+con 5 UI de oxitocina por vía intravenosa. Los resul -
+tados mostraron que un mayor número de mujeres requirieron oxitócicos adicionales en el grupo de oxitocina (RR = 0 74; IC 95%: 0 57-0 95).
+1++Un ECC que incluyó 104 pacientes comparó una dosis de 100 mcg de carbetocina frente a 10 UI de oxitocina en infusión de dos horas en la prevención 
+de la hemorragia poscesárea (39). El promedio de 
+sangre perdida después de la administración de 
+carbetocina fue 30 mL menos que después de la 
+administración de oxitocina y el porcentaje de pa -
+cientes con pérdida de sangre menor de 500 mL fue mayor en el grupo con carbetocina (81% frente a 55%; p = 0 05). 
+ 
+La evidencia indica que la oxitocina es el agente 
+de elección para la prevención de la hemorragia 
+posparto en mujeres sometidas a cesárea. Algunos estudios han subrayado que la dosis actualmente 
+utilizada puede ser más alta que la necesaria para 
+lograr el efecto deseado y  por tanto  estas dosis podrían producir cambios hemodinámicos im -
+portantes en la mujer. De igual forma  la evidencia demuestra que la infusión de una dosis baja de oxitocina después de una dosis inicial reduce la 
+necesidad de uterotónicos adicionales en cesárea  
+pero no afecta la ocurrencia general de hemorragia obstétrica mayor. Lo que es claro con la evidencia 
+actual es que la adición de una infusión de oxito -
+cina en pacientes sometidas a cesárea electiva no 
+afecta los parámetros hemodinámicos maternos  ni 
+durante  ni después de la cirugía.
+Al parecer  la carbetocina puede ser tan efectiva 
+como la oxitocina en la reducción del sangrado después de parto por cesárea y en el uso de utero -
+tónicos adicionales  no así para la hemorragia mayor 
+de 500 mL. La ventaja que ofrece la carbetocina 
+es la dosis única y no tener que utilizar infusiones 
+adicionales. Recientemente  la Comisión de Regu -
+lación en Salud publicó un estudio de efectividad  seguridad y análisis económico de la carbetocina frente a la oxitocina en la prevención de la atonía uterina y hemorragia posparto de mujeres sometidas 
+a cesárea.
+ La conclusión del análisis económico in -
+dica que el uso de carbetocina resulta 70 veces más 
+costoso en comparación con la oxitocina. Por tanto  no se puede emitir un concepto de favorabilidad o 1++
+1++
+1++1+
+###8###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013432
+no favorabilidad para el uso de carbetocina en la 
+prevención de la hemorragia posparto en mujeres 
+sometidas a cesárea (40).
+3. ¿cuáles son las intervenciones necesarias 
+para disminuir el riesgo de hemorragia grave y complicaciones en mujeres con diagnóstico antenatal de acretismo 
+placentario? 
+En pacientes con factores de riesgo para 
+acretismo placentario se recomienda realizar un ultrasonido con Doppler pla -
+cen tario por personal calificado para 
+identificar la localización y el grado de 
+inserción de la placenta. 
+Se recomienda que el ultrasonido con 
+Doppler se realice a una edad gestacional por encima del límite de viabilidad fetal.
+Si se diagnostica acretismo placentario se 
+recomienda planear la atención del parto 
+por un equipo multidisciplinario apropiado 
+para el manejo de la condición específica de 
+la paciente  en una institución que cuente 
+con las ayudas diagnósticas pertinentes  
+con disponibilidad de glóbulos rojos  plas -
+ma  plaquetas y crioprecipitado  y el acceso a una unidad de cuidados intensivos. 
+No existe evidencia suficiente para reco -
+mendar o rechazar la oclusión profiláctica 
+con balones de insuflación en las arterias hipogástricas en pacientes con acretismo placentario.  
+Ocho series de casos que incluyeron 36 mujeres 
+se enfocaron en las intervenciones con radiología profiláctica en forma de oclusión con balón o 
+embolización de arterias pélvicas en relación con 
+desenlaces como pérdida de sangre  tiempo en unidad de cuidados intensivos  requerimientos de transfusión y necesidad de histerectomía (41-47). Tres de estas series sugieren que la intervención radiológica profiláctica es benéfica  mientras que 
+una de ellas no encontró beneficios. 
+Una serie de casos de 11 pacientes a quienes se les practicó oclusión bilateral de la arteria iliaca in -
+terna para el manejo de la placenta acreta reportó un 39 4% de disminución en la pérdida de sangre intraoperatoria y un 52 1% menos de sangre trans -
+fundida en comparación con 14 mujeres a quienes 
+no se les realizó del procedimiento (48).
+Una serie de casos con 167 mujeres mostró que dejar la placenta en su sitio  parcial o totalmente  
+sin intento de removerla  se asoció con al menos 
+un beneficio en 131 mujeres (49). La resorción 
+espontánea de la placenta ocurrió en 87 casos con 
+un tiempo promedio desde el inicio del trabajo de parto de 13 5 semanas. 
+La técnica del ultrasonido resulta importante 
+para realizar el diagnóstico antenatal de inserción 
+anormal de la placenta y la planeación de la atención 
+del parto. El GDG consideró que el ultrasonido con Doppler debe ser realizado por personal calificado  
+buscando identificar al máximo la localización y el 
+grado de inserción de la placenta. Así mismo  se consideró importante que estas ecografías se reali -
+cen en una edad gestacional donde haya viabilidad fetal para mejorar los desenlaces maternos y fetales. 
+Dejar la placenta acreta en su sitio  parece ser una 
+alternativa más segura que removerla. El tratamiento conservador para la placenta acreta puede ayudar a las mujeres a evitar una histerectomía y presenta bajas 
+tasas de morbilidad materna cuando se realiza en ins -
+tituciones con los equipos y los recursos adecuados. 
+4. ¿cuál es la intervención más efectiva 
+para tratar la retención placentaria sin sangrado  después de manejo activo del 
+alumbramiento? 
+Si después de 30 min de haber realizado 
+el manejo activo del alumbramiento la placenta no se expulsa de forma espontá -D
+D
+D√
+33
+3
+D
+###9###433
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+nea  se recomienda administrar 10 UI de 
+oxitocina intramuscular o intravenosa  en combinación con la tracción controlada del cordón umbilical. 
+Se recomienda una única tracción luego de 
+la administración de esta dosis de oxitocina.
+Si la atención de la mujer se está realizando 
+en un primer nivel de atención y la placenta no se desprende con el manejo anterior  se recomienda iniciar la infusión de 20 UI de oxitocina en 500 mL de cristaloides a 60 mL/hora (40 miliunidades/min) y remitirla.  
+Si la atención de la mujer se está realizan -
+do en instituciones de segundo y tercer nivel  y la placenta no se desprende en 30 min después de administrar la segunda dosis de oxitocina  se recomienda como 
+alternativa a métodos invasivos la inyec -
+ción en la vena umbilical con técnica aséptica de 800 mcg de misoprostol di -
+sueltos en 30 cc de solución salina. 
+No se recomienda la inyección de oxitocina 
+o solución salina por vena umbilical para el manejo de la placenta retenida. 
+Si después de la realización de las manio -
+bras antes descritas para el manejo de la 
+placenta retenida sin sangrado  no hay respuesta  se recomienda hacer la extrac -
+ción manual teniendo presente el riesgo potencial de un acretismo. 
+Un ECC que incluyó 50 pacientes con placenta 
+retenida comparó el sulprostone frente a placebo 
+para evaluar la frecuencia de remoción manual de 
+la placenta (50). El ensayo fue suspendido antes 
+de alcanzar el tamaño de muestra propuesto y el 
+sulprostone fue dado al resto de las mujeres in -
+cluidas. Con los datos preliminares se evidenció una reducción del riesgo de remoción manual de 
+la placenta (RR = 0 51; IC 95%: 0 34-0 86) y una 
+disminución no estadísticamente significativa en el riesgo de la transfusión de sangre en el grupo de sulprostone. Una revisión sistemática que incluyó 15 ECC con 1.704 mujeres evaluó la inyección por vena um -
+bilical de agentes para el manejo de la placenta 
+retenida  como solución salina sola  oxitocina más 
+solución salina  oxitocina más solución salina más 
+expansor de plasma y prostaglandina más solu -
+ción salina (51). La solución salina sola no mostró 
+diferencias significativas en la remoción manual de la placenta (RR = 0 99; IC 95%: 0 84-1 16). La oxitocina más solución salina comparada con 
+manejo expectante no mostró reducción en la 
+necesidad de remover manualmente la placenta (RR = 0 87; IC 95%:0 74-1 03). La oxitocina más solución salina comparada con solución salina sola mostró una reducción en la remoción manual  re -
+ducción que no fue estadísticamente significativa (RR = 0 91; IC 95%: 0 82-1 00). La oxitocina más solución salina comparada con expansor de plasma no mostró diferencias significativas (RR = 1 34; IC 95%: 0 97-1 85). La prostaglandina más 
+solución salina comparada con solución salina sola 
+fue asociada con una reducción significativa en la incidencia de remoción manual de la placenta (RR 0 42; IC95%: 0 22-0 82). La prostaglandina más solución salina comparada con oxitocina más so -
+lución salina mostró una reducción significativa en la remoción manual de la placenta (RR = 0 43; IC 95%: 0 25-0 75). También se observó una reduc -
+ción del tiempo entre la inyección y la expulsión de 
+la placenta (DM = -6 00; IC 95%: -8 78 a -3 22).
+Una revisión sistemática comparó el uso de toco -
+líticos solos o en combinación con uterotónicos  con no intervención o con otras intervenciones  
+en el manejo de la placenta retenida en mujeres en 
+quienes había fallado el tratamiento con oxitocina. 
+(52). La revisión incluyó solo un ensayo clínico con 
+24 mujeres y los datos sugieren una reducción en 
+la necesidad de remoción manual de la placenta (RR = 0 04; IC 95%: 0 00-0 66)  así como una 
+reducción de la pérdida de sangre durante el alum -
+bramiento con el uso de nitroglicerina sublingual  
+(Media = -262 5 mL; IC 95%: -364 95 a -160 05).
+√√
+√
+B
+A
+1-1++
+1++
+###10###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013434
+La inyección por la vena umbilical de prosta -
+glandinas requiere de investigaciones adicionales  
+aunque los resultados de dos ensayos clínicos evi -
+dencian un impacto en la disminución de remoción 
+manual de la placenta.
+El consenso de expertos de la “Guía de práctica 
+clínica para el manejo de la hemorragia posparto 
+y placenta retenida” publicada por la OMS (7)  no 
+halló evidencia que soportara el uso de uterotó -
+nicos para el manejo de la placenta retenida sin 
+sangrado. Sin embargo  este grupo recomendó la 
+administración de una nueva dosis de oxitocina y 
+realizar un nuevo intento de extracción por tracción 
+controlada. Ante esto el GDG junto  con el grupo de 
+expertos consultados  consideró importante subra -
+yar que no se debe mantener de forma persistente 
+la tracción controlada del cordón y que es suficiente 
+una sola tracción para procurar la extracción de la placenta retenida como coadyuvante a la adminis -
+tración de la oxitocina.
+Así mismo  dadas las condiciones geográficas 
+y la atención por niveles establecida en el sistema 
+de salud  es aconsejable diferenciar el manejo por 
+niveles de atención. Para el primer nivel resulta importante no intentar más de una sola tracción 
+y una dosis adicional de oxitocina. En su defecto  
+es recomendable iniciar una infusión de oxitocina y remitir la paciente a un nivel superior  donde se 
+pueda garantizar un manejo adecuado. El GDG 
+también consideró que la extracción manual debe realizarse en una institución que cuente con los 
+recursos necesarios para atender cualquier compli -
+cación derivada de un posible acretismo placentario.
+5. ¿se recomienda el uso profiláctico de 
+antibióticos cuando se realiza revisión manual de la cavidad uterina?
+Se recomienda administrar dosis única 
+parenteral de cefalosporina de primera ge -
+neración inmediatamente antes de iniciar 
+la extracción manual de la placenta.En caso de alergia documentada a los be -
+talactámicos se recomienda administrar 
+clindamicina más gentamicina en dosis única.  
+En las instituciones que cuenten con per -
+fil microbiológico se recomienda elegir el 
+antibiótico de acuerdo con dicho perfil. 
+Una revisión sistemática enfocada en estudios de 
+profilaxis antibiótica después de extracción ma -
+nual de la placenta no encontró ensayos clínicos 
+centrados en este tema (53). No se encuentra evi -
+dencia de alta calidad para el uso de antibióticos 
+profilácticos.  
+El consenso de expertos de la guía de práctica 
+clínica para el manejo de la hemorragia posparto 
+y placenta retenida de la OMS (7) recomendó el 
+uso de cefalosporina de primera generación basa -
+dos en evidencia indirecta de estudios realizados 
+en mujeres sometidas a cesárea y de muje  res con 
+aborto. El GDG consideró la necesidad de incluir 
+otra posibilidad antibiótica en los casos de alergia 
+documentada  así como la importancia de contar 
+con un perfil microbiológico que apoye de forma más segura la elección del antibiótico que se va a 
+utilizar.
+6. ¿cuáles son los criterios que determinan 
+el inicio del manejo del choque 
+hipovolémico?
+Para la identificación del grado de choque 
+se recomienda la evaluación de los siguien -
+tes parámetros clínicos: 
+•	Sensorio	(estado	de	conciencia).
+•	Perfusión	(color	de	la	piel 	temperatura	
+de la piel y llenado capilar).
+•	Pulso.	
+•	Presión	arterial.		 D√
+√
+1++
+D
+###11###435
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+Se recomienda clasificar el grado del cho -
+que e iniciar el manejo con el peor pará -
+metro clínico encontrado. 
+Una revisión de tema acerca del manejo del choque 
+hipovolémico en pacientes con trauma indica que los principios del manejo y el tratamiento deben 
+ser bien conocidos y entendidos. Esto incluye el 
+reconocimiento de signos de hipoperfusión a ór -
+ganos vitales como hipotensión  taquicardia  entre otros (54). 
+La evidencia narrativa retoma los signos de cho -
+que hipovolémico de la clasificación de Baskett (54)  
+enfatizando dos aspectos importantes: en primer lugar  debido al aumento del volumen plasmático que 
+ocurre en la mujer durante el embarazo  cualquier 
+porcentaje de pérdida representa para la gestante un volumen mayor que en la mujer no embarazada. En 
+segundo lugar  se debe tener en cuenta que las altera -
+ciones del pulso y la presión arterial son tardías en la 
+mujer embarazada  por tanto  el estado de conciencia 
+y la perfusión deben ser evaluados inicialmente. El 
+GDG consideró que el estado de choque lo establece el peor parámetro encontrado después de evaluar a 
+la mujer con hemorragia posparto.
+7. ¿cuáles son las intervenciones más 
+efectivas para el manejo de la hemorragia 
+posparto con signos de choque?
+Se recomienda que cuando se diagnosti -
+que hemorragia posparto con cualquier 
+grado de choque se active el protocolo de código rojo obstétrico que incluya simul -
+táneamente acciones en cuatro áreas de intervención: comunicación  resucitación  monitoreo e investigación de la causa y control del sangrado. 
+En la hemorragia posparto con signos 
+de choque se recomiendan las siguientes 
+medidas: •	Alertar	al	personal	de	salud	entrenado	
+en código rojo obstétrico.
+•	Asignar	a	un	miembro	del	equipo	el	re-
+gistro de los procedimientos realizados  
+la administración de líquidos  medica -
+mentos y signos vitales; idealmente en formato preestablecido.
+•	Garantizar	la	disponibilidad	de	hemode -
+rivados  alertar al laboratorio y activar el sistema de referencia.
+•	Evaluar	sistema	respiratorio.
+•	Administrar	oxígeno	suplementario	con	
+máscara con bolsa  reservorio mínimo 
+a 10 litros por minuto. En ausencia de máscara  suministrar oxígeno con cánu -
+la nasal a 3 litros por minuto o sistema venturi 35-50%. 
+•	Se	debe	mantener	oximetría	de	pulso	
+por encima del 95%. 
+•	Garantizar	al	menos	dos	accesos	venosos	
+permeables de buen calibre. Se reco -
+mienda al menos uno con catéter No. 14 o 16. 
+•	Realizar	la	toma	de	muestra	de	sangre	
+para hemograma completo  pruebas cru -
+zadas  pruebas de coagulación incluido fibrinógeno  pruebas de función renal  pruebas de función hepática y gases ar -
+teriales.
+•	Iniciar	y	continuar	infusión	de	cristaloi -
+des calentados a 39 °C  titulando cada 
+5 min la respuesta basada en los signos 
+de choque: sensorio conservado  pulso 
+radial presente  presión arterial sistólica mayor de 90 mm/Hg y llenado capilar 
+< 5 seg con bolos de 500 mL si alguno 
+de los parámetros se encuentra alterado.
+•	Inserción	de	sonda	Foley	para	monito -
+rear volumen urinario.
+•	Mantener	caliente	a	la	paciente	cubrién -
+dola con mantas y en posición supina. 4
+C
+√D
+###12###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013436
+•	Valoración	y	registro	cada	15	min	del	
+pulso  presión arterial y frecuencia res -
+piratorio una vez estabilizada la paciente.
+•	Una	vez	estabilizada	la	paciente 	remitir	
+a un nivel de mayor complejidad que 
+garantice la atención adecuada.
+•	Documentación	 de	los	procedimientos 	
+balance de líquidos y hemoderivados transfundidos.  
+Un estudio descriptivo con una población de 103 
+participantes entre enfermeras  obstetras  anes -
+tesiólogos y auxiliares de enfermería reconoce la estimación visual como un método para determi -
+nar la pérdida de sangre y facilitar la resucitación temprana  minimizando el riesgo de coagulación intravascular diseminada y reduciendo la severidad 
+del choque hemorrágico (55). 
+En un estudio descriptivo con 62 pacientes se encontró que el promedio de pérdida de sangre estimada fue significativamente menor que la media de pérdida de sangre medida por algún 
+método objetivo. Estos hallaz  gos mostraron que 
+la estimación visual de pérdida de sangre puede 
+resultar inadecuada (56).  
+No se encontró evidencia relacionada con la 
+eficacia de las intervenciones o los procedimientos 
+complementarios necesarios para el manejo de la 
+hemorragia posparto. Para la atención se deben considerar al menos cuatro componentes: la co -
+municación con todos los profesionales relevantes  la resucitación  el monitoreo e investigación de la causa del sangrado y las medidas para contrarrestar 
+el sangrado. Estos componentes deben ser iniciados 
+simultáneamente para brindar un cuidado óptimo. 
+Es fundamental alertar tempranamente al grupo 
+de profesionales pertinente para el manejo de la hemorragia posparto. El GDG consideró importante definir una forma 
+estandarizada de activar el protocolo de atención y 
+adoptar el nombre de código rojo obstétrico para 
+nombrarlo. Así mismo  es importante reorganizar las acciones de intervención ante una mujer con hemorragia posparto  teniendo en cuenta las con -
+sideraciones de la GPC del RCOG (6). Es indispen -
+sable estructurar un enfoque de ABC que permita  además de la resucitación  la identificación de otros 
+problemas. La urgencia y las medidas instauradas 
+para la resucitación y el control de la hemorragia necesitan estar en la medida del grado del choque. 
+Debe administrarse oxígeno en altas concentracio -
+nes sin tener en cuenta la concentración del oxígeno materno. Usualmente  los niveles de conciencia y 
+el control de la oxigenación mejoran rápidamente una vez el volumen de circulación es restaurado.
+Es indispensable establecer dos accesos veno -
+sos de buen calibre y tomar muestras de sangre para optimizar el manejo y la necesidad de terapia transfusional. Los componentes principales de la 
+resucitación durante la hemorragia posparto son  
+la restauración del volumen de sangre y la capacidad 
+de transportar oxígeno. El reemplazo de volumen 
+debe ser llevado a cabo sobre la base de que la 
+pérdida de sangre es  a menudo  subestimada (55  56). El cuadro clínico debe ser el principal deter -
+minante de la necesidad y urgencia de la transfusión de hemoderivados y no se debe perder el tiempo 
+esperando los resultados de laboratorio (57  58). 
+Una vez que el sangrado está bajo control  se 
+debe considerar transferir a la mujer a una unidad 
+de cuidados intensivos o a una unidad de cuidados 
+intermedios  dependiendo de la severidad del san -
+grado. Es necesario el monitoreo médico continuo y el registro de los parámetros en el tiempo sugerido 
+en formatos preestablecidos  los cuales darán a los profesionales que intervienen en el manejo de la 
+mujer señales visuales adecuadas sobre su evolución 
+clínica.3
+3
+###13###437
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+8. ¿cuáles son las medidas más efectivas 
+para la recuperación del volumen 
+sanguíneo en el manejo del choque hipovolémico por hemorragia obstétrica? 
+Se recomienda iniciar infusión de crista -
+loides calentados a 39 °C  titulando cada 
+5 min la respuesta basada en los signos 
+de choque: sensorio conservado  llenado capilar < 5 seg  pulso radial presente y 
+presión arterial sistólica mayor de 90 mm/
+Hg con bolos de 500 mL si alguno de los 
+parámetros se encuentra alterado. 
+Se recomienda utilizar soporte vasopresor si  
+la paciente continúa con inestabilidad 
+hemo  dinámica después de la reposi -
+ción de volumen y control del sitio de 
+sangrado. La selección del vasopre -
+sor dependerá de los medicamentos  
+y la vía de acceso disponibles. 
+Una revisión sistemática de 1988  actualizada en el 
+2011   que incluyó 38 ECC con un total de 10.842 pacientes evaluó el uso de la albúmina en la recupe -
+ración del volumen de pacientes críticamente enfer -
+mos (59  60). La mortalidad se estimó en un 18%. El riesgo estimado de mortalidad con la administración de albúmina fue (RR = 1 05; IC 95%: 0 95-1 16).Una revisión sistemática de 65 ECC con 11.549 
+pacientes comparó la efectividad de los cristaloides 
+y los coloides en la resucitación y recuperación del volumen circulante en pacientes críticamente en -
+fermos (61). El riesgo de muerte para las diferentes 
+intervenciones comparadas fue el siguiente: 23 en -
+sayos compararon albúmina o fracción proteica en plasma (RR = 1 01; IC 95%: 0 92-1 10); 17 ensayos 
+compararon hidroxietil almidón ( Hydroxyethyl starch ) 
+(RR = 1 18; IC 95%: 0 96-1 44); 11 ensayos com -
+pararon gelatina modificada (RR = 0 91; IC 95%: 
+0 49-1 72); nueve ensayos compararon dextrano 
+(RR = 1 24; IC 95%: 0 94-1 65)  ocho ensayos 
+compararon dextrano en cristaloides hipertónicos (RR = 0 88; IC 95%: 0 74-1 05). Una revisión sistemática que incluyó 23 ensayos 
+clínicos y 3.212 pacientes evaluó el uso de 11 
+diferentes vasopresores en el manejo del choque hipovolémico (62). No se encontraron diferencias en términos de la mortalidad (RR = 0 95; IC 95%: 
+0 87-1 03); sin embargo  fueron observadas más 
+arritmias en los pacientes tratados con dopamina cuando se compararon con norepinefrina (RR = 
+0 43; IC 95%: 0 26-0 69). 
+El uso de la albúmina y de coloides para el ma -
+nejo de la hemorragia posparto no se recomienda 
+porque aunque no se encuentra evidencia directa en 
+la obstetricia  se considera que el manejo del choque 
+hipovolémico puede no diferir entre pacientes con 
+condiciones específicas y variadas. Según esto  el riesgo de muerte de una mujer en el posparto con la administración de coloides puede ser similar al 
+reportado en otro tipo de pacientes.
+Aunque no existe evidencia de la cantidad de 
+volumen por transfundir  la GPC del RCOG (6) propone un volumen total de 3 5 litros. El GDG 
+y el grupo de expertos consultados consideró que iniciar con volúmenes altos sin hacer una medición 
+frecuente de los cambios en los parámetros clínicos 
+puede acarrear consecuencias en la recuperación de la mujer con choque hipovolémico; por este motivo  
+se sugirió la evaluación cada 5 min de la respuesta 
+a la infusión de cristaloides para determinar la continuidad en la infusión de los mismos.
+Probablemente  la elección de un vasopresor en 
+pacientes con choque no influye sobre el resultado más allá del efecto mismo del vasopresor. Ante esta 
+evidencia  el GDG consideró que se pueden utilizar 
+vasopresores una vez se halla verificado una adecua -
+da reposición de volumen y un control adecuado del sitio del sangrado  pero sin que su uso retrase la implementación de otras medidas o una remisión a 
+un nivel de mayor complejidad. Seleccionar uno u 
+otro vasopresor dependerá de la disponibilidad de los mismos  de la vía de acceso disponible para su administración y del entrenamiento del personal 
+que lo vaya a utilizar. √
+√
+1++
+1++1++
+###14###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013438
+9. ¿cuáles son las intervenciones más 
+efectivas para el control de la hemorragia 
+por atonía uterina? 
+Para el control de hemorragia por atonía 
+uterina se recomienda excluir otras causas de hemorragia posparto como retención de fragmentos de placenta o membranas  laceraciones o hematomas vaginales o cer -
+vicales  ruptura uterina  hematomas de li -
+gamentos  sangrado extragenital  inversión uterina o coagulopatía. 
+Se recomienda utilizar la nemotecnia de las 
+4 “T”: Tono  Trauma  Tejido y Trombina (coagulopatía). 
+Si la causa de la hemorragia es la atonía 
+uterina  se recomienda implementar las 
+siguientes medidas hasta que cese el san -
+grado o se defina la necesidad de otra in -
+tervención: 
+•	Inserción	de	una	sonda	Foley	para	eva-
+cuar la vejiga.
+•	Compresión	uterina	bimanual.
+•	Administrar	5	UI	de	oxitocina	por	vía	IV	
+lenta  mientras se inicia una infusión de 
+30 UI de oxitocina diluida en 500 mL de cristaloides para pasar en 4 horas.
+•	Ergometrina	0 2	mg	por	vía	IM.	Repetir	
+una sola dosis adicional después de 20 min. Puede continuarse 0 2 mg cada 4 a 6 horas  máximo 5 ampollas en 24 horas (contraindicada en mujeres con hipertensión).  
+Se recomienda utilizar misoprostol 800 
+mcg por vía sublingual solo si no se cuenta 
+con oxitocina o maleato de metilergono -
+vina para el manejo de la hemorragia pos -
+parto.  
+El ácido tranexámico en dosis de 1 g por vía 
+IV se puede ofrecer como un tratamiento 
+para la hemorragia posparto si: la admi -nistración de la oxitocina seguida de las 
+opciones de tratamiento de segunda línea y el misoprostol no han logrado detener la hemorragia; o como complemento a la sutura de traumatismos del canal del par -
+to identificados como causa del sangrado (desgarros del canal del parto).  
+No se recomienda el uso de carboprost para 
+el tratamiento de las mujeres con hemo -
+rragia posparto.
+Una revisión sistemática de 3 ECC con 462 pacien -
+tes evaluó diferentes medidas para el tratamiento 
+de la hemorragia posparto con misoprostol (63). Dos ensayos compararon misoprostol 600 mcg y 
+1.000 mcg frente a placebo. El uso del misopros -
+tol no se asoció con una reducción significativa 
+en la mortalidad materna (RR = 7 24; IC 95%: 0 38-138 6)  la indicación de histerectomía (RR = 1 24; IC 95%: 0 04-40 78)  el uso adicional de 
+uterotónicos (RR = 0 98; IC 95%: 0 78-1 24)  la 
+necesidad de transfusión de sangre (RR = 1 33; IC 95%: 0 81-2 18) y la evacuación de productos retenidos (RR = 5 17; IC 95%: 0 25-107). Un ensayo mostró mejor respuesta clínica al miso -
+prostol rectal comparado con una combinación de syntometrina y oxitocina. No se encontraron ensayos con técnicas quirúrgicas  intervenciones radiológicas o drogas hemostáticas para manejo después de uterotónicos.
+Dos series de casos que incluyeron 263 pacientes 
+relacionadas con la efectividad del carboprost fren -
+te a otros agentes uterotónicos mostraron éxito en el control de la hemorragia posparto (64  65).
+Una revisión sistemática que incluyó 3 ECC con 
+122 pacientes evaluó el uso del misoprostol en el 
+tratamiento de la hemorragia posparto  así como su 
+vía y dosis óptima (66). Las vías de administración potenciales para el misoprostol incluyen la oral  la 
+sublingual  la rectal o una combinación de estas. 
+La dosis por vía oral no puede exceder los 600 mcg por el riesgo de hiperpirexia. Un régimen de 200 √B
+B
+B
+DD
+1++
+3
+1+
+###15###439
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+mcg oral más 200 a 400 mcg sublingual o rectal 
+parecieran ser buenas opciones. Para la pérdida de sangre de 500 mL o más  el riesgo relativo del misoprostol comparado con placebo fue 0 57 (IC 
+95%: 0 34-0 96).
+Un ECC que incluyó 1.422 mujeres con parto por vía vaginal y diagnóstico de hemorragia posparto por atonía uterina evaluó la efectividad de 600 mcg de misoprostol en adición a la oxitocina compa -
+rados con placebo (67). La proporción de mujeres con pérdidas de sangre superiores a los 500 mL o más en 60 min fue similar en ambos grupos (RR 
+= 1 02; IC 95%: 0 79-1 32). 
+Dos ECC con 1.787 mujeres compararon el miso -
+prostol en dosis de 800 mcg como medicamento de 
+primera línea frente a la infusión de 40 UI de oxi -
+tocina en el tratamiento de la hemorragia posparto (68  69). En el primer estudio el sangrado fue con -
+trolado 20 min posterior al inicio del tratamiento 
+asignado en 363 mujeres del grupo de misoprostol 
+y 360 del grupo de oxitocina (RR = 0 99; IC 95%: 0 95-1 04). En el segundo ensayo se encontraron cifras de 440 mujeres del grupo de misoprostol y 
+468 mujeres del grupo de oxitocina para el mismo 
+desenlace (RR = 0 94; IC 95%: 0 91-0 98).Un ECC que incluyó 144 mujeres en las que se administraron 4 g de ácido tranexámico en una hora y luego infusión de 1 g por hora por seis horas  
+comparado con placebo  evaluó este medicamento 
+como alternativa en el tratamiento de la hemorragia posparto (70). La pérdida de sangre fue menor en el grupo del ácido tranexámico (173 mL frente a 
+221 mL; p = 0 041).
+Un ensayo clínico
+ en el que participaron 1.964 
+mujeres con parto por vía vaginal evaluó el masaje uterino solo frente a la administración de 10 UI 
+de oxitocina por vía IM frente a la combinación de 
+ambas intervenciones (71). La frecuencia de pér -
+dida igual o superior a 300 mL de sangre fue mayor en el grupo de masaje solo frente a la combinación de masaje y oxitocina (RR = 1 88; IC 95%: 1 29-2 74) o con la oxitocina sola (RR = 1 71; IC 95%: 
+1 11-2 61).  El tratamiento debe estar acompañado por un 
+examen clínico cuidadoso para comprobar que el 
+útero en efecto está atónico y que las otras fuentes 
+de sangrado  tales como traumas y laceraciones genitales o inversión uterina  han sido excluidas. 
+La compresión uterina bimanual y el vaciamiento 
+de la vejiga para estimular la contracción uterina repre -
+sentan la primera línea de manejo de la hemorragia posparto  así como la compresión de la aorta que  como 
+medida temporal pero efectiva  permite lograr tiempo 
+en la resucitación con la reposición de volumen y en la elección del soporte quirúrgico apropiado. Aunque 
+no existen estudios publicados que provean evidencia 
+para estas intervenciones  el consenso de expertos de la guía del RCOG (6) y de la guía de la OMS (7)  soportan la continuidad de su uso. 
+La evidencia no muestra que la adición de 
+misoprostol sea superior a la combinación de oxi -
+tocina y ergometrina sola para el tratamiento de la hemorra  gia posparto primaria. La oxitocina es 
+preferida especialmente en mujeres con hiper -
+tensión previa o preeclampsia. Los resultados de 
+ensayos clínicos muestran que el uso de una dosis 
+de 800 mcg de misoprostol parece ser tan efectivo 
+como la oxitocina cuando se usa para detener el 
+sangrado posparto por sospecha de atonía uterina en mujeres que han recibido oxitocina profiláctica.
+El consenso de expertos de la guía del RCOG (6) 
+sugiere una dosis no mayor a 5 UI de oxitocina por vía intravenosa lenta  ya que tal recomendación está 
+en concordancia con las guías de otras organizacio -
+nes. El GDG consideró importante adicionar una 
+infusión de oxitocina que permita mejorar las con -
+tracciones uterinas y así lograr disminuir la hemo -
+rragia posparto. Por otra parte  no consideró útil la inclusión de una recomendación para apoyar el uso 
+del carboprost como medicamento en el manejo de 
+la hemorragia posparto por atonía uterina debido a la ausencia de evidencia más consistente y de 
+mejor calidad  y por ser un medicamento que no 
+se consigue en el país.
+El GDG consideró importante incluir el ácido 
+tranexámico dentro de las recomendaciones  pero 1++
+1++
+1++
+1++
+###16###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013440
+ajustando la dosis y aclarando que solo se debe 
+usar cuando los demás agentes como la oxitocina  
+la ergometrina y el misoprostol no hayan sido efectivos. Así mismo  por la ausencia de evidencia 
+disponible  no se recomienda una segunda dosis de 
+ácido tranexámico. Se requieren más estudios para aclarar la efectividad del masaje en el escenario de la hemorragia posparto.
+10. ¿cuáles son las intervenciones más 
+efectivas para el control de la hemorragia 
+posparto por atonía uterina sin respuesta  
+al manejo médico?
+Se recomienda iniciar medidas de hemos -
+tasia quirúrgica lo más pronto posible  si 
+el manejo inicial falla. Se recomienda que 
+este tiempo no supere nunca los 20 min.
+Se recomienda el taponamiento uterino 
+con balón hidrostático (incluye condón)  como la primera opción quirúrgica para las mujeres con atonía uterina. 
+Se recomienda administrar dosis única 
+parenteral de cefalosporina de primera ge -
+neración inmediatamente antes de insertar el balón. 
+En caso de alergia documentada a los be -
+talactámicos  se recomienda administrar 
+clindamicina más gentamicina en dosis única.  
+Se recomienda dejar una infusión de oxi -
+tocina de 30 UI diluidas en 500 mL de cristaloides para pasar en 4 horas. 
+Se recomienda dejar el balón por un tiempo 
+máximo de 24 horas y retirar en sitio donde se cuente con recurso humano calificado  hemoderivados y quirófano.  
+No se recomienda realizar taponamiento uterino con gasa. Se recomienda aplicar las siguientes me -
+didas quirúrgicas conservadoras depen -
+diendo de las circunstancias clínicas y la experticia de quien atiende a la mujer: 
+•	Suturas	hemostáticas	uterinas	(B-Lynch	
+o sutura compresiva modificada).
+•	Ligadura	bilateral	de	arterias	uterinas.
+•	Ligadura	bilateral	de	arterias	iliacas	in-
+ternas. 
+•	Embolización	arterial	selectiva.		
+Se recomienda recurrir a la histerectomía 
+prontamente cuando las medidas anterio -
+res fallen o las circunstancias clínicas lo indiquen desde el inicio (ejemplo: estallido uterino).
+Cinco series de casos que incluyen entre uno a 16 
+pacientes han reportado el uso de sonda Foley  el balón de Bakri  el catéter esofágico Sengstaken-Blakemore y el condón como taponamientos 
+efectivos en el manejo de la hemorragia posparto 
+por atonía uterina que no responde al tratamien -
+to médico (72-76). En las cinco series de casos se reportaron como exitosos los taponamientos para 
+el control de la hemorragia posparto por atonía 
+uterina.Una serie de casos con cinco pacientes reportó éxito en el manejo de la hemorragia posparto con 
+suturas compresivas a través de la técnica de B-
+Lynch (77).Una serie de casos que incluye tres pacientes re -
+portó éxito en el manejo de hemorragia posparto con la técnica de B-Lynch (78).Tres series de casos que han incluido entre tres 
+y 14 mujeres con hemorragia posparto por ato -
+nía uterina reportaron la efectividad en todos los 
+casos manejados con diferentes tipos de suturas 
+compresivas (79-81).
+Una serie de casos describió 110 mujeres con he -
+morragia posparto de varias causas a quienes se les 
+realizó ligadura de la arteria iliaca interna como √C
+√
+√C
+√
+CC
+C
+3
+3
+3
+3
+3
+###17###441
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+primera línea de intervención quirúrgica; 88 mu -
+jeres fueron sometidas a la ligadura de la arteria 
+iliaca interna de forma terapéutica  el 39% de las cuales requirieron histerectomía (82).
+Una serie de casos de 100 mujeres reportó un 
+porcentaje de éxito del 90% con la embolización arterial selectiva para la hemorragia obstétrica (83). Cuatro series de casos subsecuentes han reportado éxito en 1 de 1  4 de 4 
+ 10 de 10 y 26 de 29 mujeres 
+que han sido sometidas a esta intervención (84-86).
+Una revisión sistemática que incluyó 46 estudios 
+observacionales o series de casos con 664 pacien -
+tes evaluó los porcentajes de éxito de cada uno de los procedimientos quirúrgicos para el manejo 
+de la hemorragia posparto (87). Los resultados 
+acumulados no mostraron diferencias entre los porcentajes de la embolización arterial (90 7%)  el taponamiento (84%)  las suturas uterinas com -
+presivas (91 7%) y la ligadura de arteria iliaca o 
+desvascularización uterina (84 6%). 
+El uso de agentes farmacológicos no debe 
+retrasar el recurso quirúrgico en los casos de he -
+morragia por atonía uterina. Una vez se toma la 
+decisión  la elección del procedimiento depende 
+de la experiencia y la experticia del equipo de 
+profesionales disponibles. Es importante tener en cuenta las aspiraciones reproductivas futuras de la mujer en la decisión de la secuencia apropiada de 
+intervenciones. Las técnicas quirúrgicas tales como 
+el taponamiento uterino y las suturas hemostáticas 
+pueden detener el sangrado de forma inmediata 
+y facilitar una pronta decisión con respecto a la necesidad de la histerectomía. La técnica B-Lynch 
+como alternativa al manejo de la hemorragia pos -
+parto es invaluable y puede proveer un primer paso 
+quirúrgico para detener la hemorragia cuando las 
+medidas con oxitócicos han fallado.
+El GDG consideró importante incluir el ma -
+nejo antibiótico cuando se utiliza el taponamiento 
+uterino con balón para el control de la hemorragia 
+posparto bajo los mismos preceptos formulados 
+en la revisión de la cavidad uterina y la extracción manual de la placenta. En relación con el tiempo durante el cual se debe dejar el balón  se consideró 
+que un máximo de 24 horas puede ser adecuado 
+en ausencia de evidencia clara sobre este tópico. La histerectomía no se debe retrasar hasta que la mujer esté in extremis o mientras se intentan pro -
+cedimientos menos definitivos si el obstetra tiene menos experiencia en ellos.
+11. ¿cuál es el mejor tipo de histerectomía 
+indicada para el manejo de la hemorragia posparto?
+Se recomienda que el obstetra  de acuer -
+do con su experticia  la condición clínica 
+particular de cada mujer y las condiciones técnicas del sitio operatorio  defina el tipo de histerectomía que va a realizar.
+Una revisión sistemática de 24 series de casos  que 
+incluyó 981 mujeres en quienes se realizó histerec -
+tomía posparto de emergencia  encontró que la his -
+terectomía total fue más común en las mujeres que tenían adherencia anormal de la placenta (88). La morbilidad materna reportada en cuatro estudios no mostró diferencias significativas entre la histe -
+rectomía subtotal (16 de 98) y total (15 de 49) (Z = 1 74; p = 0 08). El daño del tracto urinario fue la complicación más frecuente cuando se realizó histerectomía total comparada con subtotal  pero esta diferencia no fue estadísticamente significativa 
+(16 frente a 30%; p > 0 05).
+La técnica subtotal de histerectomía es la cirugía 
+de elección en muchos casos; hay menos trauma 
+en el cérvix y en el segmento inferior. Aunque no 
+se encuentra diferencia en la morbilidad materna entre la histerectomía total y subtotal  el daño del 
+tracto urinario fue la complicación reportada con 
+más frecuencia cuando se realizó histerectomía total comparada con la subtotal. Se considera que 
+la experticia del clínico cobra relevancia en esta 
+intervención  ya que ante una hemorragia y un útero 3
+2+
+D
+2+
+###18###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013442
+aumentado de tamaño  la probabilidad de que una 
+histerectomía sea total o subtotal dependerá de 
+otros factores adicionales.
+12. ¿cuáles son las intervenciones más 
+efectivas para el control de la hemorragia posparto por acretismo placentario?
+Si la placenta no se separa con las medi -
+das habituales  se recomienda no intentar 
+separarla y remitir a una institución con 
+capacidad resolutiva. El manejo médico o 
+la histerectomía con placenta in situ  están 
+asociados con menor pérdida sanguínea 
+que la separación.
+Si la placenta se separa parcialmente se re -
+comienda que la porción desprendida sea 
+extraída  y la hemorragia que se presente sea manejada de acuerdo con las recomen -
+daciones planteadas. Las porciones que no se desprenden pueden ser dejadas en su lugar  pero la pérdida de sangre en tales circunstancias puede ser mayor y requiere el manejo de una hemorragia masiva de manera oportuna.
+En una serie de casos que incluyó 167 mujeres con 
+placenta acreta en manejo expectante (definido como dejar la placenta parcial o totalmente en su sitio  sin intento de removerla a la fuerza) se reportó 
+éxito en 131 mujeres referente a la prevención del 
+sangrado y a la realización de una histerectomía (49). A 18 mujeres se le realizó histerectomía y a otras 18 se les pudo retrasar este procedimiento 
+por unas horas. La resorción espontánea de la 
+placenta ocurrió en 87 casos y el promedio de tiempo desde el parto hasta la resorción fue  
+de 13 5 semanas.Dos series de casos que incluyeron 37 mujeres con 
+placenta acreta que tuvieron cesárea reportan otros 
+procedimientos como la ligadura  las suturas y la oclusión en el manejo de la hemorragia posparto por acretismo placentario (48  89). Los resultados de estos procedimientos han sido positivos en la reducción de la pérdida de sangre (2.011 mL frente 
+a 3.316 mL; p = 0 042) y en la media del volumen 
+de sangre transfundida (1.058 mL frente a 2.211 
+mL; p = 0 005). 
+El GDG consideró importante la opción de rea -
+lizar ligadura bilateral de la arteria uterina  seguida 
+de una sutura de B-Lynch en mujeres con acretismo 
+placentario que desean preservar su fertilidad. De igual forma  la opción de realizar oclusión perio -
+peratoria de la arteria iliaca interna  si se cuenta con el recurso para realizarla  puede ser adecuada. Como punto importante  no se debe intentar tratar 
+a estas pacientes en instituciones que no cuenten 
+con recurso humano y tecnológico suficiente para manejar las complicaciones.
+Así mismo  se consideró como punto funda -
+mental no intentar separar la placenta en lugares o instituciones donde no se cuente con personal y 
+equipos necesarios y suficientes para atender el caso. 
+Por tanto  una remisión oportuna a una institución de mayor complejidad donde se pueda realizar la 
+extracción de la placenta y al mismo tiempo el 
+manejo de la hemorragia  es vital para disminuir los riesgos de morbilidad y mortalidad.
+13. ¿cuál es la intervención más efectiva 
+para el manejo de la hemorragia obstétrica 
+por abrupcio de placenta?
+Se recomienda que el manejo de la hemo -
+rragia obstétrica por abrupcio de placenta 
+se realice en un nivel de alta complejidad  búsqueda y tratamiento activo de la coa -
+gulopatía (considerar protocolo de trans -
+fusión masiva) y soporte vital avanzado. 
+Una revisión sistemática de estudios de interven -
+ción no identificó ningún ECC para el manejo del 
+abrupcio de placenta (90).D
+D
+3
+3√
+1++
+###19###443
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+Una serie de casos con 59 pacientes evalúo el 
+manejo selectivo de las pacientes con abrupcio de placenta y determinó que la sobrevida neonatal se logra con una adecuada cesárea y con un peso fetal 
+mínimo de 1.500 g (91). 
+La escasa evidencia actualizada y de calidad sobre 
+el manejo de la hemorragia por abrupcio de placenta 
+lleva a considerar intervenciones muy generales y 
+que indiscutiblemente van a estar supeditadas a la situación específica de cada mujer que presente 
+el evento. El GDG consideró que en mujeres con 
+abrupcio y feto muerto se debe evitar al máximo realizar una cesárea y se debe insistir en parto 
+vaginal  simultáneamente con el manejo integral 
+de la situación. 
+14. ¿cuáles son las recomendaciones 
+generales para el uso de hemoderivados en el tratamiento de la mujer con hemorragia 
+obstétrica?
+Se recomienda realizar pruebas cruzadas 
+en hemorragia posparto.
+En los casos en que las pruebas cruzadas 
+no estén disponibles  se recomienda ini -
+ciar con sangre tipo O negativo o sangre específica sin pruebas cruzadas hasta que la sangre específica con pruebas cruzadas esté disponible.
+Se recomienda  en caso de choque hemo -
+rrágico grave  abrupcio de placenta con 
+feto muerto o coagulopatía intravascular diseminada (CID) clínicamente evidente  aplicar un protocolo de transfusión masiva para servicios obstétricos.
+En aquellos sitios que tengan disponibili -
+dad se recomienda reponer glóbulos rojos  
+plasma fresco congelado y plaquetas en una 
+relación 1:1:1.  
+En los sitios con limitación de recursos se 
+pueden reponer glóbulos rojos y plasma 
+fresco congelado en una relación 1 5:1. Se recomienda administrar concentrado de 
+plaquetas si el conteo es menor de 50.000.
+Se recomienda administrar crioprecipitado 
+si el fibrinógeno es menor de 1 g/L. 
+No se recomienda utilizar algún filtro 
+especial de sangre porque disminuye la 
+velocidad de infusión. 
+No existe evidencia en hemorragia obsté -
+trica para recomendar o rechazar el uso de 
+factor VII recombinante.
+Una serie de casos que incluyó 27 pacientes some -
+tidas a cesárea evaluó el efecto de la autotransfusión 
+a través de un proceso denominado rescate celular intraoperatorio  mediante el cual la sangre perdida 
+durante una cirugía es recolectada  filtrada y lim -
+piada a fin de producir glóbulos rojos autólogos 
+para transfundir al paciente (92). En el proceso se retiraron de forma efectiva sustancias como alfaproteína y líquido amniótico de 23 pacientes. 
+Este procedimiento está siendo usado comúnmente 
+en cirugía cardiaca  ortopédica y vascular con  
+una reducción relativa de transfusión del 39% y una reducción del riesgo absoluto del 23%  sin aparente impacto adverso en desenlaces clínicos.
+Una revisión sistemática que incluyó 45 estudios 
+observacionales realizados en pacientes críticamen -
+te enfermos evaluó la eficacia de la transfusión de glóbulos rojos para 272.596 pacientes (93). Los resultados de la revisión indican que la transfusión 
+de glóbulos rojos se asoció con mortalidad (OR = 
+1 7; IC 95%: 1 4-1 9). La infección nosocomial se asoció con la transfusión de glóbulos rojos en nueve estudios (OR = 1 8; IC 95%: 1 5-2 2).
+Una revisión sistemática que incluyó 25 ensayos 
+clínicos con 3.503 pacientes sin hemofilia evaluó 
+la efectividad en el uso del factor VIIa para la pro -
+filaxis y el tratamiento de la hemorragia (94). No 
+se encontraron diferencias en términos de morta -
+lidad con el uso profiláctico del factor VIIa (RR = 1 06; IC 95%: 0 5-2 24)  pero hubo disminución en la pérdida promedio de sangre (DM = -243 mL; IC 95%: -399 a -146 mL). No hubo diferencias en 3
+C
+C
+√
+√
+√C
+C
+C
+B
+3
+2+
+1++
+###20###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013444
+el uso del factor VIIa en el número de pacientes 
+transfundidos (RR = 0 91; IC 95%: 0 81-1 02)  como tampoco en el número de eventos adversos tromboembólicos (RR = 1 32; IC 95%: 0 84-
+2 06). Respecto al uso terapéutico del factor VIIa 
+no se encontraron diferencias para los desenlaces evaluados. No hubo diferencias en la reducción de la mortalidad (RR = 0 89; IC 95%: 0 77-1 03)  ni en los eventos adversos tromboembólicos (RR = 
+1 21; IC 95%: 0 93-1 58). 
+Otra revisión sistemática de intervenciones no encon -
+tró ensayos clínicos acerca del uso de intervenciones 
+hematológicas para tratar la coagulación intravascular 
+diseminada en el embarazo y en el posparto como una 
+de las complicaciones más frecuentes en los eventos 
+de hemorragia obstétrica (95). 
+Si las pruebas cruzadas no están disponibles se 
+debe brindar la mejor alternativa para restaurar la 
+capacidad de transporte de oxígeno. La sangre tipo 
+O negativo puede ser el camino más seguro para evitar una incompatibilidad transfusional. Cuando 
+la pérdida de sangre alcance alrededor de los 4 5 
+litros y se hayan administrado grandes volúmenes de cristaloides  habrá defectos en los factores de coa -
+gulación de la sangre y se tendrán que administrar algunos hemoderivados. 
+El GDG consideró que la reposición de volumen 
+con hemoderivados para mejorar la capacidad de transporte de oxígeno y corregir los problemas de coagulación debe hacerse en una relación 1:1:1. 
+En instituciones donde la disponibilidad de he -
+moderivados no es muy amplia puede hacerse una 
+reposición en una relación de 1 5 a 1.
+15. ¿cuál es la indicación más efectiva 
+para transfundir en ausencia de sangre O 
+negativo? 
+En ausencia de glóbulos rojos O negativo se 
+recomienda iniciar con glóbulos rojos “O” positivo.  Una serie de casos que incluyó 4.241 pacientes 
+evaluó desenlaces como muerte y necesidad de transfusión masiva con la transfusión de glóbulos 
+rojos (96). Solo 1.236 pacientes los recibieron sin 
+pruebas cruzadas. En este grupo de pacientes hubo un incremento en la mortalidad (OR = 2 15; IC 
+95%: 1 58-2 94) y en la necesidad de transfusión 
+masiva (OR = 11 87; IC 95%: 8 43-16 7)  pero los 
+grupos de comparación diferían en sus condiciones 
+basales  como edad y presencia de complicaciones.Una revisión de casos que incluyó 119 pacientes 
+evaluó los resultados de la transfusión de 568 
+unidades de glóbulos rojos tipo “O” positivo sin pruebas cruzadas en la resucitación de pacientes con trauma (97). No se presentó ninguna reacción hemolítica aguda o sensibilización en mujeres jóve -
+nes. Dentro de las 24 horas del ingreso fallecieron 
+38 pacientes  pero ninguna muerte fue atribuible a 
+reacción transfusional o incompatibilidad sanguí -
+nea. Las complicaciones incluyeron arritmias (2 casos)  SDRA (4 casos) y CID (7 casos). Ninguno 
+de los casos de CID se relacionó con incompati -
+bilidad transfusional.
+En una serie de casos que incluyó 153 pacientes con trauma sometidos a transfusión de glóbulos rojos sin pruebas cruzadas (98)  la tasa de mortalidad 
+general fue de 45%  la cual se incrementó a 52 y 
+100% en pacientes que recibieron cuatro y cinco más unidades de glóbulos rojos  respectivamente. 
+Aunque no todos los estudios relacionan las uni -
+dades transfundidas con los desenlaces presentados  
+parece claro que a pesar de brindar una seguridad 
+relativa  la transfusión de glóbulos rojos sin pruebas cruzadas y de sangre tipo “O” positivo en ausencia 
+de sangre tipo “O” negativo se debe limitar y con -
+siderar en cada caso específico.1++
+C3
+3
+3
+###21###445
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+16. ¿cuáles son los aspectos logísticos para 
+tener en cuenta en el manejo del choque 
+hipovolémico por causa obstétrica? 
+Se recomienda que las instituciones de 
+salud que atienden partos cuenten con un protocolo o guía para el manejo de la he -
+morragia posparto.
+Se recomienda que las instituciones de sa -
+lud de primer y segundo nivel que atienden 
+partos cuenten con un protocolo formal para la referencia de las mujeres a un nivel de mayor complejidad.
+Un estudio antes y después acerca de la implemen -
+tación de un sistema de auditoría en el manejo de 
+las mujeres con hemorragia posparto encontró un aumento en la calidad de la adherencia a tres 
+estándares: tipificación y realización de pruebas 
+cruzadas  establecimiento de la hemoglobina y el hematocrito y el diligenciamiento del registro de ingesta y eliminación de líquidos (99). No hubo 
+cambios significativos en el seguimiento estrecho 
+de signos vitales  casos de mortalidad  acceso venoso  administración de fluidos y oxitócicos admi  nistrados.
+El consenso de expertos de la Guía para el 
+ma nejo de la hemorragia posparto y la placenta 
+rete nida de la OMS (53) considera que la imple -
+mentación de un protocolo formal es un proceso 
+complejo que requiere adaptaciones locales.
+17. ¿cuál es la estrategia más efectiva 
+para mejorar las habilidades del personal 
+de salud en el manejo de la hemorragia 
+obstétrica?
+Se recomienda entrenamiento en el ma -
+nejo de la hemorragia posparto a todo el 
+personal que atiende partos.Se recomienda que el entrenamiento para 
+el manejo de la hemorragia posparto se haga bajo la estrategia de simulación. A
+Un ECC que incluyó 106 unidades de maternidad 
+en Francia evalúo la efectividad de una intervención combinada de educación  visitas periódicas  grupos 
+de discusión  recordatorios y revisiones con pares 
+comparada con la difusión pasiva del protocolo de manejo en la incidencia de hemorragia pospar -
+to (100). El porcentaje de hemorragia posparto fue 1 64% en las unidades intervenidas frente a 1 65% en las unidades de control  por lo que no se encontraron diferencias significativas. Algunos 
+elementos del manejo de la hemorragia posparto 
+fueron aplicados más frecuentemente en las uni -
+dades con la intervención  como la ayuda de un grupo de expertos  o la tendencia a una segunda 
+línea de tratamiento farmacológico y el análisis de 
+sangre a tiempo. Un ECC que incluyó 36 profesionales de la salud evaluó la enseñanza basada en lectura comparada con la enseñanza basada en simulación o la combi -
+nación de ambas para el manejo de la hemorragia 
+posparto (101). Todos los equipos mejoraron en 
+su desempeño y conocimiento. El equipo en el que se usó solo simulación fue el único grupo que demostró mejoramiento sostenido en el manejo clínico del caso  confidencia  habilidades de co -
+municación y conocimiento. Este mismo grupo reportó habilidades transferibles y menos ansiedad en emergencias subsecuentes. Una revisión sistemática que incluyó 609 estudios 
+y 35.226 personas de diversas áreas de la salud 
+comparó el entrenamiento basado en la simulación contra ninguna intervención. En comparación con la no intervención el entrenamiento por simulación se asoció con el conocimiento (RR = 1 20; IC 95%: 
+1 04-1 35)  las habilidades de manejo del tiempo 
+(RR = 1 14; IC 95%: 1 03-1 25)  las habilidades de proceso (RR = 1 09; IC 95%: 1 03-1 16)  las habilidades del producto (RR = 1 18; IC 95%: D
+D
+3
+AA
+(á)
+1+
+1+
+1++
+###22###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013446
+0 98-1 37)  los comportamientos del tiempo (RR 
+= 0 79; IC 95%: 0 47-1 10)  otros comportamien -
+tos (RR = 0 81; IC 95%: 0 66-0 96) y con efectos directos sobre los pacientes (RR = 0 50; IC 95%: 
+0 34-0 66) (102).  
+Aunque se requieren más estudios que permi -
+tan mostrar cambios positivos en la incidencia de 
+complicaciones y de mortalidad a través del mejo -
+ramiento de habilidades técnicas  comunicacionales 
+y del conocimiento  es claro que el camino hacia 
+este propósito es el entrenamiento en escenarios de 
+simulación y un acompañamiento continuo para el mantenimiento de las habilidades adquiridas.
+decLARAcIón de 
+conFLIctos de InteRÉs
+El trabajo científico de investigación  así como la 
+elaboración de las recomendaciones incluidas en el 
+presente documento  fueron realizados de manera 
+independiente por el Grupo Desarrollador de Guías (GDG) de la Universidad Nacional de Colombia. 
+Todos los miembros del GDG  así como las perso -
+nas que han participado tanto en la colaboración 
+experta como en la revisión externa  realizaron 
+declaración de conflictos de interés previo a su 
+participación. Esta Guía se publica con el permisodel Ministerio de Salud y Protección Social y el 
+Departamento de Ciencia  Tecnología e Innovación
+(Colciencias). ISBN 978-958-57937-4-3.
+ActuALIZAcIón de LA GuÍA
+Las recomendaciones de esta Guía deben actualizar -
+se en los próximos tres años a partir de su expedi -
+ción  o previamente en caso de disponer de nuevas evidencias que modifiquen de manera significativa las recomendaciones aquí anotadas.
+Fuentes de FInAncIAcIón
+Ministerio de Salud y Protección Social de Co -
+lombia - Departamento de Ciencia  Tecnología e 
+Innovación (Colciencias).RepResent Antes deL  GRupo 
+desARRoLLAdoR de LA  GuÍA  
+- unIveRsIdAd nAcIonAL  de 
+coLombIA  - ALIAnZA   
+cInets  
+Joaquín Guillermo Gómez Dávila MD  MSc. Médico cirujano. 
+Especialista en Obstetricia y Ginecología. Magíster en Epide -
+miología. Director Centro NACER. Docente  Universidad de Antioquia.
+Jhon Henry Osorio Castaño  Enf. MSc. Coordinador Epidemio -
+logía Clínica de la subguía. Enfermero. Especialista en Gerencia 
+de IPS. Magíster en Epidemiología.Gladis Adriana Vélez Álvarez  MD  MSP. Médica cirujana. Especialista en Obstetricia y Ginecología. Magíster en Salud 
+Pública. Coordinadora Área Salud Sexual y Reproductiva  
+NACER-Universidad de Antioquia.John Jairo Zuleta Tobón MD  MSc. Médico cirujano. Especia -
+lista en Obstetricia y Ginecología. Magíster en Epidemiología. Docente  Universidad de Antioquia  NACER.Juan Guillermo Londoño Cardona  MD. Médico cirujano. Es -
+pecialista en Obstetricia y Ginecología. Coordinador del Área 
+de Educación  NACER-Universidad de Antioquia. 
+Jesús Arnulfo Velásquez Penagos  MD. Médico cirujano. Espe -
+cialista en Obstetricia y Ginecología. Fellow en Cuidado Crítico Obstétrico. Coordinador de Mortalidad Materna-NACER. 
+Docente  Universidad de Antioquia
+Ingrid Arévalo-Rodríguez MSc  PhD (c). Epidemióloga clíni -
+ca  Universidad Nacional de Colombia. PhD (c) en Pediatría  
+Obstetricia y Ginecología  Medicina Preventiva y Salud Pública  Universidad Autónoma de Barcelona. Coordinadora General de Epidemiología Clínica de la Guía. Instructor asociado División 
+de Investigaciones  Fundación Universitaria de Ciencias de la 
+Salud  Hospital de San José-Hospital Infantil de San José.
+Pio Iván Gómez-Sánchez  MD  MSc  FACOG. Médico cirujano. 
+Especialista en Obstetricia y Ginecología  y Epidemiología. Magíster en Salud Sexual y Reproductiva. Profesor Titular y Director del Grupo de Investigación en Salud Sexual y Repro -
+ductiva de la Facultad de Medicina  Universidad Nacional de 
+Colombia. Líder general de la GPC.
+###23###447
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+ReconocImIento 
+A InstItucIones pARtIcIp Antes 
+Las siguientes instituciones participaron en los consensos de 
+expertos o reuniones de socialización de la GPC para la pre  ven-
+ción  detección temprana y tratamiento de las complica  ciones 
+del embarazo  parto o puerperio:  Federación Colombiana  
+de Obstetricia y Ginecología ( Fecolsog )  Sociedad Colombiana 
+de Anestesiología y Reanimación ( scare)  Asociación Colombiana  
+de Facultades de Medicina ( ascoFame)  Asociación Colombiana 
+de Facultades de Enfermería ( acoFaen)  Asociación Colombiana 
+de Empresas de Medicina Integral ( acemi)  Academia Nacional 
+de Medicina  Colegio Médico Colombiano  Asociación Colom-
+biana de Hospitales y Clínicas  Instituto Nacional de Salud  Cafam IPS  Centro Médico Imbanaco  Clínica de Occidente  
+Clínica de la Mujer  Clínica del Norte  Clínica Materno Infan -
+til Farallones  Clínica el Rosario  Clínica El Prado  Fundación 
+Cardioinfantil  Fundación Valle de Lili  Fundación Santafé de Bogotá  Hospital Militar  Hospital San José  Hospital Simón Bolívar  Fundación Universitaria de Ciencias de la Salud  Uni -
+versidad de Antioquia  Universidad del Quindío  Universidad 
+Libre  Universidad Surcolombiana  Comfama  Metrosalud.
+ReFeRencIAs
+1. WHO U  UNFPA  Bank. W . T rends in Maternal Mortality: 
+1990-2008: WHO Library Cataloguing-in-Publication 
+Data; [2010 Jan 2012]. Disponible: http://whqlibdoc.
+who.int/publications/2010/9789241500265_eng.pdf.
+2. Carroli G  Cuesta C  Abalos E  Gulmezoglu AM. Epidemiology of postpartum haemorrhage: a systematic review. Best Pract Res Clin Obstet Gynaecol. 2008;22:999-1012. Epub 2008/09/30.
+3. Alcaldía de Medellín. Salud sexual y reproductiva  Universidad de Antioquia. Informe final de la vigilancia epidemiológica de la Morbilidad Obstétrica Severa en la ciudad de Medellín. Medellín: Secretaría de Salud  
+Dirección de Salud Pública. Nacer Salud sexual y 
+reproductiva  Universidad de Antioquia; 2008.
+4. Lalonde A  Daviss BA  Acosta A  Herschderfer K. Postpartum hemorrhage today: ICM/FIGO initiative 2004-2006. Int J Gynaecol Obstet. 2006;94:243-53. Epub 2006/07/18.5. Waterstone M  Bewley S  Wolfe C. Incidence and predictors of severe obstetric morbidity: case-control study. BMJ. 2001;322:1089-93. Epub 2001/05/05.
+6. Royal College of Obstetricians and Gynaecologists. Prevention and Management of Postpartum Haemorrhage. London; 2009 [Visitado 2011 
+Jun 1]. Disponible en: http://www.rcog.org.uk/
+womens-health/clinical-guidance/prevention-and-
+management-postpartum-haemorrhage-green-
+top-52.
+7. World Health Organization. WHO guidelines for the 
+management of postpartum haemorrhage and retained 
+placenta. Geneve: WHO Press; 2009 [Visitado 2011 Jun 1]. Disponible en: http://whqlibdoc.who.int/publications/2009/9789241598514_eng.pdf.
+8. Ministerio de Salud y Protección Social  Colciencias. Guía de práctica clínica para la prevención  detección 
+temprana y tratamiento de las complicaciones del 
+embarazo  parto o puerperio. Versión completa. Bogotá: Alianza CINETS; 2013. ISBN: 978-958-57937-4-3. Disponible en: http://www.guiascol 
+cienciasminproteccionsocialalianzacinets.org/index.
+php?option=com_wrapper&view=wrapper&Itemid=552.
+9. Ministerio de Salud y Protección Social  Colciencias. Guía de práctica clínica para la prevención  detección 
+temprana y tratamiento de las complicaciones 
+del embarazo  parto o puerperio. Version para pacientes. Bogotá: Alianza Cinets; 2013. ISBN: 978-958-8838-07-6. Disponible en: h ttp://www.
+guiascolcienciasminproteccionsocialalianzacinets.org/index.php?option=com_wrapper&view=wrapper&I
+temid=552 .
+10. Prendiville WJ  Elbourne D  McDonald S. Active versus 
+expectant management in the third stage of labour. Cochrane Database Syst Rev. 2000(3):CD000007. 
+Epub 2000/07/25.
+11. Begley CM  Gyte GM  Devane D  McGuire W   Weeks 
+A. Active versus expectant management for women in the third stage of labour. Cochrane Database Syst Rev. 2011(11):CD007412. Epub 2011/11/11.
+###24###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013448
+12. Elbourne DR  Prendiville WJ  Carroli G  Wood J  
+McDonald S. Prophylactic use of oxytocin in the third stage of labour. Cochrane Database Syst Rev. 2001(4):CD001808. Epub 2001/11/01.
+13. Soltani H  Hutchon DR  Poulose TA. Timing of prophylactic uterotonics for the third stage of labour after vaginal birth. Cochrane Database Syst Rev. 2010(8):CD006173. Epub 2010/08/06.
+14. McDonald S  Abbott JM  Higgins SP . Prophylactic 
+ergometrine-oxytocin versus oxytocin for the 
+third stage of labour. Cochrane Database Syst Rev. 2004(1):CD000201. Epub 2004/02/20.
+15. Gulmezoglu AM  Forna F  Villar J  Hofmeyr 
+GJ. Prostaglandins for preventing postpartum 
+haemorrhage. Cochrane Database Syst Rev. 2007(3): 
+CD000494. Epub 2007/07/20.
+16. Alfirevic Z  Blum J  Walraven G  Weeks A  Winikoff B. Prevention of postpartum hemorrhage with 
+misoprostol. Int J Gynaecol Obstet. 2007;99 Suppl 
+2:S198-201. Epub 2007/10/27.
+17. Liabsuetrakul T  Choobun T  Peeyananjarassri K  Islam QM. Prophylactic use of ergot alkaloids in the third stage of labour. Cochrane Database Syst Rev. 
+2007(2):CD005456. Epub 2007/04/20.
+18. Novikova N  Hofmeyr GJ. T ranexamic acid for 
+preventing postpartum haemorrhage. Cochrane Database Syst Rev. 2010(7):CD007872. Epub 
+2010/07/09.
+19. Peters NC  Duvekot JJ. Carbetocin for the prevention 
+of postpartum hemorrhage: a systematic review. Obstet Gynecol Surv. 2009;64:129-35. Epub 2009/01/23.
+20. Mathew JL. Timing of umbilical cord clamping in 
+term and preterm deliveries and infant and maternal 
+outcomes: a systematic review of randomized controlled trials. Indian Pediatr. 2011;48:123-9. Epub 2011/03/08.
+21. McDonald SJ  Middleton P . Effect of timing of 
+umbilical cord clamping of term infants on maternal 
+and neonatal outcomes. Cochrane Database Syst Rev. 
+2008(2):CD004074. Epub 2008/04/22.
+22. Hofmeyr GJ  Abdel-Aleem H  Abdel-Aleem MA. Uterine massage for preventing postpartum haemorrhage. Cochrane Database Syst Rev. 2008(3): 
+CD006431. Epub 2008/07/23.
+23. Dennehy KC  Rosaeg OP   Cicutti NJ  Krepski B  
+Sylvain JP . Oxytocin injection after caesarean delivery: 
+intravenous or intramyometrial? Can J Anaesth. 
+1998;45:635-9. Epub 1998/08/26.
+24. Munn MB  Owen J  Vincent R  Wakefield M  Chestnut 
+DH  Hauth JC. Comparison of two oxytocin regimens 
+to prevent uterine atony at cesarean delivery: a 
+randomized controlled trial. Obstet Gynecol. 2001;98:386-90. Epub 2001/09/01.
+25. Lokugamage AU  Paine M  Bassaw-Balroop K  Sullivan KR  Refaey HE  Rodeck CH. Active management of the third stage at caesarean section: a randomised controlled trial of misoprostol versus syntocinon. Aust N Z J Obstet Gynaecol. 2001;41:411-4. Epub 2002/01/15.
+26. Chou MM  MacKenzie IZ. A prospective  double-blind  randomized comparison of prophylactic intramyometrial 15-methyl prostaglandin F2 alpha  125 micrograms  and intravenous oxytocin  20 units  
+for the control of blood loss at elective cesarean 
+section. Am J Obstet Gynecol. 1994;171:1356-60. Epub 1994/11/01.
+27. George RB  McKeen D  Chaplin AC  McLeod L. Up-down determination of the ED(90) of oxytocin 
+infusions for the prevention of postpartum uterine 
+atony in parturients undergoing Cesarean delivery. Can J Anaesth. 2010;57:578-82. Epub 2010/03/20.
+28. Svanstrom MC  Biber B  Hanes M  Johansson G  Naslund U  Balfors EM. Signs of myocardial ischaemia after injection of oxytocin: a randomized double-blind 
+comparison of oxytocin and methylergometrine during 
+Caesarean section. Br J Anaesth. 2008;100:683-9. Epub 2008/04/04.
+29. Butwick AJ  Coleman L  Cohen SE  Riley ET  
+Carvalho B. Minimum effective bolus dose of oxytocin 
+during elective Caesarean delivery. Br J Anaesth. 2010;104:338-43. Epub 2010/02/13.
+30. Sheehan SR  Montgomery AA  Carey M  McAuliffe FM  Eogan M  Gleeson R  et al. Oxytocin bolus versus 
+oxytocin bolus and infusion for control of blood loss 
+###25###449
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+at elective caesarean section: double blind  placebo 
+controlled  randomised trial. BMJ. 2011;343:d4661. Epub 2011/08/03.
+31. King KJ  Douglas MJ  Unger W   Wong A  King RA. 
+Five unit bolus oxytocin at cesarean delivery in 
+women at risk of atony: a randomized  double-blind  controlled trial. Anesth Analg. 2010;111:1460-6. Epub 2010/10/05.
+32. Gungorduk K  Asicioglu O  Celikkol O  Olgac Y  Ark 
+C. Use of additional oxytocin to reduce blood loss at 
+elective caesarean section: A randomised control trial. Aust N Z J Obstet Gynaecol. 2010;50:36-9. Epub 
+2010/03/12.
+33. McLeod G  Munishankar B  MacGregor H  Murphy DJ. Maternal haemodynamics at elective caesarean 
+section: a randomised comparison of oxytocin 5-unit bolus and placebo infusion with oxytocin 5-unit bolus and 30-unit infusion. Int J Obstet Anesth. 2010;19:155-60. Epub 2010/03/03.
+34. Quiroga R  Cantu R  T ello HE  Puente M  Montemayor R  Martinez A. [Intrauterine misoprostol for the prevention of bleeding cesarean]. Ginecol Obstet Mex. 2009;77:469-74. Epub 2009/11/12. 
+35. Chaudhuri P   Banerjee GB  Mandal A. Rectally administered misoprostol versus intravenous oxytocin infusion during cesarean delivery to reduce intraoperative and postoperative blood loss. Int J Gynaecol Obstet. 2010;109:25-9. Epub 2010/01/15.
+36. Eftekhari N  Doroodian M  Lashkarizadeh R. The effect of sublingual misoprostol versus intravenous oxytocin in reducing bleeding after caesarean section. J Obstet Gynaecol. 2009;29:633-6. Epub 2009/09/17.
+37. Sekhavat L  T abatabaii A  Dalili M  Farajkhoda T  T afti AD. Efficacy of tranexamic acid in reducing blood loss after cesarean section. J Matern Fetal Neonatal Med. 2009;22:72-5. Epub 2009/01/24.
+38. Attilakos G  Psaroudakis D  Ash J  Buchanan R  Winter 
+C  Donald F  et al. Carbetocin versus oxytocin for the 
+prevention of postpartum haemorrhage following 
+caesarean section: the results of a double-blind randomised trial. BJOG. 2010;117(8):929-36. Epub 2010/05/21.39. Borruto F  T reisser A  Comparetto C. Utilization of 
+carbetocin for prevention of postpartum hemorrhage 
+after cesarean section: a randomized clinical trial. Arch Gynecol Obstet. 2009;280:707-12. Epub 
+2009/02/21.
+40. CRES. Informe Técnico 125: Efectividad  seguridad y análisis económico de la carbetocina versus la oxitocina 
+para la prevención de la atonía uterina y hemorragia 
+posparto; 2011.
+41. Levine AB  Kuhlman K  Bonn J. Placenta accreta: 
+comparison of cases managed with and without 
+pelvic artery balloon catheters. J Matern Fetal Med. 
+1999;8:173-6. Epub 1999/07/16.
+42. Alvarez M  Lockwood CJ  Ghidini A  Dottino P   Mitty HA  Berkowitz RL. Prophylactic and emergent arterial catheterization for selective embolization in obstetric hemorrhage. Am J Perinatol. 1992;9:441-4. Epub 
+1992/09/01.
+43. Mitty HA  Sterling KM  Alvarez M  Gendler R. 
+Obstetric hemorrhage: prophylactic and emergency arterial catheterization and embolotherapy. Radiology. 
+1993;188:183-7. Epub 1993/07/01.
+44. Dubois J  Garel L  Grignon A  Lemay M  Leduc L. 
+Placenta percreta: balloon occlusion and embolization of the internal iliac arteries to reduce intraoperative blood losses. Am J Obstet Gynecol. 1997;176:723-6. 
+Epub 1997/03/01.
+45. Hansch E  Chitkara U  McAlpine J  El-Sayed Y  
+Dake MD  Razavi MK. Pelvic arterial embolization 
+for control of obstetric hemorrhage: a five-year experience. Am J Obstet Gynecol. 1999;180(6 Pt 1):1454-60. Epub 1999/06/16.
+46. Ojala K  Perala J  Kariniemi J  Ranta P   Raudaskoski T  T ekay A. Arterial embolization and prophylactic catheterization for the treatment for severe obstetric hemorrhage. Acta Obstet Gynecol Scand. 
+2005;84:1075-80. Epub 2005/10/20.
+47. Bodner LJ  Nosher JL  Gribbin C  Siegel RL  Beale S  
+Scorza W . Balloon-assisted occlusion of the internal iliac arteries in patients with placenta accreta/percreta. Cardiovasc Intervent Radiol. 2006;29:354-61. Epub 
+2006/02/28.
+###26###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013450
+48. T an CH  T ay KH  Sheah K  Kwek K  Wong K  T an HK  
+et al. Perioperative endovascular internal iliac artery occlusion balloon placement in management of placenta accreta. AJR Am J Roentgenol. 2007;189:1158-63. 
+Epub 2007/10/24.
+49. Sentilhes L  Ambroselli C  Kayem G  Provansal M  
+Fernandez H  Perrotin F  et al. Maternal outcome after conservative treatment of placenta accreta. Obstet Gynecol. 2010;115:526-34. Epub 2010/02/24.
+50. van Beekhuizen HJ  de Groot AN  De Boo T  Burger D  Jansen N  Lotgering FK. Sulprostone reduces the need for the manual removal of the placenta in patients 
+with retained placenta: a randomized controlled 
+trial. Am J Obstet Gynecol. 2006;194:446-50. Epub 
+2006/02/07.
+51. Nardin JM  Weeks A  Carroli G. Umbilical vein 
+injection for management of retained placenta. Cochrane Database Syst Rev. 2011(5):CD001337. 
+Epub 2011/05/13.
+52. Abdel-Aleem H  Abdel-Aleem MA  Shaaban OM. 
+T ocolysis for management of retained placenta. Cochrane Database Syst Rev. 2011(1):CD007708. Epub 2011/01/21.
+53. Chongsomchai C  Lumbiganon P   Laopaiboon M. Prophylactic antibiotics for manual removal of retained placenta in vaginal birth. Cochrane Database Syst Rev. 2006(2):CD004904. Epub 2006/04/21.
+54. Baskett PJ. ABC of major trauma. Management of hypovolaemic shock. BMJ. 1990;300:1453-7. Epub 1990/06/02.
+55. Bose P   Regan F  Paterson-Brown S. Improving the accuracy of estimated blood loss at obstetric 
+haemorrhage using clinical reconstructions. BJOG. 
+2006;113:919-24. Epub 2006/08/16.
+56. Duthie SJ  Ven D  Yung GL  Guang DZ  Chan SY  Ma HK. Discrepancy between laboratory 
+determination and visual estimation of blood loss 
+during normal delivery. Eur J Obstet Gynecol Reprod 
+Biol. 1991;38:119-24. Epub 1991/01/30.
+57. Ho AM  Karmakar MK  Dion PW . Are we giving 
+enough coagulation factors during major trauma resuscitation? Am J Surg. 2005;190:479-84. Epub 
+2005/08/18.58. Hirshberg A  Dugas M  Banez EI  Scott BG  Wall MJ  Jr.  Mattox KL. Minimizing dilutional coagulopathy in 
+exsanguinating hemorrhage: a computer simulation. J T rauma. 2003;54:454-63. Epub 2003/03/14.
+59. Human albumin administration in critically ill patients: systematic review of randomised controlled trials. 
+Cochrane Injuries Group Albumin Reviewers. BMJ. 
+1998;317:235-40. Epub 1998/07/24.
+60. Roberts I  Blackhall K  Alderson P   Bunn F  Schierhout G. 
+Human albumin solution for resuscitation and volume expansion in critically ill patients. Cochrane Database 
+Syst Rev. 2011(11):CD001208. Epub 2011/11/11.
+61. Perel P   Roberts I. Colloids versus crystalloids for 
+fluid resuscitation in critically ill patients. Cochrane Database Syst Rev. 2011(3):CD000567. Epub 2011/03/18.
+62. Havel C  Arrich J  Losert H  Gamper G  Mullner 
+M  Herkner H. Vasopressors for hypotensive shock. 
+Cochrane Database Syst Rev. 2011(5):CD003709. Epub 2011/05/13.
+63. Mousa HA  Alfirevic Z. T reatment for primary 
+postpartum haemorrhage. Cochrane Database Syst 
+Rev. 2007(1):CD003249. Epub 2007/01/27.
+64. Buttino L  Jr.  Garite TJ. The use of 15 methyl F2 alpha prostaglandin (Prostin 15M) for the control of postpartum hemorrhage. Am J Perinatol. 1986;3:241-
+3. Epub 1986/07/01.
+65. Oleen MA  Mariano JP . Controlling refractory atonic 
+postpartum hemorrhage with Hemabate sterile solution. Am J Obstet Gynecol. 1990;162:205-8. Epub 1990/01/01.
+66. Hofmeyr GJ  Walraven G  Gulmezoglu AM  
+Maholwana B  Alfirevic Z  Villar J. Misoprostol to 
+treat postpartum haemorrhage: a systematic review. BJOG. 2005;112:547-53. Epub 2005/04/22.
+67. Widmer M  Blum J  Hofmeyr GJ  Carroli G  Abdel-
+Aleem H  Lumbiganon P   et al. Misoprostol as an 
+adjunct to standard uterotonics for treatment of post-partum haemorrhage: a multicentre  double-blind randomised trial. Lancet. 2010;375:1808-13. Epub 2010/05/25.
+68. Blum J  Winikoff B  Raghavan S  Dabash R  Ramadan MC  Dilbaz B  et al. T reatment of post-partum 
+###27###451
+Guía de práctica  clínica  para la prevención  y el manejo  de la hemorra Gia posparto  y complicaciones  del choque  hemorráGico
+haemorrhage with sublingual misoprostol versus 
+oxytocin in women receiving prophylactic oxytocin: a double-blind  randomised  non-inferiority trial. Lancet. 2010;375:217-23. Epub 2010/01/12.
+69. Winikoff B  Dabash R  Durocher J  Darwish E  Nguyen TN  Leon W   et al. T reatment of post-partum haemorrhage with sublingual misoprostol versus oxytocin in women not exposed to oxytocin during labour: a double-blind  randomised  non-inferiority 
+trial. Lancet. 2010;375:210-6. Epub 2010/01/12.
+70. Ducloy-Bouthors AS  Jude B  Duhamel A  Broisin 
+F  Huissoud C  Keita-Meyer H  et al. High-dose 
+tranexamic acid reduces blood loss in postpartum 
+haemorrhage. Crit Care. 2011;15:R117. Epub 
+2011/04/19.
+71. Abdel-Aleem H  Singata M  Abdel-Aleem M  
+Mshweshwe N  Williams X  Hofmeyr GJ. Uterine massage to reduce postpartum hemorrhage after vaginal delivery. Int J Gynaecol Obstet. 2010;111:32-
+6. Epub 2010/07/06.
+72. Ikechebelu JI  Obi RA  Joe-Ikechebelu NN. The 
+control of postpartum haemorrhage with intrauterine Foley catheter. J Obstet Gynaecol. 2005;25:70-2. 
+Epub 2005/09/09.
+73. Bakri YN  Amri A  Abdul Jabbar F. T amponade-
+balloon for obstetrical bleeding. Int J Gynaecol Obstet. 2001;74:139-42. Epub 2001/08/15.
+74. Chan C  Razvi K  Tham KF  Arulkumaran S. The use of 
+a Sengstaken-Blakemore tube to control post-partum 
+hemorrhage. Int J Gynaecol Obstet. 1997;58:251-2. Epub 1997/08/01.
+75. Condous GS  Arulkumaran S  Symonds I  Chapman 
+R  Sinha A  Razvi K. The “tamponade test” in the 
+management of massive postpartum hemorrhage. Obstet Gynecol. 2003;101:767-72. Epub 2003/04/12.
+76. Akhter S  Begum MR  Kabir Z  Rashid M  Laila 
+TR  Zabeen F. Use of a condom to control massive 
+postpartum hemorrhage. Med Gen Med. 2003;5:38. 
+Epub 2003/11/06.
+77. B-Lynch C  Coker A  Lawal AH  Abu J  Cowen MJ. 
+The B-Lynch surgical technique for the control of massive postpartum haemorrhage: an alternative to hysterectomy? Five cases reported. Br J Obstet Gynaecol. 1997;104:372-5. Epub 1997/03/01.
+78. Hayman RG  Arulkumaran S  Steer PJ. Uterine 
+compression sutures: surgical management of 
+postpartum hemorrhage. Obstet Gynecol. 2002;99:502-6. Epub 2002/02/28.
+79. Ghezzi F  Cromi A  Uccella S  Raio L  Bolis P   Surbek D. The Hayman technique: a simple method to treat 
+postpartum haemorrhage. BJOG. 2007;114:362-5. 
+Epub 2007/01/16.
+80. Hwu YM  Chen CP   Chen HS  Su TH. Parallel vertical 
+compression sutures: a technique to control bleeding 
+from placenta praevia or accreta during caesarean 
+section. BJOG. 2005;112:1420-3. Epub 2005/09/20.
+81. Kafali H  Demir N  Soylemez F  Yurtseven S. Hemostatic 
+cervical suturing technique for management of uncontrollable postpartum haemorrhage originating from the cervical canal. Eur J Obstet Gynecol Reprod 
+Biol. 2003;110:35-8. Epub 2003/08/23.
+82. Joshi VM  Otiv SR  Majumder R  Nikam YA  
+Shrivastava M. Internal iliac artery ligation for arresting postpartum haemorrhage. BJOG. 2007;114:356-61. 
+Epub 2007/01/31.
+83. Dildy GA  3rd. Postpartum hemorrhage: new 
+management options. Clin Obstet Gynecol. 2002;45:330-44. Epub 2002/06/06.
+84. Hong TM  T seng HS  Lee RC  Wang JH  Chang CY. Uterine artery embolization: an effective treatment for intractable obstetric haemorrhage. Clin Radiol. 2004;59:96-101. Epub 2003/12/31.
+85. Bloom AI  Verstandig A  Gielchinsky Y  Nadiari M  Elchalal U. Arterial embolisation for persistent 
+primary postpartum haemorrhage: before or after 
+hysterectomy? BJOG. 2004;111:880-4. Epub 2004/07/24.
+86. Yong SP   Cheung KB. Management of primary postpartum haemorrhage with arterial embolisation 
+in Hong Kong public hospitals. Hong Kong Med J. 
+2006;12:437-41. Epub 2006/12/07.
+87. Doumouchtsis SK  Papageorghiou AT  Arulkumaran S. Systematic review of conservative management of postpartum hemorrhage: what to do when medical 
+###28###Revista Colombiana de Obstetricia y Ginecología Vol. 64 No. 4 • 2013452
+treatment fails. Obstet Gynecol Surv. 2007;62:540-7. 
+Epub 2007/07/20.
+88. Rossi AC  Lee RH  Chmait RH. Emergency postpartum hysterectomy for uncontrolled postpartum bleeding: a 
+systematic review. Obstet Gynecol. 2010;115:637-44. 
+Epub 2010/02/24.
+89. Shahin AY  Farghaly TA  Mohamed SA  Shokry M  Abd-El-Aal DE  Youssef MA. Bilateral uterine artery ligation plus B-Lynch procedure for atonic postpartum 
+hemorrhage with placenta accreta. Int J Gynaecol 
+Obstet. 2010;108:187-90. Epub 2009/12/01.
+90. Neilson JP . Interventions for treating placental 
+abruption. Cochrane Database Syst Rev. 2003(1): 
+CD003247. Epub 2003/01/22.
+91. Hurd WW   Miodovnik M  Hertzberg V   Lavin JP . 
+Selective management of abruptio placentae: a prospective study. Obstet Gynecol. 1983;61:467-73. Epub 1983/04/01.
+92. Catling SJ  Williams S  Fielding AM. Cell salvage in obstetrics: an evaluation of the ability of cell salvage combined with leucocyte depletion filtration to remove amniotic fluid from operative blood loss at caesarean section. Int J Obstet Anesth. 1999;8:79-84. 
+Epub 2004/08/24.
+93. Marik PE  Corwin HL. Efficacy of red blood cell 
+transfusion in the critically ill: a systematic review of the literature. Crit Care Med. 2008;36:2667-74. Epub 
+2008/08/06.
+94. Simpson E  Lin Y  Stanworth S  Birchall J  Doree 
+C  Hyde C. Recombinant factor VIIa for the prevention and treatment of bleeding in patients without haemophilia. Cochrane Database Syst Rev. 
+2012;3:CD005011. Epub 2012/03/16.
+95. Marti-Carvajal AJ  Comunian-Carrasco G  Pena-
+Marti GE. Haematological interventions for treating disseminated intravascular coagulation during preg-
+nancy and postpartum. Cochrane Database Syst Rev. 
+2011(3):CD008577. Epub 2011/03/18.
+96. Inaba K  T eixeira PG  Shulman I  Nelson J  Lee J  
+Salim A  et al. The impact of uncross-matched blood 
+transfusion on the need for massive transfusion and 
+mortality: analysis of 5 166 uncross-matched units. 
+J T rauma. 2008;65:1222-6. Epub 2008/12/17.
+97. Cortés A  Bolaños F. Reanimación con glóbulos rojos 
+Rh positivo y sin prueba cruzada en emergencias médicas. Colomb Med. 2004;35:185-90.
+98. Ball CG  Salomone JP   Shaz B  Dente CJ  T allah C  Anderson K  et al. Uncrossmatched blood transfusions for trauma patients in the emergency department: incidence  outcomes and recommendations. Can J Surg. 2011;54:111-5. Epub 2011/01/22.
+99. Kongnyuy EJ  Mlava G  van den Broek N. Using 
+criteria-based audit to improve the management 
+of postpartum haemorrhage in resource limited countries: a case study of Malawi. Matern Child Health J. 2009;13:873-8. Epub 2008/09/10.
+100. Deneux-Tharaux C  Dupont C  Colin C  Rabilloud M  T ouzet S  Lansac J  et al. Multifaceted intervention to decrease the rate of severe postpartum haemorrhage: the PITHAGORE6 cluster-randomised controlled trial. BJOG. 2010;117:1278-87. Epub 2010/06/25.
+101. Birch L  Jones N  Doyle PM  Green P   McLaughlin A  Champney C  et al. Obstetric skills drills: evaluation of teaching methods. Nurse Educ T oday. 2007;27:915-22. Epub 2007/03/23.
+102. Cook DA  Hatala R  Brydges R  Zendejas B  Szostek JH  Wang AT  et al. T echnology-enhanced simulation 
+for health professions education: a systematic review 
+and meta-analysis. JAMA. 2011;306:978-88. Epub 2011/09/09.

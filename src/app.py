@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 from back import *
 import json
+import ast
 import atexit
 
 app = Flask(__name__)
@@ -48,12 +49,18 @@ def receive_question():
         sources_to_print = {}
         for src in sources:
             if src[0] in sources_to_print:
-                sources_to_print[src[0]].append(src[1].replace("[","").replace("]","").replace("'",""))
+                sources_to_print[src[0]].append(src[1].replace("[","").replace("]","").replace("'","").split(', '))
             else:
-                sources_to_print[src[0]] = [src[1].replace("[","").replace("]","").replace("'","")]
+                sources_to_print[src[0]] = [src[1].replace("[","").replace("]","").replace("'","").split(', ')]
+
+        print(sources_to_print)
+        # for src in sources:
+        #     temp = src[1].replace("[", "").replace("]", "").replace("'", "").split(", ")
+        #     for i in range(len(temp)):
+        #         temp[i]=int(temp[i])
+        #     sources_to_print[src[1]] = temp
+        #     print("src",sources_to_print[src[1]])
         
-        #for key,val in sources_to_print.items():
-            #print(key, val)
 # Example of question: What is oxytocin and what is it purpose in obstetric?
         # print(answer,set(sources))
         # Creation of the json answer
