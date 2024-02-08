@@ -5,8 +5,9 @@ import openai
 import pandas as pd
 import numpy as np
 from openai.embeddings_utils import distances_from_embeddings
+import chromadb
 
-openai.api_key = ""
+openai.api_key = os.getenv("OpenAIKey")
 openai.api_base = "https://invuniandesai.openai.azure.com/"
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
@@ -90,7 +91,7 @@ def generate_answer(question,df_embeddings, history, deployment=deployment_name)
         print("------------prev questions\n", quest, "-->", ans)
         nb_tokens+=len(quest.split())+len(ans.split())
     print("\n\n+++++++++++++++++", nb_tokens)
-    if nb_tokens<1000:
+    if nb_tokens<2000:
         response = openai.ChatCompletion.create(
             engine= deployment_name, # engine = "deployment_name".
             #prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
@@ -100,7 +101,7 @@ def generate_answer(question,df_embeddings, history, deployment=deployment_name)
                 # scientifically-grounded answers to common consumer search queries about 
                 # obstetric health.
 
-                {"role": "user", "content": f"Answer the question based on the context below, taking into account the previous questions and the answers that have already been given, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer:"},
+                {"role": "user", "content": f"Answer the question based on the context below and on the previous questions and the answers that have already been given. Give more importance to the previous question. If the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer:"},
             ]
         )
         # print(response['choices'][0]['message']['content'])
