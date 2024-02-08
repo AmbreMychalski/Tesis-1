@@ -3,6 +3,7 @@ from flask_cors import CORS, cross_origin
 from back import *
 import json
 import ast
+import io
 import atexit
 
 app = Flask(__name__)
@@ -18,6 +19,10 @@ def load_history():
             History = json.load(f)
             print("load history------------")
             print(History)
+    else:
+        with io.open(os.path.join("front/public/", 'History.json'), 'w') as history_file:
+            history_file.write(json.dumps([]))
+
 
 def save_history():
     if (History != []):
@@ -54,12 +59,6 @@ def receive_question():
                 sources_to_print[src[0]] = [src[1].replace("[","").replace("]","").replace("'","").split(', ')]
 
         print(sources_to_print)
-        # for src in sources:
-        #     temp = src[1].replace("[", "").replace("]", "").replace("'", "").split(", ")
-        #     for i in range(len(temp)):
-        #         temp[i]=int(temp[i])
-        #     sources_to_print[src[1]] = temp
-        #     print("src",sources_to_print[src[1]])
         
 # Example of question: What is oxytocin and what is it purpose in obstetric?
         # print(answer,set(sources))
@@ -78,8 +77,6 @@ def receive_question():
         
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-# signal.signal(signal.SIGINT, signal_handler)
 
 if __name__ == '__main__':
     load_history()
