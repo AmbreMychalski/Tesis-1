@@ -14,8 +14,20 @@ openai.api_version = '2023-05-15'
 
 deployment_name='gpt-35-turbo-rfmanrique'
 
+print(os.getcwd())
+chroma_client = chromadb.Client()
+collection = chroma_client.create_collection(name="collection_test")
+
+embedding_path = os.path.abspath('src/embeddings_complete.csv')
 df=pd.read_csv('front/embeddings/embeddings.csv', index_col=0)
 df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
+
+collection.add(
+            embeddings=[arr.tolist() for arr in df['embeddings'].to_list()],
+            documents= df['text'].to_list(),
+            metadatas = df.apply(lambda row: {"title": row['title'].replace(".txt", ""), "page": str(row['page_number']), "tokens": str(row['n_tokens'])}, axis=1).tolist(),
+            ids=[str(i) for i in range(len(df))]
+        )
 
 def create_context(question, df, max_len=1800, size="ada"):
 
@@ -26,8 +38,9 @@ def create_context(question, df, max_len=1800, size="ada"):
     q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
     #print("q_embeddings\n", q_embeddings)
     # Get the distances from the embeddings
-    df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
-    
+    # df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
+    results = collection.query(query_embeddings=q_embeddings, n_results=10)
+
     returns = []
     sources = []
     cur_len = 0
@@ -35,12 +48,21 @@ def create_context(question, df, max_len=1800, size="ada"):
     # Sort by distance and add the text to the context until the context is too long
     
         # Add the length of the text to the current length
-    for i, row in df.sort_values('distances', ascending=True).iterrows():
-        
+    # for i, row in df.sort_values('distances', ascending=True).iterrows():
+    for i in range(len(results['ids'][0])):
+        print("**************************************************************")
+        print(results['metadatas'][0][i])
+        document = results['documents'][0][i]
+        title = results['metadatas'][0][i]['title']
+        page = results['metadatas'][0][i]['page']
+        tokens= results['metadatas'][0][i]['tokens']
+        print("VISU:", document, title, page, tokens)
         if(cur_len > max_len):
             break
         temp = []
-        context_chunk = row["text"]
+        # context_chunk = row["text"]
+        context_chunk = document
+
         response = openai.ChatCompletion.create(
             engine= deployment_name, # engine = "deployment_name".
             #prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
@@ -55,11 +77,12 @@ def create_context(question, df, max_len=1800, size="ada"):
         )
         print("response in lower", response['choices'][0]['message']['content'].lower())
         response['choices'][0]['message']['content'] = 'yes'
+        
         if ("yes" in (response['choices'][0]['message']['content'].lower())):
-            cur_len += row['n_tokens'] + 4
-            returns.append(row["text"])
-            temp.append(row['title'].split('.txt')[0])
-            temp.append(row['page_number'])
+            cur_len += int(tokens) + 4
+            returns.append(document)
+            temp.append(title)
+            temp.append(page)
             sources.append(temp)
     
         # cur_len += row['n_tokens'] + 4
@@ -71,10 +94,6 @@ def create_context(question, df, max_len=1800, size="ada"):
         
         # print("TEST: ","yes" in (response['choices'][0]['message']['content'].lower()))
         # print(response['choices'][0]['message']['content'])
-        
-    for context in (returns):
-        #print(f"Contexte :{context} \n")  
-        print()  
 
     # Return the context
     # return (("\n\n###\n\n".join(returns)), sources)
@@ -85,7 +104,6 @@ def generate_answer(question,df_embeddings, history, deployment=deployment_name)
     context, sources = create_context(question, df_embeddings, max_len=1800, size="ada")
     # print("context: \n\n", context)
     # print("sources: \n\n", sources)
-    print("\n\n-----------\n")
     nb_tokens=0
     for quest, ans in prev_questions:
         print("------------prev questions\n", quest, "-->", ans)
@@ -110,10 +128,6 @@ def generate_answer(question,df_embeddings, history, deployment=deployment_name)
         return('You cannot continue this conversation', [])
 
 def get_previous_questions(history):
-    # print("\n--------------TEST---------------------------------\n")
-    # for elem in history:
-    #     print('query:', elem['query'])
-    #     print('answer:', elem['answer'])
     questions= [[elem['query'], elem['answer']] for elem in history]
     print(f"The previous questions are {questions}")
     return questions

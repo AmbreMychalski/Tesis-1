@@ -6,8 +6,9 @@ import re
 import PyPDF2
 import pandas as pd
 import tiktoken
+import time
 
-openai.api_key = ""
+openai.api_key = os.getenv("OpenAIKey")
 openai.api_base = "https://invuniandesai.openai.azure.com/"
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
@@ -60,6 +61,7 @@ def txt_to_scraped():
 
     # Create a dataframe from the list of texts
     df = pd.DataFrame(texts, columns = ['fname', 'text'])
+    print("THHEEEEEEEEERE")
     print(df['fname'])
     # Set the text column to be the raw text with the newlines removed
     df['text'] = remove_newlines(df.text)
@@ -156,6 +158,7 @@ def scraped_shortened():
 def df_to_embed(df):
     df['embeddings'] = df.text.apply(lambda x: openai.Embedding.create(input=x, engine="text-embedding-ada-002-rfmanrique")['data'][0]['embedding'])
     df.to_csv(embeddings_directory+'embeddings.csv')
+    time.sleep(2)
 
 if __name__ == '__main__':
     process_to_txt()
