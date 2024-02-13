@@ -29,14 +29,33 @@ collection.add(
             ids=[str(i) for i in range(len(df))]
         )
 
-def create_context(question, df, max_len=1800, size="ada"):
+def create_context(question, df, prev_questions, max_len=1800, size="ada"):
+
+    # HyDE:
+    
+    first_response = openai.ChatCompletion.create(
+            engine= deployment_name, # engine = "deployment_name".
+            messages=[
+                {"role": "system", "content": "You are a doctor in obstetrics."},
+                # You are a helpful medical knowledge assistant. Provide useful, complete, and 
+                # scientifically-grounded answers to common consumer search queries about 
+                # obstetric health.
+
+                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question taking into account the previous asked questions. In your answer you must include the previous reword question and the answer./\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
+            ]          
+        )
+    print("-------------- FIRST RESPONSE --------------\n", first_response['choices'][0]['message']['content'], "\n\n")
 
     """
     Create a context for a question by finding the most similar context from the dataframe
     """
+
     # Get the embeddings for the question
-    q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
-    #print("q_embeddings\n", q_embeddings)
+    # q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
+    
+    # Use the first answer of chatGPT to create the context
+    q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
+    # print("q_embeddings\n", q_embeddings)
     # Get the distances from the embeddings
     # df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
     results = collection.query(query_embeddings=q_embeddings, n_results=10)
@@ -76,7 +95,7 @@ def create_context(question, df, max_len=1800, size="ada"):
             ]          
         )
         print("response in lower", response['choices'][0]['message']['content'].lower())
-        response['choices'][0]['message']['content'] = 'yes'
+        # response['choices'][0]['message']['content'] = 'yes'
         
         if ("yes" in (response['choices'][0]['message']['content'].lower())):
             cur_len += int(tokens) + 4
@@ -101,7 +120,7 @@ def create_context(question, df, max_len=1800, size="ada"):
 
 def generate_answer(question,df_embeddings, history, deployment=deployment_name):
     prev_questions = get_previous_questions(history)
-    context, sources = create_context(question, df_embeddings, max_len=1800, size="ada")
+    context, sources = create_context(question, df_embeddings, prev_questions, max_len=1800, size="ada")
     # print("context: \n\n", context)
     # print("sources: \n\n", sources)
     nb_tokens=0
