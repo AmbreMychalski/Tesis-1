@@ -36,6 +36,19 @@ pip install sklearn
 * To install the mui material library run:
 npm install @mui/material
 
+### Create the embedding database
+The database is permanent and hosted by ChromaDB.
+To create your collection "embedding_db_persist" in the database, open a powershell terminal in the APP folder, and run the databaseCreation.py program:
+    python3 front/src/databaseCreation.py
+
+To create the .csv embeddings file and fill the collection with the embeddings, run the fileProcessing.py program:
+    python3 front/src/fileProcessing.py
+
+If you need to re-execute this program and in order to avoid the duplicates, you need to empty your collection first, running in a python program the following code:
+    path = <your_database_path>
+    chroma_client = chromadb.PersistentClient(path)
+    chroma_client.delete_collection(name="embedding_db_persist")
+
 ### Launch the project
 Please add your openAI key in the files in the files 'back.py' and 'fileProcessing.py' in the variables 'openai.api_key'.
     

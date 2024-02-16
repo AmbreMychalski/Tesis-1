@@ -7,6 +7,8 @@ import PyPDF2
 import pandas as pd
 import tiktoken
 import time
+import chromadb
+import numpy as np
 
 openai.api_key = os.getenv("OpenAIKey")
 openai.api_base = "https://invuniandesai.openai.azure.com/"
@@ -57,11 +59,10 @@ def txt_to_scraped():
         # Open the file and read the text
         with open(txt_directory + file, "r", encoding="UTF-8") as f:
             text = f.read()
-            texts.append([file,text])
+            texts.append([file.replace(".txt", ""),text])
 
     # Create a dataframe from the list of texts
     df = pd.DataFrame(texts, columns = ['fname', 'text'])
-    print("THHEEEEEEEEERE")
     print(df['fname'])
     # Set the text column to be the raw text with the newlines removed
     df['text'] = remove_newlines(df.text)
@@ -155,10 +156,13 @@ def scraped_shortened():
     df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
     return(df)
 
+def emb_with_delay(text):
+    time.sleep(0.5)
+    return openai.Embedding.create(input=text, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
+
 def df_to_embed(df):
-    df['embeddings'] = df.text.apply(lambda x: openai.Embedding.create(input=x, engine="text-embedding-ada-002-rfmanrique")['data'][0]['embedding'])
+    df['embeddings'] = df.text.apply(emb_with_delay)
     df.to_csv(embeddings_directory+'embeddings.csv')
-    time.sleep(2)
 
 if __name__ == '__main__':
     process_to_txt()
@@ -170,3 +174,24 @@ if __name__ == '__main__':
     df_to_embed(df)
     print('----df to embeddings complete----')
 
+    df_complete = pd.read_csv(embeddings_directory+'embeddings.csv')
+    df_complete = df_complete.drop(['Unnamed: 0'], axis=1)
+
+    path = "C:/Users/ambre/Desktop/INSA/5A/202320/Tesis_I/APP/front/src"
+    chroma_client = chromadb.PersistentClient(path)
+    print(chroma_client.list_collections())
+
+    # Delete a collection
+    # chroma_client.delete_collection(name="embedding_db_persist")
+
+    collection = chroma_client.get_collection("embedding_db_persist")
+    
+    df_complete['embeddings'] = df_complete['embeddings'].apply(eval).apply(np.array)
+
+    collection.add(
+                embeddings=[arr.tolist() for arr in df_complete['embeddings'].to_list()],
+                documents= df_complete['text'].to_list(),
+                metadatas = df_complete.apply(lambda row: {"title": row['title'], "page": str(row['page_number']), "tokens": str(row['n_tokens'])}, axis=1).tolist(),
+                ids=[str(i) for i in range(len(df_complete))]
+            )
+    
