@@ -15,12 +15,18 @@ openai.api_base = "https://invuniandesai.openai.azure.com/"
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
 
-max_tokens = 500
+max_tokens = 1000
+
+# Know if the last file is in english or not
+last_file = ''
+last_file_en = True
 
 rawDataset = "front/rawDataset/"
 txt_directory = "front/ProcessedDataset/txt/"
 scraped_directory = "front/ProcessedDataset/scraped/"
 embeddings_directory = "front/embeddings/"
+
+deployment_name='gpt-35-turbo-rfmanrique'
 
 def process_to_txt():
 
@@ -47,7 +53,7 @@ def process_to_txt():
 
 def remove_newlines(serie):
     serie = serie.str.replace('  ', ' ')
-    serie = serie.str.replace('  ', ' ')
+    serie = serie.str.replace('\n', ' ')
     return serie
 
 def txt_to_scraped():
@@ -71,7 +77,7 @@ def txt_to_scraped():
 def split_into_many(text, tokenizer, max_tokens = max_tokens):
 
     # Split the text into sentences
-    sentences = text.split('\n')
+    sentences = text.split('.')
 
     # Get the number of tokens for each sentence
     n_tokens = [len(tokenizer.encode(" " + sentence)) for sentence in sentences]
@@ -84,7 +90,7 @@ def split_into_many(text, tokenizer, max_tokens = max_tokens):
     for sentence, token in zip(sentences, n_tokens):
         page_number = re.findall(r'###(\d+)###', sentence)
         sentence = re.sub(r'###\d+###', '', sentence)
-        # print(sentence)
+        
         if len(page_number)>0:
             last_page_number=page_number[0]
         # If the number of tokens so far plus the number of tokens in the current sentence is greater
@@ -107,6 +113,9 @@ def split_into_many(text, tokenizer, max_tokens = max_tokens):
     return chunks
 
 def scraped_shortened():
+    global last_file
+    global last_file_en
+
     # Load the cl100k_base tokenizer which is designed to work with the ada-002 model
     tokenizer = tiktoken.get_encoding("cl100k_base")
 
@@ -130,10 +139,47 @@ def scraped_shortened():
             temp += split_into_many(text=row[1]['text'], tokenizer=tokenizer)
             for text in temp:
                 data=[]
-                #print(text)
+                if last_file != row[1]['title']:
+                    last_file_en = True
+                    last_file = row[1]['title']
+                    
+                    translated = openai.ChatCompletion.create(
+                        engine= deployment_name, 
+                        messages=[
+                            {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                            # You are a helpful medical knowledge assistant. Provide useful, complete, and 
+                            # scientifically-grounded answers to common consumer search queries about 
+                            # obstetric health.
+                            # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
+
+                            {"role": "user", "content": f"Analyse the differents words of the following text./\n\n---\n\n/Text: {row[1]['title']}\n\n/Is this written in spanish? Answer by yes or no"},
+                        ]          
+                    )
+                    # print("\n-------------- FIRST RESPONSE --------------\n", translated['choices'][0]['message']['content'])
+                    # print("TITLE", row[1]['title'], "\n")
+                    if 'yes' in translated['choices'][0]['message']['content'].lower():
+                        last_file_en = False
+                print("TITLE", row[1]['title'], last_file_en, "\n")
                 page_nb = re.findall(r'###(\d+)###', text)
                 page_nb=list(set(page_nb))
                 text = re.sub(r'###\d+###', '', text)
+                if last_file_en == False:
+                    # print("\n***********To translate***********\n")
+                    translated = openai.ChatCompletion.create(
+                        engine= deployment_name, 
+                        messages=[
+                            {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                            # You are a helpful medical knowledge assistant. Provide useful, complete, and 
+                            # scientifically-grounded answers to common consumer search queries about 
+                            # obstetric health.
+                            # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
+
+                            {"role": "user", "content": f"Translate the following text in english./\n\n---\n\n/{text}\n\n/Write the translation only after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible. Keep any character you don't understand unmodified:"},
+                        ]          
+                    )
+                    # print("\n-----------------ORIGINAL---------------:", text, '\n')
+                    # print("-----------------TRANSLATION---------------:\n", translated['choices'][0]['message']['content'], '\n')
+                    text = translated['choices'][0]['message']['content']
                 # print(page_nb, text)
                 data.append(row[1]['title'])
                 data.append(page_nb)
