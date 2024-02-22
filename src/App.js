@@ -11,17 +11,6 @@ function App() {
   const [chatHistory, setChatHistory] = useState([])
   const chatHistoryRef = useRef(null);
   
-  // const saveChatHistory = () => {
-  //   const jsonChatHistory = JSON.stringify(chatHistory);
-  //   const blob = new Blob([jsonChatHistory], { type: 'application/json' });
-  //   const href = URL.createObjectURL(blob);
-  //   const link = document.createElement('a');
-  //   link.href = href;
-  //   link.download = 'chat_history.json';
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
 
   const inputHandler = (e) => {
     const userInput = e.target.value;
@@ -54,6 +43,8 @@ function App() {
         console.log("message", data.message);
         console.log("answer", data.message.answer);
         console.log("sources array", data.message.sources);
+        console.log("source to highlight", data.message.highlight);
+        console.log("id", data)
         // const sourcesArray = Object.entries(data.message.sources).map(([sourceName, ids]) => ({ name: sourceName, ids }));
         //console.log(sourcesArray)
         setAnswer(data.message.answer);
@@ -111,14 +102,16 @@ function App() {
                     <ul> 
                       {Object.entries(item.sources).map(([source, ids], sourceIndex) => (
                         <li key={sourceIndex}>
-                          <a href={require(`../public/RawDataset/${source}.pdf`)+`#page=${ids[0][0]}`} target = "_blank" rel="noreferrer"><strong>{source}:</strong></a>
+                          {/* <a href={require(`../public/RawDataset/${source}.pdf`)+`#page=${ids[0][0]}`} target = "_blank" rel="noreferrer"><strong>{source}:</strong></a> */}
+                          <a href={`http://localhost:3001/api/generate-pdf/${index}/${source}`+`#page=${ids[0][0]}`} target="_blank" rel="noreferrer"><strong>{source}:</strong></a>
                           <ul>
                             {ids.map((id, subIndex) => (
                               <li key={subIndex}>
                                 p: {Array.isArray(id) ? (
                                   <span>
                                   {id.map((subId, nestedIndex) => (
-                                    <a key={nestedIndex} href={require(`../public/RawDataset/${source}.pdf`)+`#page=${subId}`} target = "_blank" rel="noreferrer">
+                                    // <a key={nestedIndex} href={require(`../public/RawDataset/${source}.pdf`)+`#page=${subId}`} target = "_blank" rel="noreferrer">
+                                      <a key={nestedIndex} href={`http://localhost:3001/api/generate-pdf/${index}/${source}`+`#page=${subId}`} target="_blank" rel="noreferrer">
                                       {nestedIndex > 0 && ', '}
                                       {subId}
                                     </a>

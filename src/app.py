@@ -1,15 +1,21 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS, cross_origin
+from flask import Flask, request, jsonify, send_file
+from flask_cors import CORS
 from back import *
 import json
-import ast
 import io
 import atexit
+import logging
+
+rawDataset = "front/rawDataset/"
+modified_docs = "front/public/rawDataset/"
 
 app = Flask(__name__)
 cors = CORS(app)
 
+logging.basicConfig(level=logging.INFO)
+
 History = []
+path_dataset = './front/public/RawDataset/'
 
 def load_history():
     global History
@@ -33,9 +39,34 @@ def save_history():
             json.dump(History, f)
         print("History saved successfully.")
 
+@app.route('/api/generate-pdf/<int:message_id>/<pdf_name>')
+def generate_pdf(message_id, pdf_name):
+    global History
+
+    for message in History:
+        if message['id'] == message_id:
+            highlight = message['highlight']
+            pages = highlight[pdf_name][0][0]
+            coords = highlight[pdf_name][0][1]
+            if pages[0] == pages[1]:
+                pages = [pages[0]]
+    if len(pages) != 0:
+        modified_pdf_bytes = highlight_context(pdf_name, pages, coords)
+        app.logger.info(f"Generating PDF for message ID: {highlight}. {pages}, {coords}")
+        return send_file(
+                modified_pdf_bytes,
+                mimetype='application/pdf',
+                download_name=f'{pdf_name}.pdf',
+                as_attachment=False
+            )
+    else:
+        return 'PDF not found'
+
 # Definition of the API returning GPT answer to an obstetric related question
 @app.route('/api/query', methods=['POST'])
 def receive_question():
+    global path_dataset
+
     try:
         # Recovering of the question data from front
         data = request.get_json()
@@ -45,40 +76,61 @@ def receive_question():
         print("question:", question)
 
         # Recovering the embeddings
-        df_embeddings=pd.read_csv('front/embeddings/embeddings.csv', index_col=0)
+        df_embeddings=pd.read_csv('front/embeddings/embeddings_test.csv', index_col=0)
         df_embeddings['embeddings'] = df_embeddings['embeddings'].apply(eval).apply(np.array)
-        #print(df_embeddings.head())
         # Generation of the answer
-        print(History)
         (answer, sources) =  generate_answer(question,df_embeddings, History, deployment=deployment_name)
+        
+        
         sources_to_print = {}
+        sources_to_highlight = {}
         for src in sources:
             if src[0] in sources_to_print:
-                sources_to_print[src[0]].append(src[1].replace("[","").replace("]","").replace("'","").split(', '))
+                sources_to_print[src[0]].append(src[1].replace("[","").replace("]","").replace("(", '').replace(")", '').replace("'","").split(', '))
+                pages = src[1].replace("[","").replace("]","").replace("(", '').replace(")", '').replace("'","").split(', ')
+                pages = [ int(p) for p in pages]
+                coords = src[2].replace('(', '').replace(')', '').split(', ')
+                coords = [ float(c) for c in coords]
+                sources_to_highlight[src[0]].append([pages, coords])
             else:
-                sources_to_print[src[0]] = [src[1].replace("[","").replace("]","").replace("'","").split(', ')]
+                sources_to_print[src[0]] = [src[1].replace("[","").replace("]","").replace("(", '').replace(")", '').replace("'","").split(', ')]
+                pages = src[1].replace("[","").replace("]","").replace("(", '').replace(")", '').replace("'","").split(', ')
+                pages = [ int(p) for p in pages]
+                coords = src[2].replace('(', '').replace(')', '').split(', ')
+                coords = [ float(c) for c in coords]
+                sources_to_highlight[src[0]] = [[pages, coords]]
 
-        print(sources_to_print)
-        
-# Example of question: What is oxytocin and what is it purpose in obstetric?
-        # print(answer,set(sources))
+        for fname, loc in sources_to_highlight.items():
+            pages = (loc[0])[0]
+            coords = loc[0][1]
+            # to remove when bug resolved
+            if pages[0] == pages[1]:
+                pages = [pages[0]]
+            
         # Creation of the json answer
         if "I don\'t know" in answer:
             sources_to_print={}
+        if len(History)==0:
+            q_id = 0
+        else:
+            q_id = History[-1]['id']+1
         response = {
+            'id': q_id,
             'query': f"{question}",
             'answer': f"{answer}",
             'sources':sources_to_print,
+            'highlight':sources_to_highlight,
         }
-        print("RESPONSE---------\n", response)
         History.append(response)
-        print("\n\nANSWER", History)
-        return jsonify({'message': response})
+        print("\n Historic of the conversation:\n", History, "\n")
         
+        return jsonify({'message': response})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
 
 if __name__ == '__main__':
     load_history()
     atexit.register(save_history)
+                    
     app.run(port=3001, debug=True) 
