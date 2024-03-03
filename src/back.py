@@ -39,7 +39,7 @@ current_sources = []
 
 path = "C:/Users/ambre/Desktop/INSA/5A/202320/Tesis_I/APP/front/src"
 chroma_client = chromadb.PersistentClient(path)
-collection = chroma_client.get_collection("embedding_db_persist_test")    
+collection = chroma_client.get_collection("embedding_db_persist")    
 
 def highlight_context(fname, pages, coords):
     pages = [p-1 for p in pages]
@@ -79,7 +79,7 @@ def highlight_context(fname, pages, coords):
     return pdf_stream
 
 
-def create_context(question, df, prev_questions, max_len=1800, size="ada"):
+def create_context(question, prev_questions, max_len=1800, size="ada"):
     global current_sources
     current_sources = []
 
@@ -152,9 +152,9 @@ def create_context(question, df, prev_questions, max_len=1800, size="ada"):
     # Return the context
     return(("\n\n###\n\n".join(returns)), sources)
 
-def generate_answer(question, df_embeddings, history, deployment=deployment_name):
+def generate_answer(question, history, deployment=deployment_name):
     prev_questions = get_previous_questions(history)
-    context, sources = create_context(question, df_embeddings, prev_questions, max_len=1800, size="ada")
+    context, sources = create_context(question, prev_questions, max_len=1800, size="ada")
     
     nb_tokens=0
     for quest, ans in prev_questions:

@@ -75,11 +75,8 @@ def receive_question():
             question.append(" ")
         print("question:", question)
 
-        # Recovering the embeddings
-        df_embeddings=pd.read_csv('front/embeddings/embeddings_test.csv', index_col=0)
-        df_embeddings['embeddings'] = df_embeddings['embeddings'].apply(eval).apply(np.array)
         # Generation of the answer
-        (answer, sources) =  generate_answer(question,df_embeddings, History, deployment=deployment_name)
+        (answer, sources) =  generate_answer(question, History, deployment=deployment_name)
         
         
         sources_to_print = {}

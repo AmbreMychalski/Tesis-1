@@ -9,17 +9,22 @@ import tiktoken
 import time
 import chromadb
 import numpy as np
+import fitz
+import re
+
+path_dataset = './front/public/RawDataset/'
 
 openai.api_key = os.getenv("OpenAIKey")
 openai.api_base = "https://invuniandesai.openai.azure.com/"
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
 
-max_tokens = 1000
+MAX_TOKENS = 1000
 
 # Know if the last file is in english or not
 last_file = ''
 last_file_en = True
+tokenizer = tiktoken.get_encoding("cl100k_base")
 
 rawDataset = "front/rawDataset/"
 txt_directory = "front/ProcessedDataset/txt/"
@@ -28,198 +33,201 @@ embeddings_directory = "front/embeddings/"
 
 deployment_name='gpt-35-turbo-rfmanrique'
 
-def process_to_txt():
-
+def extract_text_with_coordinates():
+    raw_text = []
+    processed_text = []
     for filename in os.listdir(rawDataset):
-        # Ouvrir le fichier PDF en mode lecture binaire ('rb')
-        with open(rawDataset+filename, 'rb') as pdf_file:
-            # Créer un objet PDFReader
-            pdf_reader = PyPDF2.PdfReader(pdf_file)
+        doc = fitz.open(path_dataset+filename)
+        print(filename)
+        fname = filename.replace('.pdf', '')
+        for page in doc:
 
-            # Initialiser une variable pour stocker le texte brut
-            raw_text = ''
+            blocklist = page.get_text("blocks")
+            for i in range(len(blocklist)):
+                rect = blocklist[i][0:4]
+                text = blocklist[i][4].replace(",",' ').replace(";", " ").replace("\n", " ").replace("  ", " ")
+                if '. ' in text:
+                    end_sentence = re.split(r'(?<=[.!?])\s+', text)
+                    end_sentence = [s.strip() for s in end_sentence]
+                    for sent in end_sentence:
+                        if len(sent)>0:
+                            if 'downloaded' in sent.lower() or 'copyright' in sent.lower() or '©' in sent.lower() or 'http' in sent.lower():
+                                continue
+                            raw_text.append((fname, sent, rect, page.number+1))
+                # print('\n', blocklist[i],'---', rect, ' - ', text, '\n')
+                else:
+                    if 'downloaded' in text.lower() or 'copyright' in text.lower() or '©' in text.lower() or 'http' in text.lower():
+                        continue
+                    raw_text.append((fname, text, rect, page.number+1)) 
+    current_sent = ''
+    coord_init_sent = raw_text[1][2][0:2]
+    coord_end_sent = raw_text[1][2][2:4]
+    page_init_sent = raw_text[1][3]
+    page_end_sent = raw_text[1][3]
+    for tuple in raw_text:
+        current_sent += tuple[1]
+        if tuple[1].endswith('.') or tuple[1].endswith('!') or tuple[1].endswith('?'):
+            coord_end_sent = tuple[2][2:4]
+            page_end_sent = tuple[3]
+            processed_text.append((tuple[0], current_sent, coord_init_sent+coord_end_sent, (page_init_sent,page_end_sent)))
+            current_sent = ''
+            coord_init_sent = tuple[2][0:2]
+            page_init_sent = tuple[3]
 
-            # Parcourir chaque page du PDF
-            for page_num in range(len(pdf_reader.pages)):
-                # Extraire le texte de la page
-                page = pdf_reader.pages[page_num]
-                raw_text += "###" + str(page_num+1)+ "###" + page.extract_text() + "\n"
+    df = pd.DataFrame(processed_text, columns = ['fname', 'text', 'coords', 'page'])
+    df.to_csv(scraped_directory+'scraped_test.csv')
+    return df
 
-        raw_text = raw_text.replace(",",' ')
-        filename=filename.replace(".pdf",".txt")
-        # Si vous souhaitez sauvegarder le texte brut dans un fichier texte
-        with open(txt_directory+filename, 'w', encoding='utf-8') as txt_file:
-            txt_file.write(raw_text)
-
-def remove_newlines(serie):
-    serie = serie.str.replace('  ', ' ')
-    serie = serie.str.replace('\n', ' ')
-    return serie
-
-def txt_to_scraped():
-
-    # Create a list to store the text files
-    texts=[]
-    # Get all the text files in the text directory
-    for file in os.listdir(txt_directory):
-        # Open the file and read the text
-        with open(txt_directory + file, "r", encoding="UTF-8") as f:
-            text = f.read()
-            texts.append([file.replace(".txt", ""),text])
-
-    # Create a dataframe from the list of texts
-    df = pd.DataFrame(texts, columns = ['fname', 'text'])
-    print(df['fname'])
-    # Set the text column to be the raw text with the newlines removed
-    df['text'] = remove_newlines(df.text)
-    df.to_csv(scraped_directory+'scraped.csv')
-
-def split_into_many(text, tokenizer, max_tokens = max_tokens):
-
-    # Split the text into sentences
-    sentences = text.split('.')
-
-    # Get the number of tokens for each sentence
-    n_tokens = [len(tokenizer.encode(" " + sentence)) for sentence in sentences]
-
-    chunks = []
-    tokens_so_far = 0
-    chunk = []
-    last_page_number = '0'
-    # Loop through the sentences and tokens joined together in a tuple
-    for sentence, token in zip(sentences, n_tokens):
-        page_number = re.findall(r'###(\d+)###', sentence)
-        sentence = re.sub(r'###\d+###', '', sentence)
-        
-        if len(page_number)>0:
-            last_page_number=page_number[0]
-        # If the number of tokens so far plus the number of tokens in the current sentence is greater
-        # than the max number of tokens, then add the chunk to the list of chunks and reset
-        # the chunk and tokens so far
-        if tokens_so_far + token > max_tokens:
-            chunks.append(". ".join(chunk) + ".")
-            chunk = []
-            tokens_so_far = 0
-
-        # If the number of tokens in the current sentence is greater than the max number of
-        # tokens, go to the next sentence
-        if token > max_tokens:
-            continue
-
-        # Otherwise, add the sentence to the chunk and add the number of tokens to the total
-        chunk.append('###'+last_page_number+"###"+sentence)
-        tokens_so_far += token + 1
-
-    return chunks
-
-def scraped_shortened():
-    global last_file
-    global last_file_en
-
-    # Load the cl100k_base tokenizer which is designed to work with the ada-002 model
-    tokenizer = tiktoken.get_encoding("cl100k_base")
-
-    df = pd.read_csv(scraped_directory+'/scraped.csv', index_col=0)
-
-    df.columns = ['title', 'text']
-
-    # Tokenize the text and save the number of tokens to a new column
+def make_chunks(df):
+    global MAX_TOKENS
+    global tokenizer
+    # df = pd.read_csv(scraped_directory+'/scraped_test.csv', index_col=0)
+    # df.columns = ['fname', 'text', 'coords', 'page']
+    
     df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
 
-    shortened = []
-    # Loop through the dataframe
+    tokens_so_far = 0
+    chunks_text = []
+    fname = df.iloc[0]['fname']
+    current_chunk = ''
+    coord_init_chunk = df.iloc[0]['coords'][0:2]
+    coord_end_chunk = df.iloc[0]['coords'][2:4]
+    page_init_chunk = df.iloc[0]['page'][0]
+    page_end_chunk = df.iloc[0]['page'][1]
     for row in df.iterrows():
-        temp=[]
         # If the text is None, go to the next row
         if row[1]['text'] is None:
             continue
 
-        # If the number of tokens is greater than the max number of tokens, split the text into chunks
-        if row[1]['n_tokens'] > max_tokens:
-            temp += split_into_many(text=row[1]['text'], tokenizer=tokenizer)
-            for text in temp:
-                data=[]
-                if last_file != row[1]['title']:
-                    last_file_en = True
-                    last_file = row[1]['title']
-                    
-                    translated = openai.ChatCompletion.create(
-                        engine= deployment_name, 
-                        messages=[
-                            {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
-                            # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-                            # scientifically-grounded answers to common consumer search queries about 
-                            # obstetric health.
-                            # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
+        if row[1]['n_tokens']>MAX_TOKENS:
+            # Do something
+            continue
+        # if row[1]['fname']!=fname:
+        #     print(row[1]['fname'])
 
-                            {"role": "user", "content": f"Analyse the differents words of the following text./\n\n---\n\n/Text: {row[1]['title']}\n\n/Is this written in spanish? Answer by yes or no"},
-                        ]          
-                    )
-                    # print("\n-------------- FIRST RESPONSE --------------\n", translated['choices'][0]['message']['content'])
-                    # print("TITLE", row[1]['title'], "\n")
-                    if 'yes' in translated['choices'][0]['message']['content'].lower():
-                        last_file_en = False
-                print("TITLE", row[1]['title'], last_file_en, "\n")
-                page_nb = re.findall(r'###(\d+)###', text)
-                page_nb=list(set(page_nb))
-                text = re.sub(r'###\d+###', '', text)
-                if last_file_en == False:
-                    # print("\n***********To translate***********\n")
-                    translated = openai.ChatCompletion.create(
-                        engine= deployment_name, 
-                        messages=[
-                            {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
-                            # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-                            # scientifically-grounded answers to common consumer search queries about 
-                            # obstetric health.
-                            # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
-
-                            {"role": "user", "content": f"Translate the following text in english./\n\n---\n\n/{text}\n\n/Write the translation only after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible. Keep any character you don't understand unmodified:"},
-                        ]          
-                    )
-                    # print("\n-----------------ORIGINAL---------------:", text, '\n')
-                    # print("-----------------TRANSLATION---------------:\n", translated['choices'][0]['message']['content'], '\n')
-                    text = translated['choices'][0]['message']['content']
-                # print(page_nb, text)
-                data.append(row[1]['title'])
-                data.append(page_nb)
-                data.append(text)
-                shortened.append(data)
-
-        # Otherwise, add the text to the list of shortened texts
+        if tokens_so_far + row[1]['n_tokens'] > MAX_TOKENS or row[1]['fname']!=fname:
+            
+            chunks_text.append((fname, current_chunk, coord_init_chunk+coord_end_chunk, (page_init_chunk,page_end_chunk), tokens_so_far))
+            fname = row[1]['fname']
+            current_chunk = row[1]['text']
+            coord_init_chunk = row[1]['coords'][0:2]
+            page_init_chunk = row[1]['page'][1]
+            coord_end_chunk = row[1]['coords'][2:4]
+            page_end_chunk = row[1]['page'][1]   
+            tokens_so_far = row[1]['n_tokens']
+            
         else:
-            for text in temp:
-                data=[]
-                page_nb = re.findall(r'###(\d+)###', text)
-                page_nb=list(set(page_nb))
-                text = re.sub(r'###\d+###', '', text)
-                data.append(row[1]['title'])
-                data.append(page_nb)
-                data.append(row[1]['text'] )
-                shortened.append(data)
+            current_chunk+= ' '
+            current_chunk += row[1]['text']
+            tokens_so_far += row[1]['n_tokens'] + 1   
+            coord_end_chunk = row[1]['coords'][2:4]
+            page_end_chunk = row[1]['page'][1]         
 
-    df = pd.DataFrame(shortened, columns = ['title','page_number','text'])
+    df2 = pd.DataFrame(chunks_text, columns = ['fname', 'text', 'coords', 'page', 'n_tokens'])
+    df2.to_csv(scraped_directory+'scraped_chunks.csv')
+    return df2
+
+def suppress_after_reference(text):
+    lower_text = text.lower()
+    search_term = 'references 1.'
+
+    index = lower_text.find(search_term)
+    if index != -1:
+        res = text[:index]
+        return res
+    else:
+        search_term = 'referencias 1.'
+        index = lower_text.find(search_term)
+        if index != -1:
+            res = text[:index]
+            return res
+        else:
+            return text
+    
+def extract_references(df):
+    last_file_ref = ''
+    index_to_drop = []
+    for index, row in df.iterrows():
+        if row['fname'] != 'FIGO recommendations on the management of postpartum hemorrhage 2022':
+            if 'references 1.' in row['text'].lower() or 'referencias 1.' in row['text'].lower():
+                last_file_ref = row['fname']
+                df.at[index, 'text'] = suppress_after_reference(row['text'])
+                print(last_file_ref)
+                print(row['page'], df.at[index, 'text'])
+                print('-----------------')
+            elif row['fname'] == last_file_ref:
+                print(row['fname'], last_file_ref)
+                print(row['page'], df.at[index, 'text'])
+                print('-----------------')
+                index_to_drop.append(index)
+    print(index_to_drop)
+    df = df.drop(index=index_to_drop)
+    df.to_csv(scraped_directory+'scraped_without_ref.csv')
+    return df
+
+def make_traductions(df):
+    global tokenizer
+    last_file = ''
+    last_file_en = True
+    for index, row in df.iterrows():
+        if last_file != row['fname']:
+            last_file_en = True
+            last_file = row['fname']
+            translated = openai.ChatCompletion.create(
+                    engine= deployment_name, 
+                    messages=[
+                        {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                        # You are a helpful medical knowledge assistant. Provide useful, complete, and 
+                        # scientifically-grounded answers to common consumer search queries about 
+                        # obstetric health.
+                        # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
+
+                        {"role": "user", "content": f"Analyse the differents words of the following text./\n\n---\n\n/Text: {row['fname']}\n\n/Is this written in spanish? Answer by yes or no"},
+                    ]          
+                )
+            # print("\n-------------- FIRST RESPONSE --------------\n", translated['choices'][0]['message']['content'])
+            # print("TITLE", row[1]['fname'], "\n")
+            if 'yes' in translated['choices'][0]['message']['content'].lower():
+                last_file_en = False
+        if last_file_en == False:
+            # print("TITLE", row['fname'], last_file_en, "\n")
+            # print("\n***********To translate***********\n")
+            # translated = openai.ChatCompletion.create(
+            #     engine= deployment_name, 
+            #     messages=[
+            #         {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+            #         # You are a helpful medical knowledge assistant. Provide useful, complete, and 
+            #         # scientifically-grounded answers to common consumer search queries about 
+            #         # obstetric health.
+            #         # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
+
+            #         {"role": "user", "content": f"Translate the following text in english./\n\n---\n\n/{row[1]['text']}\n\n/Write the translation only after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible. Keep any character you don't understand unmodified:"},
+            #     ]          
+            # )
+            # print("\n-----------------ORIGINAL---------------:", row['text'], '\n')
+            # print("-----------------TRANSLATION---------------:\n", translated['choices'][0]['message']['content'], '\n')
+            df.at[index, 'text'] = ' ' # translated['choices'][0]['message']['content']
     df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
-    return(df)
+    df.to_csv(scraped_directory+'shorteneds.csv')
+    return df
 
 def emb_with_delay(text):
     time.sleep(0.5)
     return openai.Embedding.create(input=text, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
 
-def df_to_embed(df):
+def make_embed(df):
     df['embeddings'] = df.text.apply(emb_with_delay)
     df.to_csv(embeddings_directory+'embeddings.csv')
 
-if __name__ == '__main__':
-    process_to_txt()
-    print('----process to text complete----')
-    txt_to_scraped()
-    print('----text to scraped complete----')
-    df = scraped_shortened()
-    print('----scraped shortened complete----')
-    df_to_embed(df)
-    print('----df to embeddings complete----')
 
+if __name__ == '__main__':
+    
+    # text_with_coordinates = extract_text_with_coordinates()
+    # text_in_chunks = make_chunks(text_with_coordinates)
+    # text_without_ref = extract_references(text_in_chunks)
+    # text_trad = make_traductions(text_without_ref)
+    # make_embed(text_trad)
+    
     df_complete = pd.read_csv(embeddings_directory+'embeddings.csv')
     df_complete = df_complete.drop(['Unnamed: 0'], axis=1)
 
@@ -237,7 +245,6 @@ if __name__ == '__main__':
     collection.add(
                 embeddings=[arr.tolist() for arr in df_complete['embeddings'].to_list()],
                 documents= df_complete['text'].to_list(),
-                metadatas = df_complete.apply(lambda row: {"title": row['title'], "page": str(row['page_number']), "tokens": str(row['n_tokens'])}, axis=1).tolist(),
+                metadatas = df_complete.apply(lambda row: {"title": row['fname'], "page": str(row['page']), "coords": str(row['coords']), "tokens": str(row['n_tokens'])}, axis=1).tolist(),
                 ids=[str(i) for i in range(len(df_complete))]
             )
-    
