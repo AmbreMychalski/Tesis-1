@@ -133,7 +133,6 @@ def create_context(question, prev_questions, max_len=1800, size="ada"):
 
     # Get the embeddings for the question
     # q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
-    print("\n\nFIRST ANSWER", first_response['choices'][0]['message']['content'], "\n\n")
     # Use the first answer of chatGPT to create the context
     q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
 
@@ -259,10 +258,13 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
     # Return the context
     return(("\n\n###\n\n".join(returns)), sources, question_en)
 
-def generate_answer(question, history, deployment=deployment_name):
+def get_previous_questions(history):
+    questions= [[elem['query_en'], elem['answer_en']] for elem in history]
+    return questions
+
+def generate_answer(question_es, history, deployment=deployment_name):
     prev_questions = get_previous_questions(history)
-    context, sources, question = create_context_es(question, prev_questions, max_len=1800, size="ada")
-    
+    context, sources, question_en = create_context_es(question_es, prev_questions, max_len=1800, size="ada")
     nb_tokens=0
     for quest, ans in prev_questions:
         nb_tokens+=len(quest.split())+len(ans.split())
@@ -275,18 +277,15 @@ def generate_answer(question, history, deployment=deployment_name):
                 # scientifically-grounded answers to common consumer search queries about 
                 # obstetric health.
 
-                {"role": "user", "content": f"Answer the question based on the context below and on the previous questions and the answers that have already been given. Give more importance to the previous question. If the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer:"},
+                {"role": "user", "content": f"Answer the question based on the context below and on the previous questions and the answers that have already been given. Give more importance to the previous question. If the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question_en}\nAnswer:"},
             ]
         )
         answer_en = response['choices'][0]['message']['content']
         answer_es = translate_en_es(answer_en)
 
         context = context.split("\n###\n")
-        return (answer_es, sources)
+        return (answer_es, answer_en, question_en, sources)
     else:
         return('You cannot continue this conversation', [])
 
-def get_previous_questions(history):
-    questions= [[elem['query'], elem['answer']] for elem in history]
-    return questions
 

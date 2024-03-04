@@ -70,14 +70,12 @@ def receive_question():
     try:
         # Recovering of the question data from front
         data = request.get_json()
-        question = data.get('query')
-        if len(question)==0:
-            question.append(" ")
-        print("question:", question)
+        question_es = data.get('query')
+        if len(question_es)==0:
+            question_es.append(" ")
 
         # Generation of the answer
-        (answer, sources) =  generate_answer(question, History, deployment=deployment_name)
-        
+        (answer_es, answer_en, question_en, sources) =  generate_answer(question_es, History, deployment=deployment_name)
         
         sources_to_print = {}
         sources_to_highlight = {}
@@ -105,7 +103,7 @@ def receive_question():
                 pages = [pages[0]]
             
         # Creation of the json answer
-        if "I don\'t know" in answer:
+        if "I don\'t know" in answer_en:
             sources_to_print={}
         if len(History)==0:
             q_id = 0
@@ -113,11 +111,14 @@ def receive_question():
             q_id = History[-1]['id']+1
         response = {
             'id': q_id,
-            'query': f"{question}",
-            'answer': f"{answer}",
+            'query_es': f"{question_es}",
+            'query_en': f'{question_en}',
+            'answer_es': f"{answer_es}",
+            'answer_en': f"{answer_en}",
             'sources':sources_to_print,
             'highlight':sources_to_highlight,
         }
+        print("----------RESPONSE-----------", response)
         History.append(response)
         print("\n Historic of the conversation:\n", History, "\n")
         

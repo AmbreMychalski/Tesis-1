@@ -41,17 +41,18 @@ function App() {
       .then(data => {
         
         console.log("message", data.message);
-        console.log("answer", data.message.answer);
+        console.log("answer_es", data.message.answer_es);
+        console.log("answer_en", data.message.answer_en);
         console.log("sources array", data.message.sources);
         console.log("source to highlight", data.message.highlight);
         console.log("id", data)
         // const sourcesArray = Object.entries(data.message.sources).map(([sourceName, ids]) => ({ name: sourceName, ids }));
         //console.log(sourcesArray)
-        setAnswer(data.message.answer);
+        setAnswer(data.message.answer_es);
         // setSources(sourcesArray);
         setChatHistory(prevHistory => [
           ...prevHistory,
-          { query: query, answer: data.message.answer, sources: data.message.sources }
+          { query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources }
         ]);
       })
       .catch(error => {
@@ -83,7 +84,7 @@ function App() {
 
     fetchChatHistory();
   }, []);   
-  console.log("chatHistory", chatHistory);
+  console.log("chatHistory final", chatHistory);
 
   // Front
   return (
@@ -95,8 +96,8 @@ function App() {
           <ul>
             {chatHistory.map((item, index) => (
               <li key={index}>
-                <p><strong>Query:</strong> {item.query}</p>
-                <p><strong>Answer:</strong> {item.answer}</p>
+                <p><strong>Query:</strong> {item.query_es}</p>
+                <p><strong>Answer:</strong> {item.answer_es}</p>
                   <div><strong>Sources:</strong> 
                   {Object.entries(item.sources).length > 0 ? (
                     <ul> 
