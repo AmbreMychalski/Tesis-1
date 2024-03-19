@@ -152,15 +152,15 @@ def extract_references(df):
             if 'references 1.' in row['text'].lower() or 'referencias 1.' in row['text'].lower():
                 last_file_ref = row['fname']
                 df.at[index, 'text'] = suppress_after_reference(row['text'])
-                print(last_file_ref)
-                print(row['page'], df.at[index, 'text'])
-                print('-----------------')
+                # print(last_file_ref)
+                # print(row['page'], df.at[index, 'text'])
+                # print('-----------------')
             elif row['fname'] == last_file_ref:
-                print(row['fname'], last_file_ref)
-                print(row['page'], df.at[index, 'text'])
-                print('-----------------')
+                # print(row['fname'], last_file_ref)
+                # print(row['page'], df.at[index, 'text'])
+                # print('-----------------')
                 index_to_drop.append(index)
-    print(index_to_drop)
+    # print(index_to_drop)
     df = df.drop(index=index_to_drop)
     df.to_csv(scraped_directory+'scraped_without_ref.csv')
     return df
@@ -192,21 +192,24 @@ def make_traductions(df):
         if last_file_en == False:
             # print("TITLE", row['fname'], last_file_en, "\n")
             # print("\n***********To translate***********\n")
-            # translated = openai.ChatCompletion.create(
-            #     engine= deployment_name, 
-            #     messages=[
-            #         {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
-            #         # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-            #         # scientifically-grounded answers to common consumer search queries about 
-            #         # obstetric health.
-            #         # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
+            # print(df.at[index, 'text'])
+            # print(row[1]['text'])
+            translated = openai.ChatCompletion.create(
+                engine= deployment_name, 
+                messages=[
+                    {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                    # You are a helpful medical knowledge assistant. Provide useful, complete, and 
+                    # scientifically-grounded answers to common consumer search queries about 
+                    # obstetric health.
+                    # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
 
-            #         {"role": "user", "content": f"Translate the following text in english./\n\n---\n\n/{row[1]['text']}\n\n/Write the translation only after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible. Keep any character you don't understand unmodified:"},
-            #     ]          
-            # )
+                    {"role": "user", "content": f"Translate the following text in english./\n\n---\n\n/{df.at[index, 'text']}\n\n/Write the translation only after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible. Keep any character you don't understand unmodified:"},
+                ]          
+            )
             # print("\n-----------------ORIGINAL---------------:", row['text'], '\n')
             # print("-----------------TRANSLATION---------------:\n", translated['choices'][0]['message']['content'], '\n')
-            df.at[index, 'text'] = ' ' # translated['choices'][0]['message']['content']
+            
+            df.at[index, 'text'] = translated['choices'][0]['message']['content'] # ' '
     df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
     df.to_csv(scraped_directory+'shorteneds.csv')
     return df
