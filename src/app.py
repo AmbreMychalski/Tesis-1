@@ -118,9 +118,9 @@ def receive_question():
             'sources':sources_to_print,
             'highlight':sources_to_highlight,
         }
-        print("----------RESPONSE-----------", response)
+        # print("----------RESPONSE-----------", response)
         History.append(response)
-        print("\n Historic of the conversation:\n", History, "\n")
+        # print("\n Historic of the conversation:\n", History, "\n")
         
         return jsonify({'message': response})
     except Exception as e:

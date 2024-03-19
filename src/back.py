@@ -12,30 +12,21 @@ import io
 rawDataset = "front/rawDataset/"
 modified_docs = "front/public/rawDataset/"
 
+# ---------------- GPT 4 --------------
+# openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
+# openai.api_base = "https://invuniandesai-2.openai.azure.com/"
+# deployment_name='gpt-4-rfmanrique'
+# deployment_embeddings_name = 'gpt4-embedding-ada-002'
+
+# ---------------- GPT 3.5 turbo --------------
 openai.api_key = os.getenv("OpenAIKey")
 openai.api_base = "https://invuniandesai.openai.azure.com/"
+deployment_name='gpt-35-turbo-rfmanrique'
+deployment_embeddings_name = 'text-embedding-ada-002-rfmanrique'
+
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
-
-deployment_name='gpt-35-turbo-rfmanrique'
-
 current_sources = []
-
-# Non persistent ChromaDB
-# print(os.getcwd())
-# chroma_client = chromadb.Client()
-# collection = chroma_client.create_collection(name="collection_test")
-
-# embedding_path = os.path.abspath('src/embeddings_complete.csv')
-# df=pd.read_csv('front/embeddings/embeddings.csv', index_col=0)
-# df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
-
-# collection.add(
-#             embeddings=[arr.tolist() for arr in df['embeddings'].to_list()],
-#             documents= df['text'].to_list(),
-#             metadatas = df.apply(lambda row: {"title": row['title'].replace(".txt", ""), "page": str(row['page_number']), "tokens": str(row['n_tokens'])}, axis=1).tolist(),
-#             ids=[str(i) for i in range(len(df))]
-#         )
 
 path = "C:/Users/ambre/Desktop/INSA/5A/202320/Tesis_I/APP/front/src"
 chroma_client = chromadb.PersistentClient(path)
@@ -134,7 +125,7 @@ def create_context(question, prev_questions, max_len=1800, size="ada"):
     # Get the embeddings for the question
     # q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
     # Use the first answer of chatGPT to create the context
-    q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
+    q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine=deployment_embeddings_name)['data'][0]['embedding']
 
     # Get the distances from the embeddings
     # df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
@@ -210,7 +201,7 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
     # q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
     # print("\n\nFIRST ANSWER", first_response['choices'][0]['message']['content'], "\n\n")
     # Use the first answer of chatGPT to create the context
-    q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
+    q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine=deployment_embeddings_name)['data'][0]['embedding']
 
     # Get the distances from the embeddings
     # df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
@@ -259,26 +250,38 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
     return(("\n\n###\n\n".join(returns)), sources, question_en)
 
 def get_previous_questions(history):
+    # print("----------------------------- History -----------------------------")
+    # print(history)
+    # print("\n")
     questions= [[elem['query_en'], elem['answer_en']] for elem in history]
-    return questions
+    prev_questions = []
+    for elem in history:
+        prev_questions.append({'role':'user','content':elem['query_en']})
+        prev_questions.append({'role':'assistant','content':elem['answer_en']})
+    return prev_questions
+
+def format_previous_questions(prev_questions):
+    return 0
 
 def generate_answer(question_es, history, deployment=deployment_name):
     prev_questions = get_previous_questions(history)
+    role_sys = {"role": "system", "content": "You are a doctor in obstetrics."}
     context, sources, question_en = create_context_es(question_es, prev_questions, max_len=1800, size="ada")
     nb_tokens=0
     for quest, ans in prev_questions:
         nb_tokens+=len(quest.split())+len(ans.split())
     if nb_tokens<2000:
+        prev_questions.insert(0, role_sys)
+        prev_questions.append({"role": "user", "content": f"""##Provided Information## {context} \n\n---\n\##Question## {question_en} \
+                    \n\n---\n\Based on the ##Provided Information## above and its relevant topic, and continuing the previous conversation ##Previous \
+                    conversation##, answer the ##Question##. The answer must be short, and fit in maximum 2 sentences. If the question cannot be answered using the provided informations, or if there are no provided informations, \
+                 just respond \"I don\'t know\""""})
+        # print("----------------------------- Previous questions -----------------------------")
+        # print(prev_questions)
+        
         response = openai.ChatCompletion.create(
             engine= deployment_name, 
-            messages=[
-                {"role": "system", "content": "You are a doctor in obstetrics."},
-                # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-                # scientifically-grounded answers to common consumer search queries about 
-                # obstetric health.
-
-                {"role": "user", "content": f"Answer the question based on the context below and on the previous questions and the answers that have already been given. Give more importance to the previous question. If the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question_en}\nAnswer:"},
-            ]
+            messages= prev_questions
         )
         answer_en = response['choices'][0]['message']['content']
         answer_es = translate_en_es(answer_en)
