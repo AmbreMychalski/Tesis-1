@@ -13,16 +13,16 @@ rawDataset = "front/rawDataset/"
 modified_docs = "front/public/rawDataset/"
 
 # ---------------- GPT 4 --------------
-# openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
-# openai.api_base = "https://invuniandesai-2.openai.azure.com/"
-# deployment_name='gpt-4-rfmanrique'
-# deployment_embeddings_name = 'gpt4-embedding-ada-002'
+openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
+openai.api_base = "https://invuniandesai-2.openai.azure.com/"
+deployment_name='gpt-4-rfmanrique'
+deployment_embeddings_name = 'gpt4-embedding-ada-002'
 
 # ---------------- GPT 3.5 turbo --------------
-openai.api_key = os.getenv("OpenAIKey")
-openai.api_base = "https://invuniandesai.openai.azure.com/"
-deployment_name='gpt-35-turbo-rfmanrique'
-deployment_embeddings_name = 'text-embedding-ada-002-rfmanrique'
+# openai.api_key = os.getenv("OpenAIKey")
+# openai.api_base = "https://invuniandesai.openai.azure.com/"
+# deployment_name='gpt-35-turbo-rfmanrique'
+# deployment_embeddings_name = 'text-embedding-ada-002-rfmanrique'
 
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
@@ -74,12 +74,13 @@ def translate_es_en(txt_es):
         engine= deployment_name, 
         messages=[
             {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
-            # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-            # scientifically-grounded answers to common consumer search queries about 
-            # obstetric health.
-            # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
-
-            {"role": "user", "content": f"Translate the following text from spanish to english./\n\n---\n\n/{txt_es}\n\n/You have to keep the translated text as close semantically and syntactically to its original version as possible. Return the English translation only:"},
+            {"role": "user", "content": f"""Text to translate: ``` {txt_es} ```. Translate the text delimited \
+by triple backticks from Spanish to English. \
+You must keep the translated text as close semantically and syntactically to its original \
+version as possible. You mustn’t add any special characters such as ```, ", / and your answer mustn’t \
+be returned between quotes. \
+Return the English translation only.\
+"""},
         ]          
     )
     txt_en = translated['choices'][0]['message']['content']
@@ -90,12 +91,13 @@ def translate_en_es(txt_en):
         engine= deployment_name, 
         messages=[
             {"role": "system", "content": "You're a translator, and you translate between English and Spanish ."},
-            # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-            # scientifically-grounded answers to common consumer search queries about 
-            # obstetric health.
-            # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
-
-            {"role": "user", "content": f"Translate the following text from english to spanish./\n\n---\n\n/{txt_en}\n\n/You have to keep the translated text as close semantically and syntactically to its original version as possible. Return the Spanish translation only:"},
+            {"role": "user", "content": f"""Text to translate: ``` {txt_en} ```. Translate the text delimited \
+by triple backticks from English to Spanish.
+You must keep the translated text as close semantically and syntactically to its original \
+version as possible. You mustn't add any special characters such as ```, ", / and your answer mustn't \
+be returned between quotes.
+Return the Spanish translation only.
+"""},
         ]          
     )
     txt_es = translated['choices'][0]['message']['content']
@@ -110,11 +112,7 @@ def create_context(question, prev_questions, max_len=1800, size="ada"):
             engine= deployment_name, 
             messages=[
                 {"role": "system", "content": "You are a doctor in obstetrics."},
-                # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-                # scientifically-grounded answers to common consumer search queries about 
-                # obstetric health.
-
-                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question taking into account the previous asked questions. In your answer you must include the previous reword question and the answer./\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
+                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question considering the previous asked questions. In your answer you must include the previous reword question and the answer. \n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
             ]          
         )
     
@@ -129,7 +127,7 @@ def create_context(question, prev_questions, max_len=1800, size="ada"):
 
     # Get the distances from the embeddings
     # df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
-    results = collection.query(query_embeddings=q_embeddings, n_results=20)
+    results = collection.query(query_embeddings=q_embeddings, n_results=50)
 
     returns = []
     sources = []
@@ -151,11 +149,7 @@ def create_context(question, prev_questions, max_len=1800, size="ada"):
             engine= deployment_name, # engine = "deployment_name".
             messages=[  
                 {"role": "system", "content": "You are a doctor in obstetrics."},
-                # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-                # scientifically-grounded answers to common consumer search queries about 
-                # obstetric health.
-
-                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\n---\n\nThe question is: {question}\nDo you consider it relevant for providing an accurate response in this field? Please respond with a 'yes' or 'no' only."},
+                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
             ]          
         )
 
@@ -185,12 +179,8 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
             engine= deployment_name, 
             messages=[
                 {"role": "system", "content": "You are a doctor in obstetrics."},
-                # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-                # scientifically-grounded answers to common consumer search queries about 
-                # obstetric health.
-
-                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question taking into account the previous asked questions. In your answer you must include the previous reword question and the answer./\n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question_en}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
-            ]          
+                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question considering the previous asked questions. In your answer you must include the previous reword question and the answer. \n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
+            ]        
         )
     
     """
@@ -205,7 +195,7 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
 
     # Get the distances from the embeddings
     # df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
-    results = collection.query(query_embeddings=q_embeddings, n_results=20)
+    results = collection.query(query_embeddings=q_embeddings, n_results=50)
 
     returns = []
     sources = []
@@ -227,12 +217,8 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
             engine= deployment_name, # engine = "deployment_name".
             messages=[  
                 {"role": "system", "content": "You are a doctor in obstetrics."},
-                # You are a helpful medical knowledge assistant. Provide useful, complete, and 
-                # scientifically-grounded answers to common consumer search queries about 
-                # obstetric health.
-
-                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\n---\n\nThe question is: {question_en}\nDo you consider it relevant for providing an accurate response in this field? Please respond with a 'yes' or 'no' only."},
-            ]          
+                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
+            ]     
         )
 
         # response['choices'][0]['message']['content'] = 'yes'
@@ -245,6 +231,21 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
             temp.append(page)
             temp.append(coords)
             sources.append(temp)
+            print('---index---', i)
+    
+    for i in range(len(sources)):
+        src = sources[i][1].replace('(', '').replace(')', '').split(', ')
+        for j in range(len(src)):
+            src[j]=int(src[j])
+        if src[0]==src[1]:
+            sources[i][1] = "("+str(src[0])+")"
+
+
+    # print("-----------------CONTEXTBIS---------------")
+    # for i in returns:
+    #     print(i)
+    #     print(len(i))
+    # print("-----------------ENDCONTEXTBIS---------------")
             
     # Return the context
     return(("\n\n###\n\n".join(returns)), sources, question_en)
@@ -265,28 +266,51 @@ def format_previous_questions(prev_questions):
 
 def generate_answer(question_es, history, deployment=deployment_name):
     prev_questions = get_previous_questions(history)
-    role_sys = {"role": "system", "content": "You are a doctor in obstetrics."}
+    role_sys = {"role": "system", "content": "You are a specialized obstetric chatbot. You respond to questions from other doctors regarding obstetrical emergencies."}
     context, sources, question_en = create_context_es(question_es, prev_questions, max_len=1800, size="ada")
     nb_tokens=0
+    # print("---------------CONTEXT------------------")
+    # print(context)
+    # print("---------------ENDCONTEXT------------------")
+    
     for quest, ans in prev_questions:
         nb_tokens+=len(quest.split())+len(ans.split())
     if nb_tokens<2000:
         prev_questions.insert(0, role_sys)
-        prev_questions.append({"role": "user", "content": f"""##Provided Information## {context} \n\n---\n\##Question## {question_en} \
-                    \n\n---\n\Based on the ##Provided Information## above and its relevant topic, and continuing the previous conversation ##Previous \
-                    conversation##, answer the ##Question##. The answer must be short, and fit in maximum 2 sentences. If the question cannot be answered using the provided informations, or if there are no provided informations, \
-                 just respond \"I don\'t know\""""})
+        prev_questions.append({"role": "user", "content": f"""```  {context}  ```
+            Question ---  {question_en}  ---  
+From the support information that you are provided, delimited by triple backticks, extract the \
+relevant information \
+based on the asked question delimited by triple quotes. If there are any measurements or doses \
+mentioned in the question, try to locate them in the provided information. 
+Then, using these relevant details and any measurements or dosis you extracted, continue the previous \
+conversation by answering the question.
+Provide a detailed answer, offering further explanations and elaborating on the information. 
+The answer mustn’t include special characters such as /, ", ---, ``` etc. 
+If the question cannot be answered with the provided information, simply write "I don't know.".
+            """})
+        prev_questions.append({"role": "user", "content": f"""Once you thought about your answer, revise it following these steps:
+1. Verify your answer and remove any references to the provided information. For instance, \
+if your answer states:  "Based on the information provided, it seems that ...", replace it with \
+"It seems that ". Refer to these information as your own knowledge as an obstetrical chatbot. \
+Your response mustn't mention the words "provided information" or "given information" under any circumstances.
+2. If if the context delimited by triple backticks is empty or if your answer implies that you cannot \
+respond based on the given information, simply state "I don't know.".
+3. Remove from your answer any advice reminding him to consult with a healthcare professional."""})
         # print("----------------------------- Previous questions -----------------------------")
         # print(prev_questions)
+        # print("----------------------------- End Previous questions -----------------------------")
         
         response = openai.ChatCompletion.create(
             engine= deployment_name, 
             messages= prev_questions
         )
         answer_en = response['choices'][0]['message']['content']
+        print("----------------------------- Answer EN -----------------------------")
+        print(answer_en )
         answer_es = translate_en_es(answer_en)
-
-        context = context.split("\n###\n")
+        print("----------------------------- Answer ES -----------------------------")
+        print(answer_es )
         return (answer_es, answer_en, question_en, sources)
     else:
         return('You cannot continue this conversation', [])

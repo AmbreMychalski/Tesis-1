@@ -6,16 +6,12 @@ import io
 import atexit
 import logging
 
-rawDataset = "front/rawDataset/"
-modified_docs = "front/public/rawDataset/"
-
 app = Flask(__name__)
 cors = CORS(app)
 
 logging.basicConfig(level=logging.INFO)
 
 History = []
-path_dataset = './front/public/RawDataset/'
 
 def load_history():
     global History
@@ -65,7 +61,6 @@ def generate_pdf(message_id, pdf_name):
 # Definition of the API returning GPT answer to an obstetric related question
 @app.route('/api/query', methods=['POST'])
 def receive_question():
-    global path_dataset
 
     try:
         # Recovering of the question data from front
@@ -73,10 +68,8 @@ def receive_question():
         question_es = data.get('query')
         if len(question_es)==0:
             question_es.append(" ")
-
         # Generation of the answer
         (answer_es, answer_en, question_en, sources) =  generate_answer(question_es, History, deployment=deployment_name)
-        
         sources_to_print = {}
         sources_to_highlight = {}
         for src in sources:
@@ -94,13 +87,6 @@ def receive_question():
                 coords = src[2].replace('(', '').replace(')', '').split(', ')
                 coords = [ float(c) for c in coords]
                 sources_to_highlight[src[0]] = [[pages, coords]]
-
-        for fname, loc in sources_to_highlight.items():
-            pages = (loc[0])[0]
-            coords = loc[0][1]
-            # to remove when bug resolved
-            if pages[0] == pages[1]:
-                pages = [pages[0]]
             
         # Creation of the json answer
         if "I don\'t know" in answer_en:
