@@ -90,7 +90,7 @@ function App() {
   return (
     <div className="main">
       <h1>Obstetric Search</h1>
-      {chatHistory && (
+      {chatHistory.length > 0 && (
       <div className="history-panel">
         <div className="history-scroll"  ref={chatHistoryRef}>
           <ul>
