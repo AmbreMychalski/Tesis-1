@@ -10,6 +10,7 @@ function App() {
   const [sources, setSources] = useState([])
   const [chatHistory, setChatHistory] = useState([])
   const chatHistoryRef = useRef(null);
+  const [loading, setLoading] = useState(false);
   
 
   const inputHandler = (e) => {
@@ -26,6 +27,7 @@ function App() {
 
   // Submission of the query to the back API
   const handleSubmit = () => {
+    setLoading(true);
     const jsonData = {
       query: query,
     };
@@ -39,6 +41,7 @@ function App() {
     })
       .then(response => response.json())
       .then(data => {
+        setLoading(false);
         
         console.log("message", data.message);
         console.log("answer_es", data.message.answer_es);
@@ -57,6 +60,7 @@ function App() {
       })
       .catch(error => {
         console.error('Error while sending the request to the backend: ', error);
+        setLoading(false);
       });
       console.log("jsonData", jsonData);
 
@@ -146,7 +150,9 @@ function App() {
           fullWidth
           label="Search"
         />
-      <button className="search-button" onClick={handleSubmit}>Submit</button>
+      <button className="search-button" onClick={handleSubmit} disabled={loading}>
+            {loading ? <div className="loading-spinner"></div> : 'Submit'}
+        </button>
       </div>
     </div>
   );
