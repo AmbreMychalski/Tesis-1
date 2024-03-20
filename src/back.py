@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 from openai.embeddings_utils import distances_from_embeddings
 import chromadb
+import time
 import fitz
 import io
 
@@ -13,16 +14,16 @@ rawDataset = "front/rawDataset/"
 modified_docs = "front/public/rawDataset/"
 
 # ---------------- GPT 4 --------------
-openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
-openai.api_base = "https://invuniandesai-2.openai.azure.com/"
-deployment_name='gpt-4-rfmanrique'
-deployment_embeddings_name = 'gpt4-embedding-ada-002'
+# openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
+# openai.api_base = "https://invuniandesai-2.openai.azure.com/"
+# deployment_name='gpt-4-rfmanrique'
+# deployment_embeddings_name = 'gpt4-embedding-ada-002'
 
 # ---------------- GPT 3.5 turbo --------------
-# openai.api_key = os.getenv("OpenAIKey")
-# openai.api_base = "https://invuniandesai.openai.azure.com/"
-# deployment_name='gpt-35-turbo-rfmanrique'
-# deployment_embeddings_name = 'text-embedding-ada-002-rfmanrique'
+openai.api_key = os.getenv("OpenAIKey")
+openai.api_base = "https://invuniandesai.openai.azure.com/"
+deployment_name='gpt-35-turbo-rfmanrique'
+deployment_embeddings_name = 'text-embedding-ada-002-rfmanrique'
 
 openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
@@ -70,20 +71,25 @@ def highlight_context(fname, pages, coords):
     return pdf_stream
 
 def translate_es_en(txt_es):
-    translated = openai.ChatCompletion.create(
-        engine= deployment_name, 
-        messages=[
-            {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
-            {"role": "user", "content": f"""Text to translate: ``` {txt_es} ```. Translate the text delimited \
-by triple backticks from Spanish to English. \
-You must keep the translated text as close semantically and syntactically to its original \
-version as possible. You mustn’t add any special characters such as ```, ", / and your answer mustn’t \
-be returned between quotes. \
-Return the English translation only.\
-"""},
-        ]          
-    )
-    txt_en = translated['choices'][0]['message']['content']
+    txt_en=''
+    try:
+        translated = openai.ChatCompletion.create(
+            engine= deployment_name, 
+            messages=[
+                {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                {"role": "user", "content": f"""Text to translate: ``` {txt_es} ```. Translate the text delimited \
+    by triple backticks from Spanish to English. \
+    You must keep the translated text as close semantically and syntactically to its original \
+    version as possible. You mustn’t add any special characters such as ```, ", / and your answer mustn’t \
+    be returned between quotes. \
+    Return the English translation only.\
+    """},
+            ]          
+        )
+        txt_en = translated['choices'][0]['message']['content']
+
+    except Exception as e:
+        txt_en = 'An error occurred'
     return(txt_en)
 
 def translate_en_es(txt_en):
@@ -173,7 +179,9 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
 
     # Spanish to English translation
     question_en = translate_es_en(question)
-    
+    if 'An error occurred' in question_en:
+        return('', [], question_en)
+
     # HyDE:
     first_response = openai.ChatCompletion.create(
             engine= deployment_name, 
@@ -220,6 +228,7 @@ def create_context_es(question, prev_questions, max_len=1800, size="ada"):
                 {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
             ]     
         )
+        time.sleep(0.1)
 
         # response['choices'][0]['message']['content'] = 'yes'
     
@@ -272,7 +281,10 @@ def generate_answer(question_es, history, deployment=deployment_name):
     # print("---------------CONTEXT------------------")
     # print(context)
     # print("---------------ENDCONTEXT------------------")
-    
+    if 'An error occurred:' in question_en:
+        answer_es = 'Ocurrió un error: La respuesta fue filtrada debido a que la solicitud activó la política de gestión de contenido de Azure OpenAI. Por favor, modifica tu solicitud y vuelve a intentarlo. Para obtener más información sobre nuestras políticas de filtrado de contenido, por favor lee nuestra documentación: https://go.microsoft.com/fwlink/?linkid=2198766'
+        return (answer_es, question_en, '', sources)
+
     for quest, ans in prev_questions:
         nb_tokens+=len(quest.split())+len(ans.split())
     if nb_tokens<2000:
