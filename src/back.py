@@ -173,7 +173,7 @@ def create_context(question, prev_questions, max_len=1800, size="ada"):
     # Return the context
     return(("\n\n###\n\n".join(returns)), sources)
 
-def create_context_es(question, prev_questions, max_len=1800, size="ada"):
+def create_context_es(question, prev_questions, max_len=1500, size="ada"):
     global current_sources
     current_sources = []
 
