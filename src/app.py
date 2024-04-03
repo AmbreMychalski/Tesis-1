@@ -25,21 +25,36 @@ def load_history():
         with io.open(os.path.join("front/public/", 'History.json'), 'w') as history_file:
             history_file.write(json.dumps([]))
 
-
+@app.route('/api/save', methods=['POST'])
 def save_history():
-    if (History != []):
-        print("\nSaving history to file...")
-        with open("front/public/History.json", "w") as f:
-            print("-----------------------")
+    # if (History != []):
+    #     print("\nSaving history to file...")
+    #     with open("front/public/History.json", "w") as f:
+    #         print("-----------------------")
+    #         print(History)
+    #         json.dump(History, f)
+    #     print("History saved successfully.")
+    try: 
+        History = request.get_json().get('history')
+        if (History != [[]]):
+            print("\nSaving history to file...")
             print(History)
-            json.dump(History, f)
-        print("History saved successfully.")
+            with open("front/public/History.json", "w") as f:
+                print("-----------------------")
+                print(History)
+                json.dump(History, f)
+            print("History saved successfully.")
+        return jsonify({'message': 'succesfully saved'})
+    except Exception as e:
+        print("erreur")
+        return jsonify({'error': str(e)}), 500
+    
 
-@app.route('/api/generate-pdf/<int:message_id>/<pdf_name>')
+@app.route('/api/generate-pdf/<int:message_id>/<pdf_name>', methods=['POST', 'GET'])
 def generate_pdf(message_id, pdf_name):
-    global History
-
-    for message in History:
+    data = request.get_json()
+    history = data.get('history')
+    for message in history:
         if message['id'] == message_id:
             highlight = message['highlight']
             pages = highlight[pdf_name][0][0]
@@ -61,15 +76,24 @@ def generate_pdf(message_id, pdf_name):
 # Definition of the API returning GPT answer to an obstetric related question
 @app.route('/api/query', methods=['POST'])
 def receive_question():
-
+    
     try:
         # Recovering of the question data from front
         data = request.get_json()
         question_es = data.get('query')
+        print('\n------------------------- query -------------------------\n')
+        print(question_es)
+        if len(question_es)==0 or question_es.isspace():
+            return jsonify({'error': 'La pregunta esta vacia'}), 204
+        history = data.get('history')
         if len(question_es)==0:
             question_es.append(" ")
         # Generation of the answer
-        (answer_es, answer_en, question_en, sources) =  generate_answer(question_es, History, deployment=deployment_name)
+        #(answer_es, answer_en, question_en, sources) =  generate_answer(question_es, History, deployment=deployment_name)
+        print("\n------------------------- history -------------------------\n", history)
+        (answer_es, answer_en, question_en, sources) =  generate_answer(question_es, history, deployment=deployment_name)
+        print('\n------------------------- answer -------------------------\n')
+        print(answer_es)
         sources_to_print = {}
         sources_to_highlight = {}
         for src in sources:
@@ -91,10 +115,10 @@ def receive_question():
         # Creation of the json answer
         if "I don\'t know" in answer_en:
             sources_to_print={}
-        if len(History)==0:
+        if len(history)==0:
             q_id = 0
         else:
-            q_id = History[-1]['id']+1
+            q_id = history[-1]['id']+1
         response = {
             'id': q_id,
             'query_es': f"{question_es}",
@@ -104,9 +128,6 @@ def receive_question():
             'sources':sources_to_print,
             'highlight':sources_to_highlight,
         }
-        # print("----------RESPONSE-----------", response)
-        History.append(response)
-        # print("\n Historic of the conversation:\n", History, "\n")
         
         return jsonify({'message': response})
     except Exception as e:
