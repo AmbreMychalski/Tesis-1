@@ -2,6 +2,7 @@ import os
 import openai
 import chromadb
 import pandas as pd
+import re
 
 # ---------------- GPT 4 --------------
 # openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
@@ -23,7 +24,9 @@ embeddings_directory = "front/embeddings/"
 dialogues_directory = "front/dialogues/"
 
 input_file = 'embeddings_complete_500_marine.csv'
-output_file = 'dialogues_gpt35_chunks500_marine.csv'
+output_file = 'dialogues_gpt35_chunks500_ambre.csv'
+cleaned_dialogue_file = 'cleaned_dialogue_ambre.csv'
+formatted_dialogue_file = 'formatted_dialogue_ambre.csv'
 
 def generate_n_row_conversation(nb_turn=5):
     dialogue = []
@@ -81,8 +84,49 @@ def generate_n_row_conversation(nb_turn=5):
         df = pd.DataFrame(dialogue, columns = ['dialogue'])
         df.to_csv(dialogues_directory+output_file, mode='a', header=False)
 
+def clean_generated_dialogues(dialogue_csv_file):
+    df = pd.read_csv(dialogues_directory+dialogue_csv_file)
+    df = df.drop(columns=['Unnamed: 0'])
+    print(df.head())
+    print("\n-------------- Cleaning dialogues from non wanting patterns -------------")
+    df = df.replace('\n', '', regex=True)
+    df = df.replace('>: ', '>', regex=True)
+    # df = df.replace('"<', '', regex=True)
+    # df = df.replace('>"', '', regex=True)
+    df = df.replace(r'\(Word count requirement: \d+ words\)', '', regex=True)
+    df = df.replace(r'</Assistant \d+>', '', regex=True)
+    df = df.replace(r'</Doctor \d+>', '', regex=True)
+    df = df.replace(r'</chat><chat>', '', regex=True)
+    df = df.replace(r'<chat><chat>', '<chat>', regex=True)
+    df = df.replace(r'</chat></chat>', '</chat>', regex=True)
+    # print(df.loc[[0]])
+    for index, row in df.iterrows():
+        if not row['dialogue'].endswith('</chat>'):
+            df.at[index, 'dialogue'] += ' </chat>'
+    print(df.head())
+    df.to_csv(dialogues_directory+cleaned_dialogue_file, index=False)
+
+    
+
+def format_cleaned_dialogues(clean_dialogue_csv):
+    df = pd.read_csv(dialogues_directory+clean_dialogue_csv)
+
+    processed_dialogue = []
+
+    for index, row in df.iterrows():
+        dialogue = row['dialogue']
+        dialogue = dialogue.replace('<chat>', '<s>').replace('</chat>', '</s>')
+        dialogue = re.sub(r'<Doctor \d+>', '<INST>', dialogue)
+        dialogue = re.sub(r'<Assistant \d+>', '</INST>', dialogue)
+        processed_dialogue.append(dialogue)
+    df = pd.DataFrame(processed_dialogue)
+    print(df.head())
+    df.to_csv(dialogues_directory+formatted_dialogue_file, index=False)
+    
 
 if __name__ == '__main__':
     print("Generating conversations with", deployment_name)
-    generate_n_row_conversation(3)
+    # generate_n_row_conversation(3)
+    # clean_generated_dialogues(output_file)
+    # format_cleaned_dialogues(cleaned_dialogue_file)
     
