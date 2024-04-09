@@ -1,8 +1,16 @@
+# Code created on the base of https://medium.com/@xuebinbin12/fine-tuning-chat-based-llm-with-multi-turn-conversational-data-part-i-d8c64d01a20d
+# Bin Xue, Jan 17, 2024, Fine-Tuning chat-based LLM with Multi-Turn Conversational Data (Part I)
+
 import os
 import openai
-import chromadb
 import pandas as pd
 import re
+from transformers import AutoTokenizer
+import json
+
+import torch
+from datasets import Dataset
+from trl import DataCollatorForCompletionOnlyLM
 
 # ---------------- GPT 4 --------------
 # openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
@@ -26,7 +34,9 @@ dialogues_directory = "front/dialogues/"
 input_file = 'embeddings_complete_500_marine.csv'
 output_file = 'dialogues_gpt35_chunks500_ambre.csv'
 cleaned_dialogue_file = 'cleaned_dialogue_ambre.csv'
-formatted_dialogue_file = 'formatted_dialogue_ambre.csv'
+json_formatted_dialogue_file = 'formatted_dialogue_ambre.json'
+llama_formatted_dialogue_file = 'llama_formatted_dialogue.csv'
+
 
 def generate_n_row_conversation(nb_turn=5):
     dialogue = []
@@ -105,28 +115,96 @@ def clean_generated_dialogues(dialogue_csv_file):
             df.at[index, 'dialogue'] += ' </chat>'
     print(df.head())
     df.to_csv(dialogues_directory+cleaned_dialogue_file, index=False)
-
     
-
-def format_cleaned_dialogues(clean_dialogue_csv):
+def format_cleaned_json_dialogues(clean_dialogue_csv):
     df = pd.read_csv(dialogues_directory+clean_dialogue_csv)
 
     processed_dialogue = []
-
+    last_role = None
+    pattern = r'<(Doctor|Assistant) (.*?)>(.*?)(?=<)'
     for index, row in df.iterrows():
+        last_role = None
+        json_diag = []
         dialogue = row['dialogue']
-        dialogue = dialogue.replace('<chat>', '<s>').replace('</chat>', '</s>')
-        dialogue = re.sub(r'<Doctor \d+>', '<INST>', dialogue)
-        dialogue = re.sub(r'<Assistant \d+>', '</INST>', dialogue)
-        processed_dialogue.append(dialogue)
-    df = pd.DataFrame(processed_dialogue)
-    print(df.head())
-    df.to_csv(dialogues_directory+formatted_dialogue_file, index=False)
+        for match in re.finditer(pattern, dialogue):
+            role = match.group(1).strip()
+            content = match.group(3).strip()
+            if role == "Doctor" and role != last_role:
+                content = content.replace('<chat>', '').replace('</chat>', '')
+                json_diag.append({'role': 'user', 'content': content})
+                last_role = role
+            elif role == "Assistant" and role != last_role:
+                content = content.replace('<chat>', '').replace('</chat>', '')
+                json_diag.append({'role': 'assistant', 'content': content})
+                last_role = role
+        processed_dialogue.append(json_diag)
+
+    final_processed_dialogue = []
+    for instance in processed_dialogue:
+        if len(instance) > 1:  # Suppress instances with only one question from the user or one response from the assistant
+            final_processed_dialogue.append(instance)
+    print(len(final_processed_dialogue))
+
+    # Save in json format
+    with open(dialogues_directory+json_formatted_dialogue_file, 'w') as f:
+        json.dump(final_processed_dialogue, f)
     
+def format_to_llama(formatted_json_dialogue_file):
+    # Initialize the tokenizer with llama model
+    checkpoint = 'meta-llama/Llama-2-7b-chat-hf'
+    # tokenizer = AutoTokenizer.from_pretrained(checkpoint,
+    #                                             max_length=1500,
+    #                                             padding="max_length")
+    tokenizer = AutoTokenizer.from_pretrained(checkpoint,
+                                         padding='right')
+    tokenizer.add_special_tokens({'pad_token':'[PAD]'})
+
+    # Format the json dialogues into a pandas dataframe
+    with open(dialogues_directory+formatted_json_dialogue_file, "r") as f:
+        json_dialogue = json.load(f)
+
+    formatted_conversations = []
+
+    for conversation in json_dialogue:
+        conv = {'dialogue': conversation}
+        formatted_conversations.append(conv)
+
+    df = pd.json_normalize(formatted_conversations)
+    # print(df.head())
+    # print(df.iloc[0]['dialogue'], type(df.iloc[0]['dialogue']))
+
+    # Format the conversations in the dataframe with llama multi-turns conversation format
+    print(repr(tokenizer.pad_token))
+    df['template_formatted_conversation_turns'] = df['dialogue'].apply(lambda x: tokenizer.apply_chat_template(x,tokenize=False, padding=True))
+    
+    # print(df.head())
+    # print(df.iloc[0]['template_formatted_conversation_turns'])
+
+    # Save the formatted conversations into .csv file
+    print(f"vocab length={len(tokenizer.get_vocab())}")
+    df.to_csv(dialogues_directory+llama_formatted_dialogue_file, index=False)
+
+    # Dataset Construction
+    dataset = Dataset.from_list(df['template_formatted_conversation_turns'].apply(lambda x: tokenizer(x, return_length=True)).to_list()) 
+    response_template = '[/INST]'
+    instruction_template = '[INST]'
+    collator = DataCollatorForCompletionOnlyLM(instruction_template=instruction_template, response_template=response_template, tokenizer=tokenizer)
+    
+    # Example of created batch
+    print('Example of created batch:')
+    dataloader = torch.utils.data.DataLoader(dataset=dataset, 
+                                         collate_fn=collator, 
+                                         batch_size=2)
+    for batch in dataloader:
+        print(batch)
+        break
 
 if __name__ == '__main__':
     print("Generating conversations with", deployment_name)
     # generate_n_row_conversation(3)
     # clean_generated_dialogues(output_file)
-    # format_cleaned_dialogues(cleaned_dialogue_file)
+    # # format_cleaned_dialogues(cleaned_dialogue_file)
+    # format_cleaned_json_dialogues(cleaned_dialogue_file)
+    format_to_llama(json_formatted_dialogue_file)
+    # max_token_dataset()
     
