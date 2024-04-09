@@ -7,6 +7,7 @@ import pandas as pd
 import re
 from transformers import AutoTokenizer
 import json
+from huggingface_hub import login
 
 import torch
 from datasets import Dataset
@@ -32,10 +33,10 @@ embeddings_directory = "front/embeddings/"
 dialogues_directory = "front/dialogues/"
 
 input_file = 'embeddings_complete_500_marine.csv'
-output_file = 'dialogues_gpt35_chunks500_ambre.csv'
-cleaned_dialogue_file = 'cleaned_dialogue_ambre.csv'
-json_formatted_dialogue_file = 'formatted_dialogue_ambre.json'
-llama_formatted_dialogue_file = 'llama_formatted_dialogue.csv'
+output_file = 'dialogues_gpt35_chunks1500_marine.csv'
+cleaned_dialogue_file = 'cleaned_dialogue_marine.csv'
+json_formatted_dialogue_file = 'formatted_dialogue_marine.json'
+llama_formatted_dialogue_file = 'llama_formatted_dialogue_marine.csv'
 
 
 def generate_n_row_conversation(nb_turn=5):
@@ -198,12 +199,16 @@ def format_to_llama(formatted_json_dialogue_file):
     for batch in dataloader:
         print(batch)
         break
+    print("Dataset size:", len(dataset))
+    # Add to HuggingFace
+    login()
+    dataset.push_to_hub("Druluth/musicoterapy_qa_llama2-1046")
+    # dataset.push_to_hub("Druluth/obstetric_qa_llama2-348")
 
 if __name__ == '__main__':
     print("Generating conversations with", deployment_name)
     # generate_n_row_conversation(3)
     # clean_generated_dialogues(output_file)
-    # # format_cleaned_dialogues(cleaned_dialogue_file)
     # format_cleaned_json_dialogues(cleaned_dialogue_file)
     format_to_llama(json_formatted_dialogue_file)
     # max_token_dataset()
