@@ -65,13 +65,9 @@ function App() {
       },
       body: JSON.stringify(jsonData),
     })
-      .then(response => {
-        if (response.status === 204) {
-          handleError("Ha ocurrido un error: por favor verifica que su pregunta no esté vacía.");
-        } else {
-          response.json()
-        }})
+    .then(response => response.json())
       .then(data => {
+        console.log('data', data)
         setLoading(false);
         
         console.log("message", data.message);
@@ -80,12 +76,7 @@ function App() {
         console.log("sources array", data.message.sources);
         console.log("source to highlight", data.message.highlight);
         console.log("id", data)
-        // const sourcesArray = Object.entries(data.message.sources).map(([sourceName, ids]) => ({ name: sourceName, ids }));
-        //console.log(sourcesArray)
         setAnswer(data.message.answer_es);
-        // setSources(sourcesArray);
-        // setChatHistory(prevHistory => [
-        // Update the current chat history so that it includes the answer to the new question
         setCurrentChatHistory(prevHistory => [
           ...prevHistory,
           { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight }
@@ -107,6 +98,7 @@ function App() {
       })
       .catch(error => {
         console.error('Error while sending the request to the backend: ', error);
+        handleError("Ha ocurrido un error: por favor verifica que su pregunta no esté vacía.");
         setLoading(false);
       });
       console.log("jsonData", jsonData);
