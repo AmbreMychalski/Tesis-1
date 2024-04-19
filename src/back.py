@@ -45,16 +45,16 @@ def highlight_context(fname, pages, coords):
             end_of_page_y = p.rect.height 
             x1 = coords[0]
             x2 = coords[1]
-            y1 = end_of_page_x
-            y2 = end_of_page_y
+            y1 = end_of_page_x-(0.1*end_of_page_x)
+            y2 = end_of_page_y-(0.1*end_of_page_y)
             print(x1, x2, y1, y2)
         elif i < (len(pages)-1):
             end_of_page_x = p.rect.width 
             end_of_page_y = p.rect.height 
             x1 = 0.0
             x2 = 0.0
-            y1 = end_of_page_x
-            y2 = end_of_page_y
+            y1 = end_of_page_x-(0.1*end_of_page_x)
+            y2 = end_of_page_y-(0.1*end_of_page_y)
         else:
             print(i)
             x1 = 0.0
@@ -62,7 +62,11 @@ def highlight_context(fname, pages, coords):
             y1 = coords[2]
             y2 = coords[3]
         rect_to_draw = (x1, x2, y1, y2)
-        p.add_highlight_annot(rect_to_draw)
+        rect_highlight = fitz.Rect(rect_to_draw)
+        p1 = rect_highlight.top_left  # top-left point of first rectangle
+        p2 = rect_highlight.bottom_right  # bottom-right point of last rectangle
+        p.add_highlight_annot(start=p1,stop=p2)
+        # Set border style to square
     pdf_stream = io.BytesIO()
     pdf_document.save(pdf_stream)
         
@@ -276,11 +280,12 @@ def format_previous_questions(prev_questions):
 def generate_answer(question_es, history, deployment=deployment_name):
     prev_questions = get_previous_questions(history)
     role_sys = {"role": "system", "content": "You are a specialized obstetric chatbot. You respond to questions from other doctors regarding obstetrical emergencies."}
+    print('-----------------question_es------------', question_es)
     context, sources, question_en = create_context_es(question_es, prev_questions, max_len=1800, size="ada")
     nb_tokens=0
-    # print("---------------CONTEXT------------------")
-    # print(context)
-    # print("---------------ENDCONTEXT------------------")
+    print("---------------CONTEXT------------------")
+    print(context)
+    print("---------------ENDCONTEXT------------------")
     if 'An error occurred:' in question_en:
         answer_es = 'Ocurrió un error: La respuesta fue filtrada debido a que la solicitud activó la política de gestión de contenido de Azure OpenAI. Por favor, modifica tu solicitud y vuelve a intentarlo. Para obtener más información sobre nuestras políticas de filtrado de contenido, por favor lee nuestra documentación: https://go.microsoft.com/fwlink/?linkid=2198766'
         return (answer_es, question_en, '', sources)
