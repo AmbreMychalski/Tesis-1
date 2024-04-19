@@ -38,6 +38,10 @@ h3 {
   width: 80%;
 }
 
+.history-container{
+  display:flex;
+  background-color: #f0f0f0; /* Couleur de fond */
+}
 .answer-text {
   margin: 20px;
   font-size: 18px;
@@ -68,6 +72,32 @@ h3 {
   align-self: stretch;
   /* align-self: flex-end; */
   position: relative;
+}
+
+.newChat-button{
+  background-color: #156752; /* Green */
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+  width: 120px; /* Fixed width */
+  height: 40px; /* Fixed height */
+}
+
+@media screen and (max-width: 768px) {
+  .search-button {
+    width: 100%; /* Set width to 100% on smaller screens */
+    max-width: 200px; /* Set maximum width to 200px */
+    height: auto; /* Allow height to adjust based on content */
+  }
 }
 
 .saveHistory-button {
@@ -189,6 +219,9 @@ h3 {
 
 .container{
   display:flex;
+  background-color:  #ffffff;  /* Couleur de fond */
+  width: 80vw; /* Take up 100% of the viewport width */
+  height: 80vh; /* Take up 100% of the viewport height */
 }
 
 .left{

@@ -84,7 +84,7 @@ function App() {
       //console.log("lengthes", currentChatHistory.length, chatHistory.length)
       // Update  the global chat history to avoid incoherences
       console.log('current chat', currentChatHistory);
-      if (currentChatHistory===undefined){
+      if (currentChatHistory===undefined || currentChatHistory.length===0){
         // console.log('current chat', currentChatHistory);
         setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
       } else {
@@ -215,15 +215,14 @@ function App() {
     <div className="main">
       <h1>Obstetric Search</h1>
       <button className="saveHistory-button" onClick={handleSaveHistory}>Save history</button>
-      {chatHistory.length>0 && (
       <div className='container'>
         <div className="history-panel left">
           <div className="history-scroll"  ref={chatHistoryRef}>
-            <div className="container">
+            <div className="history-container">
               <h3>History</h3>
-              <button className="search-button" onClick={handleNewChat}>New chat</button>
+              <button className="newChat-button" onClick={handleNewChat}>New chat</button>
             </div>
-            {chatHistory.map((item, index) => (
+            {chatHistory.length>0 && chatHistory.map((item, index) => (
               console.log("item", item),
               console.log('currentChatHistory', currentChatHistory),
               console.log('is equal', item === currentChatHistory),
@@ -240,7 +239,7 @@ function App() {
           <div className="history-scroll"  ref={chatHistoryRef}>
             <ul>
             
-            {currentChatHistory.map((item, index) => (
+            {currentChatHistory && currentChatHistory.map((item, index) => (
               <li key={index}>
                 <p><strong>Query:</strong> {item.query_es}</p>
                 <p><strong>Answer:</strong> {item.answer_es}</p>
@@ -284,7 +283,7 @@ function App() {
           </ul>
         </div>
       </div>
-    </div>)}
+    </div>
     <div className="search">
       <TextField
         id="outlined-basic"
