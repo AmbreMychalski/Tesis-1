@@ -241,43 +241,45 @@ function App() {
             
             {currentChatHistory && currentChatHistory.map((item, index) => (
               <li key={index}>
-                <p><strong>Query:</strong> {item.query_es}</p>
-                <p><strong>Answer:</strong> {item.answer_es}</p>
-                <div><strong>Sources:</strong> 
-                  {Object.entries(item.sources).length > 0 ? (
-                  <ul> 
-                    {Object.entries(item.sources).map(([source, ids], sourceIndex) => (
-                    <li key={sourceIndex}>
-                      {/* <a href={`http://localhost:3001/api/generate-pdf/${index}/${source}`+`#page=${ids[0][0]}`} target="_blank" rel="noreferrer"><strong>{source}:</strong></a> */}
-                      <a href="#" onClick={() => handleGeneratePdf(index, source, ids[0][0])}><strong>{source}:</strong></a>
-                      <ul>
-                        {ids.map((id, subIndex) => (
-                        <li key={subIndex}>
-                          p: {Array.isArray(id) ? (
-                          <span>
-                            {id.map((subId, nestedIndex) => (
-                            // <a key={nestedIndex} href={`http://localhost:3001/api/generate-pdf/${index}/${source}`+`#page=${subId}`} target="_blank" rel="noreferrer">
-                            //   {nestedIndex > 0 && ', '}
-                            //   {subId}
-                            // </a>
-                            <a href="#" onClick={() => handleGeneratePdf(index, source, subId)}>
-                              {nestedIndex > 0 && ', '}
-                              {subId}</a>
-                            ))}
-                          </span>
-                          ) : (
-                            id
-                          )}
-                        </li>
-                        ))}
-                      </ul>
-                    </li>
-                    ))}
-                  </ul>
-                  ) : (
-                    <p>No sources available</p>
-                  )}
-                </div>
+                <p className="whatsapp-bubble"><strong>Pregunta:</strong> {item.query_es}</p>
+                <p className="whatsapp-bubble received">
+                  <p><strong>Respuesta:</strong> {item.answer_es}</p>
+                  <div><strong>Fuentes:</strong> 
+                    {Object.entries(item.sources).length > 0 ? (
+                    <ul> 
+                      {Object.entries(item.sources).map(([source, ids], sourceIndex) => (
+                      <li key={sourceIndex}>
+                        {/* <a href={`http://localhost:3001/api/generate-pdf/${index}/${source}`+`#page=${ids[0][0]}`} target="_blank" rel="noreferrer"><strong>{source}:</strong></a> */}
+                        <a href="#" onClick={() => handleGeneratePdf(index, source, ids[0][0])}><strong>{source}:</strong></a>
+                        <ul>
+                          {ids.map((id, subIndex) => (
+                          <li key={subIndex}>
+                            p: {Array.isArray(id) ? (
+                            <span>
+                              {id.map((subId, nestedIndex) => (
+                              // <a key={nestedIndex} href={`http://localhost:3001/api/generate-pdf/${index}/${source}`+`#page=${subId}`} target="_blank" rel="noreferrer">
+                              //   {nestedIndex > 0 && ', '}
+                              //   {subId}
+                              // </a>
+                              <a href="#" onClick={() => handleGeneratePdf(index, source, subId)}>
+                                {nestedIndex > 0 && ', '}
+                                {subId}</a>
+                              ))}
+                            </span>
+                            ) : (
+                              id
+                            )}
+                          </li>
+                          ))}
+                        </ul>
+                      </li>
+                      ))}
+                    </ul>
+                    ) : (
+                      <p>No sources available</p>
+                    )}
+                  </div>
+                </p>
               </li>
             ))}
           </ul>
