@@ -23,7 +23,6 @@ h2 {
 h3 {
   margin-right: 80px;
 }
-
 .search {
   display: flex;
   align-items: center;
@@ -104,6 +103,52 @@ h3 {
   text-overflow: ellipsis;
   margin-top: 5px;
   max-width: 95%;
+
+  background-color: #9e9d9d;; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+  align-self: flex-end;
+  position: relative;
+}
+
+.history-button:hover {
+  background-color: #7c7b7b;
+  /* Color on hover */
+}
+
+.selected-history-button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+  max-width: 95%;
+
+  background-color: #343434;; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+  align-self: flex-end;
+  position: relative;
+}
+.selected-history-button:hover {
+  background-color: #191919;
 }
 
 .loading-spinner {

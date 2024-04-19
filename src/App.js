@@ -223,10 +223,21 @@ function App() {
               <button className="search-button" onClick={handleNewChat}>New chat</button>
             </div>
             {chatHistory.map((item, index) => (
+              console.log("item", item),
+              console.log('currentChatHistory', currentChatHistory),
+              console.log('is equal', item === currentChatHistory),
+              <button
+                  className={`history-button ${item === currentChatHistory ? 'selected-history-button' : ''}`}
+                  key={index}
+                  onClick={() => handleChangeHistory(item)}>
+                  {item[0].query_es}
+              </button>
+            ))}
+            {/* {chatHistory.map((item, index) => (
                 <button className="history-button" key={index}  onClick={ () => handleChangeHistory(item)}>
                   {item[0].query_es}
                 </button>
-              ))}
+            ))} */}
           </div>
         </div>  
         <div className="history-panel right">
