@@ -86,6 +86,8 @@ def receive_question():
         if len(question_es)==0 or question_es.isspace():
             return jsonify({'error': 'La pregunta esta vacia'}), 204
         history = data.get('history')
+        if history is None:
+            history=[]
         if len(question_es)==0:
             question_es.append(" ")
         # Generation of the answer

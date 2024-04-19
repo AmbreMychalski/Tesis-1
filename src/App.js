@@ -66,43 +66,44 @@ function App() {
       body: JSON.stringify(jsonData),
     })
     .then(response => response.json())
-      .then(data => {
-        console.log('data', data)
-        setLoading(false);
-        
-        console.log("message", data.message);
-        console.log("answer_es", data.message.answer_es);
-        console.log("answer_en", data.message.answer_en);
-        console.log("sources array", data.message.sources);
-        console.log("source to highlight", data.message.highlight);
-        console.log("id", data)
-        setAnswer(data.message.answer_es);
-        setCurrentChatHistory(prevHistory => [
-          ...prevHistory,
-          { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight }
-        ]);
-        console.log("lengthes", currentChatHistory.length, chatHistory.length)
-        // Update  the global chat history to avoid incoherences
-        if (currentChatHistory.length==0){
-          console.log('current chat', currentChatHistory);
-          setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
-        } else {
-          const updatedHistory = chatHistory.map((row, rowIndex) =>{
-            if (chatHistory[rowIndex].every(item => currentChatHistory.includes(item))){
-              return [...currentChatHistory, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
-            }
-            return row;
-          });
-          setChatHistory(updatedHistory);
-        }
-      })
-      .catch(error => {
-        console.error('Error while sending the request to the backend: ', error);
-        handleError("Ha ocurrido un error: por favor verifica que su pregunta no esté vacía.");
-        setLoading(false);
-      });
-      console.log("jsonData", jsonData);
-      console.log("chat history", chatHistory);
+    .then(data => {
+      console.log('data', data)
+      setLoading(false);
+      
+      console.log("message", data.message);
+      console.log("answer_es", data.message.answer_es);
+      console.log("answer_en", data.message.answer_en);
+      console.log("sources array", data.message.sources);
+      console.log("source to highlight", data.message.highlight);
+      console.log("id", data)
+      setAnswer(data.message.answer_es);
+      setCurrentChatHistory(prevHistory => [
+        ...(prevHistory || []),
+        { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight }
+      ]);
+      //console.log("lengthes", currentChatHistory.length, chatHistory.length)
+      // Update  the global chat history to avoid incoherences
+      console.log('current chat', currentChatHistory);
+      if (currentChatHistory===undefined){
+        // console.log('current chat', currentChatHistory);
+        setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
+      } else {
+        const updatedHistory = chatHistory.map((row, rowIndex) =>{
+          if (chatHistory[rowIndex].every(item => currentChatHistory.includes(item))){
+            return [...currentChatHistory, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
+          }
+          return row;
+        });
+        setChatHistory(updatedHistory);
+      }
+    })
+    .catch(error => {
+      console.error('Error while sending the request to the backend: ', error);
+      handleError("Ha ocurrido un error: por favor verifica que su pregunta no esté vacía.");
+      setLoading(false);
+    });
+    console.log("jsonData", jsonData);
+    console.log("chat history", chatHistory);
 
   };
 
@@ -214,7 +215,7 @@ function App() {
     <div className="main">
       <h1>Obstetric Search</h1>
       <button className="saveHistory-button" onClick={handleSaveHistory}>Save history</button>
-      {chatHistory.length && (
+      {chatHistory.length>0 && (
       <div className='container'>
         <div className="history-panel left">
           <div className="history-scroll"  ref={chatHistoryRef}>
@@ -233,11 +234,6 @@ function App() {
                   {item[0].query_es}
               </button>
             ))}
-            {/* {chatHistory.map((item, index) => (
-                <button className="history-button" key={index}  onClick={ () => handleChangeHistory(item)}>
-                  {item[0].query_es}
-                </button>
-            ))} */}
           </div>
         </div>  
         <div className="history-panel right">
