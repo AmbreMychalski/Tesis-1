@@ -13,16 +13,18 @@ logging.basicConfig(level=logging.INFO)
 
 History = []
 
+history_path = "public/History.json"
+
 def load_history():
     global History
-    file_path = "front/public/History.json"
+    file_path = history_path
     if os.path.exists(file_path):
         with open(file_path, "r") as f:
             History = json.load(f)
             print("load history------------")
             print(History)
     else:
-        with io.open(os.path.join("front/public/", 'History.json'), 'w') as history_file:
+        with io.open(os.path.join("public/", 'History.json'), 'w') as history_file:
             history_file.write(json.dumps([]))
 
 @app.route('/api/save', methods=['POST'])

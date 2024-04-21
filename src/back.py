@@ -10,8 +10,8 @@ import time
 import fitz
 import io
 
-rawDataset = "front/rawDataset/"
-modified_docs = "front/public/rawDataset/"
+rawDataset = "rawDataset/"
+modified_docs = "public/rawDataset/"
 
 # ---------------- GPT 4 --------------
 # openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
@@ -29,44 +29,54 @@ openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
 current_sources = []
 
-path = "C:/Users/ambre/Desktop/INSA/5A/202320/Tesis_I/APP/front/src"
+path = "C:/Users/ambre/Desktop/INSA/5A/202320/Tesis_I/APP/obstetric-gpt/src"
 chroma_client = chromadb.PersistentClient(path)
 collection = chroma_client.get_collection("embedding_db_persist")    
 
 def highlight_context(fname, pages, coords):
-    pages = [p-1 for p in pages]
-    pdf_document = fitz.open(rawDataset+ fname +".pdf")
+#     x1              x2
+#  y1 -----------------
+#     |               |
+#     |               |
+#     |               |
+#     |      PDF      |
+#     |               |
+#     |               |
+#     |               |
+#  y2 -----------------
 
+
+    first_page=pages[0]-1
+    last_page=pages[-1]-1
+    pages = []
+    i=first_page
+    while i!=last_page+1:
+        pages.append(i)
+        i+=1
+    
+    pdf_document = fitz.open(rawDataset+ fname +".pdf")
     for i in range(len(pages)):
-        x1, x2, y1, y2 = 0.0, 0.0, 0.0, 0.0
         p = pdf_document[pages[i]]
+        end_of_page_x = p.rect.width 
+        end_of_page_y = p.rect.height 
+        x1, y1, x2, y2 = 10.0, 10.0, end_of_page_x-10, end_of_page_y-10
         if i==0:
-            end_of_page_x = p.rect.width 
-            end_of_page_y = p.rect.height 
-            x1 = coords[0]
-            x2 = coords[1]
-            y1 = end_of_page_x-(0.1*end_of_page_x)
-            y2 = end_of_page_y-(0.1*end_of_page_y)
-            print(x1, x2, y1, y2)
-        elif i < (len(pages)-1):
-            end_of_page_x = p.rect.width 
-            end_of_page_y = p.rect.height 
-            x1 = 0.0
-            x2 = 0.0
-            y1 = end_of_page_x-(0.1*end_of_page_x)
-            y2 = end_of_page_y-(0.1*end_of_page_y)
-        else:
-            print(i)
-            x1 = 0.0
-            x2 = 0.0
-            y1 = coords[2]
-            y2 = coords[3]
-        rect_to_draw = (x1, x2, y1, y2)
+            if coords[0]-10 >=0.0:
+                x1 = coords[0]-10
+            if coords[2]-50 >=0.0:
+                y1 = coords[2]-50
+        elif i==len(pages)-1:
+            print("else", i)
+            if coords[3]+30 <=end_of_page_x:
+                x2 = coords[3]+30
+            if coords[0]-10 <=end_of_page_y:
+                y2 = coords[1]+50
+        rect_to_draw = (x1, y1, x2, y2)
         rect_highlight = fitz.Rect(rect_to_draw)
         p1 = rect_highlight.top_left  # top-left point of first rectangle
         p2 = rect_highlight.bottom_right  # bottom-right point of last rectangle
-        p.add_highlight_annot(start=p1,stop=p2)
-        # Set border style to square
+        p.draw_rect(rect_highlight,  color=fitz.utils.getColor('black'), fill=fitz.utils.getColor('yellow'), fill_opacity=0.3, width = 0.3)
+        # p.add_highlight_annot(start=p1,stop=p2)
     pdf_stream = io.BytesIO()
     pdf_document.save(pdf_stream)
         

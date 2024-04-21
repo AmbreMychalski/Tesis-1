@@ -52,12 +52,12 @@ If you need to re-execute this program and in order to avoid the duplicates, you
 ### Launch the project
 Please add your openAI key in the files in the files 'back.py' and 'fileProcessing.py' in the variables 'openai.api_key'.
     
-To launch the frontend, open a powershell terminal in the APP/front folder, and run the following command:
+To launch the frontend, open a powershell terminal in the front folder, and run the following command:
     npm start
 A web windows will be automatically opened on the search bar view.
 
-To launch the backend, open a python terminal in the APP folder and run:
-    python3 front/src/app.py
+To launch the backend, open a python terminal in the front folder and run:
+    python3 src/app.py
 
 ### Use the project
 
