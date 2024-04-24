@@ -13,7 +13,6 @@ __pycache__
 Front_React/build
 Front_React/node_modules
 
-Back_Python/react_build
 Back_Python/chroma-db
 # misc
 .DS_Store
