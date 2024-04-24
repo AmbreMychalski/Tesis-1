@@ -1,9 +1,9 @@
 FROM python:3.9.19-bookworm
 
-WORKDIR /my-music-gpt
+WORKDIR /Tesis-1
 
-COPY ./init_db.py .
-COPY ./embeddings_complete.csv .
+COPY ./databaseInit.py .
+COPY ./embeddings/embeddings_chunks1500.csv ./embeddings/
 COPY ./requirements.txt .
 COPY ./react_build/ ./react_build/
 COPY ./app.py .

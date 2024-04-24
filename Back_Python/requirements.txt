@@ -1,0 +1,9 @@
+Flask
+openai==0.28.1
+pandas
+matplotlib
+plotly
+scipy
+scikit-learn
+flask_cors
+chromadb

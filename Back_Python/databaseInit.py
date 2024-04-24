@@ -4,8 +4,8 @@ import numpy as np
 
 embeddings_directory = "embeddings/"
 path_chroma = "chroma-db"
-collection_name = "embedding_db_persist_500"
-embeddings_file = "embeddings_chunks500.csv"
+collection_name = "embedding_db_persist_1500"
+embeddings_file = "embeddings_chunks1500.csv"
 
 # ---------------------------------------------------------------------------------------------------------------
 # -------------------------------------------- Retrieve embeddings ----------------------------------------------
