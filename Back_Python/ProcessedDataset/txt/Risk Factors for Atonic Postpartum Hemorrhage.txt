@@ -1,0 +1,910 @@
+###1###Risk Factors for Atonic Postpartum Hemorrhage:
+A Systematic Review and Meta-analysis
+Holly B. Ende  MD   M. James Lozada  DO   David H. Chestnut  MD   Sarah S. Osmundson  
+MD  MS  Rachel L. Walden  MLIS   Matthew S. Shotwell  PhD   Jeanette R. Bauchat  MD  MS
+Departments of Anesthesiology  Obstetrics and Gynecology  and Biostatistics  Vanderbilt 
+University Medical Center  and the Annette and Irwin Eskind Family Biomedical Library  Vanderbilt 
+University  Nashville  Tennessee.
+Abstract
+OBJECTIVE: To identify and quantify risk factors for atonic postpartum hemorrhage.
+DATA SOURCES: PubMed  CINAHL  EMBASE  Web of Science  and and ClinicalTrials.gov 
+databases were searched for English language studies with no restrictions on date or location. 
+Studies included randomized trials  prospective or retrospective cohort studies  and case–control 
+studies of pregnant patients who developed atonic postpartum hemorrhage and reported at least 
+one risk factor.
+METHODS OF STUDY SELECTION: Title  abstract  and full-text screening were performed 
+using the Raayan web application. Of 1 239 records screened  27 studies were included in this 
+review. Adjusted or unadjusted odds ratios (ORs)  relative risks  or rate ratios were recorded or 
+calculated. For each risk factor  a qualitative synthesis of low and moderate risk of bias studies 
+classifies the risk factor as definite  likely  unclear  or not a risk factor. For risk factors with 
+sufficiently homogeneous definitions and reference ranges  a quantitative meta-analysis of low and 
+moderate risk of bias studies was implemented to estimate a combined OR.
+TABULATION  INTEGRATION  AND RESULTS: Forty-seven potential risk factors for atonic 
+postpartum hemorrhage were identified in this review  of which 15 were judged definite or likely 
+risk factors. The remaining 32 assessed risk factors showed no association with atonic postpartum 
+hemorrhage or had conflicting or unclear evidence.
+CONCLUSION: A substantial proportion of postpartum hemorrhage occurs in the absence of 
+recognized risk factors. Many risk factors for atonic hemorrhage included in current risk-
+assessment tools were confirmed  with the greatest risk conferred by prior postpartum hemorrhage 
+of any etiology  placenta previa  placental abruption  uterine rupture  and multiple gestation. Novel 
+risk factors not currently included in risk-assessment tools included hypertension  diabetes  and 
+ethnicity. Obesity and magnesium were not associated with atonic postpartum hemorrhage in this 
+review.
+Corresponding author: Holly B. Ende  Department of Anesthesiology  Vanderbilt University Medical Center  Nashville  TN; 
+holly.ende@vumc.org. 
+Each author has confirmed compliance with the journal’s requirements for authorship.
+Financial Disclosure
+The authors did not report any potential conflicts of interest.
+HHS Public Access
+Author manuscript
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Published in final edited form as:
+Obstet Gynecol . 2021 February 01; 137(2): 305–323. doi:10.1097/AOG.0000000000004228.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###2###SYSTEMATIC REVIEW REGISTRATION: PROSPERO  CRD42020157521.
+Postpartum hemorrhage affects 3–10% of deliveries and accounts for nearly 20% of 
+maternal deaths worldwide.1 2 Although there are many etiologies  uterine atony is the most 
+common and accounts for nearly 70% of cases.3 Patients who experience postpartum 
+hemorrhage can have increased morbidity and mortality  which can be attenuated by 
+identifying patients at risk  early preparation  and increased vigilance.1 4 Risk stratification 
+for postpartum hemorrhage is commonly performed using an assessment tool from one of 
+several organizations  such as the California Maternal Quality Care Collaborative  
+Association of Women’s Health  Obstetric and Neonatal Nurses  or the American College of 
+Obstetricians and Gynecologists.5–7 Although these risk-assessment tools have the support 
+of major medical societies  recent evidence suggests that the tools have only moderate 
+predictive value for severe hemorrhage in the highest risk groups and that a significant 
+portion of hemorrhages (up to 43%) occur in those deemed low risk.8 9 This limitation may 
+be partly due to the tools’ development via expert consensus opinion and a lack of 
+systematically reviewed evidence to support or refute the included risk factors. A recently 
+published meta-analysis that evaluated the association between maternal demographics and 
+comorbidities  and postpartum hemorrhage evaluated only four potential risk factors and 
+found body mass index  nulliparity  and hypertensive disorders to confer risk of postpartum 
+hemorrhage.11 Additionally  existing tools assess the risk of all postpartum hemorrhage 
+etiologies simultaneously  which may confound attempts at risk prediction because each 
+etiology of postpartum hemorrhage is likely associated with different risk factors. 
+Furthermore  current tools fail to account for the relative contribution of each risk factor or 
+to provide mechanisms to quantify risk for a given patient when more than one risk factor is 
+present. Because each etiology of postpartum hemorrhage likely has a unique set of risk 
+factors  evaluating each etiology separately may improve the ability to delineate individual 
+patient risk. The systematic identification and quantification of risk factors for atonic 
+postpartum hemorrhage may allow the development of more reliable  weighted risk-
+stratification tools. Thus  this systematic review aimed to identify risk factors that increase 
+the odds of a patient developing postpartum hemorrhage due only to uterine atony after 
+vaginal or cesarean delivery.
+SOURCES
+This review follows the PRISMA (Preferred Reporting Items for Systematic Reviews and 
+Meta-analyses) statement11 and was registered with the PROSPERO International 
+Prospective Register for Systematic Reviews (registration number CRD42020157521).
+The PubMed (National Library of Medicine)  CI-NAHL (EBSCO)  EMBASE (Ovid)  Web 
+of Science (Clarivate)  and ClinicalTrials.gov  (National Institutes of Health) databases were 
+searched in November 2018 for English language studies with no restrictions on date or 
+geographic location. PubMed MeSH headings included  but were not limited to  postpartum 
+hemorrhage; uterine hemorrhage; uterine inertia; causality; epidemiology; incidence; 
+methylergonovine; misoprostol; oxytocin; prevalence; probability; risk assessment; risk 
+factors; and risk  in addition to corresponding keywords (full search strategies are shown in Ende et al. Page 2
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###3###Appendix 1  available online at http://links.lww.com/AOG/C163 ). The PubMed search was 
+translated for CINAHL  EMBASE  Web of Science  and clinicaltrials.gov .
+STUDY SELECTION
+Eligibility for inclusion was limited to randomized clinical trials  prospective or 
+retrospective cohort studies  and case–control studies written in the English language with 
+pregnant patients who developed postpartum uterine atony or atonic postpartum hemorrhage. 
+Definitions of atonic postpartum hemorrhage varied by study and included some 
+combination of clinical diagnoses  second-line uterotonic administration  estimated blood 
+loss  need for transfusion  or International Classification of Diseases codes (Table 1). Studies 
+were excluded if they reported postpartum hemorrhage data without specifying etiology or if 
+they did not report the incidence of at least one risk factor for postpartum hemorrhage in a 
+uterine atony subgroup. Case reports  case series  and unpublished meeting abstracts were 
+excluded. Two blinded authors screened abstracts  and a third blinded author resolved 
+conflicts. Full-text articles were obtained for all included abstracts. Full-text article review 
+was conducted by the same two blinded authors  with conflicts resolved in the same manner. 
+Title  abstract  and full-text screening were performed using the Raayan web application.12
+The risk of bias for each included study was assessed using the Risk of Bias Assessment 
+Tool for Nonrandomized Studies.13 This tool was chosen because of the nonrandomized 
+nature of all included studies as well as its scope in assessing multiple sources of bias  
+including those related to selection  performance  detection  attrition  and reporting. Six 
+domains of risk of bias were assessed  including: 1) selection of participants  2) confounding 
+variables  3) measurement of exposure  4) blinding of outcome assessments  5) incomplete 
+outcome data  and 6) selective outcome reporting. Bias scoring proceeded after training each 
+scorer on the assessment tool to ensure good inter-rater reliability correlation. Two authors 
+(D.H.C.  H.B.E.) independently assessed the risk of bias for each study  with disagreements 
+resolved by a third blinded author (J.R.B.). Studies were found to have a low risk of bias if 
+they attained a low-risk classification in all six evaluated domains. Studies were considered a 
+moderate risk of bias if at least one domain was rated unclear risk (but no domains were 
+rated high risk). Finally  studies were found to have a high risk of bias if at least one domain 
+was rated high risk.
+All data were collected independently by co-investigators into a study spreadsheet and 
+verified by a separate author. In addition to baseline study characteristics including country 
+of origin  study design  the number of patients  and inclusion and exclusion criteria  data 
+were collected on all risk factors for atonic postpartum hemorrhage reported in the study. 
+For each risk factor  adjusted or unadjusted odds ratios (aOR  uOR)  relative risks (aRR  
+uRR)  or rate ratios (arr  urr) were recorded when available. If not explicitly reported  uOR 
+and 95% CI were calculated with a 2×2 table using the number of patients with and without 
+a given risk factor who developed atonic postpartum hemorrhage.14 The primary outcome 
+assessed in all studies was the OR  RR  or rr of risk factors associated with atonic 
+postpartum hemorrhage. For each identified risk factor  low and moderate risk of bias studies 
+were synthesized qualitatively to label each risk factor as definite  likely  unclear  or not a 
+risk factor based on the number of total studies evaluating the factor and percentage of Ende et al. Page 3
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###4###studies showing a positive association (Box 1). For risk factors with sufficiently 
+homogeneous definitions and reference ranges  a quantitative meta-analysis of low and 
+moderate risk of bias studies was implemented to estimate a combined OR. The inverse 
+variance random effects method was used for meta-analysis.15 This method requires only 
+effect estimates (ie  OR or risk ratios) and their SEs. The SEs were estimated by 
+backtransforming the 95% confidence limits using the standard normal distribution. The 
+DerSimonian-Laird estimator was used to estimate the between-study variance in effects.16 
+Owing to the rarity of uterine atony (and  thus  the near-equivalence of the OR and RR)  
+studies that reported a risk ratio were included. Adjusted and unadjusted risk ratios and ORs 
+were included. The I2 statistic and a P-value against the null hypothesis (ie  I250) are 
+reported for each subgroup. The I2 statistic represents the percentage of variability in the 
+effect estimates that is attributable to study heterogeneity (compared with sampling 
+heterogeneity). Meta-analysis was implemented in R 3.6.3 (https://www.r-pro ject.org)   using 
+the “metafor” 2.4 add-on package.
+RESULTS
+The database search revealed 1 977 total records  and 1 239 records were screened after 
+removing duplicates. After excluding 871 records based on title and abstract review  368 
+full-text articles were assessed for eligibility (Fig. 1). Twenty-seven studies reported data for 
+at least one risk factor for atonic postpartum hemorrhage and were included in the narrative 
+summary. Of those  19 studies contributed data to the qualitative synthesis and 13 to the 
+meta-analysis. Table 1 summarizes the study design  patient population  study definitions of 
+postpartum hemorrhage and uterine atony  and the risk factors assessed in the included 
+studies. The scoring for risk of bias for each study is reported in Figure 2.
+A total of 47 unique risk factors were identified in the search: 15 relating to maternal history 
+or demographics  11 to maternal comorbidities  six pregnancy-related factors  eight labor-
+related factors  and seven delivery-related factors. For qualitative comparison  the authors 
+characterized each risk factor as definite  likely  unclear  or not a risk factor based on the 
+number of low and moderate risk of bias studies that showed statistically significant 
+evidence that the risk factor was associated with atony (Box 1).
+Six variables were found to be definite risk factors for atonic postpartum hemorrhage  based 
+on either all low and moderate risk of bias studies showing a positive association (if at least 
+three studies) or the majority of low and moderate risk of bias studies showing a positive 
+association (if at least five studies). Definite risk factors included being of Asian race  a 
+history of prior postpartum hemorrhage of any etiology in a previous pregnancy  preexisting 
+or gestational diabetes mellitus  placental disorders (including retained placenta  placenta 
+previa  vasa previa  and placental abruption  but excluding abnormal placentation)  
+prolonged labor (as defined in each study and presented in Appendix 2  available online at 
+http://links.lww.com/AOG/C163 )  and genital tract trauma sustained during delivery. An 
+additional nine variables were deemed likely associated with atonic postpartum hemorrhage  
+and these included being of Hispanic ethnicity  nulliparity  hypertensive diseases of 
+pregnancy  multiple gestation  chorioamnionitis  uterine rupture  predelivery oxytocin 
+exposure  induction of labor  and instrumented vaginal delivery. Some variables that are Ende et al. Page 4
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###5###traditionally considered risk factors for postpartum hemorrhage were not found to be 
+associated specifically with atonic postpartum hemorrhage in this review but may confer risk 
+for hemorrhage due to other etiologies. These included maternal obesity  leiomyomas  
+polyhydramnios  prolonged second stage of labor  magnesium exposure  and cesarean 
+delivery. Meta-analysis was implemented for 24 risk factors with at least two low or 
+moderate risk of bias studies demonstrating homogeneous risk factor definitions and 
+reference ranges (Figs. 3–7). Table 2 displays a summary of qualitative and quantitative 
+(where applicable) results for each risk factor. Appendix 2 (http://links.lww.com/AOG/
+C163 )  includes a complete list of articles that report on each risk factor and the statistical 
+associations reported  therein. A narrative summary of all risk factors  with the explanations 
+of qualitative and quantitative synthesis results for each factor can be found in Appendix 3  
+available online at http://links.lww.com/AOG/C163 . Further details on studies reporting on 
+race or ethnicity as risk factors for atonic postpartum hemorrhage  including who classified 
+each patient’s race  classifications used  and data on missing data and “other” classifications  
+can be found in Appendix 4  available online at http://links.lww.com/AOG/C163 .
+DISCUSSION
+This systematic review highlights several previously unrecognized risk factors for atonic 
+postpartum hemorrhage that are not included in current risk-assessment tools  and it 
+questions whether other risk factors used in current tools are  in fact  supported by published 
+evidence. This review also provides further evidence supporting the validity of many risk 
+factors already included in risk-stratification tools and provides quantitative estimates of 
+their contribution to atonic postpartum hemorrhage risk. Although some risk factors 
+presented may cause postpartum hemorrhage independently  for example genital tract 
+trauma or abnormal placentation  these factors also appear to contribute to uterine atony  
+and  thus  are captured in this review.
+Perhaps most importantly  current risk-assessment tools fail to include some definite or 
+likely risk factors that appear to be well-established in the literature. Hispanic ethnicity (OR 
+1.23  95% CI 1.20–1.25) and Asian race (OR 1.39  95% 1.33–1.46) were associated with 
+atonic postpartum hemorrhage in this review and are missing from current risk-assessment 
+tools. The ORs for ethnicity and race are comparable with those for commonly cited risk 
+factors  including induction of labor (OR 1.23  95% 1.10–1.39) and macrosomia (OR 1.46  
+95% 1.35–1.57). Given the mounting evidence of disparities in the care of minority women  
+we may be failing to anticipate the increased risk of postpartum hemorrhage in these 
+populations.17 These associations do not imply causation  and it is unclear whether the 
+underlying mechanism of these relationships are biological  social  or a byproduct of 
+disparities or systematic racism.18 Specific attention must be paid when including race or 
+ethnicity in risk-prediction systems  because recent evidence suggests that these algorithms 
+may perpetuate health care disparities.19 20
+Hypertensive disease (OR 1.84  95% 1.45–2.33) and diabetes mellitus (OR 1.22  95% 1.08–
+1.39)  both of which are known to be associated with vascular and perfusion abnormalities  
+also emerged as previously underappreciated risk factors for atonic postpartum hemorrhage.
+21–23 We hypothesize that the vascular pathophysiology of these diseases may contribute Ende et al. Page 5
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###6###directly to the development of atony and hemorrhage; however  genetic susceptibility to both 
+atony and hypertension or diabetes in specific patient populations may also explain this 
+association and certainly warrants further investigation.24 25 Interestingly  high vaginal 
+lacerations and cervical trauma are not included in current risk-assessment tools. However  
+high vaginal and cervical lacerations demonstrated higher OR than either instrumented 
+delivery or perineal trauma  both of which are included in the Association of Women’s 
+Health  Obstetric and Neonatal Nurses’ risk-stratification tool.6 Although nulliparity and 
+prolonged first stage of labor were found to be associated with atonic postpartum 
+hemorrhage and are not included in the current risk-assessment tools  they may be associated 
+with other risk factors that are included  such as induction of labor  oxytocin use  and 
+chorioamnionitis. Of these factors  chorioamnionitis demonstrated the highest OR of 1.93 
+(95% CI 1.56–2.39) and may contribute significantly to an increased risk associated with 
+nulliparity or prolonged first stage of labor. Finally  uterine rupture was found to be 
+associated with atonic postpartum hemorrhage. Although not specifically described in the 
+studies that reported this association  hemorrhage attributable to uterine atony presumably 
+occurred after repair of the uterine defect.
+Additionally  some risk factors currently included in risk-assessment tools are not supported 
+by this literature review of atonic postpartum hemorrhage  although an association with 
+other etiologies of postpartum hemorrhage would not be captured by this study. Prolonged 
+second stage of labor (which is included in nearly all risk-assessment tools) did not emerge 
+as a definite risk factor for atonic postpartum hemorrhage in our systematic review and 
+meta-analysis  with combined OR 1.10 (95% CI 0.82–1.48). Polyhydramnios did not emerge 
+as a risk factor for atonic postpartum hemorrhage in quantitative analysis  with combined 
+OR 1.29 (95% CI 0.94–1.76)  despite the historical identification of polyhydramnios as a 
+cause of atonic postpartum hemorrhage due to uterine overdistention. Macrosomia and 
+multiple gestation  which are implicated by a similar mechanism  did demonstrate increased 
+risk with combined OR of 1.46 (95% CI 1.35–1.57) and 2.16 (95% CI 1.53–3.06)  
+respectively. Uterine overdistention alone  however  may not fully explain the variability in 
+the risk of atony that is observed between these three conditions. For example  multiple 
+gestation pregnancies are frequently due to in vitro fertilization  which has been associated 
+with increased risk of postpartum hemorrhage possibly due to abnormalities of placental 
+implantation and endometrial function.26 Additionally  there may be some underlying 
+immunologic  vascular  or genetic pathophysiology that overlaps with infertility and atonic 
+postpartum hemorrhage.27–30
+Obesity and magnesium exposure are additional factors included in most risk-assessment 
+tools; however  neither showed associations with atonic postpartum hemorrhage in this 
+review. It is possible that the underlying conditions (ie  diabetes mellitus  hypertension) are 
+the real risk factors  as discussed above  leaving the clinical impression that obesity and 
+magnesium increase postpartum hemorrhage risk and leading some studies to find a positive 
+effect. Given the retrospective nature of most included studies  however  magnesium 
+exposure and dosing may have been inadequately captured  hindering the ability to 
+demonstrate an association with atonic postpartum hemorrhage.Ende et al. Page 6
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###7###Cesarean delivery and uterine leiomyomas are included in the risk-assessment tools but were 
+not found to be associated with atonic postpartum hemorrhage by either qualitative or 
+quantitative analysis. Because intrapartum cesarean delivery is associated with factors (eg  
+prolonged labor and oxytocin exposure) shown to increase the risk of atonic postpartum 
+hemorrhage  this may contribute to a positive association in studies or a clinical impression 
+that cesarean delivery is significantly associated with atonic postpartum hemorrhage. The 
+occurrence of leiomyomas varies significantly in size  location  vascularity  and previous 
+surgical interventions  which may influence the ability to determine the significance of 
+leiomyomas as a risk factor in published studies.
+Finally  many risk factors already included in widely adopted risk-assessment tools are 
+further confirmed in this systematic review as associated with atonic postpartum hemorrhage
+—prior postpartum hemorrhage  multiple gestation  placental disorders (previa or 
+abruption)  chorioamnionitis  predelivery oxytocin exposure  induction of labor  prolonged 
+labor  perineal trauma  and instrumented vaginal delivery. Although some of these factors 
+(eg  abnormal placentation  birth canal trauma) are etiologies for postpartum hemorrhage 
+themselves  the evidence presented here suggests that they are additionally associated with 
+the development of uterine atony. This evidence further supports the inclusion of these 
+factors when stratifying risk  and our data may help health care professionals improve tools 
+by assigning a quantitative weight to risk factors with a stronger association with atonic 
+postpartum hemorrhage. Additionally  current tools likely can be further improved by more 
+nuanced definitions of some factors shown to have a robust association with atonic 
+postpartum hemorrhage. For example  further delineation of genital tract trauma may be 
+warranted; although episiotomy or perineal tear (OR 1.67  95% 1.28–2.18) is included in 
+some current risk-assessment tools  high vaginal laceration and cervical laceration are not 
+(OR 2.19  95% 1.13–4.24  and 5.70  95% 2.56–12.67  respectively).
+The data for oxytocin exposure  which also are already included in current risk-assessment 
+tools  presented the most significant challenge in the interpretation of results for this 
+systematic review. Although qualitative synthesis suggested an association between 
+predelivery oxytocin exposure and atonic postpartum hemorrhage  the meta-analysis failed 
+to confirm the association (combined OR 1.15  95% 0.95–1.40). Importantly  two low risk of 
+bias studies were not included in the meta-analysis because of heterogeneity in defining the 
+exposure and reference ranges (eg  evaluating oxytocin per unit dose). With conflicting 
+results  it is essential also to consider the mechanism by which oxytocin likely contributes to 
+atonic postpartum hemorrhage  namely that tachyphylaxis to oxytocin occurs during labor  
+thereby decreasing efficacy of the primary drug used for the active management the third 
+stage of labor.31–33 Further investigation is needed to determine the cut-offs for the amount 
+or duration of oxytocin that leads to an increased risk of atony.
+Although the risk-assessment tools may be refined by adding  keeping or removing risk 
+factors  the individual weights and whether each individually or in combination defines an 
+individual patient’s postpartum hemorrhage risk as moderate or high remains undetermined. 
+When preparing and allocating resources for potential postpartum hemorrhage  the use of 
+risk scores that weigh the variable contribution of risk factors may be preferable to the use of 
+tools that merely collate a list of diagnoses with many associated or overlapping risk factors. Ende et al. Page 7
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###8###To this end  recent headway has been made in using statistical modeling and machine 
+learning to predict postpartum hemorrhage.34 Notably  however  a substantial proportion of 
+postpartum hemorrhage occurs in the absence of recognized risk factors.
+The strengths of this systematic review include the systematic approach to identifying all 
+publications that included risk factors for atonic postpartum hemorrhage and the division of 
+risk factors into maternal  pregnancy-related  labor-related  and delivery-related conditions 
+to provide a logical progression of possible etiologies of atonic postpartum hemorrhage. 
+Finally  we evaluated each variable  both qualitatively and quantitatively  to summarize a 
+large number of studies in a comprehensive review. The results of this systematic review and 
+meta-analysis  however  must be considered in the context of several limitations. First  we 
+had to accept the authors’ definitions of atonic postpartum hemorrhage  which varied from 
+study to study. The most common definitions in large database studies were rather 
+consistent  using International Classification of Diseases codes for postpartum hemorrhage 
+due to atony. The variability occurred primarily in the smaller studies  which used 
+definitions of postpartum hemorrhage that included estimated blood loss  postpartum 
+hemoglobin or hematocrit drop  and clinical diagnosis  with additional definitions for the 
+diagnosis of atony including uterotonic administration  medical team diagnosis  or other 
+surgical interventions. These definitions represent a spectrum of pathology  and each study’s 
+definition may have affected the magnitude of associations of any given risk factor. Second  
+because all authors were fluent only in English  we restricted our search to English-language 
+studies  which contributed to publication bias. Third  for thoroughness we did include in the 
+narrative summary studies with a high risk of bias; however  we included only studies with a 
+low or moderate risk of bias when evaluating each risk factor  both qualitatively and 
+quantitatively. Fourth  the types of effect estimates reported and the factors used to adjust for 
+potential confounding were heterogeneous across studies. Additionally  nearly all reported 
+ORs and RRs reflect weak associations (range 1–2)  which are likely below the 
+discriminatory ability of the included cohort and case–control studies. These observations 
+may result from unmeasured bias or confounding.35 Lastly  to summarize risk factors 
+qualitatively  we had to provide a unique definition to categorize a risk factor as definite  
+likely  or unclear. Although these definitions were created de novo for this review  a post hoc 
+evaluation revealed that for those variables designated definite risk factors  all (six of six) 
+showed statistically significant combined OR. Of the variables designated likely  eight of 
+nine were amenable to meta-analysis  and seven showed statistically significant increased 
+odds of atonic postpartum hemorrhage. Finally  15 variables were classified as unclear risk 
+factors  with only six of those demonstrating data homogeneous enough for meta-analysis  
+and of those  only one (macrosomia) demonstrated a statistically significant OR.
+In summary  this systematic review and meta-analysis of risk factors for postpartum 
+hemorrhage due to uterine atony provides critical insights to help guide future obstetric care. 
+By more narrowly defining our focus to only atonic postpartum hemorrhage  we aimed to 
+provide more definitive evidence supporting or refuting presumed risk factors  given that 
+each etiology of postpartum hemorrhage likely has a unique set of contributing factors. 
+These findings should lead researchers and clinicians to refine current risk-assessment tools 
+further. Future tools should include weighted values for risk factors or modeling risk levels Ende et al. Page 8
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###9###by the etiology of postpartum hemorrhage. Finally  the genetic basis for postpartum 
+hemorrhage warrants further investigation and eventual inclusion into risk-assessment tools.
+Supplementary Material
+Refer to Web version on PubMed Central for supplementary material.
+Acknowledgments
+Sarah S. Osmundson is supported by grant number K23DA047476 from the National Institute of Drug Abuse.
+REFERENCES
+1. Bateman BT  Berman MF  Riley LE  Leffert LR. The epidemiology of postpartum hemorrhage in a 
+large  nationwide sample of deliveries. Anesth Analg 2010;110:1368–73. doi: 10.1213/
+ANE.0b013e3181d74898 [PubMed: 20237047] 
+2. Sosa CG  Althabe F  Belizán JM  Buekens P. Risk factors for postpartum hemorrhage in vaginal 
+deliveries in a LatinAmerican population. Obstet Gynecol 2009;113:1313–9. doi: 10.1097/
+AOG.0b013e3181a66b05 [PubMed: 19461428] 
+3. Oyelese Y   Scorza WE  Mastrolia R  Smulian JC. Postpartum hemorrhage. Obstet Gynecol Clin 
+North Am 2007;34:421–41  x. doi: 10.1016/j.ogc.2007.06.007 [PubMed: 17921008] 
+4. Girard T  Mörtl M  Schlembach D. New approaches to obstetric hemorrhage: the postpartum 
+hemorrhage consensus algorithm. Curr Opin Anaesthesiol 2014;27:267–74. doi: 10.1097/
+ACO.0000000000000081 [PubMed: 24739248] 
+5. Bingham D  Melsop K  Main E. CMQCC Obstetric hemorrhage hospital level implementation 
+guide. Stanford University; 2010
+6. The AWHONN Postpartum Hemorrhage Project. Postpartum hemorrhage (PPH) risk assessment 
+table 1.0. Accessed June 8  2020. https://mygnosis.com/Content/Chunks/3504/assets/pdfs/
+PPH_Risk_Assessment_Table-7-17-15.pdf
+7. American College of Obstetricians and Gynecologists. Maternal safety bundle for obstetric 
+hemorrhage. Accessed May 26  2020. https://www.acog.org/community/districts-and-sections/
+district-ii/programs-and-resources/safe-motherhood-initiative/obstetric-hemorrhage
+8. Kawakita T  Mokhtari N  Huang JC  Landy HJ. Evaluation of risk-assessment tools for severe 
+postpartum hemorrhage in women undergoing cesarean delivery. Obstet Gynecol 2019; 134:1308–
+16. doi: 10.1097/AOG.0000000000003574 [PubMed: 31764744] 
+9. Dilla AJ  Waters JH  Yazer MH. Clinical validation of risk stratification criteria for peripartum 
+hemorrhage. Obstet Gynecol 2013;122:120–6. doi: 10.1097/AOG.0b013e3182941c78 [PubMed: 
+23743452] 
+10. Durmaz A  Komurcu N. Relationship between maternal characteristics and postpartum 
+hemorrhage: a meta-analysis study. J Nurs Res 2018;26:362–72. doi: 10.1097/
+jnr.0000000000000245 [PubMed: 29219937] 
+11. Moher D  Liberati A  Tetzlaff J  Altman DG Preferred reporting items for systematic reviews and 
+meta-analyses: the PRISMA statement. Int J Surg 2010;8:336–41. doi: 10.1016/j.ijsu.2010.02.007 
+[PubMed: 20171303] 
+12. Ouzzani M  Hammady H  Fedorowicz Z  Elmagarmid A. Rayyan-a web and mobile app for 
+systematic reviews. Syst Rev 2016;5:210. doi: 10.1186/s13643-016-0384-4 [PubMed: 27919275] 
+13. Kim SY   Park JE  Lee YJ  Seo HJ  Sheen SS  Hahn S  et al. Testing a tool for assessing the risk of 
+bias for nonrandomized studies showed moderate reliability and promising validity. J Clin 
+Epidemiol 2013;66:408–14. doi: 10.1016/j.jclinepi.2012.09.016 [PubMed: 23337781] 
+14. Morris JA  Gardner MJ. Calculating confidence intervals for relative risks (odds ratios) and 
+standardised ratios and rates. Br Med J (Clin Res Ed) 1988;296:1313–6. doi: 10.1136/
+bmj.296.6632.1313Ende et al. Page 9
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###10###15. Borenstein M  Hedges LV   Higgins JP  Rothstein HR. A basic introduction to fixed-effect and 
+random-effects models for meta-analysis. Res Synth Methods 2010;1:97–111. doi: 10.1002/
+jrsm.12 [PubMed: 26061376] 
+16. DerSimonian R  Laird N. Meta-analysis in clinical trials. Control Clin Trials 1986;7:177–88. doi: 
+10.1016/0197-2456(86)90046-2 [PubMed: 3802833] 
+17. Leonard SA  Main EK  Scott KA  Profit J  Carmichael SL Racial and ethnic disparities in severe 
+maternal morbidity prevalence and trends. Ann Epidemiol 2019;33:30–6. doi: 10.1016/
+j.annepidem.2019.02.007 [PubMed: 30928320] 
+18. Kaplan JB  Bennett T. Use of race and ethnicity in biomedical publication. JAMA 2003;289:2709–
+16. doi: 10.1001/jama.289.20.2709 [PubMed: 12771118] 
+19. Obermeyer Z  Powers B  V ogeli C  Mullainathan S. Dissecting racial bias in an algorithm used to 
+manage the health of populations. Science 2019;366:447–53. doi: 10.1126/science.aax2342 
+[PubMed: 31649194] 
+20. Vyas DA  Eisenstein LG  Jones DS. Hidden in plain sight - reconsidering the use of race correction 
+in clinical algorithms. N Engl J Med 2020;383:874–82. doi: 10.1056/NEJMms2004740 [PubMed: 
+32853499] 
+21. Turbeville HR  Sasser JM. Preeclampsia beyond pregnancy: long-term consequences for mother 
+and child. Am J Physiol Ren Physiol 2020;318:F1315–26. doi: 10.1152/ajprenal.00071.2020
+22. Dinh QN  Drummond GR  Sobey CG  Chrissobolis S. Roles of inflammation  oxidative stress  and 
+vascular dysfunction in hypertension. Biomed Res Int 2014;2014:406960. doi: 
+10.1155/2014/406960
+23. Huang D  Refaat M  Mohammedi K  Jayyousi A  Al Suwaidi J  Abi Khalil C Macrovascular 
+complications in patients with diabetes and Prediabetes. Biomed Res Int 2017;2017:7839101. doi: 
+10.1155/2017/7839101
+24. Luft FC. Molecular genetics of human hypertension. Curr Opin Cardiol 2020;35:249–57. doi: 
+10.1097/HCO.0000000000000722 [PubMed: 32068615] 
+25. Gaulton KJ. Mechanisms of type 2 diabetes risk loci. Curr Diab Rep 2017;17:72. doi: 10.1007/
+s11892-017-0908-x [PubMed: 28741265] 
+26. Nyfløt LT  Sandven I  Stray-Pedersen B  Pettersen S  Al-Zirqi I  Rosenberg M  et al. Risk factors 
+for severe postpartum hemorrhage: a case-control study. BMC Pregnancy Childbirth 2017; 17:17. 
+doi: 10.1186/s12884-016-1217-0 [PubMed: 28068990] 
+27. Escobar MF  Hincapie MA  Barona JS. Immunological role of the maternal uterine microbiota in 
+postpartum hemorrhage. Front Immunol 2020;11:504. doi: 10.3389/fimmu.2020.00504 [PubMed: 
+32296425] 
+28. Ehsani M  Mohammadnia-Afrouzi M  Mirzakhani M. Female unexplained infertility: a disease 
+with imbalanced adaptive immunity. J Hum Reprod Sci 2019;12:274–82. doi: 10.4103/
+jhrs.JHRS_30_19 [PubMed: 32038075] 
+29. Macer ML  Taylor HS. Endometriosis and infertility: a review of the pathogenesis and treatment of 
+endometriosis-associated infertility. Obstet Gynecol Clin North Am 2012;39:535–49. doi: 
+10.1016/j.ogc.2012.10.002 [PubMed: 23182559] 
+30. Tanbo T  Fedorcsak P. Endometriosis-associated infertility: aspects of pathophysiological 
+mechanisms and treatment options. Acta Obstet Gynecol Scand 2017;96:659–67. doi: 10.1111/
+aogs.13082 [PubMed: 27998009] 
+31. Dyer RA  Butwick AJ  Carvalho B. Oxytocin for labour and caesarean delivery: implications for 
+the anaesthesiologist. Curr Opin Anaesthesiol 2011;24:255–61. doi: 10.1097/
+ACO.0b013e328345331c [PubMed: 21415725] 
+32. World Health Organization. WHO recommendations for the prevention and treatment of 
+postpartum haemorrhage. World Health Organization; 2012.
+33. Gülmezoglu AM  Lumbiganon P  Landoulsi S  Widmer M  Abdel-Aleem H  Festin M  et al. Active 
+management of the third stage of labour with and without controlled cord traction: a randomised  
+controlled  non-inferiority trial. Lancet 2012; 379:1721–7. doi: 10.1016/S0140-6736(12)60206-2 
+[PubMed: 22398174] Ende et al. Page 10
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###11###34. Venkatesh KK  Strauss RA  Grotegut CA  Heine RP  Chescheir NC  Stringer JSA  et al. Machine 
+learning and statistical models to predict postpartum hemorrhage. Obstet Gynecol 2020;135: 935–
+44. doi: 10.1097/AOG.0000000000003759 [PubMed: 32168227] 
+35. Grimes DA  Schulz KF. False alarms and pseudo-epidemics: the limitations of observational 
+epidemiology. Obstet Gynecol 2012;120:920–7. doi: 10.1097/AOG.0b013e31826af61a [PubMed: 
+22996110] 
+36. Bateman BT  Hernandez-Diaz S  Huybrechts KF  Palmsten K  Mogun H  Ecker JL  et al. 
+Outpatient calcium-channel blockers and the risk of postpartum haemorrhage: a cohort study. 
+BJOG 2013;120:1668–7. doi: 10.1111/1471-0528.12428 [PubMed: 24020971] 
+37. Bekabil TT  Tsaedu FA  Debelew GT. Maternal complications of twin deliveries in Jimma 
+University Specialized Hospital  Southwest Ethiopia: a facility-based cohort study. Gaziantep Med 
+J 2015;21:84–9.
+38. Bryant A  Mhyre JM  Leffert LR. The association of maternal race and ethnicity and the risk of 
+postpartum hemorrhage. Anesth Analg 2012;115:1127–36. doi: 10.1213/ANE.0b013e3182691e62 
+[PubMed: 22886840] 
+39. Callaghan WM  Kuklina EV   Berg CJ. Trends in postpartum hemorrhage: United States  1994–
+2006. Am J Obstet Gynecol 2010;202:353–6. doi: 10.1016/j.ajog.2010.01.011 [PubMed: 
+20350642] 
+40. Chalouhi SE  Tarutis J  Barros G. Risk of postpartum hemorrhage among Native American women. 
+Int J Gynaecol Obstet 2015;131:269–72. doi: 10.1016/j.ijgo.2015.05.037 [PubMed: 26534873] 
+41. Driessen M  Bouvier-Colle MH  Dupont C  Khoshnood B  Rudigoz RC  Deneux-Tharaux C 
+Postpartum hemorrhage resulting from uterine atony after vaginal delivery: factors associated with 
+severity. Obstet Gynecol 2011;117:21–31. doi: 10.1097/AOG.0b013e318202c845 [PubMed: 
+21173641] 
+42. Feerasta SH  Motiei A  Motiwala S  Zuberi NF. Uterine atony at a tertiary care hospital in Pakistan: 
+a risk factor analysis. JPMA J Pakistan Med Assoc 2000;50:132–6.
+43. Foley A  Gunter A  Nunes KJ  Shahul S  Scavone BM Patients undergoing cesarean delivery after 
+exposure to oxytocin during labor require higher postpartum oxytocin doses. Anesth Analg 
+2018;126:920–4. doi: 10.1213/ANE.0000000000002401 [PubMed: 28858899] 
+44. Grotegut CA  Paglia MJ  Johnson LN. Oxytocin exposure during labor among women with 
+postpartum hemorrhage secondary to uterine atony. Am J Obstet Gynecol 2011;204:56.e1–6. doi: 
+10.1016/j.ajog.2010.08.023 [PubMed: 21047614] 
+45. Guillaume A  Sananès N  Poirier V   Gaudineau A  Fritz G  Boudier E  et al. Benefits of cord blood 
+collection in the prevention of post-partum hemorrhage: a cohort study. J Matern Fetal Neonatal 
+Med 2015;28:2111–4. doi: 10.3109/14767058.2014.979401 [PubMed: 25341670] 
+46. Harvey SA  Lim E  Gandhi KR. Racial-ethnic disparities in postpartum hemorrhage in Native 
+Hawaiians  Pacific Islanders  and Asians. J Asia Pac Med Public Health 2017;76:128–32.
+47. Joseph KS  Sheehy O  Mehrabadi A. Can drug effects explain the recent temporal increase in 
+atonic postpartum haemorrhage? Paediatric perinatal Epidemiol 2015;29:220–31. doi: 10.1111/
+ppe.12190
+48. Kahr MK  Franke D  Brun R. Blood group O: a novel risk factor for increased postpartum blood 
+loss? Haemophilia 2018;24:e207–12. doi: 10.1111/hae.13537 [PubMed: 29877601] 
+49. Kovacheva VP  Soens MA  Tsen LC. Serum uric acid as a novel marker for uterine atony and post-
+spinal vasopressor use during cesarean delivery. Int J Obstet Anesth 2013;22: 200–8. doi: 10.1016/
+j.ijoa.2013.04.005 [PubMed: 23702182] 
+50. Lao TT  Sahota DS  Cheng YK. Advanced maternal age and postpartum hemorrhage - risk factor 
+or red herring?. J Matern Fetal Neonatal Med 2014;27:243–6. doi: 
+10.3109/14767058.2013.807240 [PubMed: 23713943] 
+51. Looft E  Simic M  Ahlberg M  Snowden JM  Cheng YW  Stephansson O Duration of second stage 
+of labour at term and Pushing time: risk factors for postpartum haemorrhage. Paediatr Perinat 
+Epidemiol 2017;31:126–33. doi: 10.1111/ppe.12344 [PubMed: 28195653] 
+52. Lutomski JE  Byrne BM  Devane D  Greene RA. Increasing trends in atonic postpartum 
+haemorrhage in Ireland: an 11-year population-based cohort study. BJOG 2012;119:306–14. doi: 
+10.1111/j.1471-0528.2011.03198.x [PubMed: 22168794] Ende et al. Page 11
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###12###53. Marshall AL  Durani U  Bartley A  Hagen CE  Ashrani A  Rose C  et al. The impact of postpartum 
+hemorrhage on hospital length of stay and inpatient mortality: a National Inpatient Sample-based 
+analysis. Am J Obstet Gynecol 2017;217:344. e1–6. doi: 10.1016/j.ajog.2017.05.004 [PubMed: 
+28502758] 
+54. Mehrabadi A  Hutcheon JA  Lee L  Kramer MS  Liston RM  Joseph KS Epidemiological 
+investigation of a temporal increase in atonic postpartum haemorrhage: a population-based 
+retrospective cohort study. BJOG 2013;120:853–62. doi: 10.1111/1471-0528.12149 [PubMed: 
+23464351] 
+55. Oberg AS  Hernandez-Diaz S  Palmsten K  Almqvist C  Bateman BT Patterns of recurrence of 
+postpartum hemorrhage in a large population-based cohort. Am J Obstet Gynecol 2014;210: 229–
+8. doi: 10.1016/j.ajog.2013.10.872 [PubMed: 24351791] 
+56. Regalia AL  Acmet E  Limonta Ghezzi GV . Logistic regression analysis highlighted previous 
+atony  pre-eclampsia  oxytocin induction and augmentation of labour  macrosomia  slow labour  
+Kristeller manoevres to be risk factors for uterine atony. Ital J Gynaecol Obstet 2001;3:120–23.
+57. Siddiqui M  Minhaj M  Mueller A  Tung A  Scavone B  Rana S  et al. Increased Perinatal 
+morbidity and mortality among Asian American and Pacific Islander women in the United States. 
+Anesth Analg 2017;124:879–86. doi: 10.1213/ANE.0000000000001778 [PubMed: 28099290] 
+58. Tran G  Kanczuk M  Balki M. The association between the time from oxytocin cessation during 
+labour to cesarean delivery and postpartum blood loss: a retrospective cohort study. Can J Anaesth 
+2017;64:820–7. doi: 10.1007/s12630-017-0874-4 [PubMed: 28421545] 
+59. Vendittelli F  Barasinski C  Pereira B  Lémery D. Incidence of immediate postpartum hemorrhages 
+in French maternity units: a prospective observational study (HERA study). BMC Pregnancy 
+Childbirth 2016;16:242. doi: 10.1186/s12884-016-1008-7 [PubMed: 27552986] 
+60. Waheed G  Toheed R  Mansha M  Bin Ayub T. Comparison of causes of postpartum haemorrhage 
+following vaginal deliveries and caesarean sections in a tertiary care hospital of Pakistan. Pakistan 
+J Med Health Sci 2013;7:5885–9.
+61. Wetta LA  Szychowski JM  Seals S  Mancuso MS  Biggio JR  Tita AT Risk factors for uterine 
+atony/postpartum hemorrhage requiring treatment after vaginal delivery. Am J Obstet Gynecol 
+2013;209:51–6. doi: 10.1016/j.ajog.2013.03.011 [PubMed: 23507549] Ende et al. Page 12
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###13###Box 1.
+Defining the Strength of a Risk Factor
+Definite
+All low and moderate risk of bias studies positive (at least three studies)
+Majority (more than 50%) low and moderate risk of bias studies positive (at least five 
+studies)
+Likely
+All low and moderate risk of bias studies positive (two studies)
+Majority (more than 50%) low and moderate risk of bias studies positive (2–4 studies)
+Unclear
+All low and moderate risk of bias studies positive (one study)
+Low and moderate risk of bias studies show mixed or conflicting results
+A majority (more than 50%) of studies negative but at least one low or moderate risk of 
+bias study positive
+Not a risk factor
+No low or moderate risk of bias studies positiveEnde et al. Page 13
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###14###Fig. 1. 
+Flow diagram of studies identified for systematic review.
+Ende. Atonic Hemorrhage Risk Systematic Review. Obstet Gynecol 2021.Ende et al. Page 14
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###15###Fig. 2. 
+Risk of bias assessment. Risk of bias assessments were performed using the Risk of Bias 
+Assessment Tool for Nonrandomized Studies.13 Green (+)  indicates low risk of bias  blue (?) 
+indicates unclear risk of bias  and red (X)  indicates high risk of bias. For the summary of 
+risk of bias  studies were considered overall low risk of bias ( green + ) if they were classified 
+as low risk in all six domains. Studies were considered a moderate risk of bias ( yellow  —) if 
+at least one domain was rated unclear risk (but no domains were rated high risk) and high 
+risk ( red X ) if at least one domain was rated high risk.Ende et al. Page 15
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###16###Ende. Atonic Hemorrhage Risk Systematic Review. Obstet Gynecol 2021.Ende et al. Page 16
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###17###Fig. 3. 
+Meta-analysis of history and demographic risk factors. Forest plots of odds ratios (ORs) that 
+were included in the quantitative meta-analysis and the associated overall ORs. For each 
+OR  the size of the gray square region  is proportional to the corresponding study weight. 
+Diamond-shaped intervals  represent the overall ORs. I2 represents the fraction of variability 
+among the individual ORs that cannot be explained by sampling variability. aOR  adjusted 
+odds ratio; uOR  unadjusted odds ratio; aRR  adjusted relative risk; PPH  postpartum 
+hemorrhage; CD  cesarean delivery.
+Ende. Atonic Hemorrhage Risk Systematic Review. Obstet Gynecol 2021.Ende et al. Page 17
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###18###Fig. 4. 
+Meta-analysis of maternal comorbidity risk factors. Forest plots of odds ratios (ORs) that 
+were included in the quantitative meta-analysis and the associated overall ORs. For each 
+OR  the size of the gray square region  is proportional to the corresponding study weight. 
+Diamond-shaped intervals  represent the overall ORs. I2 represents the fraction of variability 
+among the individual ORs that cannot be explained by sampling variability. aOR  adjusted 
+odds ratio; uOR  unadjusted odds ratio; aRR  adjusted relative risk; uRR  unadjusted relative 
+risk.
+Ende. Atonic Hemorrhage Risk Systematic Review. Obstet Gynecol 2021.Ende et al. Page 18
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###19###Fig. 5. 
+Meta-analysis of pregnancy-related risk factors. Forest plots of odds ratios (ORs) that were 
+included in the quantitative meta-analysis and the associated overall ORs. For each OR  the 
+size of the gray square region  is proportional to the corresponding study weight. Diamond-
+shaped intervals  represent the overall ORs. I2 represents the fraction of variability among the 
+individual ORs that cannot be explained by sampling variability. aOR  adjusted odds ratio; 
+aRR  adjusted relative risk; uRR  unadjusted relative risk.
+Ende. Atonic Hemorrhage Risk Systematic Review. Obstet Gynecol 2021.Ende et al. Page 19
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###20###Fig. 6. 
+Meta-analysis of labor-related risk factors. Forest plots of odds ratios (ORs) that were 
+included in the quantitative meta-analysis and the associated overall ORs. For each OR  the 
+size of the gray square region  is proportional to the corresponding study weight. Diamond-
+shaped intervals  represent the overall ORs. I2 represents the fraction of variability among the 
+individual ORs that cannot be explained by sampling variability. aOR  adjusted odds ratio; 
+uOR  unadjusted odds ratio; aRR  adjusted relative risk; uRR  unadjusted relative risk.
+Ende. Atonic Hemorrhage Risk Systematic Review. Obstet Gynecol 2021.Ende et al. Page 20
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###21###Fig. 7. 
+Meta-analysis of delivery-related risk factors. Forest plots of odds ratios (ORs) that were 
+included in the quantitative meta-analysis and the associated overall ORs. For each OR  the 
+size of the gray square region  is proportional to the corresponding study weight. Diamond-
+shaped intervals  represent the overall ORs. I2 represents the fraction of variability among the 
+individual ORs that cannot be explained by sampling variability. aOR  adjusted odds ratio; 
+aRR  adjusted relative risk; uRR  unadjusted relative risk.
+Ende. Atonic Hemorrhage Risk Systematic Review. Obstet Gynecol 2021.Ende et al. Page 21
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript
+###22###Author Manuscript Author Manuscript Author Manuscript Author ManuscriptEnde et al. Page 22Table 1.
+Summary of Article Characteristics
+Author and Year Study Country Study Design Study Years No. of Patients Rate of Atonic PPH n (%) Mode of Delivery
+Bateman et al  20101 United States Retrospective cohort 1995–2004 (2004 data for risk 
+factor analysis)876 641 Atonic PPH: 20 353 (2.3) VD CD
+Bateman et al  201336 United States Retrospective cohort 2000–2007 9 750 Calcium channel blocker: 
+1 226Atonic PPH: 201 (2.1) VD CD
+Bekabil et al  201537 Ethiopia Prospective cohort 2012–2013 432 Twin: 144 Atony: 16 (3.7) VD CD
+Bryant* et al  201238 United States Retrospective cohort 2005–2008 2 488 974 Atonic PPH: 53 266 (2.1) VD CD
+Callaghan et al  201039 United States Retrospective cohort 1994–2006 10 481 197 Atonic PPH: 212  00 (2) VD CD
+Chalouhi* etal  201540 United States Retrospective cohort 2009–2012 1 062 Atony: 87 (8.2) VD
+Driessen et al  201141 France Prospective cohort 2004–2006 146 876 Atonic PPH: 4 550 (3.1) VD
+Feerasta et al  200042 Pakistan Retrospective case- control 1987–1997 332 Case: 112  Control: 220 NA (case-control) VD
+Foley et al  201843 United States Retrospective cohort 2015 402 Atony: 195 (48.5) CD
+Definition of Atonic PPH Risk Factors Assessed Covariates Adjusted For Exclusion Criteria
+ICD code Age  mode of delivery  HDP  diabetes  uterine leiomyoma  prior 
+CD  polyhydramnios  chorioamnionitis  precipitous delivery  long 
+labor  medical induction of labor  multiple gestation  stillbirth  
+antepartum hemorrhage  retained placentaLogistic regression included all risk factors 
+assessedMissing data on maternal age
+ICD code Calcium channel blocker administration Age  race  ethnicity  HDP  diabetes  obesity  renal 
+disease  leiomyomas  prior CD  placenta previa  
+multiple gestation  mode of delivery  induction of 
+laborPreterm labor or preterm delivery  
+migraine  arrhythmia  angina  Raynaud  
+exposure to multiple antihypertensives  
+out of hospital delivery  no diagnosis of 
+pre-existing or gestational hypertension
+PPH: undefined Atony: 
+undefinedMultiple gestation None None
+ICD code Race and ethnicity (African American  Hispanic  Asian or Pacific 
+Islander)Induction of labor  multiple gestation  
+polyhydramnios  diabetes  chorioamnionitis  
+stillbirth  grand multiparity  preeclampsia  
+obesity  leiomyomas  placental abruption  
+placenta previa  previous CD  chronic anemia  
+retained placenta  prolonged laborRace or ethnicity data missing or coded as 
+a category not included in the study
+ICD code Mode of delivery Age None
+PPH: EBL Atony: uterotonic† Ethnicity (Native American) None Multiple gestation  preterm delivery  
+coagulopathy
+PPH: EBL or Hgb drop of more 
+than 2 g per dLMaternal age  BMI  prior PPH  fibroma  hydramnios  parity  
+multiple gestation  type of onset of labor  epidural analgesia  
+prolonged labor  oxytocin during labor  prolonged expulsive Logistic regression included all risk factors 
+assessedIncomplete data  CD  PPH of etiology 
+other than atony
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+###23###Author Manuscript Author Manuscript Author Manuscript Author ManuscriptEnde et al. Page 23Definition of Atonic PPH Risk Factors Assessed Covariates Adjusted For Exclusion Criteria
+Atony: uterotonic† or other 
+intervention ‡ case report form 
+to elucidate etiologyefforts  gestational age  instrumented VD  prophylactic uterotonics  
+birth weight
+PPH: undefined Atony: 
+undefined†Parity  stillbirth or neonatal death  prior PPH  prior CD  HDP  
+antenatal anemia  multiple gestation  history of preterm labor  use 
+of tocolytics  diabetes  polyhydramnios  amnionitis  uterine 
+leiomyomas  induced labor  augmented labor  prolonged labor  
+mode of delivery  precipitous delivery  epidural  macrosomiaLogistic regression included all risk factors 
+assessedNone
+PPH: EBL  Hgb drop  
+transfusion Atony: uterotonicPredelivery oxytocin exposure Nulliparity  hypertension  diabetes  multiple 
+gestation  polyhydramnios  premature rupture of 
+membranes  preterm rupture of membranes  
+prolonged rupture of membranes  placenta previa  
+placental abruption  chorioamnionitis  
+macrosomiaGeneral anesthesia  postpartum oxytocin 
+dose not charted
+Author and Year Study Country Study Design Study Years No. of Patients Rate of Atonic PPH n (%) Mode of Delivery
+Grotegut* et al  201144 United States Retrospective case- control 2000–2004 108 Case: 54  control: 54 NA (case-control) VD CD
+Guillaume et al  201545 France Retrospective cohort 2011–2013 7 810 Atonic PPH: 202 (2.6) VD
+Harvey* et al  201746 United States Retrospective cohort 1995–2013 243 693 Atonic PPH: 8 962 (3.7) VD CD
+Joseph et al  201547 Canada Retrospective case- control 1998–2009 138 704 Case: 6 378  control: 31 795 NA (case-control) VD CD
+Kahr et al  201848 Switzerland Prospective cohort 2015–2016 1 487 Atony: 71 (4.8) VD CD
+Kovacheva et al  201349 United States Retrospective cohort 2009 345 Atony: 35 (10) CD
+Lao et al  201450 Hong Kong Retrospective cohort 1998–2008 64 886 Atonic PPH: 1 194 (1.8) VD CD
+Looft et al  201751 Sweden Retrospective cohort 2008–2014 57 267 Atonic PPH: 2 659 (4.6) VD
+Definition of Atonic PPH Risk Factors Assessed Covariates Adjusted For Exclusion Criteria
+PPH: ICD+chart review for 
+transfusionPredelivery oxytocin exposure  race  BMI  
+admission hematocrit  induction status  
+preeclampsia  magnesium therapy  
+chorioamnionitisRace  BMI  admission hematocrit  induction status  magnesium 
+treatment  chorioamnionitisNone
+Atony: uterotonic† or other 
+intervention‡
+PPH: EBL Cord blood collection Age  grand multiparity  diabetes  induction of labor  long labor  
+oxytocin augmentation  prophylactic postpartum oxytocin  
+instrumented delivery  birth weight  vaginal tearing  placental 
+retentionMultiple gestation  gestational age less than 37 
+wkAtony: medical team 
+diagnosis
+ICD code Ethnicity (Native Hawaiians and Other Pacific 
+Islanders  Asian  White)Age  delivery type  prior CD  smoking  obesity  substance abuse  
+multiple gestation  multiparity  HDP  diabetes  labor induction  
+polyhydramnios  chorioamnionitis  placental abruption  placenta 
+previa  prolonged laborNon-Hawaii residents  records lacking race-
+ethnicity data  race-ethnicity other than Native 
+Hawaiians and Other Pacific Islanders  Asian  
+or White
+ICD code Maternal medication use (antidepressants  
+aspirin  nonsteroidal antiinflammatory drugs  Age  welfare status  rural vs urban residence  prior CD  alcoholism  
+liver disease  thrombocytopenia  multiple gestation  preeclampsia  None
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+###24###Author Manuscript Author Manuscript Author Manuscript Author ManuscriptEnde et al. Page 24Definition of Atonic PPH Risk Factors Assessed Covariates Adjusted For Exclusion Criteria
+beta-agonists  and antihistamines)  multiple 
+pregnancies  placenta previa or abruption  
+polyhydramnios  prolonged labor  preeclampsia 
+or eclampsia  epidural  labor induction  perineal 
+trauma  uterine rupture  mode of delivery  
+chorioamnionitis  alcohol use disorder  liver 
+disease  thrombocytopenia  asthmapolyhydramnios  placenta previa  placental abruption  epidural 
+analgesia  labor induction  prolonged first stage  prolonged second 
+stage  mode of delivery  uterine rupture  cervical laceration  severe 
+perineal tear  chorioamnionitis
+PPH: EBL or Hgb drop 
+Atony: undefinedBlood group O None Gestational age less than 22 wk  primary 
+coagulopathy or blood-clotting disorder  no 
+informed consent  maternal age younger than 
+18 y
+PPH: Difference between 
+preoperative and 
+postoperative hematocrit 
+Atony: uterotonic†Serum uric acid level Uric acid level  use of magnesium  duration of oxytocin  
+polyhydramnios  oligohydramnios  chorioamnionitis  abnormal 
+placentation  gestational age  birth weightMultiple gestation  no serum uric acid 
+measured within 24 hours of CD  incomplete 
+medical records  general anesthesia  pre-
+existing coagulation abnormalities  
+hyperuricemia before pregnancy
+PPH: EBL Atony: 
+undefinedMaternal age None Maternal age younger than 20 y  gestational 
+age less than 24 wk  multiple gestation  
+spontaneous miscarriage  therapeutic abortion  
+incomplete data
+ICD code Length of the second stage Length of pushing Age  height  BMI  smoking  induction of labor  oxytocin use during 
+first stage of labor  gestational age  birth weightNoncephalic presentation  CD  missing data
+Author and Year Study Country Study Design Study Years No. of Patients Rate of Atonic PPH n (%) Mode of Delivery
+Lutomski et al  201252 Ireland Retrospective cohort 1999–2009 649 019 Atonic PPH: 12 800 (2.0) VD CD
+Marshall* et al  201753 United States Retrospective cohort 2012–2013 1 352 691 Atonic PPH: 31 549 (2.3) VD CD
+Mehrabadi et al  201354 Canada Retrospective cohort 2001–2010 371 193 Atonic PPH: Total number not reported VD CD
+Oberg et al  201455 Sweden Retrospective cohort 1997–2009 538 332 women  914 939 
+pregnanciesAtonic PPH: 17 818 (1.9) VD (atonic PPH data analyzed VD 
+only)
+Regalia et al  200156 Italy Retrospective cohort 1995–1999 10 756 Atony: 427 (4.0) VD
+Siddiqui* et al  201757 United States Retrospective cohort 2002–2013 21 898 501 Atonic PPH: 499 189 (2.3) VD CD
+Tran et al  201758 Canada Retrospective cohort 2013–2015 490 Atonic PPH: 80 (16) CD
+Vendittelli et al  201659 France Prospective cohort 2011 129 110 Atonic PPH: 2 490 (1.9) VD CD
+Waheed et al  201360 Pakistan Retrospective cohort 2006–2009 8 713 Atonic PPH: 93 (1.1) VD CD
+Definition of Atonic PPH Risk Factors Assessed Covariates Adjusted For Exclusion Criteria
+ICD code Maternal age  hypertension  diabetes  mode of delivery  multiple 
+gestation  large fetus  episiotomy  genital tract trauma  prolonged 
+first stage  prolonged second stage  placental disorders  amniotic 
+cavity infection  polyhydramniosAge  marital status  socioeconomic status  
+hypertension  diabetes  mode of delivery  
+induction of labor  multiple gestation  
+macrosomia  episiotomy  genital tract trauma  
+prolonged labor  placenta previa  vasa previa  None
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+###25###Author Manuscript Author Manuscript Author Manuscript Author ManuscriptEnde et al. Page 25Definition of Atonic PPH Risk Factors Assessed Covariates Adjusted For Exclusion Criteria
+placental abruption  chorioamnionitis  
+polyhydramnios
+ICD code Race  parity None Incomplete data
+ICD code Maternal age  parity  birthweight  BMI  gestational age  smoking 
+status  multiple gestation  mode of delivery  prior CD  epidural 
+analgesia  induction  oxytocin augmentation  uterine rupture  third or 
+fourth degree perineal tear  high vaginal laceration  cervical 
+laceration  placenta previa  placental abruption  breech  transverse 
+lie  polyhydramnios  prolonged first stage  prolonged second stage  
+preeclampsia  chorioamnionitis  forceps  vacuum  forceps and 
+vacuumLogistic regression included all risk factors 
+assessedIncomplete data
+ICD code History of PPH according to type Year of birth  age  civil status  country of 
+origin  chronic hypertension  diabetes  
+coagulopathy  leiomyomasMultiple gestation
+PPH: undefined Maternal age  BMI  gestational age  parity  fetal weight  prior atony  
+prior CD or uterine scar  uterine leiomyomas  preeclampsia  fever in 
+labor  hydramnios  labor induction  labor velocity of progress  use of 
+Kristeller maneuvers  nonvertex cephalic presentationLogistic regression included all risk factors 
+assessedMultiple gestation  placental risk factors for PPH  
+gestational age less than 35 wk  CD  incomplete 
+data Atony: undefined
+ICD code Ethnicity None Ethnicity other than Caucasian or Asian American 
+and Pacific Islander
+PPH: EBL and drop in hct Length of the oxytocin recovery period  BMI Preeclampsia  chorioamnionitis  morbid 
+obesity  macrosomia  multiple gestation  
+polyhydramnios  oxytocin induction  dose 
+and duration of oxytocin augmentationAny mode of delivery other than intrapartum CD 
+for labor arrest  women not receiving 2h or more 
+of oxytocin augmentation during labor  gestational 
+age less than 37 or more than 41 wk  PPH cause 
+other than atony  incomplete data  general 
+anesthesiaAtony: uterotonic† or 
+other intervention‡
+PPH: EBL Mode of delivery None None
+Atony: undefined
+PPH: EBL or change in 
+vital signsMode of delivery None None
+Atony: medical team 
+diagnosis  uterine 
+massage  uterotonic†
+Author and Year Study Country Study Design Study Years No. of Patients Rate of Atonic PPH n (%) Mode of Delivery
+Wetta* et al  201361 United States Secondary analysis of randomized controlled trial 2008–2010 1 798 Atony: 118 (6.6) VD
+Definition of Atonic PPH Risk Factors Assessed Covariates Adjusted For Exclusion Criteria
+PPH: EBL Atony: medical team 
+diagnosisAge  oxytocin dose  BMI  ethnicity  race  augmentation  induction  
+birthweight  parity  preeclampsia  magnesium use  twin gestation  
+chorioamnionitis  hydramnios  amnioinfusion  epidural anesthesia  
+breastfeeding  artificial rupture of membranesLogistic regression included all 
+risk factors assessedGestational age less than 24 wk  CD  fetal 
+demise  pulmonary edema  coagulopathy  
+cardiomyopathy
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+###26###Author Manuscript Author Manuscript Author Manuscript Author ManuscriptEnde et al. Page 26PPH  postpartum hemorrhage; VD  vaginal delivery; CD  cesarean delivery; ICD  International Classification of Diseases; HDP  hypertensive disorders of pregnancy; EBL  estimated blood loss; Hgb  
+hemoglobin; BMI  body mass index; hct  hematocrit; NA  not applicable.*Article evaluates race or ethnicity as risk factor for atonic postpartum hemorrhage. Additional information regarding classifications of race or ethnicity used  who classified patients  whether options were 
+defined by participants or investigators  reasons race or ethnicity were assessed  missing data  and “other” categories is presented in Appendix 4  http://links.lww.com/AOG/C163 .
+†Uterotonic administration was in addition to standard oxytocin therapy.‡“Other interventions” included the use of a Bakri balloon  uterine massage  uterine artery embolization  or surgical interventions.
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+###27###Author Manuscript Author Manuscript Author Manuscript Author ManuscriptEnde et al. Page 27Table 2.
+Summary of Qualitative and Quantitative Results for Assessed Risk Factors
+Risk Factors Qualitative Synthesis Result Meta-Analysis Result [OR (95% CI)]
+History and demographic
+ Young age Unclear Not applicable
+ Old age Unclear Not applicable
+ Hispanic Likely 1.23 (1.20–1.25)
+ Asian Definite 1.39 (1.33–1.46)
+ Native American Not Not applicable
+ Black or African American Unclear 1.00 (0.78–1.29)
+ Nulliparity Likely Not applicable
+ Prior postpartum hemorrhage Definite 2.25 (1.02–4.96)
+ Prior cesarean delivery Unclear 1.12 (0.96–1.32)
+ Blood group O Not Not applicable
+ Calcium channel blocker exposure Not Not applicable
+ Antidepressant exposure Unclear Not applicable
+ Aspirin exposure Not Not applicable
+ Nonsteroidal antiinflammatory drug exposure Not Not applicable
+ Doxylamine exposure Not Not applicable
+Maternal comorbidity
+ Hypertension Likely 1.84 (1.45–2.33)
+ Diabetes Definite 1.22 (1.08–1.39)
+ Anemia Unclear Not applicable
+ Obesity Not Not applicable
+ Leiomyomas Unclear 1.31 (0.55–3.10)
+ Liver disease Not Not applicable
+ Thrombocytopenia Not Not applicable
+ Asthma Not Not applicable
+ Elevated uric acid Unclear Not applicable
+ Alcohol use disorder Not Not applicable
+ Smoking Not Not applicable
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.
+###28###Author Manuscript Author Manuscript Author Manuscript Author ManuscriptEnde et al. Page 28Risk Factors Qualitative Synthesis Result Meta-Analysis Result [OR (95% CI)]
+Pregnancy-related
+ Polyhydramnios Unclear 1.29 (0.94–1.76)
+ Multiple gestation Likely 2.16 (1.53–3.06)
+ Malpresentation Unclear Not applicable
+ Macrosomia Unclear 1.46 (1.35–1.57) (more than 4 000 g)
+ Placental disorders (previa or abruption) Definite 2.74 (1.57–4.79)
+ Antepartum hemorrhage Unclear Not applicable
+ Stillbirth Unclear Not applicable
+Labor-related
+ Chorioamnionitis Likely 1.93 (1.56–2.39)
+ Uterine rupture Likely 2.35 (1.65–3.35)
+ Predelivery oxytocin exposure Likely 1.15 (0.95–1.40)
+ Induction of labor Likely 1.23 (1.10–1.39)
+ Prolonged labor Definite 1.76 (1.53–2.03) (all labor)
+1.31 (1.24–1.38) (1st stage)
+1.10 (0.82–1.48) (2nd stage)
+ Epidural Unclear 0.94 (0.72–1.23)
+ Magnesium exposure Not Not applicable
+ Tocolytic exposure Not Not applicable
+Delivery-related
+ Gestational age Not Not applicable
+ Genital tract trauma Definite 1.67 (1.28–2.18) (perineal laceration)
+2.19 (1.13–4.24) (high vaginal laceration)
+5.70 (2.56–12.67) (cervical laceration)
+ Instrumented vaginal delivery Likely 1.67 (1.40–2.00)
+ Cesarean delivery Unclear Not applicable
+ Cord blood collection Not Not applicable
+ Breastfeeding Not Not applicable
+OR  odds ratio.
+Obstet Gynecol . Author manuscript; available in PMC 2021 August 04.

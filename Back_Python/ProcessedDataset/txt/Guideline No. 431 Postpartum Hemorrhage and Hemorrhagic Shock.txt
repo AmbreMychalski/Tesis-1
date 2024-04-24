@@ -1,0 +1,1456 @@
+###1###SOGC CLINICAL PRACTICE GUIDELINE
+No. 431  December 2022 (Replaces No. 235  October 2009 & No. 115  June 2002)
+Guideline No. 431: Postpartum
+Hemorrhage and Hemorrhagic Shock
+(En français : Directive clinique no 431 : Hémorragie post-partum et choc hémorragique)
+The English document is the original version. In the event of any discrepancy between the English and French content  the English version prevails.
+This clinical practice guideline was prepared by the authors and
+overseen by the SOGC Clinical Practice Obstetrics committee. Itwas reviewed by the SOGC Obstetrical Content Review
+committee and approved by the SOGC Guideline Management
+and Oversight Committee and SOGC Board of Directors.This clinical practice guideline supersedes No. 235  published inOctober 2009 and No. 115  published in June 2002.
+Authors
+debbie Robinson  MD  Winnipeg  MB
+Melanie Basso  RN  MSN  Vancouver  BC
+Cynthia Chan  MD  London  ON
+Kirsten Duckitt  MD  Campbell River  BCRyan Lett  MD  Regina  SKSOGC Clinical Practice eObstetrics Committee (2022):
+Douglas Black (past-Chair)  Mélina Castonguay  Cynthia Chan Elissa Cohen (co-Chair)  Christine Dallaire  Kirsten Duckitt 
+Sebastian Hobson (co-Chair)  Isabelle Létourneau  Amy Metcalfe 
+J. Larry Reynolds  debbie Robinson  Marie-Ève Roy-Lacroix Katherine Tyndall  Kathryn Versteeg
+Acknowledgements: The authors would like to acknowledge
+and thank special contributor Dr. Stephanie Cooper  MD  Calgary AB  for her extensive contribution to the appended PPH
+Appendices.
+Disclosures: Statements were received from all authors.
+Dr. Ryan Lett has previously given lectures on intravenous ironand received an unrestricted educational honorarium from P ﬁzer;
+he also sits on the National Advisory Committee on Blood and
+Blood Products as a representative for Saskatchewan. No other
+relationships or activities that could involve a con ﬂict of interest
+were declared.
+All authors have indicated that they meet the journal ’s
+requirements for authorship.
+Keywords: postpartum hemorrhage; therapeutics; hemorrhagic
+shock; obstetric delivery; preventive medicine
+Corresponding author : debbie Robinson 
+debbie.robinson@umanitoba.caJ Obstet Gynaecol Can 2022;44(12):1293-1310
+https://doi.org/10.1016/j.jogc.2022.10.002
+ª2022 The Society of Obstetricians and Gynaecologists of Canada/La
+Société des obstétriciens et gynécologues du Canada. Published by
+Elsevier Inc. All rights reserved.
+This document re ﬂects emerging clinical and scienti ﬁc advances as of the publication date and is subject to change. The information is not
+meant to dictate an exclusive course of treatment or procedure. Institutions are free to amend the recommendations. The SOGC suggests 
+however  that they adequately document any such amendments.
+Informed consent: Patients have the right and responsibility to make informed decisions about their care in partnership with their health care
+provider. In order to facilitate informed choice  patients should be provided with information and support that is evidence-based  culturallyappropriate  and personalized. The values  beliefs and individual needs of each patient in the context of their personal circumstances should beconsidered and the ﬁnal decision about care and treatment options chosen by the patient should be respected.
+Language and inclusivity: The SOGC recognizes the importance to be fully inclusive and when context is appropriate  gender-neutral lan-
+guage will be used. In other circumstances  we continue to use gendered language because of our mission to advance women ’s health. The
+SOGC recognizes and respects the rights of all people for whom the information in this document may apply  including but not limited totransgender  non-binary  and intersex people. The SOGC encourages health care providers to engage in respectful conversation with their
+patients about their gender identity and preferred gender pronouns and to apply these guidelines in a way that is sensitive to each person ’s
+needs.It is the Society of Obstetrician and Gynaecologists of Canada (SOGC) policy to review the content 5 years after publication  at which
+time the document may be revised to re ﬂect new evidence or the document may be archived
+DECEMBER JOGC DÉCEMBRE 2022 l1293
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###2###RECOMMENDED CHANGES IN PRACTICE
+1. Quantitative blood loss measurement should replace
+estimated blood loss for all deliveries.
+2. Maximum single dose oxytocin doses should be 3 IU IV rapid
+injection  or 10 IU intramuscular
+3. In cases of severe obstetrical hemorrhage  the calculated
+maximum allowable blood loss and lab-based (or point-of-careebased) factor replacement should guide treatment
+whenever possible.
+4. Misoprostol should only be used sublingually or orally for the
+prevention and treatment of postpartum hemorrhage.
+KEY MESSAGES
+1. Reducing the risk of postpartum hemorrhage begins
+antenatally and continued vigilance is needed throughout
+labour to recognize abnormal postpartum bleeding early.
+2. Appropriate recognition and treatment of postpartum
+hemorrhage can prevent serious morbidity while reducing
+costs to the health care system by minimizing costly
+interventions and length of hospital stays.
+3. Simulation training followed by formal debrie ﬁng will improve
+outcomes in the clinical setting.
+ABSTRACT
+Objective: This guideline aims to provide evidence for prevention 
+recognition  and treatment of postpartum hemorrhage includingsevere hemorrhage leading to hemorrhagic shock.
+Target population: All pregnant patients.
+Bene ﬁts  harms  and costs: Appropriate recognition and treatment of
+postpartum hemorrhage can prevent serious morbidity whilereducing costs to the health care system by minimizing more costlyinterventions and length of hospital stays.
+Evidence: Medical literature  PubMed  ClinicalTrials.gov   the
+Cochrane Database  and grey literature were searched for articles published between 2012 and 2021  on postpartum hemorrhage uterotonics  obstetrical hemorrhage  and massive hemorrhage
+protocols.
+Validation methods: The authors rated the quality of evidence and
+strength of recommendations using the Grading of
+Recommendations Assessment  Development and Evaluation
+(GRADE) approach. See online Appendix A (Tables A1 for
+deﬁnitions and A2for interpretations of strong and conditional
+[weak] recommendations).
+Intended Audience: All members of the health care team who care for
+labouring or postpartum women  including  but not restricted to nurses  midwives  family physicians  obstetricians  andanesthesiologists.
+RECOMMENDATIONS
+1. An individualized risk assessment for postpartum hemorrhage
+should be documented in a checklist upon arrival to a labour unitand updated throughout labour and delivery ( strong  high ). The riskassessment should include a calculation of the maximum allow-
+able blood loss ( good practice point ).
+2. Both antenatal and postnatal anemia should be identi ﬁed and
+treated aggressively ( strong  high ).
+3. Quantitative blood loss measurement should replace estimated
+blood loss in all patients whenever possible ( strong  moderate ).
+4. Staging and management of postpartum hemorrhage should be
+based on quantitative blood loss ( strong  high ).
+5. Active management of the third stage of labour should be offered
+to all women ( strong  high ).
+6. Prophylactic intramuscular oxytocin can be used for patients at low
+risk for postpartum hemorrhage ( strong  high ).
+7. For patients at high risk of postpartum hemorrhage  prophylactic
+intravenous oxytocin should be used ( conditional  moderate ).
+8. When given intravenously  oxytocin can be given either as a rapid
+infusion (max rate 1 IU/min) for 4 minutes  followed by 7.5 e15 IU/h
+or as a 3 IU intravenous rapid injection ( strong  moderate )
+9. If there is inadequate response to oxytocin within 4 minutes  a
+second-line uterotonic should be administered ( strong  high ).
+10. Carbetocin can be considered as a ﬁrst-line agent for postpartum
+hemorrhage prophylaxis at cesarean delivery ( strong  moderate ).
+11. Bimanual uterine compression and bladder emptying should be
+performed as ﬁrst-line measures while waiting for pharmacologic
+agents to take effect ( good practice point ).
+12. Misoprostol (sublingual/oral) is an effective adjunct to prophylactic
+or therapeutic oxytocin in high-risk individuals ( strong  high )
+13. Intramuscular ergotamine and intramuscular or intramyometrial
+carboprost  can both be used to treat active postpartum hemor-
+rhage (
+strong  high ).
+14. Rectal misoprostol is inferior to other routes (both in onset and in
+bioavailability) and should not be used ( strong  moderate ).
+15. Tranexamic acid can be used in all patients as an adjunct to ute-
+rotonics in the setting of postpartum hemorrhage  and can be used
+as a prophylactic agent in patients at high risk for postpartumhemorrhage ( strong  high ).
+16. Uterine tamponade is an effective tool and should be considered
+for ongoing mild to moderate bleeding ( conditional  moderate ).
+17. If the placenta has not been expelled spontaneously in the 30
+minutes following delivery  measures should be taken to expeditedelivery of the placenta ( strong  high ).
+18. When there is ongoing bleeding  examine the patient for the
+presence of clots  retained placental tissue  or genital tract lacer-ations ( good practice point ).
+19. In the case of uterine inversion  if immediate reversion is not
+possible  transfer the patient to an operating room for uterinerelaxation and patient stabilization  as required ( good practice
+point )
+20. If pharmacologic interventions have not controlled
+bleeding  surgical intervention should be undertaken promptly(strong  high )
+21. Compression sutures  ligation of uterine or internal iliac arteries 
+and uterine artery embolization are all effective interventions that
+can be considered; however  hysterectomy should not be delayedin an unstable patient ( strong  high ).
+22. Severe obstetrical hemorrhage should be managed by a multi-
+disciplinary team consisting of obstetrics  anaesthesia  nursing and transfusion medicine ( strong  high ).
+23. An obstetrical massive hemorrhage protocol  including de ﬁned
+roles and responsibilities of each team member  should be used
+(strong  moderate ).
+24. Initial resuscitative and monitoring measures should include
+intravenous access /C22  electrocardiography  oxygen saturation 
+blood pressure  placement of an indwelling urethral catheter 
+euthermia  and volume replacement with balanced crystalloid(good practice point ).
+1294
+lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###3###25. Four units red blood cells should be given prior to other blood
+products in an actively bleeding patient who is approaching themaximum allowable blood loss  unless the patient has a coagu-
+lation defect ( strong  moderate )
+26. Fibrinogen levels should be measured in every moderate to severe
+case of postpartum hemorrhage  and if <2 g/L  should be replaced
+accordingly ( strong  high ).27. A massive hemorrhage protocol with ratios of red blood cells
+to fresh frozen plasma to platelets of 1:1:1: or 2:1:1 canbe used in the absence of timely lab results ( strong 
+moderate ).
+28. Simulation training with all members of the multidisciplinary team
+should occur on a regular basis  ideally by a trained facilitator
+(strong  high ).
+DECEMBER JOGC DÉCEMBRE 2022
+l1295PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###4###INTRODUCTION
+Postpartum hemorrhage (PPH) continues to be a sig-
+niﬁcant contributor to maternal morbidity and mor-
+tality  even in developed countries.1Between 2003 and 2010 
+the incidence of PPH in Canada was 5.6 per 100 deliveries.
+International data from high resource countries suggest the
+rate is closer to 10% when blood loss is actually measured 2
+and this rate continues to rise  with uterine atony being the
+primary cause.3 4The traditional de ﬁnition of blood loss as
+/C21500 mL with vaginal delivery or /C211000 mL with cesarean
+delivery (CD) is no longer suf ﬁcient  as visual estimates have
+been found to be inaccurate  even for experienced pro-
+viders.5 6In addition  many women of reproductive age
+maintain normal vital signs despite blood loss beyond these
+amounts. Since these factors can lead to delays in treatment
+causing adverse maternal outcomes 7 8accurate and cumu-
+lative measurement of blood loss has emerged as the newstandard of care.
+9
+Prevention is key to reducing maternal morbidity from
+PPH  as 60% of these patients have at least one identi ﬁable
+antepartum or intrapartum risk factor.10Assessment for
+these risk factors  as well as early intervention  are integral
+to mitigating potential adverse outcomes.
+This guideline provides a new approach to the early
+identi ﬁcation and management of PPH. Recommenda-
+tions are based on emerging data that highlight the suc-cesses of obstetrical hemorrhage toolkits and care bundles
+in reducing maternal morbidity and mortality.
+The California Maternal Quality Care Collaborative
+implemented a quality improvement initiative that led to a
+reduction in PPH of 20.8%  compared with 1.2% in non-
+participating hospitals.
+11This guideline presents an
+adapted model to prevent and manage PPH and com-
+prises the following categories:
+1. RISK ASSESSMENT
+2. RISK REDUCTION
+3. RECOGNIZE AND RE-EVALUATE
+4. REACT5. RESUSCITATE
+6. REVIEW
+RISK ASSESSMENT
+Causes and Risk Factors
+The four Ts (tone  tissue  trauma  thrombin) are well
+known. Evaluation of risk factors in each of these cate-
+gories is important to determine a potential cause of PPH
+(Table 1 ).Individualized risk should be documented in a
+checklist upon arrival to a labour unit and updated
+throughout labour and delivery (Appendix B ). Patients at
+high risk for PPH deliver in a facility with easy access to amassive hemorrhage protocol (MHP) that takes into
+consideration local blood product supply  transport  and
+access to specialist advice.
+Anemia
+Women with anemia (Hb <110 g/L) have less reserve to
+cope with PPH. Anemia may also reduce oxygen deliveryto myometrial muscles resulting in uterine atony.
+12In
+addition  iron is a necessary cofactor for adenosine
+triphosphate (ATP) production in muscle cells  and iron
+deﬁciency itself may contribute to uterine atony.13
+Iron de ﬁciency anemia is a signi ﬁcant health problem for
+women worldwide.14The prevalence of iron de ﬁciency
+anemia in pregnancy is estimated at 41%  with higher rates
+in low socioeconomic populations.14A study  conducted in
+Toronto  Canada  of pregnant women screened for iron
+deﬁciency anemia found that 91% of participants were iron
+deﬁcient (ferritin <50mg/L)  with most having severe iron
+deﬁciency with a ferritin <20mg/L despite only 25% of
+participants having a hemoglobin level <110 g/L.15These
+ﬁndings highlight the fact that by the time a low hemoglobin
+is detected  the iron de ﬁciency is profound. Both hemo-
+globin and ferritin should be measured antenatally.
+Anemia and iron de ﬁciency should be assessed and treated
+at or before 28 weeks gestation. Ferrous salts  taken dailyor every other day  on an empty stomach is the ideal
+method of iron supplementation.
+16There is insuf ﬁcient
+evidence to routinely co-administer ascorbic acid (vitamin
+C).17Intravenous iron should be given if there is no
+response (increase in Hb of 10 g/L) within 2 weeks.18
+Postpartum anemia contributes to fatigue  postpartum
+depression  poor bonding  and poor lactation.19 20Oral
+iron supplementation should continue for at least 3
+months postpartum and intravenous (IV) iron considered
+with hemoglobin <80 g/L  regardless of symptoms.16ABBREVIATIONS
+CD cesarean delivery
+MABL maximum allowable blood loss
+MHP massive hemorrhage protocol
+PPH postpartum hemorrhage
+TXA tranexamic acid
+1296 lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###5###RISK REDUCTION
+The California Collaborative found that underestimating
+blood loss and relying on vital signs led to health care
+providers underestimating the severity of PPH and  more
+importantly  led to delays in treatment.11Denial is delay
+should be the new theme for PPH management strate-
+gies.11The bene ﬁt of one or more PPH bundles (con-
+taining key medications  instruments  tamponade devices sponges  sutures  etc.) can decrease the time to treatment
+by having all potentially needed materials readily available.
+Accurate Measurement of Blood Loss
+Since visual estimates grossly underestimate the true volumeof blood loss  it is recommended that labour units begin to
+accurately monitor and record ongoing bleeding .D r y
+weights of sponges  towels  sheets  and other commonly
+soaked surfaces should be recorded on a standard form thatcan be accessed at any time to properly evaluate blood loss
+in any patient. Measuring amniotic ﬂu i di nt h ed r a p e( c a l i -
+brated cones are available) and wiping the ﬂuid off the ﬂoor
+before active bleeding begins will distinguish it from any
+postpartum bleeding. Whenever possible  suction the am-
+niotic ﬂuid at CD prior to delivering the infant and docu-
+ment its volume. Everything suctioned after this point
+should be considered blood loss. Sponges  towels  and
+drapes should be collected and weighed. A record of cu-
+mulative blood loss for the ﬁrst 24 hours should be kept.
+Estimated blood loss should be replaced by quantitative
+(measured) blood loss ( Appendices C  D  E  F ).
+Classi ﬁcation and Management Protocols for
+Stages of Postpartum Hemorrhage
+A staging system based on quantitative blood loss 
+regardless of vital signs  with detailed managementTable 1. Postpartum hemorrhage risk factors
+Etiology Risk Factors
+Tone (uterine atony) Uterine overdistension /C15Polyhydramnios
+/C15Multiple gestation
+/C15Macrosomia
+Uterine exhaustion /C15Precipitous or prolonged labour
+/C15Prolonged oxytocin use
+/C15High parity
+/C15General anaesthesia
+/C15Anemia
+Infection /C15Prolonged rupture of membranes
+/C15Chorioamnionitis
+Dysfunctional uterine activity /C15Fibroids
+/C15Placenta previa
+Tissue Retained products of conception Incomplete placental delivery (succenturiate lobe 
+morbidly adherent placenta)
+Trauma Laceration of cervix  vagina  perineum /C15Precipitous or operative delivery
+/C15Episiotomy extension
+/C15Fetal malposition
+Extension/lacerations at cesarean /C15Deep engagement
+/C15Prolonged second stage
+/C15Fetal malposition
+Uterine rupture Previous uterine surgery
+Uterine inversion /C15Nulliparity with fundal placenta
+/C15Excessive cord traction
+Thrombin Pre-existing states /C15Hereditary coagulopathies (von Willebrand disease  hemophilia)
+/C15Idiopathic thrombotic purpura
+Acquired in pregnancy /C15Preeclampsia
+/C15Disseminated intravascular coagulopathy
+/C15Fetal demise
+/C15Severe infection
+/C15Abruption
+/C15Amniotic ﬂuid embolism
+Iatrogenic /C15Therapeutic anticoagulation
+DECEMBER JOGC DÉCEMBRE 2022 l1297PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###6###protocols for each stage should be implemented.21(Clas-
+siﬁcation in Table 2   for a more detailed table including
+expanded management protocols see Appendix G )
+Active Management of the Third Stage of Labour
+The SOGC ﬁrst commented on the active management of
+the third stage of labour in 2000.22Three elements were
+originally included: a uterotonic after delivery of the
+anterior shoulder  early cord clamping  and cord traction to
+deliver the placenta. Since that time  delayed cord clamping
+has become the standard of care as it improves neonatal
+outcomes without increasing the incidence of PPH.23
+Furthermore  in multiple trials and reviews  controlledcord traction has been shown to only decrease the lengthof the third stage by 4-6 minutes and blood loss by
+<30 mL.
+24e28Since there is limited evidence to suggest
+that expediting delivery of the placenta before 30 minutes
+reduces the risk of PPH in an uncomplicated delivery 22
+the de ﬁnition of active management of the third stage of
+labour should be con ﬁned to the use of a uterotonic.
+Providers choosing to employ controlled cord traction
+should only do so after signs of placental separation  and
+traction should be performed with uterine contraction as
+these measures reduce the risk of uterine inversion  cord
+avulsion  and partial detachment of the placenta.
+Although prophylaxis with oxytocin for all patients has been
+common practice  a 2019 Cochrane review found no clear
+beneﬁt to routine uterotonics in terms of PPH or hemo-
+globin in women at low risk of PPH  based on low quality
+evidence.29They concluded that women at low risk for PPHshould be given the necessary information regarding the
+beneﬁts and risks of active management of the third stage of
+labour in order to make informed choices about their care.
+Skin to skin contact may independently reduce the length of
+the third stage.30
+Oxytocin Free Interval Prior to Cesarean Delivery
+The longer oxytocin is used for the induction or
+augmentation of labour  the less responsive the uterus
+becomes to it. Tran et al. showed a statistically signi ﬁcant
+association between the length of the oxytocin free interval
+prior to CD and the total estimated blood loss with the
+greatest bene ﬁt after 1 hour.31While the reduction in
+blood loss in patients with a low BMI was not clinicallysigniﬁcant (7 mL/10-min recovery interval)  the greatest
+beneﬁt was seen in women with a BMI >40 kg/m
+2  where
+blood loss was reduced by 45 mL per 10-minute recovery
+interval up to a maximum of 450 mL at 99 minutes. In
+these women  higher amounts and longer durations of
+oxytocin use were associated with an increased need for a
+second-line uterotonic agent. When maternal and fetal
+conditions are stable  providing an oxytocin wash-out in-
+terval may be bene ﬁcial  particularly when the patient ’s
+BMI is >40 kg/m2.
+Prophylactic Uterotonics ( Table 3 )
+Oxytocin
+Numerous trials over more than 2 decades continue to
+show that oxytocin is the drug of choice for both the
+prevention and treatment of PPH.32Compared with pla-
+cebo  ergometrine  carboprost  or misoprostol  oxytocin isTable 2. Classi ﬁcation and management of PPH by stage
+Blood loss  mL BP  mm HgaHR  bpmaSigns/symptoms Initial managementb
+Stage 0 /C15<500 vaginal
+/C15<1000 CDNormal <100 Asymptomatic Active or physiologic management
+of the third stage
+Stage 1 (mild) /C15500-1000 vaginal
+/C151000 CDNormal <110 Often asymptomatic  or may
+have signs of severe PPHTherapeutic ﬁrst-line uterotonic
+Stage 2
+(moderate)1000-1500 Postural
+hypotension
+(SBP 80-100)>110 May be asymptomatic  or
+may have signs of
+severe PPH/C15Second-line uterotonic
+/C15Look for other causes
+Stage 3
+(severe)>1500 SBP <80 >120 /C15Diaphoresis
+/C15Delayed capillary re ﬁll time
+/C15Tachypnea
+/C15Pallor
+/C15Oliguria/anuria
+/C15Decreased level of
+consciousness
+/C15Agitation
+/C15Cool extremitiesFull resuscitation protocol
+aBP and HR may be variable.
+bExpanded in Appendix G .
+BP: blood pressure; CD: cesarean delivery; HR: heart rate; PPH: postpartum hemorrhage; SBP: systolic blood pressure.
+1298 lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###7###either more effective  has fewer adverse effects  or
+both.33e35While the uterus is increasingly responsive to
+oxytocin as pregnancy progresses  there are fewer re-
+ceptors in the lower uterine segment than in the fundus 
+and oxytocin has no direct effects on the cervix.36
+Oxytocin is most commonly given by IV or intramus-cular injection  though some research has been done on
+the inhaled and intramyometrial routes.
+37 38For low-risk
+patients  prophylaxis via any route is suf ﬁcient; for high-
+risk patients  the IV route is preferred.39
+Much research has been done on the effects of IV oxytocinat the time of CD. In an elective CD (no labour)  as little as
+1 IU of oxytocin can achieve uterine tonus. While similar
+studies have not been done in the context of a vaginal
+birth  it is reasonable to assume that the uterus will be at
+least as responsive after vaginal delivery than after an
+intrapartum CD  where studies show an IV bolus of 3 IU
+is sufﬁcient to cause maximal uterine tonus by 4 minutes.
+40
+Interestingly  a rapid IV infusion will provide the same
+beneﬁt at 4 minutes  when approximately 3 e4I Uo f
+oxytocin has entered the circulation.41 42
+In order to avoid overdosing oxytocin  the infusion should
+be put through a pump  hung as a separate mini-infusion
+with only 4 IU in 100 mL. At this point  an infusion of
+7.5e15 IU/h is suf ﬁcient to maintain uterine tone; ahigher infusion rate or additional IV boluses will not
+provide any additional bene ﬁt. For high-risk patients  or
+ongoing bleeding  a second-line agent should be added.
+Oxytocin has known hemodynamic and cardiac side ef-
+fects (mainly ST depression from vasoconstriction of
+coronary arteries) that are seldom recognized after vaginal
+birth  primarily because patients are not monitored to
+detect them and because the clinical signs are attributed to
+other causes. Fortunately  these side effects are short lived;
+however  they have contributed to maternal death indeveloped countries.
+43 44When oxytocin is given quickly 
+hypotension and ST changes begin to appear after as little
+as 1 IU is administered but do not become noticeable until
+3 IU is administered; these signs are signi ﬁcant at
+/C215I U .40At 10 IU  50% of women will experience ST
+depression  even non-pregnant  non-anesthetized control
+patients.45These effects disappear when the 5 IU bolus
+is given over 5 minutes. Rapid IV bolus should therefore
+be restricted to 3 IU or less  and an IV infusion is
+preferred.
+Carbetocin
+Carbetocin is a synthetic  long-acting  heat stable  analogue
+of oxytocin with equivalent af ﬁnity for the oxytocin re-
+ceptor. A single prophylactic 100 mg dose given IV over 30
+seconds to 1 min provides similar or better clinical effectsTable 3. Prophylactic and ﬁrst-line therapeutic uterotonics
+Oxytocin (Syntocinon  Pitocin) Carbetocin (Duratocin)
+Use Prophylaxis Prophylaxis AND ﬁrst-line therapeutic Prophylaxis
+Mechanism of action Uterotonic  direct stimulation of
+oxytocin receptorsaUterotonic  direct stimulation of
+oxytocin receptorsaStimulation of oxytocin
+receptors
+Dose and route /C153 IU IV rapid injection
+/C1510 IU IM20e40 IU/L infusion erapid /C24þmin 
+then 7e15 IU/h once tone achieved/C15100mg slow IV injection
+(/C2130 s)
+/C15100mgI M
+Onset of clinical action /C151e2 min (IV)
+/C153e7 min (IM)4 min with rapid infusion /C151e2 min IV
+/C153e4 min IM
+Half-life /C154e10 min (IV)
+/C1515e30 min (IM)Ongoing 40 min
+Duration of action /C1515e20 min (IV)
+/C151e2 h (IM)Ongoing 1 h
+Adverse effects /C15IV:
+o<1I Uenone
+o1e3I Ueminimal
+o>3I Uedose-related
+increase ST depression 
+increase in HR  drop in BP
+/C15IM: minimal/C15Water retention
+/C15Note: rate above 15 IU/h ineffective
+after 3 IU in circulation100mg dose side effects
+equivalent to 5 IU slow
+IV rapid injection oxytocin
+Note: misoprostol and TXA may be given concurrently with these ﬁrst-line uterotonics for patients at high risk for PPH.
+aDecreased effect with prolonged use. Increased effect after oxytocin free interval.
+DECEMBER JOGC DÉCEMBRE 2022 l1299PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###8###and similar side effects as a 5 IU IV bolus of oxytocin
+given at the same rate 46 47and some studies have shown
+smaller doses to be equally effective.48In addition  its long
+half-life of 40 minutes reduces the need for additional
+uterotonics when compared with oxytocin. The product
+monograph states that severe preeclampsia/eclampsia is a
+contraindication to its use; however  clinical trials in
+women delivering vaginally or by cesarean found carbe-
+tocin to be both safe and effective in this setting.49 50While
+carbetocin has not been studied as a therapeutic agent for
+active PPH  it should be considered a ﬁrst-line agent for
+prophylaxis at CD. Emerging evidence suggests the use ofcarbetocin may also be considered as a ﬁrst-line prophy-
+lactic uterotonic at vaginal delivery.
+51
+RECOGNIZE AND RE-EVALUATE
+It is crucial for care providers to rapidly recognize wheninitial measures have not adequately controlled bleeding.
+Failure to discern both the extent and source of bleedingwill needlessly delay appropriate intervention. Recording
+quantitative blood loss and vital signs for every post-
+partum patient will help health care providers recognize
+when blood loss has moved between stages and can
+prompt intervention ( Appendix G )
+RE-EVALUATE TONE
+Bimanual Uterine Compression and Bladder
+Emptying
+The basic manoeuvre of manually compressing the uterus
+simultaneously through the abdomen and the vagina can
+be life-saving and should be actively used until the phar-
+macologic agents take effect  or surgical intervention is
+initiated. The lower uterine segment must be cleared ofclots to allow the uterus to contract. Catheterization
+should be an initial step in management of PPH as a full
+bladder can impair the uterus ’ability to contract.Special Agents
+Misoprostol
+PG E1is available in 100 and 200 mg tablets and can be given
+sublingually  orally  buccally  vaginally  and rectally. However 
+an understanding of the pharmacokinetics of misoprostol 
+borne out in clinical trials  will quickly eliminate most of
+these routes for treatment of PPH52(Table 4 ).
+The 2018 Cochrane review of all uterotonic agents found
+misoprostol alone was superior to placebo but inferior to
+oxytocin for preventing PPH; however  adding miso-
+prostol to oxytocin prevented the need for additionaluterotonics.
+47 53When used as an adjunctive treatment 
+misoprostol should be given sublingually as this route
+offers the highest bioavailability with a rapid onset and a
+moderate duration of action. Doses above 400 mg are not
+needed  and  in fact  200 mg may be suf ﬁcient.54Miso-
+prostol should not be given rectally as this route offers the
+lowest bioavailability and is associated with a maximum
+serum concentration that may not reach clinically signi ﬁ-
+cant levels.52 55While misoprostol is a valuable adjunct to
+both prophylactic and therapeutic uterotonics  the inject-
+able agents (oxytocin  ergometrine  carboprost  and TXA)
+have a more rapid onset and may be more useful as an
+independent agent in active PPH. The main side effects of
+misoprostol  which are dose dependent  are shivering and
+fever  nausea  vomiting  and diarrhea.
+Tranexamic Acid
+TXA is an anti ﬁbrinolytic agent that inhibits the activation
+of plasminogen to plasmin. Given intravenously  it has a
+half-life of 2 hours.56Side effects include nausea  vomiting 
+diarrhea  seizures  deep vein thrombosis  and pulmonary
+embolism  though seizures and thrombosis have not been
+demonstrated in clinical trials of PPH.57Two separate
+randomized trials showed prophylactic IV TXA (after cord
+clamping in 1 trial  and preoperatively in the other)Table 4. Pharmacokinetics of misoprostol
+AUC rankaOnset of action bmin Tmax cmin Cmax dpg/mL (averaged) Duration of action eh
+Sublingual 1 11 30 500 3
+Vaginal 2 20 75 300 4
+Oral 3 8 30 300 2
+Buccal 4 20 75 200 4
+Rectal 5 100 75 100 4
+aAUC: area under the (concentration vs time) curve; re ﬂects bioavailability from highest (1) to lowest (5)
+bHow rapidly clinical effect is seen.
+cTmax: how rapidly the drug is completely absorbed.
+dHow completely the drug is absorbed.
+eHow long clinical effect is seen.
+1300 lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###9###reduced the blood loss at CD 58 59and 2 separate large
+meta-analyses  as well as one randomized controlled trial
+showed that 1g of IV TXA given in the setting of ongoing
+PPH after vaginal delivery decreases blood loss  rate of
+hysterectomy  and mortality.60e62In particular  when given
+over 30e60 seconds  there was no difference in systolic or
+diastolic blood pressures compared with placebo.61TXA
+should be given whenever a second-line uterotonic is
+administered. Every 15-minute delay results in a 10%
+reduction of TXA ef ﬁcacy and immediate treatment im-
+proves survival by over 70% ( P<0.0001).63Prophylactic
+use (in addition to a prophylactic uterotonic agent) in in-dividuals at high risk of PPH (cesarean or vaginal delivery)
+is a reasonable option. For a summary of special agents 
+seeTable 5 .
+Uterotonics for Treatment of Postpartum
+Hemorrhage
+Additional agents should be used whenever the initial
+agent has not produced suf ﬁcient uterine tone by 4 mi-
+nutes  or concurrently with a prophylactic agent in patients
+with increased risk for PPH based on the ongoing
+checklist ( Table 6 ).
+Ergometrine
+Ergometrine  or ergonovine is an ergot alkaloid which directly
+stimulates uterine and vascular smooth muscle to contract. It
+can be given intramuscularly or  in life-saving circumstances as a slow IV injection.
+64It is a potent uterotonic  but in the
+setting of anemia and hypovolemia  ergometrine can rarelyprecipitate coronary artery vasospasm and myocardial
+ischemia  even in patients without pre-existing cardiovascular
+risk factors.65Ergometrine should not be used in patients
+with essential or gestational hypertension 66or in patients on
+HIV protease inhibitors.47 67 68Though undisputedly
+extremely effective  potential adverse effects limit ergome-
+trine to a second-line agent.
+Carboprost
+Carboprost is a prostaglandin F 2athat causes contractions
+in myometrial and intestinal smooth muscle cells.69It can
+be given by intramuscular or intramyometrial injection butcannot be given intravenously. Its ef ﬁcacy is equivalent to
+oxytocin after either cesarean or vaginal delivery but
+common adverse effects  including nausea  vomiting 
+diarrhea  and fever limit its use to a second-line agent.
+34 70
+Loperamide should be given concurrently with carboprost
+to counteract its diarrheal effects. As a member of the F
+class of prostaglandins  carboprost can cause broncho-
+spasm and should not be used in patients with asthma.71
+Mechanical Options
+Tamponade
+Intrauterine compression may control mild to moderate
+blood loss. The Bakri balloon was designed for this pur-
+pose and its use prevents the need for further non-
+pharmacologic intervention in 75% e95% of cases.72 73It
+should be ﬁlled with 300 e500 mL of sterile solution  left
+in situ for 8 e48 hours and then gradually de ﬂated. Anti-
+biotics should be considered if they have not already beenTable 5. Special agents
+Misoprostol (Cytotec) Tranexamic acid (TXA)
+Indication /C15Adjunct for prophylaxis with ﬁrst-line agents in
+high-risk patients
+/C15Adjunct for treatment with second-line uterotonics
+in all patients with active PPH/C15Adjunct for prophylaxis with ﬁrst-line agents in very high-
+risk patients
+/C15Adjunct for treatment with second-line uterotonics in
+all patients with active PPH
+Mechanism of action Uterotonic; binds prostaglandin receptors Anti ﬁbrinolytic; inhibits activation of plasminogen to plasmin
+Dose/route/rate /C15200e400mg sublingual
+/C15200e400mg oral1 g IV over 30 e60 s
+Onset of action /C1511 min (sublingual)
+/C158 min (oral)
+o both peak at 30 mind
+Half-life /C152 h (sublingual)
+/C151.5 h (oral)2h
+Duration of action /C153 h (sublingual)
+/C152 h (oral)d
+Repeat dosing d Every 30 min; max 2 doses
+Adverse effects /C15Fever (especially with doses /C21600mg)
+/C15Shivering  nausea/vomiting  diarrheaNausea/vomitingdiarrhea  Headache
+Caution d VTE has not been seen in obstetrical clinical trials
+IV: intravenous; PPH: postpartum hemorrhage; VTE: venous thromboembolism.
+DECEMBER JOGC DÉCEMBRE 2022 l1301PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###10###given  and a pack can be placed in the vagina if the balloon
+is hourglassing through the cervix. If a Bakri balloon is not
+available  any balloon device can be used. Alternatively 
+systematically packing the uterus from cornua to cornua
+with laparotomy packs tied end to end may be considered;
+however  this procedure requires more experience  more
+anaesthesia  and a second procedure to remove. It may
+also mask blood loss and increase the risk of infection.
+Packing should be used as a last resort until more de ﬁni-
+tive treatment can be initiated. A running record of
+accumulated quantitative blood loss and interventions
+should be easily accessible and visible to all members of
+the care team ( Appendix E  F  H  I ).
+RE-EVALUATE SOURCE
+Retained Placenta
+Retained placenta occurs in 1% e3% of vaginal deliveries
+and is the second leading cause of PPH.74Risk factors are
+uterine atony  an adherent placenta  succenturiate lobe  and
+a trapped placenta behind a closed cervix. Internationally 
+recommendations for manual removal of the placenta varybetween 30 and 60 minutes  based on studies from the
+1990s showing no increase in PPH until at least 30 minutes
+had passed.
+74The majority of placentas (95%) will deliver
+spontaneously by 18 minutes. A 2012 randomized
+controlled trial con ﬁrmed a previous observational study
+that found patients who had manual removal of the
+placenta earlier than 30 minutes had less blood loss.75
+Similarly  a large retrospective study (n >28 000) showedwaiting more than 30 minutes for placental separation
+increased the risk of blood transfusion more than three-
+fold.76More studies need to be done to be able to
+recommend the ideal time for manual removal of the
+placenta in a stable patient.
+Intraumbilical oxytocin (20 IU in 30 mL saline)  miso-
+prostol (800 mg in 30 mL saline)  or ergometrine (0.2 mg in
+30 mL saline)  as well as IV carbetocin (100 mg)  or sub-
+lingual misoprostol (400 mg) all have similar ef ﬁcacy for
+expelling the placenta within 30 minutes of administration
+(62%e72%).77 78In the presence of heavy bleeding 
+transfer to an operating room for manual removal of the
+placenta should be expedited and curettage with a large
+curette may be needed. There is insuf ﬁcient evidence to
+recommend routine treatment with antibiotics.74
+Lacerations
+Lacerations of the vagina or cervix  or disruption of a
+uterine scar should be ruled out by a formal examination
+under anaesthesia  and surgical repair of the injury should
+be completed. Vaginal packing may be required when
+generalized bleeding from a deep venous plexus pre-
+cludes proper repair. Re-opening the abdominal incision
+after CD to look for surgical bleeding should not be
+delayed.
+Uterine Inversion
+This rare but potentially life-threatening condition is
+thought to be caused by excessive cord traction on aTable 6. Second-line uterotonics for treatment of postpartum hemorrhage
+Ergometrine/ergonovine Carboprost (Hemabate  PGF 2a)
+Mechanism of action Uterotonic; non-speci ﬁc activation of adrenergic and
+dopaminergic receptors in uterine and vascular
+smooth muscleUterotonic; binds prostaglandin receptors
+Dose and route /C15250mg IM (preferred)
+/C15250mg IV over 1 min (only in life-saving circumstances)250mg IM or IMM
+Onset of action /C152e5 min (IM)
+/C151e2 min (IV)5 min
+Half-life /C15T1/2a¼10 mina
+/C15T1/2b¼2hb30 min
+Duration of action 120 min 60 min
+Repeat dosing Every 2 h  max 5 doses Every 15 min  max 5 doses
+Adverse effects Nausea/vomiting  hypertension  vasoconstriction causing ST
+depression and chest painDiarrhea
+Caution /C15Hypertension
+/C15HIV medications (NNRTIs or protease inhibitors)
+/C15Macrolide antibioticsCan cause bronchospasm in patients
+with asthma
+aT1/2a¼time for the drug to redistribute to other tissues;
+bT1/2b¼time for the drug to re-enter and then be cleared from the circulation
+IM: intramuscular; IMM: intramyometrial; IV: intravenous; NNRTI: non-nucleoside reverse transcriptase inhibitors; PGF 2a: prostaglandin F 2a.
+1302 lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###11###fundal placenta or fundal pressure without a uterine
+contraction; however  there are no risk factors in most
+cases.79Clinical diagnosis is based on the presence of brisk
+vaginal bleeding  a mass in the vagina  and vasovagal
+syncope. If still attached  the placenta should not be
+removed prior to reversion. Prompt replacement may be
+attempted; however  hypovolemic shock occurs rapidly 
+and the patient should be urgently transferred to an
+operating room if reversion cannot be accomplishedimmediately. Uterine relaxation with IV nitroglycerine in
+addition to vasopressors may be required to revert the
+uterus and reverse hemodynamic instability. If reversion is
+unsuccessful  laparotomy may be required. Antibiotics and
+oxytocin should be given after reversion.
+REACT
+If previous measures fail to control bleeding  urgent
+abdominal surgical exploration is required. Bimanual
+compression should be continued while preparations in
+the operating room are being made and surgery is about to
+begin. Uterine compression sutures (B-Lynch  Cho) uterine artery ligation  internal iliac artery ligation  embo-
+lization  and hysterectomy are possible interventions. This
+guideline is not an instruction manual for those not skilled
+at performing these procedures. Additional expertise
+should be sought urgently if the necessary procedure is
+beyond the skill set of the care provider.
+Compression Sutures
+The B-Lynch technique uses an absorbable suture on a
+large needle to create compression “suspenders  ”which
+successfully treat intractable uterine atony 75% of the
+time.
+80Adding a second suture can further decrease the
+need for hysterectomy.81Cho square compression sutures 
+incorporating both anterior and posterior walls of the
+uterus  have similar ef ﬁcacy.82
+Uterine Artery Ligation
+The purpose of uterine artery ligation is not to obliterate
+blood ﬂow to the uterus  but to temporarily slow it. Key
+aspects include bladder retraction (to prevent traction on
+both bladder and ureters caused by the suture) and use of
+an absorbable suture on a large needle to secure the uterine
+artery at the level of the isthmus (or 2 e3 cm below the
+uterine incision at CD). Ensuring 2 cm of myometrium isincorporated into the suture will bundle the uterine artery
+and vein and prevent complete occlusion of the uterine
+artery. A second suture can be used superiorly to further
+compress ascending branches of the uterine artery. Alter-
+natively  if bleeding is predominantly coming from thelower uterine segment or cervical branches  a second stitch
+placed 3 cm inferior to the ﬁrst can be used to compress
+descending branches of the uterine artery. This location
+increases the risk of ureteric entrapment  and further
+bladder dissection should be performed. Radiologic or
+cystoscopic evaluation of ureteral patency is recommended.
+Bilateral Internal Iliac Artery Ligation
+Bilateral internal iliac artery ligation is extremely effective
+at controlling obstetrical hemorrhage (including followinghysterectomy)  with numerous case series reporting suc-
+cess rates of 75% or higher.
+83e85Unfortunately  bilateral
+internal iliac artery ligation requires more skill and expe-
+rience. Retroperitoneal dissection to identify the bifurca-
+tion of the common iliac artery is followed by ligation of
+the internal branch at least 2 cm distal to the bifurcation
+with an absorbable suture. Bilateral internal iliac artery
+ligation reduces pelvic blood ﬂow by 49% but immediate
+increased retrograde ﬂow in collateral vessels prevents
+pelvic ischemia. Resumption of menses and demonstration
+ofﬂow in distal uterine arteries in 90% of women within 6
+months suggests that fertility is preserved.86
+Uterine or Internal Iliac Artery Embolization
+Embolization of either uterine or internal iliac arteries is
+highly effective and fertility sparing. When compared with
+hysterectomy  blood loss and operative time are
+signiﬁcantly less.87 88The main drawbacks of embolization
+are the availability of an interventional radiology
+department and a patient with a stable blood pressure. If
+these conditions are met and bleeding is ongoing  uterineartery embolization can be considered before proceeding
+to hysterectomy. Uterine artery embolization can also be
+considered post-hysterectomy for ongoing bleeding 
+where a contributing vessel can be identi ﬁed. Uterine
+artery embolization is particularly useful for cases
+where bleeding is expected to be high and/or surgical
+treatment is expected to be dif ﬁcult (e.g.  placenta previa 
+accreta  severe obesity  or suspected intra-abdominal
+adhesions). In these cases  an interventional radiology
+consult should be obtained pre-delivery and a plan
+established  including the possibility of pre-deliveryplacement of arterial balloons.
+Hysterectomy
+In cases of massive obstetric hemorrhage  hysterectomy
+can be life-saving  and the biggest risk is waiting too long
+to perform it. Successive clamping of pedicles without
+tying them until the uterine arteries have been secured will
+allow faster control of bleeding. Con ﬂicting opinions on
+subtotal versus total hysterectomy preclude a
+DECEMBER JOGC DÉCEMBRE 2022 l1303PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###12###recommendation  and clinical judgment on the source of
+bleeding and type of hysterectomy is required.89
+Abdominal Packing
+When surgical hemostasis has been achieved  but ongoing
+bleeding persists  disseminated intravascular coagulation acidosis  and hypothermia are often contributing factors.
+Packing the pelvis tightly with warm  moist packs and
+leaving them in place for 24 e48 hours can provide the
+necessary time to reverse these factors.
+RESUSCITATE
+Resuscitation requires ongoing communication andteamwork involving the obstetrical care provider and
+anaesthesia and nursing teams. An algorithm  including
+clinical signs and symptoms of PPH and hypovolemic
+shock and their treatments  should clearly outline the re-
+sponsibilities of various team members in order to opti-
+mize maternal outcome
+11(Appendix G ).
+PPH is an active  ongoing process; lab results represent a
+point in time that has invariably passed. While formal lab
+tests can help tailor therapy  waiting for results to initiate
+treatment can worsen patient outcomes.90Most parturi-
+ents are able to maintain hemodynamic stability despite
+considerable blood loss. The recommended hemoglobin
+level at which to transfuse has decreased over time. In
+2003  the threshold was 80 g/L  and as of 2021 theconsensus is 70 g/L; however  with many patients able to
+tolerate hemoglobin as low as 50 g/L  this threshold may
+change in the future. Patients with pre-existing anemia
+may tolerate lower hemoglobin levels better than those
+with acute anemia. Current recommendations suggest
+that vital sign changes and accurate measurements of
+ongoing blood loss should trigger resuscitation efforts.
+Escalation of care (with or without transfusion) should
+occur at blood loss intervals of 500  1000  and 1500 mL
+(mild/moderate/severe blood loss) so the team can
+respond appropriately if the patient is not tolerating theblood loss.
+Maximum allowable blood loss (MABL)
+91is an invaluable
+tool to customize treatment of PPH and should be
+calculated for each individual patient and documented on
+the risk assessment form. This formula uses the patient ’s
+most recent hemoglobin level as the initial hemoglobin
+(Hbi) and the hemoglobin at which transfusion may occur 
+if clinically indicated  as the ﬁnal hemoglobin (Hb f); it in-
+corporates the patient ’s weight and total circulating blood
+volume and provides an individualized estimate of the
+patient ’s tolerable blood loss before transfusion shouldoccur. The equation assumes that volume losses have been
+replaced with balanced crystalloid. In a healthy pregnancy 
+the total circulating blood volume is 100 mL/kg (range
+90e200 mL/kg.) In obesity  or volume-contracted states
+such as severe preeclampsia  total blood volume should be
+estimated at 70 mL/kg.92
+The actual calculation is:
+ðHbi-HbfÞ/C2Pt’s Weight ðkgÞ/C2Total Blood Volume ðmL=kgÞ
+½ðHbiþHbfÞ/C20:5/C138
+The following simpli ﬁed and more user-friendly version of
+this formula can be used to calculate MABL:
+MABL ¼WtðkgÞ/C2100/C2½Hbi-70/C138
+ðHbiþ70Þ/C20:5
+Hypotension  tachycardia  oliguria  and altered mental
+status indicate hypovolemic shock and should be treatedaggressively. The “lethal triad ”of coagulopathy  acidosis 
+and hypothermia  which occurs in hemorrhagic shock 
+compounds the loss of volume and blood components.
+8
+(Appendix J )
+Initial Steps
+Establish the following:
+/C15Two large bore IV catheters
+/C15Frequent BP monitoring (consider arterial line)
+/C15Continuous EKG
+/C15O2saturation monitor
+/C15Temperature probe
+/C15Foley catheter
+Oxygen  Temperature  Volume
+Oxygen supplementation of 8 e10 L/min will slow the
+onset of tissue hypoxia. Hypothermia increases the risk of
+mortality; keeping the patient dry  using warmed blankets
+or forced air warmers  and warming all ﬂuids will help
+maintain euthermia.93Initial volume resuscitation should
+use Ringer ’s lactate in a ratio of 1 e2 mL per 1 mL blood
+loss.94Higher volumes of crystalloid have been
+associated with poor maternal outcomes due to dilutional
+coagulopathy. At this time  there is no evidence to promote
+the use of colloids over crystalloids  as colloids are also
+associated with impaired coagulation. In the setting of
+ongoing massive hemorrhage  red blood cell (RBC)
+administration should occur before total blood loss equals
+MABL.
+1304 lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###13###Blood Products
+Red Blood CellsRBCs are the ﬁrst step in the transfusion process  unless
+the patient has a known coagulation defect. Transfusing
+RBCs is not without risk  and ongoing transfusion medi-
+cine trials continue to demonstrate that the decision to
+transfuse must take into account the potential for harm.
+92
+Patients at high risk for PPH should have a blood type andscreening on admission to cross match blood  if needed. O
+negative  Kell negative emergency blood is the next best
+alternative to cross-matched blood. There is no absolutehemoglobin level at which transfusion must occur  but
+maintaining a level between 70 and 90 g/L during active
+hemorrhage is recommended.
+95
+Transfusion should occur when hemorrhage is unre-
+sponsive to uterotonic measures and blood loss exceeds
+150 mL/min ortotal loss is rapidly approaching the
+calculated MABL orwhen the patient develops symptoms
+of inadequate perfusion  such as shortness of breath or
+tachycardia unresponsive to ﬂuid in the presence of he-
+moglobin less than 90 g/L.
+Fatigue alone is not a symptom that warrants trans-
+fusion.96Each unit of packed RBCs should increase the
+hemoglobin by 10 g/L. If 4 units of RBCs have been
+given  and blood loss is ongoing  activation of a MHP
+should be considered. Hemorrhage caused by uterine
+atony or birth-related trauma rarely requires additional
+coagulation factors or platelets  unless the volume of blood
+loss is signi ﬁcantly greater than the MABL and/or dilu-
+tional coagulopathy occurs. Hemorrhage due to placental
+abruption  amniotic ﬂuid embolism  or disseminated
+intravascular coagulation consumes platelets and factors
+rapidly and replacement may be bene ﬁcial earlier in
+resuscitation.97Cell salvage does not increase the risk of
+amniotic ﬂuid embolism and should be considered when
+the risk for severe PPH is high.19Intravenous iron is an
+important adjuvant for a hemoglobin level <80 g/L once
+bleeding has settled.16 98 99
+Platelets
+Platelet transfusion is necessary if blood loss is severe or if
+a consumptive coagulopathy develops. During active
+hemorrhage  platelets should be transfused at a level
+of 75 /C2109/L in order to maintain a level above
+50/C2109/L.19There is no evidence to support a ﬁxed ratio
+of platelets in obstetric hemorrhage; however  it is
+acceptable to give 1 pooled dose of adult platelets
+(4 U platelets  or 5 U in Québec) per 8 e10 U of RBCs 
+transfused in the absence of lab data and with ongoinghemorrhage.100Each dose should raise the platelet count
+by 15e25/C2109/L.
+Fresh Frozen Plasma
+The goal of transfusion is to keep the INR <1.8. Donor
+plasma has less ﬁbrinogen than the 5 g/L typically seen in
+the plasma of healthy parturients and is not the ﬁrst choice
+for its replacement.19Although plasma provides additional
+clotting factors  most healthy women with moderate ob-stetric hemorrhage do not require these factors. However 
+using plasma in a ratio to RBCs of 1:2 or 1:1  as a global
+replacement  may improve outcomes in severe hemor-
+rhage in trauma patients  particularly if timely lab values
+are not available. Large volumes of plasma increase the
+incidence of transfusion-related acute lung injury (TRALI)
+and transfusion-associated cardiorespiratory overload
+(TACO).
+101
+Fibrinogen
+Fibrinogen levels <2 g/L are associated with poor out-
+comes and direct replacement below these levels is rec-
+ommended. Testing for ﬁbrinogen levels when blood loss
+is<1500 mL is not predictive of severe PPH  and routine
+administration of ﬁbrinogen in the absence of hypo ﬁ-
+brinogenemia does not improve outcomes. Levels will
+drop more rapidly in the setting of abruption and amniotic
+ﬂuid embolism than in the setting of atony.94 96 97
+Each unit of cryoprecipitate contains 150 e350 mg of
+ﬁbrinogen and a typical dose is 8 e10 U. Thawing is
+required prior to use  and multiple donors are required for
+sufﬁcient amounts  which increases the risk of transfusion
+reactions.102 103
+Fibrinogen concentrates (RiaSTAP and FIBRYGA) do not
+require thawing  provide accurate dosing  and decrease
+both the requirement for other blood products and the
+incidence of circulatory overload.104Fibrinogen concen-
+trates also undergo viral inactivation and removal of an-
+tigens and antibodies. Four grams of ﬁbrinogen
+concentrate is equivalent to 10 units of cryoprecipitate and
+typically raises plasma ﬁbrinogen levels by 1 g/L (60 mg/
+kg dosing).102 103
+Massive Hemorrhage Protocol
+Originally designed for trauma patients  MHP is now often
+used in the setting of obstetrical hemorrhage. In the
+trauma literature  transfusing ﬁxed ratios of RBCs to fresh
+frozen plasma to platelets of either 1:1:1 or 2:1:1 after theﬁrst 4 units of packed RBCs has been shown to decrease
+mortality.
+94 96 97 105 106Therapy based on lab values
+DECEMBER JOGC DÉCEMBRE 2022 l1305PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###14###(including viscoelastography  where available [rotational
+thromboelastometry  thromboelastography]) is superior to
+ratio-based approaches as it reduces the number of
+products transfused  reduces transfusion overload and
+transfusion-related complications  and tailors therapy to
+the underlying coagulopathy.107 108
+The amount of blood loss that should trigger an MHP can
+be markedly different based on the patient ’s size  etiology
+of hemorrhage  and underlying health issues (i.e.  pre-
+eclampsia). Using a single blood loss volume to initiate an
+MHP may result in some patients being transfused too
+early and others too late. Whenever the blood loss is
+approaching the MABL and there is ongoing bleeding 
+RBCs should be considered ﬁrst.94 96 97 105 106Canadian
+standard of care recommendations indicate that an MHP
+should be able to be mobilized and products delivered
+within 10 minutes.109If local resources cannot reliably
+meet this timeline  consider initiating an MHP sooner.
+If the patient is stable and the bleeding is controlled after
+the initial 4 units of RBCs  the MHP products can be
+returned.
+Coagulopathy does not occur in every PPH including
+massive PPH. When there is no coagulopathy  there is no
+beneﬁt to transfusion of coagulation products. The etiology
+of the bleed matters  as atony and trauma are less likely to
+require coagulation factor replacement than abruption 
+abnormal placentation  or amniotic ﬂuid embolism. Testing
+for coagulopathy rarely demonstrates abnormalities when
+the blood loss is <1.5e2 L. When coagulopathy is present
+in PPH  hypo ﬁbrinogenemia is the most common etiol-
+ogy 102 103and commonly coexists with hypocalcemia.
+Ionized calcium less than 1.16 mmol/L (rather than routine
+or corrected calcium which may be normal) is the most
+accurate way to measure calcium status in a hemorrhaging
+patient and may be at least as important as ﬁbrinogen in
+terms of risk reduction.110Calcium chloride is the agent of
+choice to replace calcium as it contains 3 times the
+elemental calcium of calcium gluconate and does not
+require liver metabolism. Fresh frozen plasma and platelets
+are less commonly needed  but may be included in the
+MHP   particularly after 4 to 8 units of RBCs  respectively.
+Frequent monitoring of all these components (CBC  PTT 
+INR  ﬁbrinogen  ionized calcium)  as well as magnesium 
+electrolytes  hypothermia  and overall volume status are
+necessary components of any MHP . Tailoring therapy as
+early as feasible results in a patient-centred approach that isin keeping with the most up-to-date recommendations in
+transfusion medicine.Prothrombin Complex Concentrate
+Prothrombin complex concentrate contains vitamin
+Kedependent clotting factors and is indicated for reversal
+of vitamin K antagonists (warfarin). Apart from patients
+with known factor II or X de ﬁciencies  in which case  a
+hematologist should be consulted  there is currently no
+role for prothrombin complex concentrate in the treat-
+ment of PPH.
+96 97 105
+Recombinant Activated Factor VII
+Recombinant activated factor VII (rFVIIa) provides a
+thrombin burst and stabilizes clots  and should only be
+administered to patients with a ﬁbrinogen level >1g/L 
+platelets >20/C2109/L  and a near normal pH (7.4) and
+temperature (35.9/C14C). Given the absence of strong evi-
+dence of bene ﬁt and the serious risk of thrombosis  rFVIIa
+should only be used in PPH as a last resort and in
+consultation with a transfusion medicine specialist or
+hematologist.96 97 105
+REVIEW
+Quality care initiatives in many centres have clearly shown
+that strong teamwork and communication  along with
+simulation training and debrie ﬁng after any signi ﬁcant
+PPH  improve outcomes. Key components of teamwork
+include a process for standard and structured communi-
+cation  effective use of clear language  psychological safetywhere team members are not fearful of speaking up 
+situational awareness  and effective leadership
+111
+(Appendix K ).
+Debrie ﬁng after simulation led by a trained facilitator
+promotes improved learning outcomes and enhances
+future performance in the clinical setting.112Debrie ﬁng is
+more than feedback  it is “an interactive  bidirectional and
+reﬂective conversation  ”113which will foster better
+communication and teamwork in subsequent clinical sce-
+narios. As experiencing PPH can be traumatic  care pro-viders should have a conversation with the patient and
+their family to explain the events and answer any questions
+they have. Debrie ﬁng after a signi ﬁcant PPH should occur
+and should include all involved members of the health care
+team  as well as a separate discussion with the patient and
+her family.
+CONCLUSION
+Although the acute treatment of PPH is key for any single
+patient  the ongoing review practices is most important for
+1306 lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###15###future patients. While standardized approaches for the
+identi ﬁcation and management of PPH may need to vary
+between sites based on the availability of resources  best
+practices include:
+/C15a risk assessment for every patient  including calculation
+of the MABL
+/C15a standardized approach for collecting  weighing  and
+reporting blood loss
+/C15stage-based management strategies  including protocols
+speciﬁcally designed for massive blood loss
+/C15‘hemorrhage carts ’for storing medications and supplies
+/C15regular multidisciplinary staff training and simulation
+/C15debrie ﬁng with formal review of adverse events.
+Templates for all these recommendations can be found in
+the supplementary toolkit.
+SUPPLEMENTARY TOOLKIT
+A supplementary toolkit related to this article can befound in the Online Appendix .
+REFERENCES
+1.Grobman WA  Bailit JL  Rice MM  et al. Frequency of and factors
+associated with severe maternal morbidity. Obstet Gynecol2014;123:804 e10.
+2.Deneux-Tharaux C  Bonnet MP   Tort J. Épidémiologie de l ’hémorragie du
+post-partum [Epidemiology of post-partum haemorrhage]. J GynecolObstet Biol Reprod (Paris) 2014;43:936 e50.
+3.Mehrabadi A  Liu S  Bartholomew S  et al. Temporal trends in postpartum
+hemorrhage and severe postpartum hemorrhage in Canada from 2003 to
+2010. J Obstet Gynaecol Can 2014;36:21 e33.
+4.Knight M  Callaghan WM  Berg C  et al. Trends in postpartum hemorrhage
+in high resource countries: a review and recommendations from theInternational Postpartum Hemorrhage Collaborative Group. BMCPregnancy Childbirth 2009;9:55 .
+5.Al Kadri HM  Al Anazi BK  Tamim HM. Visual estimation versus
+gravimetric measurement of postpartum blood loss: a prospective cohortstudy. Arch Gynecol Obstet 2011;283:1207 e13.
+6.Patel A  Goudar SS  Geller SE  et al. Drape estimation vs. visual
+assessment for estimating postpartum hemorrhage [published erratumappears in Int J Gynaecol Obstet 2006;95:312]. Int J Gynaecol Obstet2006;93:220 e4.
+7.Della Torre M  Kilpatrick SJ  Hibbard JU  et al. Assessing preventability for
+obstetric hemorrhage. Am J Perinatol 2011;28:753 e60.
+8.Seacrist MJ  VanOtterloo LR  Morton CH  et al. Quality improvement
+opportunities identi ﬁed through case review of pregnancy-related deaths
+from obstetric hemorrhage. J Obstet Gynecol Neonatal Nurs
+2019;48:288 e99.
+9.Rubenstein AF  Zamudio S  Al-Khan A  et al. Clinical experience with the
+implementation of accurate measurement of blood loss during cesareandelivery: in ﬂuences on hemorrhage recognition and allogeneic transfusion.
+Am J Perinatol 2018;35:655 e9.10.Kramer MS  Berg C  Abenhaim H  et al. Incidence  risk factors and
+temporal trends in severe postpartum hemorrhage. Am J Obstet Gynecol
+2013;209:449.e1 e7.
+11. California Maternal Quality Care Collaborative. Obstetric hemorrhage.
+Available at: https://www.cmqcc.org/content/obstetric-hemorrhage-0 .
+Accessed on June 1  2021.
+12.Kavle JA  Stoltzfus RJ  Witter F  et al. Association between anaemia during
+pregnancy and blood loss at and after delivery among women with vaginalbirths in Pemba Island  Zanzibar  Tanzania. J Health Popul Nutr
+2008;26:232 e40.
+13.Dziegala M  Josiak K  Kasztura M  et al. Iron de ﬁciency as energetic insult
+to skeletal muscle in chronic diseases. J Cachexia Sarcopenia Muscle2018;9:802 e15.
+14.Mawani M  Ali SA  Bano G  et al. Iron de ﬁciency anemia among women of
+reproductive age  an important public health problem: situation analysis.Reprod Syst Sex Disord 2016;5:187 .
+15.Tang G  Lausman A  Abdulrehman J  et al. Prevalence of iron de ﬁciency
+and iron de ﬁ
+ciency anemia during pregnancy: a single centre Canadian
+study. Blood 2019;134(Suppl 1):3389 .
+16.Munoz M  Pena-Rosas J  Robinson S  et al. Patient blood management in
+obstetrics: management of anaemia and hematinic de ﬁciencies in pregnancy
+and in the post-partum period: NATA consensus statement. Transfus Med2018;28:22 e39.
+17.Li N  Zhao G  Wu W   et al. The ef ﬁcacy and safety of vitamin c for
+iron supplementation in adult patients with irondeﬁciency anemia: a randomized clinical trial. JAMA Netw Open 2020;3:
+e2023644 .
+18.Pavord S  Daru J  Prasannan N  et al. UK guidelines on the management of
+iron de ﬁciency in pregnancy. Br J Haematol 2020;188:819 e30.
+19.Munoz M  Stensballe J  Bucloy-Bouthors A-S  et al. Patient blood
+management in obstetrics: prevention and treatment of postpartumhaemorrhage. A NATA consensus statement. Blood Transfus2019;17:112 e36.
+20.Khalafallah AA  Dennis AE  Ogden K  et al. Three-year follow-up of a
+randomised clinical trial of intravenous versus oral iron for anaemia inpregnancy. BMJ Open 2012;2:e000998 .
+21. Cooper S. Alberta Health Services. PPH staging and management guidelines.
+Available at: https://extranet.ahsnet.ca/teams/policydocuments/1/klink/et-
+klink-ckv-post-partum-hemorrhage-adult-inpatient.pdf . Accessed on June 1 
+2021.
+22.Leduc D  Senikas V   Lalonde A. Active management of the third stage of
+labour: prevention and treatment of post partum hemorrhage. J ObstetGynaecol Can 2018;40:e841 e55.
+23.Delayed Umbilical Cord Clamping After Birth: ACOG Committee
+Opinion  Number 814. Obstet Gynecol 2020;136:e100 e6.
+24.Hana ﬁS  El-Shehawy H  Meshmesh K. Impact of controlled cord traction
+in the management of the third stage of labor on postpartum hemorrhage:
+a randomized controlled trial. EBWHJ 2014;4:78 e81.
+25.Hofmeyr GJ  Mshweshwe NT  Gülmezoglu AM. Controlled cord traction
+for the third stage of labour. Cochrane Database Syst Rev2015;1:CD008020 .
+26.Gülmezoglu AM  Lumbiganon P   Landoulsi S  et al. Active
+management of the third stage of labour with and without controlledcord traction: a randomised  controlled  non-inferiority trial. Lancet
+2012;379:1721 e7.
+27.Bartlett L  Cantor D  Lynam P   et al. Facility-based active management of
+the third stage of labour: assessment of quality in six countries in sub-Saharan Africa. Bull World Health Organ 2015;93:759 e67.
+28.Althabe F  Alemán A  Tomasso G  et al. A pilot randomized controlled trial
+of controlled cord traction to reduce postpartum blood loss. Int J GynaecolObstet 2009;107:4 e7.
+29.Begley CM  Gyte GML  Devane D  et al. Active versus expectant
+management for women in the third stage of labour. Cochrane Database
+Syst Rev 2019;(2):CD007412 .
+DECEMBER JOGC DÉCEMBRE 2022
+l1307PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###16###30.Karimi FZ  Heidarian Miri H  Salehian M  et al. The effect of mother-infant
+skin to skin contact after birth on third stage of labor: a systematic review
+and meta-analysis. Iran J Public Health 2019;48:612 e20.
+31.Tran G  Kanczuk M  Balki M. The association between the time from
+oxytocin cessation during labour to Cesarean delivery and postpartumblood loss: a retrospective cohort study. Can J Anesth 2017;64:820 e7.
+32.Westhoff G  Cotter AM  Tolosa JE. Prophylactic oxytocin for the third
+stage of labour to prevent postpartum haemorrhage. Cochrane DatabaseSyst Rev 2013;10:CD001808 .
+33.Bilgin Z  Kömürcü N. Comparison of the effects and side effects of
+misoprostol and oxytocin in the postpartum period: a systematic review.
+Taiwan J Obstet Gynecol 2019;58:748 e56.
+34.Sunil Kumar KS  Shyam S  Batakurki P . Carboprost versus oxytocin for
+active management of third stage of labor: a prospective randomizedcontrol study. J Obstet Gynaecol India 2016;66(Suppl 1):229 e34.
+35.McDonald S  Abbott JM  Higgins SP . Prophylactic ergometrine-oxytocin
+versus oxytocin for the third stage of labour. Cochrane Database Syst Rev2004;1:CD000201 .
+36. DrugBank Online. Oxytocin pharmacokinetics. Available at: https://go.
+drugbank.com/drugs/DB00107 . Accessed on June 1  2021.
+37.Mangla D  Goel JK  Goel R. Prophylactic intramyometrial oxytocin before
+placenta delivery during cesarean section prevents postpartum hemorrhage:a prospective randomized study of 150 women. J South Asian Feder ObstGynae 2012;4:93 e6.
+38.Fernando D  Siederer S  Singh S  et al. Safety  tolerability and
+pharmacokinetics of single doses of oxytocin administered via an inhaledroute in healthy females: randomized  single blind  phase 1 study. Lancet2017;22:249 e55.
+39.Oladapo OT  Okusanya BO  Abalos E  et al. Intravenous versus
+intramuscular prophylactic oxytocin for the third stage of labour. CochraneDatabase Syst Rev 2020;(11):CD009332 .
+40.Heesen M  Carvalho B  Carvalho JCA  et al. International consensus
+statement on the use of uterotonic agents during caesarean section.Anaesthesia 2019;74:1305 e19.
+41.George RB  McKeen D  Chaplin AC  et al. Up-down determination of the
+ED(90) of oxytocin infusions for the prevention of postpartum uterineatony in parturients undergoing Cesarean delivery. Can J Anesth
+2010;57:578 e82.
+42.Lavoie A  McCarthy RJ  Wong CA. The ED90 of prophylactic oxytocin
+infusion after delivery of the placenta during Cesarean delivery in laboringcompared with nonlaboring women: an up-down sequential allocationdose-response study. Anesth Analg 2015;121:159 e64.
+43.Lewis G  ed. Why mothers die 1997 e99. The con ﬁdential enquiry into
+maternal deaths in the United Kingdom. London (UK): RCOG Press; 2001 .
+44.Farina Z  Fawcus S. Oxytocin eensuring appropriate use and balancing
+efﬁcacy with safety. S Afr Med J 2015;105:271 e4.
+45.Svanström MC  Biber B  Hanes M  et al. Signs of myocardial ischaemia
+after injection of oxytocin: a randomized double-blind comparison of
+oxytocin and methylergometrine during Caesarean section. Br J Anaesth2008;100:683 e9.
+46.Mörtl MG  Friedrich S  Kraschl J  et al. Haemodynamic effects of
+carbetocin and oxytocin given as intravenous bolus on women undergoing
+caesarean delivery: a randomised trial. Int J Obstet Gynaecol2011;118:1349 e56.
+47.Gallos ID  Papadopoulou A  Man R  et al. Uterotonic agents for preventing
+postpartum haemorrhage: a network meta-analysis. Cochrane Database
+Syst Rev 2018;12:CD011689 .
+48.Khan M  Balki M  Ahmed I  et al. Carbetocin at elective Cesarean delivery:
+a sequential allocation trial to determine the minimum effective dose. Can JAnaesth 2014;61:242 e8.
+49.Nucci B  Aya A  Aubry E  et al. Carbetocin for prevention of postcesarean
+hemorrhage in women with severe preeclampsia: a before-after cohortcomparison with oxytocin. J Clin Anesth 2016;35:321 e5.50.Reyes OA  Gonzalez GM. Carbetocin versus oxytocin for prevention of
+postpartum hemorrhage in patients with severe preeclampsia: a double-
+blind randomized controlled trial. J Obstet Gynaecol Can2011;33:1099 e104.
+51. Chao YS  McCormack S. Carbetocin for the prevention of post-partum
+hemorrhage: a review of clinical effectiveness  cost-effectiveness  andguidelines. Ottawa (ON): Canadian Agency for Drugs and Technologies inHealth. Available at: https://www.ncbi.nlm.nih.gov/books/NBK546425/ .
+Accessed on July 29  2019.
+52.Tang OS  Gemzell-Danielsson K  Ho PC. Misoprostol: pharmacokinetic
+proﬁles  effects on the uterus and side effects. Int J Gynecol Obstet
+2007:S160 e7.
+53.Chaudhuri P  Majumdar A. Sublingual misoprostol as an adjunct to
+oxytocin during cesarean delivery in women at risk of postpartumhemorrhage. Int J Gynaecol Obstet 2015;128:48 e52.
+54.Ugwu IA  Oluwasola TA  Enabor OO  et al. Randomized controlled
+trial comparing 200
+mg and 400 mg sublingual misoprostol for prevention
+of primary postpartum hemorrhage. Int J Gynaecol Obstet
+2016;133:173 e7.
+55.Barbieri R. Stop using rectal misoprostol for the treatment of
+postpartum hemorrhage caused by uterine atony. OBG Manag 2016;28.8-10 12 .
+56. Pharmacokinetics of tranexamic acid. Available at: https://go.drugbank.
+com/drugs/DB00302 . Accessed on June 1  2021.
+57. Chauncey J  Wieters J. Tranexamic acid - Stat Pearls. Available at: https://
+www.ncbi.nlm.nih.gov/books/NBK532909/ . Accessed on June 1  2021.
+58.Della Corte L  Saccone G  Locci M  et al. Tranexamic acid for treatment of
+primary postpartum hemorrhage after vaginal delivery: a systematic review
+and meta-analysis of randomized controlled trials. J Matern Fetal Neonatal
+Med 2020;33:869 e74.
+59.Ray I  Bhattacharya R  Chakraborty S  et al. Role of intravenous tranexamic
+acid on cesarean section blood loss: a prospective randomized study.J Obstet Gynaecol India 2016;66(Suppl 1):347 e52.
+60.Xia Y   Grif ﬁths BB  Xue Q. Tranexamic acid for postpartum hemorrhage
+prevention in vaginal delivery: a meta-analysis. Medicine (Baltimore)2020;99:e18792 .
+61.Sentilhes L  Senat MV   Le Lous M  et al. Tranexamic acid for the
+prevention of blood loss after cesarean delivery. N Engl J Med
+2021;384:1623 e34.
+62.Brenner A  Shakur-Still H  Chaudhri R  et al. The impact of early outcome
+events on the effect of tranexamic acid in post-partum haemorrhage: anexploratory subgroup analysis of the WOMAN trial. BMC PregnancyChildbirth 2018;18:215 .
+63.Gayet-Ageron A  Prieto-Merino D  Ker K  et al. Effect of treatment delay
+on the effectiveness and safety of anti ﬁbrinolytics in acute severe
+haemorrhage: a meta-analysis of individual patient-level data from 40 138
+bleeding patients. Lancet 2018;391:125 e32.
+64. Pharmacokinetics of ergotamine. Available at: https://go.drugbank.com/
+drugs/DB01253 . Accessed on June 1  2021.
+65.Spencer SPE  Lowe SA. Ergometrine for postpartum hemorrhage and
+associated myocardial ischemia: two case reports and a review of theliterature. Clin Case Rep 2019;7:2433 e42.
+66.Liabsuetrakul T  Choobun T  Peeyananjarassri K  et al. Prophylactic use of
+ergot alkaloids in the third stage of labour. Cochrane Database Syst Rev
+2018;6:CD005456 .
+67. Recommendations for the use of antiretroviral drugs during pregnancy and
+interventions to reduce perinatal HIV transmission in the United States.Available at: https://clinicalinfo.hiv.gov/en/guidelines/perinatal/
+intrapartum-antiretroviral-therapyprophylaxis . Accessed on June 1  2021.
+68.Chelmow D. Postpartum haemorrhage: prevention. BMJ Clin Evid
+2008;2008:1410 .
+69.Bygdeman M. Pharmacokinetics of prostaglandins. Best Pract Res Clin
+Obstet Gynaecol 2003;17:707 e16.
+1308
+lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###17###70.Bai J  Sun Q  Zhai H. A comparison of oxytocin and carboprost
+tromethamine in the prevention of postpartum hemorrhage in high-risk
+patients undergoing cesarean delivery. Exp Ther Med 2014;7:46 e50.
+71. Minigh J. Carboprost - an overview. The Comprehensive Pharmacology
+Reference; ScienceDirect Topics. Availableat: https://www.sciencedirect.com/
+topics/nursing-and-health-professions/carboprost . Accessed on June 1  2022.
+72.Likis FE  Sathe NA  Morgans AK  et al. Management of postpartum
+hemorrhage. Comparative effectiveness review no. 151. AHRQpublication no. 15-EHC013-EF . Rockville (MD): Agency for Healthcare
+Research and Quality; 2015 .
+73.Brown H  Okeyo S  Mabeya H  et al. The Bakri tamponade balloon as an
+adjunct treatment for refractory postpartum hemorrhage. Int J GynaecolObstet 2016;135:276 e80.
+74.Perlman NC  Carusi DA. Retained placenta after vaginal delivery:
+risk factors and management. Int J Womens Health 2019;11:527 e34.
+75.Magann EF  Niederhauser A  Doherty DA  et al. Reducing hemodynamic
+compromise with placental removal at 10 versus 15 mins: a randomizedclinical trial. Am J Perinatol 2012;29:609 e14.
+76.Shinar S  Schwartz A  Maslovitz S  et al. How long is safe? Setting the cutoff
+for uncomplicated third stage length: a retrospective case-control study.
+Birth 2016;43:36 e41.
+77.Maher MA  Sayyed TM  Elkhouly NI. Different routes and forms of
+uterotonics for treatment of retained placenta: a randomized clinical trial.J Matern Fetal Neonatal Med 2017;30:2179 e84.
+78.Harara R  Hanafy S  Zidan MS  et al. Intraumbilical injection of three
+different uterotonics in the management of retained placenta. J ObstetGynaecol Res 2011;37:1203 e7.
+79. Thakur M  Thakur A. Uterine inversion. Treasure Island (FL): StatPearls
+Publishing. Available at: https://www.ncbi.nlm.nih.gov/books/NBK525
+971/ . Accessed on June 1  2022.
+80.Kaya B  Tuten A  Daglar K  et al. B-Lynch uterine compression sutures in
+the conservative surgical management of uterine atony. Arch GynecolObstet 2015;291:1005 e14.
+81.S¸ahin H  Soylu Karap ınar O  S ¸ahin EA  et al. The effectiveness of
+the double B-lynch suture as a modi ﬁcation in the treatment
+of intractable postpartum haemorrhage. J Obstet Gynaecol2018;38:796 e9.
+82.Kwong LT  So PL  Wong SF. Uterine compression sutures with additional
+hemostatic procedures for the management of postpartum hemorrhage.J Obstet Gynaecol Res 2020;46:2332 e9.
+83.Joshi VM  Otiv SR  Majumder R  et al. Internal iliac artery ligation for
+arresting postpartum haemorrhage. BJOG 2007;114:356 e61.
+84.Wang CY   Pan HH  Chang CC  et al. Outcomes of hypogastric
+artery ligation and transcatheter uterine artery embolization inwomen with postpartum hemorrhage. Taiwan J Obstet Gynecol2019;58:72 e6.
+85.
+Camuzcuoglu H  Toy H  Vural M  et al. Internal iliac artery ligation for
+severe postpartum hemorrhage and severe hemorrhage after postpartum
+hysterectomy. J Obstet Gynaecol Res 2010;36:538 e43.
+86.Singh A  Kishore R  Saxena SS. Ligating internal iliac artery:
+success beyond hesitation. J Obstet Gynaecol India2016;66(Suppl 1):235 e41.
+87.Liu Z  Wang Y  Yan J  et al. Uterine artery embolization versus
+hysterectomy in the treatment of refractory postpartum hemorrhage: asystematic review and meta-analysis. J Matern Fetal Neonatal Med
+2020;33:693 e705.
+88.Kim TH  Lee HH  Kim JM  et al. Uterine artery embolization for primary
+postpartum hemorrhage. Iran J Reprod Med 2013;11:511 e8.
+89.Zhang Y  Yan J  Han Q  et al. Emergency obstetric hysterectomy for life-
+threatening postpartum hemorrhage: a 12-year review. Medicine(Baltimore) 2017;96:e8443 .90.Ballas J  Roberts S. Hypovolemic shock. In: Phelan JP   editor. Critical care
+obstetrics .6
+thed. Oxford (UK): John Wiley & Sons Ltd; 2019. p. 535 e45.
+91.Gross J. Estimating allowable blood loss: corrected for dilution.
+Anesthesiology 1983;58:277 e80.
+92. Blood  still saving lives but .there are risks (video). Available at: https://
+www.blood.gov.au/health-professionals . Accessed on June 1  2021.
+93.Cohen WR. Obstetric hemorrhage and hypothermia: chilling facts. Open J
+Obstet Gynecol 2018;8:2160 e270.
+94.Henriquez DDCA  Bloemenkamp KWM  Loeff RM  et al. Fluid
+resuscitation during persistent postpartum haemorrhage and maternaloutcome: a nationwide cohort study. Eur J Obstetr Gynecol Reprod Biol
+2019;235:49 e56.
+95. Lotterman S  Sharma S. Blood transfusion. Treasure Island (FL): StatPearls
+Publishing. Available at: https://www.ncbi.nlm.nih.gov/books/NBK4
+99824/ . Accessed on June 1  2021.
+96.Prick BW   Jansen AJ  Steegers EA  et al. Transfusion policy after
+severe postpartum haemorrhage: a randomised non-inferiority trial. BJOG2014;121:1005 e14.
+97.Collis R  Guasch E. Managing major obstetric haemorrhage:
+pharmacotherapy and transfusion. Best Pract Res Clin Anaesthesiol
+2017;31:107 e24.
+98.Chua S  Gupta S  Curnow J  et al. Intravenous iron vs blood for acute post-
+partum anaemia (IIBAPPA): a prospective randomised trial. BMCPregnancy Childbirth 2017;17:424 .
+99.Holm C  Thomsen LL  Norgaard A  et al. Single-dose intravenous iron
+infusion versus red blood cell transfusion for the treatment of severepostpartum anaemia: a randomized controlled pilot study. Vox Sang2017;112:122 e31.
+100. Jones RM  de Lloyd L  Kealaher EJ  et al. Platelet count and transfusion
+requirements during moderate or severe postpartum haemorrhage.
+Anaesthesia 2016;71:648 e56.
+101. Ontario Regional Blood Coordinating Network (ORBCoN). Bloody easy 4:
+blood transfusions  alternatives and transfusion reactions. A guide totransfusion medicine. 4
+thed. ORBCON. Available at: ﬁle:///C:/Users/
+cgreen/Downloads/EN_BE4-JULY11_FINAL.pdf . Accessed on June 1 
+2021.
+102. Lumbreras-Marquez MI  Villela-Franyutti D  Reale SC  et al. Coagulation
+management in obstetric anesthesia. Curr Anesthesiol Rep
+2022;12:266 e76.
+103. Ducloy-Bouthors AS  Mercier FJ  Grouin JM  et al. Early and systematic
+administration of ﬁbrinogen concentrate in postpartum haemorrhage
+following vaginal delivery: the FIDEL randomised controlled trial. BJOG2021;128:1814 e23.
+104. Sahin AS  Ozkan S. Treatment of obstetric hemorrhage with ﬁbrinogen
+concentrate. Med Sci Monit 2019;25:1814 e21.
+105. O’Brien KL  Shainker SA  Lockhart EL. Transfusion management of
+obstetric hemorrhage. Transfus Med Rev 2018;32:249 e55.
+106. Bell SF  Collis RE  Bailey C  et al. The incidence  aetiology  and coagulation
+management of massive postpartum haemorrhage: a two-year nationalprospective cohort study. Int J Obstet Anesth 2021;47:102983 .
+107. Ramler PI  Gillissen A  Henriquez D  et al. Clinical value of early
+viscoelastometric point-of-care testing during postpartum hemorrhagefor the prediction of severity of bleeding: a multicenter prospectivecohort study in the Netherlands. Acta Obstet Gynecol Scand2021;100:1656 e64.
+108. McNamara H  Kenyon C  Smith R  et al. Four years ’experience of a
+ROTEM -guided algorithm for treatment of coagulopathy in obstetric
+haemorrhage. Anaesthesia 2019;74:984 e91.
+109. Callum J  Yeh CH  Petrosoniak A  et al. A regional MHP
+developed through a modi ﬁed Delphi techni que. CMAJ Open
+2019;7:E546 e61.
+DECEMBER JOGC DÉCEMBRE 2022
+l1309PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###18###110. Epstein D  Solomon N  Korytny A  et al. Association between ionized
+calcium and severity of postpartum hemorrhage: a retrospective cohort
+study. Brit J Anaesth 2021;126:1022 e8.
+111. Leonard MW   Frankel AS. Role of effective teamwork and
+communication in delivering safe  high-quality care. Mt Sinai J Med2011;78:820 e6.112. Cheng A  Eppich W   Kolbe M  et al. A conceptual framework for the
+development of debrie ﬁng skills: a journey of discovery  growth and
+maturity. Simul Healthc 2020;15:55 e60.
+113. Sawyer T  Eppich W   Brett-Fleegler M  et al. More than one way to debrief:
+a critical review of healthcare simulation debrie ﬁng methods. Simul Healthc
+2016;11:209 e17.
+1310
+lDECEMBER JOGC DÉCEMBRE 2022SOGC CLINICAL PRACTICE GUIDELINE
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
+###19###APPENDIX A
+Table 1. Key to Grading of Recommendations  Assessment  Development and Evaluation Quality of Evidence
+Grade Deﬁnition
+Strength of recommendation
+Strong High level of con ﬁdence that the desirable effects outweigh the undesirable effects (strong recommendation
+for) or the undesirable effects outweigh the desirable effects (strong recommendation against)
+ConditionalaDesirable effects probably outweigh the undesirable effects (weak recommendation for) or the undesirable
+effects probably outweigh the desirable effects (weak recommendation against)
+Quality of evidence
+High High level of con ﬁdence that the true effect lies close to that of the estimate of the effect
+Moderate Moderate con ﬁdence in the effect estimate:
+The true effect is likely to be close to the estimate of the effect  but there is a possibility that it is substantiallydifferent
+Low Limited con ﬁdence in the effect estimate:
+The true effect may be substantially different from the estimate of the effect
+Very low Very little con ﬁdence in the effect estimate:
+The true effect is likely to be substantially different from the estimate of effect
+aDo not interpret conditional recommendations to mean weak evidence or uncertainty of the recommendation.
+Adapted from GRADE Handbook (2013)  Table 5.1.
+Table 2. Implications of Strong and Conditional recommendations  by guideline user
+Perspective Strong Recommendation
+/C15“We recommend that .”
+/C15“We recommend to not .”Conditional (Weak) Recommendation
+/C15“We suggest .”
+/C15“We suggest to not .”
+Authors The net desirable effects of a course of action outweigh the
+effects of the alternative course of action.It is less clear whether the net desirable consequences of
+a strategy outweigh the alternative strategy.
+Patients Most individuals in the situation would want the
+recommended course of action  while only a small
+proportion would not.The majority of individuals in the situation would want the
+suggested course of action  but many would not.
+Clinicians Most individuals should receive the course of action.
+Adherence to this recommendation according to the
+guideline could be used as a quality criterion orperformance indicator.Recognize that patient choices will vary by individual and
+that clinicians must help patients arrive at a care
+decision consistent with the patient ’s values and
+preferences.
+Policymakers The recommendation can be adapted as policy in most
+settings.The recommendation can serve as a starting point for
+debate with the involvement of many stakeholders.
+Adapted from GRADE Handbook (2013)  Table 6.1.
+DECEMBER JOGC DÉCEMBRE 2022 l1310.e1PPH and Hemorrhagic Shock
+Downloaded for Anonymous User (n/a) at University of the Andes from ClinicalKey.com by Elsevier on August 19  
+2023. For personal use only. No other uses without permission. Copyright ©2023. Elsevier Inc. All rights reserved.
