@@ -124,7 +124,7 @@ function App() {
     const jsonData = {
       history: currentChatHistory,
     };
-    fetch(`http://localhost:3001/api/generate-pdf/${index}/${source}`, {
+    fetch(`api/generate-pdf/${index}/${source}`, {
       
     method: 'POST',
     mode:'cors',
