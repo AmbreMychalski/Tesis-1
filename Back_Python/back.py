@@ -10,7 +10,7 @@ import time
 import fitz
 import io
 
-rawDataset = "../Front_React/public/documents/"
+rawDataset = "react_build/documents/"
 
 # ---------------- GPT 4 --------------
 # openai.api_key = os.getenv("OpenAIKey_gpt4") #gpt 4
