@@ -127,7 +127,6 @@ function App() {
     fetch(`api/generate-pdf/${index}/${source}`, {
       
     method: 'POST',
-    mode:'cors',
     headers: {
       'Content-Type': 'application/json'
     },
