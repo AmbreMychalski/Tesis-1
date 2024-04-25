@@ -10,7 +10,7 @@ COPY ./app.py .
 COPY ./back.py .
 
 RUN pip install -r requirements.txt
-RUN python init_db.py
+RUN python databaseInit.py
 
 EXPOSE 5000
 

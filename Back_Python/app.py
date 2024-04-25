@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 
 History = []
 
-history_path = "Front_React/public/"
+history_path = "../Front_React/public/"
 
 def load_history():
     global History
