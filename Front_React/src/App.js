@@ -1,16 +1,13 @@
 import { React, useState, useRef, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import "./App.css";
-// import "../Back_Python/app.py";
 
 function App() {
 
   const [query, setQuery] = useState([])
   const [answer, setAnswer] = useState("")
   const [sources, setSources] = useState([])
-  // const [chatHistory, setChatHistory] = useState([])
   const [chatHistory, setChatHistory] = useState([[]])
-  //const [currentChatHistory, setCurrentChatHistory] = useState([])
   const [currentChatHistory, setCurrentChatHistory] = useState({ conversation: [], conversationIndex: -1 });
 
   const chatHistoryRef = useRef(null);
@@ -60,7 +57,6 @@ function App() {
       history: currentChatHistory.conversation,
     };
   
-    // fetch('http://localhost:3001/api/query', {
     fetch('api/query', {
       method: 'POST', 
       headers: {
@@ -88,20 +84,11 @@ function App() {
         conversationIndex: prevHistory.conversationIndex })
     );
 
-      //console.log("lengthes", currentChatHistory.length, chatHistory.length)
       // Update  the global chat history to avoid incoherences
       console.log('current chat', currentChatHistory);
       if (currentChatHistory.conversation===undefined || currentChatHistory.conversation.length===0){
-        // console.log('current chat', currentChatHistory);
         setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
       } else {
-        // const updatedHistory = chatHistory.map((row, rowIndex) =>{
-        //   if (chatHistory[rowIndex].every(item => currentChatHistory.includes(item))){
-        //     return [...currentChatHistory, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
-        //   }
-        //   return row;
-        // });
-        // setChatHistory(updatedHistory);
         const updatedHistory = chatHistory.map((conversation, index) => {
           if (index === currentChatHistory.conversationIndex) {
             return [...currentChatHistory.conversation, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
@@ -134,12 +121,7 @@ function App() {
   };
   
   const handleDeleteMessage = (messageIndex) => {
-  //   const conversationIndex = getCurrentChatHistoryIndex();
   console.log('index conversation', currentChatHistory.conversationIndex)
-  //   if(conversationIndex===-1){
-  //     return
-  //   }
-
     setChatHistory(prevChatHistory => {
       const updatedChatHistory = prevChatHistory.map((conversation, index) => {
         if (index === currentChatHistory.conversationIndex) {
@@ -150,7 +132,6 @@ function App() {
           }));
 
           if (updatedConversationWithNewIDs.length === 0) {
-            // setCurrentChatHistory({conversationIndex: chatHistory.length-2, conversation: chatHistory[chatHistory.length-2]})
             return null; // Filter out the empty conversation
           }
 
@@ -173,38 +154,13 @@ function App() {
       const updatedConversationWithNewIDs = updatedConversation.map((message, index) => ({
         ...message,
         id: index,
-      }));
-    
-      // if (updatedConversationWithNewIDs.length === 0) {
-      //   // Filter out the empty conversation and reset the index
-      //   return { conversation: [], conversationIndex: -1 };
-      // }
-    
+      }));    
       console.log("currentChatHistory length", updatedConversationWithNewIDs.length);
       console.log(updatedConversationWithNewIDs);
     
       // Return the updated conversation and preserve the conversation index
       return { conversation: updatedConversationWithNewIDs, conversationIndex: prevHistory.conversationIndex };
     });
-    
-    // setCurrentChatHistory(prevHistory => {
-    //   console.log("messageIndex", messageIndex)
-    //   const updatedHistory = prevHistory.filter((message) => {
-    //     console.log("Message ID:", message.id);
-    //     return message.id !== messageIndex;
-    //   });
-    //   const updatedHistoryWithNewIDs = updatedHistory.map((message, index) => ({
-    //     ...message,
-    //     id: index, // Assign new ID based on index
-    //   }));
-    //   if (updatedConversationWithNewIDs.conversation.length === 0) {
-    //     return { conversation: [], conversationIndex: -1 }; // Filter out the empty conversation
-    //   }
-    //   console.log("currentChatHistory length", updatedHistoryWithNewIDs.length);
-    //   console.log(updatedHistoryWithNewIDs)
-    
-    //   return { conversation: updatedConversationWithNewIDs, conversationIndex: prevHistory.conversationIndex };;
-    // });
     
     console.log("New chat history with deleted message", chatHistory);
     console.log("New current chat history with deleted message", currentChatHistory);
@@ -213,7 +169,7 @@ function App() {
   const handleGeneratePdf = (index, source, id) =>{
     console.log(index, source, id)
     const jsonData = {
-      history: currentChatHistory,
+      history: currentChatHistory.conversation,
     };
     fetch(`api/generate-pdf/${index}/${source}`, {
       

@@ -57,6 +57,8 @@ def save_history():
 def generate_pdf(message_id, pdf_name):
     data = request.get_json()
     history = data.get('history')
+    print('data', data)
+    print('history', data)
     for message in history:
         if message['id'] == message_id:
             highlight = message['highlight']
