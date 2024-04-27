@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 
 History = []
 
-history_path = "../Front_React/public/"
+history_path = "react_build/"
 
 def load_history():
     global History
@@ -26,23 +26,16 @@ def load_history():
             print(History)
     else:
         with io.open(os.path.join(history_path, 'History.json'), 'w') as history_file:
-            history_file.write(json.dumps([]))
+            history_file.write(json.dumps([[]]))
 
 @app.route('/api/save', methods=['POST'])
 def save_history():
-    # if (History != []):
-    #     print("\nSaving history to file...")
-    #     with open("front/public/History.json", "w") as f:
-    #         print("-----------------------")
-    #         print(History)
-    #         json.dump(History, f)
-    #     print("History saved successfully.")
     try: 
         History = request.get_json().get('history')
         if (History != [[]]):
             print("\nSaving history to file...")
             print(History)
-            with open("front/public/History.json", "w") as f:
+            with open(history_path+"History.json", "w") as f:
                 print("-----------------------")
                 print(History)
                 json.dump(History, f)

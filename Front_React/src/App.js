@@ -12,7 +12,6 @@ function App() {
 
   const chatHistoryRef = useRef(null);
   const [loading, setLoading] = useState(false);
-  const [historyLoading, setHistoryLoading] = useState(true);
   const [error, setError] = useState(null);
 
 
@@ -238,23 +237,22 @@ function App() {
       try {
         const response = await fetch('History.json');
         const data = await response.json();
-        setChatHistory(data);
-        setCurrentChatHistory({conversationIndex: data.length - 1, conversation:data[data.length - 1]})
+        console.log("data", data, data.length)
+        if (data[0].length === 0) {
+          setChatHistory([]);
+          setCurrentChatHistory({conversationIndex: 0, conversation: []});
+        } else {
+          setChatHistory(data);
+          setCurrentChatHistory({ conversationIndex: data.length - 1, conversation: data[data.length - 1] });
+        }
       } catch (error) {
         console.error('Error fetching chat history:', error);
-      }
-      finally{
-        setHistoryLoading(false);
       }
     };
 
     fetchChatHistory();
   }, []);   
   console.log("chatHistory final", chatHistory);
-
-  if (historyLoading){
-    return <div>Loading...</div>
-  }
 
   // Front
   return (
@@ -325,7 +323,7 @@ function App() {
                     )}
                   </div>
                 </p>
-                    <button className="delete-button" onClick={() =>{handleDeleteMessage(index)}}>Delete</button>
+                <button className="delete-button" onClick={() =>{handleDeleteMessage(index)}}>Delete</button>
               </li>
             ))}
           </ul>
