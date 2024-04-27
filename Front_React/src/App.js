@@ -10,7 +10,9 @@ function App() {
   const [sources, setSources] = useState([])
   // const [chatHistory, setChatHistory] = useState([])
   const [chatHistory, setChatHistory] = useState([[]])
-  const [currentChatHistory, setCurrentChatHistory] = useState([])
+  //const [currentChatHistory, setCurrentChatHistory] = useState([])
+  const [currentChatHistory, setCurrentChatHistory] = useState({ conversation: [], conversationIndex: -1 });
+
   const chatHistoryRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [historyLoading, setHistoryLoading] = useState(true);
@@ -55,7 +57,7 @@ function App() {
     setLoading(true);
     const jsonData = {
       query: query,
-      history: currentChatHistory,
+      history: currentChatHistory.conversation,
     };
   
     // fetch('http://localhost:3001/api/query', {
@@ -78,23 +80,33 @@ function App() {
       console.log("source to highlight", data.message.highlight);
       console.log("id", data)
       setAnswer(data.message.answer_es);
-      setCurrentChatHistory(prevHistory => [
-        ...(prevHistory || []),
+      setCurrentChatHistory(prevHistory => ({conversation:
+        [
+        ...(prevHistory.conversation || []),
         { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight }
-      ]);
+        ],
+        conversationIndex: prevHistory.conversationIndex })
+    );
 
       //console.log("lengthes", currentChatHistory.length, chatHistory.length)
       // Update  the global chat history to avoid incoherences
       console.log('current chat', currentChatHistory);
-      if (currentChatHistory===undefined || currentChatHistory.length===0){
+      if (currentChatHistory.conversation===undefined || currentChatHistory.conversation.length===0){
         // console.log('current chat', currentChatHistory);
         setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
       } else {
-        const updatedHistory = chatHistory.map((row, rowIndex) =>{
-          if (chatHistory[rowIndex].every(item => currentChatHistory.includes(item))){
-            return [...currentChatHistory, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
+        // const updatedHistory = chatHistory.map((row, rowIndex) =>{
+        //   if (chatHistory[rowIndex].every(item => currentChatHistory.includes(item))){
+        //     return [...currentChatHistory, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
+        //   }
+        //   return row;
+        // });
+        // setChatHistory(updatedHistory);
+        const updatedHistory = chatHistory.map((conversation, index) => {
+          if (index === currentChatHistory.conversationIndex) {
+            return [...currentChatHistory.conversation, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
           }
-          return row;
+          return conversation;
         });
         setChatHistory(updatedHistory);
       }
@@ -109,14 +121,93 @@ function App() {
 
   };
 
-  const handleChangeHistory = (item) =>{
+  const handleChangeHistory = (index, item) =>{
     console.log("the new current history", item)
-    setCurrentChatHistory(item)
+    
+    setCurrentChatHistory({conversationIndex: index, conversation: item})
   };
 
   const handleNewChat = () => {
-    setCurrentChatHistory([]);
+    const index = chatHistory.length
+    setCurrentChatHistory({conversationIndex: index, conversation: []});
     console.log("New chat chat history", chatHistory);
+  };
+  
+  const handleDeleteMessage = (messageIndex) => {
+  //   const conversationIndex = getCurrentChatHistoryIndex();
+  console.log('index conversation', currentChatHistory.conversationIndex)
+  //   if(conversationIndex===-1){
+  //     return
+  //   }
+
+    setChatHistory(prevChatHistory => {
+      const updatedChatHistory = prevChatHistory.map((conversation, index) => {
+        if (index === currentChatHistory.conversationIndex) {
+          const updatedConversation = conversation.filter((_, index) => index !== messageIndex);
+          const updatedConversationWithNewIDs = updatedConversation.map((message, index) => ({
+            ...message,
+            id: index, // Assign new ID based on index
+          }));
+
+          if (updatedConversationWithNewIDs.length === 0) {
+            // setCurrentChatHistory({conversationIndex: chatHistory.length-2, conversation: chatHistory[chatHistory.length-2]})
+            return null; // Filter out the empty conversation
+          }
+
+          return updatedConversationWithNewIDs;
+        }
+        return conversation;
+      }).filter(conversation => conversation !== null);
+      console.log("New chat history with deleted message", updatedChatHistory);
+      return updatedChatHistory;
+    });
+
+    setCurrentChatHistory(prevHistory => {
+      console.log("messageIndex", messageIndex);
+      const updatedConversation = prevHistory.conversation.filter((message) => {
+        console.log("Message ID:", message.id);
+        return message.id !== messageIndex;
+      });
+    
+      // Assign new ID based on index for the updated messages
+      const updatedConversationWithNewIDs = updatedConversation.map((message, index) => ({
+        ...message,
+        id: index,
+      }));
+    
+      // if (updatedConversationWithNewIDs.length === 0) {
+      //   // Filter out the empty conversation and reset the index
+      //   return { conversation: [], conversationIndex: -1 };
+      // }
+    
+      console.log("currentChatHistory length", updatedConversationWithNewIDs.length);
+      console.log(updatedConversationWithNewIDs);
+    
+      // Return the updated conversation and preserve the conversation index
+      return { conversation: updatedConversationWithNewIDs, conversationIndex: prevHistory.conversationIndex };
+    });
+    
+    // setCurrentChatHistory(prevHistory => {
+    //   console.log("messageIndex", messageIndex)
+    //   const updatedHistory = prevHistory.filter((message) => {
+    //     console.log("Message ID:", message.id);
+    //     return message.id !== messageIndex;
+    //   });
+    //   const updatedHistoryWithNewIDs = updatedHistory.map((message, index) => ({
+    //     ...message,
+    //     id: index, // Assign new ID based on index
+    //   }));
+    //   if (updatedConversationWithNewIDs.conversation.length === 0) {
+    //     return { conversation: [], conversationIndex: -1 }; // Filter out the empty conversation
+    //   }
+    //   console.log("currentChatHistory length", updatedHistoryWithNewIDs.length);
+    //   console.log(updatedHistoryWithNewIDs)
+    
+    //   return { conversation: updatedConversationWithNewIDs, conversationIndex: prevHistory.conversationIndex };;
+    // });
+    
+    console.log("New chat history with deleted message", chatHistory);
+    console.log("New current chat history with deleted message", currentChatHistory);
   };
 
   const handleGeneratePdf = (index, source, id) =>{
@@ -179,9 +270,6 @@ function App() {
     });
 
   };
-  
-  // console.log("sources", sources);
-  // console.log("chatHistory", chatHistory);
 
   useEffect(() => {
     if (chatHistoryRef.current) {
@@ -195,7 +283,7 @@ function App() {
         const response = await fetch('History.json');
         const data = await response.json();
         setChatHistory(data);
-        setCurrentChatHistory(data[data.length - 1])
+        setCurrentChatHistory({conversationIndex: data.length - 1, conversation:data[data.length - 1]})
       } catch (error) {
         console.error('Error fetching chat history:', error);
       }
@@ -227,12 +315,11 @@ function App() {
             {chatHistory.length>0 && chatHistory.map((item, index) => (
               console.log("item", item),
               console.log('currentChatHistory', currentChatHistory),
-              console.log('is equal', item === currentChatHistory),
               <button
-                  className={`history-button ${item === currentChatHistory ? 'selected-history-button' : ''}`}
+                  className={`history-button ${index === currentChatHistory.conversationIndex ? 'selected-history-button' : ''}`}
                   key={index}
-                  onClick={() => handleChangeHistory(item)}>
-                  {item[0].query_es}
+                  onClick={() => handleChangeHistory(index, item)}>
+                  {item && item[0] && item[0].query_es}
               </button>
             ))}
           </div>
@@ -241,8 +328,8 @@ function App() {
           <div className="history-scroll"  ref={chatHistoryRef}>
             <ul>
             
-            {currentChatHistory && currentChatHistory.map((item, index) => (
-              <li key={index}>
+            {currentChatHistory && currentChatHistory.conversation.map((item, index) => (
+              <li className = "messages" key={index}>
                 <p className="whatsapp-bubble"><strong>Pregunta:</strong> {item.query_es}</p>
                 <p className="whatsapp-bubble received">
                   <p><strong>Respuesta:</strong> {item.answer_es}</p>
@@ -282,6 +369,7 @@ function App() {
                     )}
                   </div>
                 </p>
+                    <button className="delete-button" onClick={() =>{handleDeleteMessage(index)}}>Delete</button>
               </li>
             ))}
           </ul>

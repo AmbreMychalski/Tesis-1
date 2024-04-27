@@ -73,6 +73,19 @@ h3 {
   position: relative;
 }
 
+.search-button:hover {
+  background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
+}
+
+@media screen and (max-width: 768px) {
+  .search-button {
+    width: 100%; /* Set width to 100% on smaller screens */
+    max-width: 200px; /* Set maximum width to 200px */
+    height: auto; /* Allow height to adjust based on content */
+  }
+}
+
+
 .newChat-button{
   background-color: #156752; /* Green */
   margin-top: 20px;
@@ -91,8 +104,37 @@ h3 {
   height: 40px; /* Fixed height */
 }
 
+.newChat-button:hover {
+  background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
+}
+
+
+.delete-button {
+  background-color: #156752; /* Green */
+  margin-top: 2px;
+  margin-right: 70px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: auto;
+  width: 90; /* Fixed width */
+  height: 25; /* Fixed height */
+}
+
+.delete-button:hover {
+  background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
+}
+
 @media screen and (max-width: 768px) {
-  .search-button {
+  .delete-button {
     width: 100%; /* Set width to 100% on smaller screens */
     max-width: 200px; /* Set maximum width to 200px */
     height: auto; /* Allow height to adjust based on content */
@@ -115,6 +157,10 @@ h3 {
   margin-left: 10px;
   align-self: flex-end;
   position: relative;
+}
+
+.saveHistory-button:hover {
+  background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
 }
 
 @keyframes rotate {
@@ -196,10 +242,6 @@ h3 {
   animation: rotate 1s linear infinite; /* Apply the rotation animation */
 }
 
-.search-button:hover {
-  background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
-}
-
 .history-panel {
   margin-bottom: 20px; /* Marge en bas pour séparer l'historique de la barre de recherche */
   color: #333; /* Couleur du texte */
@@ -217,6 +259,12 @@ h3 {
 .history-scroll {
   max-height: 100%; /* Hauteur maximale de la zone de défilement */
   overflow-y: auto; /* Activer le défilement vertical lorsque le contenu dépasse la hauteur maximale */
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+  /* Add this line to align items to the end (right) */
+  justify-content: flex-end;
 }
 
 .container{
