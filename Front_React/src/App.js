@@ -5,8 +5,6 @@ import "./App.css";
 function App() {
 
   const [query, setQuery] = useState([])
-  const [answer, setAnswer] = useState("")
-  const [sources, setSources] = useState([])
   const [chatHistory, setChatHistory] = useState([[]])
   const [currentChatHistory, setCurrentChatHistory] = useState({ conversation: [], conversationIndex: -1 });
 
@@ -74,27 +72,31 @@ function App() {
       console.log("sources array", data.message.sources);
       console.log("source to highlight", data.message.highlight);
       console.log("id", data)
-      setAnswer(data.message.answer_es);
-      setCurrentChatHistory(prevHistory => ({conversation:
-        [
-        ...(prevHistory.conversation || []),
-        { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight }
-        ],
-        conversationIndex: prevHistory.conversationIndex })
-    );
-
-      // Update  the global chat history to avoid incoherences
-      console.log('current chat', currentChatHistory);
-      if (currentChatHistory.conversation===undefined || currentChatHistory.conversation.length===0){
-        setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
+      if (data.message.answer_es === "Ha alcanzado el límite máximo de una conversación: por favor elimine mensajes anteriores o inicie una nueva conversación."){
+        handleError("Ha ocurrido un error: "+data.message.answer_es);
+        
       } else {
-        const updatedHistory = chatHistory.map((conversation, index) => {
-          if (index === currentChatHistory.conversationIndex) {
-            return [...currentChatHistory.conversation, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
-          }
-          return conversation;
-        });
-        setChatHistory(updatedHistory);
+        setCurrentChatHistory(prevHistory => ({conversation:
+          [
+          ...(prevHistory.conversation || []),
+          { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight }
+          ],
+          conversationIndex: prevHistory.conversationIndex })
+      );
+
+        // Update  the global chat history to avoid incoherences
+        console.log('current chat', currentChatHistory);
+        if (currentChatHistory.conversation===undefined || currentChatHistory.conversation.length===0){
+          setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
+        } else {
+          const updatedHistory = chatHistory.map((conversation, index) => {
+            if (index === currentChatHistory.conversationIndex) {
+              return [...currentChatHistory.conversation, { id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }];
+            }
+            return conversation;
+          });
+          setChatHistory(updatedHistory);
+        }
       }
     })
     .catch(error => {

@@ -235,30 +235,32 @@ def generate_answer(question_es, history, deployment=deployment_name):
         answer_es = 'Ocurrió un error: La respuesta fue filtrada debido a que la solicitud activó la política de gestión de contenido de Azure OpenAI. Por favor, modifica tu solicitud y vuelve a intentarlo. Para obtener más información sobre nuestras políticas de filtrado de contenido, por favor lee nuestra documentación: https://go.microsoft.com/fwlink/?linkid=2198766'
         return (answer_es, question_en, '', sources)
 
+    print("oui")
     for quest, ans in prev_questions:
         nb_tokens+=len(quest.split())+len(ans.split())
-    if nb_tokens<2000:
+    print('oui 2')
+    try:
         prev_questions.insert(0, role_sys)
         prev_questions.append({"role": "user", "content": f"""```  {context}  ```
             Question ---  {question_en}  ---  
-From the support information that you are provided, delimited by triple backticks, extract the \
-relevant information \
-based on the asked question delimited by triple quotes. If there are any measurements or doses \
-mentioned in the question, try to locate them in the provided information. 
-Then, using these relevant details and any measurements or dosis you extracted, continue the previous \
-conversation by answering the question.
-Provide a detailed answer, offering further explanations and elaborating on the information. 
-The answer mustn’t include special characters such as /, ", ---, ``` etc. 
-If the question cannot be answered with the provided information, simply write "I don't know.".
+    From the support information that you are provided, delimited by triple backticks, extract the \
+    relevant information \
+    based on the asked question delimited by triple quotes. If there are any measurements or doses \
+    mentioned in the question, try to locate them in the provided information. 
+    Then, using these relevant details and any measurements or dosis you extracted, continue the previous \
+    conversation by answering the question.
+    Provide a detailed answer, offering further explanations and elaborating on the information. 
+    The answer mustn’t include special characters such as /, ", ---, ``` etc. 
+    If the question cannot be answered with the provided information, simply write "I don't know.".
             """})
         prev_questions.append({"role": "user", "content": f"""Once you thought about your answer, revise it following these steps:
-1. Verify your answer and remove any references to the provided information. For instance, \
-if your answer states:  "Based on the information provided, it seems that ...", replace it with \
-"It seems that ". Refer to these information as your own knowledge as an obstetrical chatbot. \
-Your response mustn't mention the words "provided information" or "given information" under any circumstances.
-2. If if the context delimited by triple backticks is empty or if your answer implies that you cannot \
-respond based on the given information, simply state "I don't know.".
-3. Remove from your answer any advice reminding him to consult with a healthcare professional."""})
+    1. Verify your answer and remove any references to the provided information. For instance, \
+    if your answer states:  "Based on the information provided, it seems that ...", replace it with \
+    "It seems that ". Refer to these information as your own knowledge as an obstetrical chatbot. \
+    Your response mustn't mention the words "provided information" or "given information" under any circumstances.
+    2. If if the context delimited by triple backticks is empty or if your answer implies that you cannot \
+    respond based on the given information, simply state "I don't know.".
+    3. Remove from your answer any advice reminding him to consult with a healthcare professional."""})
         # print("----------------------------- Previous questions -----------------------------")
         # print(prev_questions)
         # print("----------------------------- End Previous questions -----------------------------")
@@ -274,7 +276,14 @@ respond based on the given information, simply state "I don't know.".
         print("----------------------------- Answer ES -----------------------------")
         print(answer_es )
         return (answer_es, answer_en, question_en, sources)
-    else:
-        return('You cannot continue this conversation', [])
+    except Exception as e:
+        print('oui 3')
+        print("An error occurred:", e)
+        print("An error occurred:", e)
+        if "4096 tokens" in str(e):
+            print("ici")
+            return("Ha alcanzado el límite máximo de una conversación: por favor elimine mensajes anteriores o inicie una nueva conversación.",
+                   "You have reached the maximum size of a conversation: please delete previous messages or start a new conversation.",
+                   question_en, [])
 
 
