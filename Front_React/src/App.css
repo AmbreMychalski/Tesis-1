@@ -141,11 +141,12 @@ h3 {
   }
 }
 
-.saveHistory-button {
+
+.login-button {
   background-color: #156752; /* Green */
-  margin-top: 20px;
   border: none;
   border-radius: 5px;
+  margin-top: 2%;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -154,9 +155,45 @@ h3 {
   font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-left: 10px;
-  align-self: flex-end;
-  position: relative;
+  align-self: center;
+}
+
+.login-button:hover {
+  background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
+}
+
+.logout-button {
+  background-color: #156752;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 0;
+  margin-left:auto;
+}
+.logout-button:hover {
+  background-color: #51a66b; /* Couleur de fond au survol (bleu plus sombre) */
+}
+
+
+.saveHistory-button {
+  background-color: #156752;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 2px;
+  margin-left:auto;
 }
 
 .saveHistory-button:hover {
@@ -170,6 +207,27 @@ h3 {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.button-container {
+  display: flex; /* Use flexbox */
+  justify-content: flex-end; /* Center horizontally */
+}   
+
+.d-table {
+  display:table;
+}
+
+.d-table-cell {
+  display:table-cell;
+}
+
+.w-100 {
+  width: 89%;
+}
+
+.tar {
+  text-align: right;
 }
 
 .history-button{

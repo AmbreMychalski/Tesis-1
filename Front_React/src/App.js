@@ -1,9 +1,12 @@
 import { React, useState, useRef, useEffect } from "react";
 import TextField from "@mui/material/TextField";
+import { useAuth0 } from '@auth0/auth0-react';
+import { LoginButton } from './Login';
+import { LogoutButton } from './Logout';
 import "./App.css";
 
 function App() {
-
+  const {isAuthenticated} = useAuth0();
   const [query, setQuery] = useState([])
   const [chatHistory, setChatHistory] = useState([[]])
   const [currentChatHistory, setCurrentChatHistory] = useState({ conversation: [], conversationIndex: -1 });
@@ -260,7 +263,17 @@ function App() {
   return (
     <div className="main">
       <h1>Obstetric Search</h1>
-      <button className="saveHistory-button" onClick={handleSaveHistory}>Save history</button>
+      {isAuthenticated ? <>
+      {/* <div className="button-container">
+        <button className="saveHistory-button" onClick={handleSaveHistory}>Save history</button>
+        <LogoutButton/>
+      </div> */}
+      <div class="border d-table w-100">
+        <div class="d-table-cell tar">
+          <button className="saveHistory-button" onClick={handleSaveHistory}>Save history</button>
+          <LogoutButton/>
+        </div>
+      </div>
       <div className='container'>
         <div className="history-panel left">
           <div className="history-scroll"  ref={chatHistoryRef}>
@@ -346,6 +359,8 @@ function App() {
       </button>
       {error && <ErrorModal error={error} onClose={handleClose} />}
     </div>
+    </>
+        : <LoginButton/>}
   </div>
   );
 }
