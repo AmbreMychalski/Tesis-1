@@ -13,6 +13,8 @@ __pycache__
 Front_React/build
 Front_React/node_modules
 
+Front_React/src/authConf.json
+Back_Python/react_build/authConf.json
 Back_Python/chroma-db
 # misc
 .DS_Store
