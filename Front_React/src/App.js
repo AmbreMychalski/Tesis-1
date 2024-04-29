@@ -1,8 +1,13 @@
 import { React, useState, useRef, useEffect } from "react";
 import TextField from "@mui/material/TextField";
+import authConf from "./authConf.json";
 import "./App.css";
 
 function App() {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [connected, setConnected] = useState(false)
+
   const [query, setQuery] = useState([])
   const [chatHistory, setChatHistory] = useState([[]])
   const [currentChatHistory, setCurrentChatHistory] = useState({ conversation: [], conversationIndex: -1 });
@@ -10,7 +15,6 @@ function App() {
   const chatHistoryRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
 
   const handleError = (errorMessage) => {
     setError(errorMessage);
@@ -31,6 +35,16 @@ function App() {
     );
   }
   
+  const handleLogin = (e) =>{
+    e.preventDefault();
+    if (username==authConf.username && password==authConf.password){
+      setConnected(true)
+    }
+    else{
+      console.log("Nombre de usuario o contraseña incorrectos, por favor inténtalo de nuevo.");
+    }
+  }
+
 
   const inputHandler = (e) => {
     const userInput = e.target.value;
@@ -254,6 +268,14 @@ function App() {
     fetchChatHistory();
   }, []);   
   console.log("chatHistory final", chatHistory);
+
+  if (!connected){
+    return(<div className="container-form"> <form  id="msform"><fieldset><h2>Por favor, autentíquese </h2>
+      <p><input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username"/></p>
+      <p><input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/></p>
+      <button className="saveHistory-button" onClick={handleLogin}>Login</button>
+  </fieldset></form></div>);
+  }
 
   // Front
   return (
