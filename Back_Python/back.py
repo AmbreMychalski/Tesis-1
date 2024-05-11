@@ -28,11 +28,12 @@ openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
 current_sources = []
 
-# path = "C:/Users/ambre/Desktop/INSA/5A/202320/Tesis_I/APP/obstetric-gpt/src"
 path = "chroma-db/"
 chroma_client = chromadb.PersistentClient(path)
 collection = chroma_client.get_collection("embedding_db_persist_1500")    
 
+# Highlight a pdf zone: Take the filename, the pages and the coordinates of the 
+# zone to highlight and return a the transformed pdf in a bytes stream.
 def highlight_context(fname, pages, coords):
 #     x1              x2
 #  y1 -----------------
@@ -65,17 +66,16 @@ def highlight_context(fname, pages, coords):
             if coords[2]-50 >=0.0:
                 y1 = coords[2]-50
         elif i==len(pages)-1:
-            print("else", i)
             if coords[3]+30 <=end_of_page_x:
                 x2 = coords[3]+30
             if coords[0]-10 <=end_of_page_y:
                 y2 = coords[1]+50
         rect_to_draw = (x1, y1, x2, y2)
         rect_highlight = fitz.Rect(rect_to_draw)
-        p1 = rect_highlight.top_left  # top-left point of first rectangle
-        p2 = rect_highlight.bottom_right  # bottom-right point of last rectangle
+        p1 = rect_highlight.top_left  
+        p2 = rect_highlight.bottom_right  
         p.draw_rect(rect_highlight,  color=fitz.utils.getColor('black'), fill=fitz.utils.getColor('yellow'), fill_opacity=0.3, width = 0.3)
-        # p.add_highlight_annot(start=p1,stop=p2)
+
     pdf_stream = io.BytesIO()
     pdf_document.save(pdf_stream)
         
@@ -83,13 +83,15 @@ def highlight_context(fname, pages, coords):
     pdf_document.close()
     return pdf_stream
 
+# Translate a test from Spanish to English: Take the Spanish text in input and
+# return the English version 
 def translate_es_en(txt_es):
     txt_en=''
     try:
         translated = openai.ChatCompletion.create(
             engine= deployment_name, 
             messages=[
-                {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                {"role": "system", "content": "You're a translator, and you translate between Spanish and English."},
                 {"role": "user", "content": f"""Text to translate: ``` {txt_es} ```. Translate the text delimited \
     by triple backticks from Spanish to English. \
     You must keep the translated text as close semantically and syntactically to its original \
@@ -105,11 +107,13 @@ def translate_es_en(txt_es):
         txt_en = 'An error occurred'
     return(txt_en)
 
+# Translate a test from English to Spanish: Take the English text in input and
+# return the Spanish version 
 def translate_en_es(txt_en):
     translated = openai.ChatCompletion.create(
         engine= deployment_name, 
         messages=[
-            {"role": "system", "content": "You're a translator, and you translate between English and Spanish ."},
+            {"role": "system", "content": "You're a translator, and you translate between English and Spanish."},
             {"role": "user", "content": f"""Text to translate: ``` {txt_en} ```. Translate the text delimited \
 by triple backticks from English to Spanish.
 You must keep the translated text as close semantically and syntactically to its original \
@@ -122,6 +126,9 @@ Return the Spanish translation only.
     txt_es = translated['choices'][0]['message']['content']
     return(txt_es)
 
+# Create a context relevant to a given question: Take the question in Spanish and 
+# the history in input and return a context of a defined maximum length with the 
+# corresponding sources
 def create_context_es(question, prev_questions, max_len=1500, size="ada"):
     global current_sources
     current_sources = []
@@ -140,25 +147,17 @@ def create_context_es(question, prev_questions, max_len=1500, size="ada"):
             ]        
         )
     
-    """
-    Create a context for a question by finding the most similar context from the dataframe
-    """
-
-    # Get the embeddings for the question
-    # q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-ada-002-rfmanrique')['data'][0]['embedding']
-    # print("\n\nFIRST ANSWER", first_response['choices'][0]['message']['content'], "\n\n")
-    # Use the first answer of chatGPT to create the context
+    # Pass the question into a vector (Embedding)
     q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine=deployment_embeddings_name)['data'][0]['embedding']
 
-    # Get the distances from the embeddings
-    # df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
+    # Get the more similar embeddings from the database
     results = collection.query(query_embeddings=q_embeddings, n_results=50)
 
     returns = []
     sources = []
     cur_len = 0
 
-    # Sort by distance and add the text to the context until the context is too long
+    # Add the chunk to the context until the context is too long
     for i in range(len(results['ids'][0])):
         document = results['documents'][0][i]
         title = results['metadatas'][0][i]['title']
@@ -170,18 +169,17 @@ def create_context_es(question, prev_questions, max_len=1500, size="ada"):
         temp = []
         context_chunk = document
 
+        # Check if the context chunk is relevant to the query
         response = openai.ChatCompletion.create(
-            engine= deployment_name, # engine = "deployment_name".
+            engine= deployment_name,
             messages=[  
                 {"role": "system", "content": "You are a doctor in obstetrics."},
                 {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
             ]     
         )
         time.sleep(0.1)
-
-        # response['choices'][0]['message']['content'] = 'yes'
     
-        # Add the length of the text to the current length
+        # Add the chunk to the context if relevant
         if ("yes" in (response['choices'][0]['message']['content'].lower())):
             cur_len += int(tokens) + 4
             returns.append(document)
@@ -189,29 +187,21 @@ def create_context_es(question, prev_questions, max_len=1500, size="ada"):
             temp.append(page)
             temp.append(coords)
             sources.append(temp)
-            print('---index---', i)
     
+    # Treat the sources typing
     for i in range(len(sources)):
         src = sources[i][1].replace('(', '').replace(')', '').split(', ')
         for j in range(len(src)):
             src[j]=int(src[j])
         if src[0]==src[1]:
             sources[i][1] = "("+str(src[0])+")"
-
-
-    # print("-----------------CONTEXTBIS---------------")
-    # for i in returns:
-    #     print(i)
-    #     print(len(i))
-    # print("-----------------ENDCONTEXTBIS---------------")
             
-    # Return the context
+    # Return the context and sources
     return(("\n\n###\n\n".join(returns)), sources, question_en)
 
+# Get the previous questions from history: Take the history in input and return the 
+# questions it contains
 def get_previous_questions(history):
-    # print("----------------------------- History -----------------------------")
-    # print(history)
-    # print("\n")
     questions= [[elem['query_en'], elem['answer_en']] for elem in history]
     prev_questions = []
     for elem in history:
@@ -219,26 +209,27 @@ def get_previous_questions(history):
         prev_questions.append({'role':'assistant','content':elem['answer_en']})
     return prev_questions
 
-def format_previous_questions(prev_questions):
-    return 0
-
+# Generate an answer to a question: Take the Spanish question and the history in input
+# and return the answers (in English and in Spanish) and the sources used in the RAG process
+# to ground the answer.
 def generate_answer(question_es, history, deployment=deployment_name):
+    # Retrieve the previous questions from the history
     prev_questions = get_previous_questions(history)
+
     role_sys = {"role": "system", "content": "You are a specialized obstetric chatbot. You respond to questions from other doctors regarding obstetrical emergencies."}
-    print('-----------------question_es------------', question_es)
+    
+    # Create a context to ground the answer
     context, sources, question_en = create_context_es(question_es, prev_questions, max_len=1800, size="ada")
     nb_tokens=0
-    print("---------------CONTEXT------------------")
-    print(context)
-    print("---------------ENDCONTEXT------------------")
+    
     if 'An error occurred:' in question_en:
         answer_es = 'Ocurrió un error: La respuesta fue filtrada debido a que la solicitud activó la política de gestión de contenido de Azure OpenAI. Por favor, modifica tu solicitud y vuelve a intentarlo. Para obtener más información sobre nuestras políticas de filtrado de contenido, por favor lee nuestra documentación: https://go.microsoft.com/fwlink/?linkid=2198766'
         return (answer_es, question_en, '', sources)
 
-    print("oui")
     for quest, ans in prev_questions:
         nb_tokens+=len(quest.split())+len(ans.split())
-    print('oui 2')
+        
+    # Prompt to generate the answer
     try:
         prev_questions.insert(0, role_sys)
         prev_questions.append({"role": "user", "content": f"""```  {context}  ```
@@ -261,27 +252,16 @@ def generate_answer(question_es, history, deployment=deployment_name):
     2. If if the context delimited by triple backticks is empty or if your answer implies that you cannot \
     respond based on the given information, simply state "I don't know.".
     3. Remove from your answer any advice reminding him to consult with a healthcare professional."""})
-        # print("----------------------------- Previous questions -----------------------------")
-        # print(prev_questions)
-        # print("----------------------------- End Previous questions -----------------------------")
         
         response = openai.ChatCompletion.create(
             engine= deployment_name, 
             messages= prev_questions
         )
         answer_en = response['choices'][0]['message']['content']
-        print("----------------------------- Answer EN -----------------------------")
-        print(answer_en )
         answer_es = translate_en_es(answer_en)
-        print("----------------------------- Answer ES -----------------------------")
-        print(answer_es )
         return (answer_es, answer_en, question_en, sources)
     except Exception as e:
-        print('oui 3')
-        print("An error occurred:", e)
-        print("An error occurred:", e)
         if "4096 tokens" in str(e):
-            print("ici")
             return("Ha alcanzado el límite máximo de una conversación: por favor elimine mensajes anteriores o inicie una nueva conversación.",
                    "You have reached the maximum size of a conversation: please delete previous messages or start a new conversation.",
                    question_en, [])

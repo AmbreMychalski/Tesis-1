@@ -176,7 +176,7 @@ def make_traductions(df):
             translated = openai.ChatCompletion.create(
                     engine= deployment_name, 
                     messages=[
-                        {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                        {"role": "system", "content": "You're a translator, and you translate between Spanish and English."},
                         # You are a helpful medical knowledge assistant. Provide useful, complete, and 
                         # scientifically-grounded answers to common consumer search queries about 
                         # obstetric health.
@@ -197,13 +197,13 @@ def make_traductions(df):
             translated = openai.ChatCompletion.create(
                 engine= deployment_name, 
                 messages=[
-                    {"role": "system", "content": "You're a translator, and you translate between Spanish and English ."},
+                    {"role": "system", "content": "You're a translator, and you translate between Spanish and English."},
                     # You are a helpful medical knowledge assistant. Provide useful, complete, and 
                     # scientifically-grounded answers to common consumer search queries about 
                     # obstetric health.
                     # If the text is written in spanish translate it in english. Write the translation after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible:
 
-                    {"role": "user", "content": f"Translate the following text in english./\n\n---\n\n/{df.at[index, 'text']}\n\n/Write the translation only after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible. Keep any character you don't understand unmodified:"},
+                    {"role": "user", "content": f"Translate the following text in English./\n\n---\n\n/{df.at[index, 'text']}\n\n/Write the translation only after the colons. You have to keep the translated text as close semantically and syntactically to its original version as possible. Keep any character you don't understand unmodified:"},
                 ]          
             )
             # print("\n-----------------ORIGINAL---------------:", row['text'], '\n')

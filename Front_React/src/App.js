@@ -76,15 +76,7 @@ function App() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log('data', data)
       setLoading(false);
-      
-      console.log("message", data.message);
-      console.log("answer_es", data.message.answer_es);
-      console.log("answer_en", data.message.answer_en);
-      console.log("sources array", data.message.sources);
-      console.log("source to highlight", data.message.highlight);
-      console.log("id", data)
       if (data.message.answer_es === "Ha alcanzado el límite máximo de una conversación: por favor elimine mensajes anteriores o inicie una nueva conversación."){
         handleError("Ha ocurrido un error: "+data.message.answer_es);
         
@@ -98,7 +90,6 @@ function App() {
       );
 
         // Update  the global chat history to avoid incoherences
-        console.log('current chat', currentChatHistory);
         if (currentChatHistory.conversation===undefined || currentChatHistory.conversation.length===0){
           setChatHistory([...chatHistory, [{ id: data.message.id, query_es: query, answer_es: data.message.answer_es, query_en: data.message.query_en, answer_en: data.message.answer_en, sources: data.message.sources, highlight: data.message.highlight  }]]);
         } else {
@@ -117,25 +108,18 @@ function App() {
       handleError("Ha ocurrido un error: por favor verifica que su pregunta no esté vacía.");
       setLoading(false);
     });
-    console.log("jsonData", jsonData);
-    console.log("chat history", chatHistory);
-
   };
 
-  const handleChangeHistory = (index, item) =>{
-    console.log("the new current history", item)
-    
+  const handleChangeHistory = (index, item) =>{    
     setCurrentChatHistory({conversationIndex: index, conversation: item})
   };
 
   const handleNewChat = () => {
     const index = chatHistory.length
     setCurrentChatHistory({conversationIndex: index, conversation: []});
-    console.log("New chat chat history", chatHistory);
   };
   
   const handleDeleteMessage = (messageIndex) => {
-  console.log('index conversation', currentChatHistory.conversationIndex)
     setChatHistory(prevChatHistory => {
       const updatedChatHistory = prevChatHistory.map((conversation, index) => {
         if (index === currentChatHistory.conversationIndex) {
@@ -153,14 +137,11 @@ function App() {
         }
         return conversation;
       }).filter(conversation => conversation !== null);
-      console.log("New chat history with deleted message", updatedChatHistory);
       return updatedChatHistory;
     });
 
     setCurrentChatHistory(prevHistory => {
-      console.log("messageIndex", messageIndex);
       const updatedConversation = prevHistory.conversation.filter((message) => {
-        console.log("Message ID:", message.id);
         return message.id !== messageIndex;
       });
     
@@ -169,19 +150,13 @@ function App() {
         ...message,
         id: index,
       }));    
-      console.log("currentChatHistory length", updatedConversationWithNewIDs.length);
-      console.log(updatedConversationWithNewIDs);
     
       // Return the updated conversation and preserve the conversation index
       return { conversation: updatedConversationWithNewIDs, conversationIndex: prevHistory.conversationIndex };
     });
-    
-    console.log("New chat history with deleted message", chatHistory);
-    console.log("New current chat history with deleted message", currentChatHistory);
   };
 
   const handleGeneratePdf = (index, source, id) =>{
-    console.log(index, source, id)
     const jsonData = {
       history: currentChatHistory.conversation,
     };
@@ -252,7 +227,6 @@ function App() {
       try {
         const response = await fetch('History.json');
         const data = await response.json();
-        console.log("data", data, data.length)
         if (data[0].length === 0) {
           setChatHistory([]);
           setCurrentChatHistory({conversationIndex: 0, conversation: []});
@@ -267,13 +241,12 @@ function App() {
 
     fetchChatHistory();
   }, []);   
-  console.log("chatHistory final", chatHistory);
 
   if (!connected){
     return(<div className="container-form"> <form  id="msform"><fieldset><h2>Por favor, autentíquese </h2>
-      <p><input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username"/></p>
-      <p><input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/></p>
-      <button className="saveHistory-button" onClick={handleLogin}>Login</button>
+      <p><input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Usuario"/></p>
+      <p><input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Contraseña"/></p>
+      <button className="saveHistory-button" onClick={handleLogin}>Entrar</button>
   </fieldset></form></div>);
   }
 
@@ -283,19 +256,17 @@ function App() {
       <h1>Obstetric Search</h1>
       <div class="border d-table w-100">
         <div class="d-table-cell tar">
-          <button className="saveHistory-button" onClick={handleSaveHistory}>Save history</button>
+          <button className="saveHistory-button" onClick={handleSaveHistory}>Guardar historial</button>
         </div>
       </div>
       <div className='container'>
         <div className="history-panel left">
           <div className="history-scroll"  ref={chatHistoryRef}>
             <div className="history-container">
-              <h3>History</h3>
-              <button className="newChat-button" onClick={handleNewChat}>New chat</button>
+              <h3>Historial</h3>
+              <button className="newChat-button" onClick={handleNewChat}>Nueva conversación</button>
             </div>
             {chatHistory.length>0 && chatHistory.map((item, index) => (
-              console.log("item", item),
-              console.log('currentChatHistory', currentChatHistory),
               <button
                   className={`history-button ${index === currentChatHistory.conversationIndex ? 'selected-history-button' : ''}`}
                   key={index}
@@ -346,11 +317,11 @@ function App() {
                       ))}
                     </ul>
                     ) : (
-                      <p>No sources available</p>
+                      <p>No hay fuentes disponibles</p>
                     )}
                   </div>
                 </p>
-                <button className="delete-button" onClick={() =>{handleDeleteMessage(index)}}>Delete</button>
+                <button className="delete-button" onClick={() =>{handleDeleteMessage(index)}}>Suprimir</button>
               </li>
             ))}
           </ul>
@@ -364,10 +335,10 @@ function App() {
         onKeyPress={handleKeyDown} 
         variant="outlined" 
         fullWidth
-        label="Search"
+        label="Buscar"
       />
       <button className="search-button" onClick={handleSubmit} disabled={loading}>
-            {loading ? <div className="loading-spinner"></div> : 'Submit'}
+            {loading ? <div className="loading-spinner"></div> : 'Enviar'}
       </button>
       {error && <ErrorModal error={error} onClose={handleClose} />}
     </div>

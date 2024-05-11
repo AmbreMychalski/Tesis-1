@@ -6,7 +6,6 @@ import io
 import atexit
 import logging
 
-#app = Flask(__name__)
 app = Flask(__name__, static_folder='react_build')
 cors = CORS(app)
 
@@ -16,42 +15,40 @@ History = []
 
 history_path = "react_build/"
 
+# Retrieve the history and save it in local when launching the app
 def load_history():
     global History
     file_path = history_path+"History.json"
     if os.path.exists(file_path):
         with open(file_path, "r") as f:
             History = json.load(f)
-            print("load history------------")
-            print(History)
     else:
         with io.open(os.path.join(history_path, 'History.json'), 'w') as history_file:
             history_file.write(json.dumps([[]]))
 
+# Save the history: When the front ask to save the history, save the local 
+# variable into a json file
 @app.route('/api/save', methods=['POST'])
 def save_history():
     try: 
         History = request.get_json().get('history')
         if (History != [[]]):
-            print("\nSaving history to file...")
-            print(History)
             with open(history_path+"History.json", "w") as f:
-                print("-----------------------")
-                print(History)
                 json.dump(History, f)
-            print("History saved successfully.")
         return jsonify({'message': 'succesfully saved'})
     except Exception as e:
-        print("erreur")
         return jsonify({'error': str(e)}), 500
     
-
+# Generate a highlight pdf with the given sources: When the front ask to generate a pdf,
+# take the pdf name and the corresponding message in input to generate the highlithed pdf 
+# retrieving the coordinate of the zone to highlight in the message stored into the history.
+# Return a byte stream corresponding to the highlighted pdf
 @app.route('/api/generate-pdf/<int:message_id>/<pdf_name>', methods=['POST', 'GET'])
 def generate_pdf(message_id, pdf_name):
     data = request.get_json()
     history = data.get('history')
-    print('data', data)
-    print('history', data)
+
+    # Get the corresponding message from history and retrieve the coordinates of the source 
     for message in history:
         if message['id'] == message_id:
             highlight = message['highlight']
@@ -61,7 +58,6 @@ def generate_pdf(message_id, pdf_name):
                 pages = [pages[0]]
     if len(pages) != 0:
         modified_pdf_bytes = highlight_context(pdf_name, pages, coords)
-        app.logger.info(f"Generating PDF for message ID: {highlight}. {pages}, {coords}")
         return send_file(
                 modified_pdf_bytes,
                 mimetype='application/pdf',
@@ -71,29 +67,30 @@ def generate_pdf(message_id, pdf_name):
     else:
         return 'PDF not found'
 
-# Definition of the API returning GPT answer to an obstetric related question
+# Generate a response to a given question: When the front submit a question, take the Spanish 
+# question and generate an answer (in Spanish and English) with sources and coordinates
 @app.route('/api/query', methods=['POST'])
 def receive_question():
     
     try:
-        # Recovering of the question data from front
         data = request.get_json()
         question_es = data.get('query')
-        print('\n------------------------- query -------------------------\n')
-        print(question_es)
+
+        # Verify that the question isn't empty
         if len(question_es)==0 or question_es.isspace():
             return jsonify({'error': 'La pregunta esta vacia'}), 204
+        
+        # Retrieve the history stored in the front
         history = data.get('history')
         if history is None:
             history=[]
         if len(question_es)==0:
             question_es.append(" ")
+
         # Generation of the answer
-        #(answer_es, answer_en, question_en, sources) =  generate_answer(question_es, History, deployment=deployment_name)
-        print("\n------------------------- history -------------------------\n", history)
         (answer_es, answer_en, question_en, sources) =  generate_answer(question_es, history, deployment=deployment_name)
-        print('\n------------------------- answer -------------------------\n')
-        print(answer_es)
+        
+        # Formatting of the sources
         sources_to_print = {}
         sources_to_highlight = {}
         for src in sources:
