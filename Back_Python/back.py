@@ -9,6 +9,7 @@ import chromadb
 import time
 import fitz
 import io
+import langid
 
 rawDataset = "react_build/documents/"
 
@@ -107,6 +108,30 @@ def translate_es_en(txt_es):
         txt_en = 'An error occurred'
     return(txt_en)
 
+# Translate a test from French to English: Take the French text in input and
+# return the English version 
+def translate_fr_en(txt_fr):
+    txt_en=''
+    try:
+        translated = openai.ChatCompletion.create(
+            engine= deployment_name, 
+            messages=[
+                {"role": "system", "content": "You're a translator, and you translate between French and English."},
+                {"role": "user", "content": f"""Text to translate: ``` {txt_fr} ```. Translate the text delimited \
+    by triple backticks from French to English. \
+    You must keep the translated text as close semantically and syntactically to its original \
+    version as possible. You mustn’t add any special characters such as ```, ", / and your answer mustn’t \
+    be returned between quotes. \
+    Return the English translation only.\
+    """},
+            ]          
+        )
+        txt_en = translated['choices'][0]['message']['content']
+
+    except Exception as e:
+        txt_en = 'An error occurred'
+    return(txt_en)
+
 # Translate a test from English to Spanish: Take the English text in input and
 # return the Spanish version 
 def translate_en_es(txt_en):
@@ -120,6 +145,25 @@ You must keep the translated text as close semantically and syntactically to its
 version as possible. You mustn't add any special characters such as ```, ", / and your answer mustn't \
 be returned between quotes.
 Return the Spanish translation only.
+"""},
+        ]          
+    )
+    txt_es = translated['choices'][0]['message']['content']
+    return(txt_es)
+
+# Translate a test from English to French: Take the English text in input and
+# return the Spanish version 
+def translate_en_fr(txt_en):
+    translated = openai.ChatCompletion.create(
+        engine= deployment_name, 
+        messages=[
+            {"role": "system", "content": "You're a translator, and you translate between English and French."},
+            {"role": "user", "content": f"""Text to translate: ``` {txt_en} ```. Translate the text delimited \
+by triple backticks from English to French.
+You must keep the translated text as close semantically and syntactically to its original \
+version as possible. You mustn't add any special characters such as ```, ", / and your answer mustn't \
+be returned between quotes.
+Return the French translation only.
 """},
         ]          
     )
@@ -143,7 +187,7 @@ def create_context_es(question, prev_questions, max_len=1500, size="ada"):
             engine= deployment_name, 
             messages=[
                 {"role": "system", "content": "You are a doctor in obstetrics."},
-                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question considering the previous asked questions. In your answer you must include the previous reword question and the answer. \n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
+                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question considering the previous asked questions. In your answer you must include the previous reword question and the answer. \n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question_en}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
             ]        
         )
     
@@ -174,7 +218,7 @@ def create_context_es(question, prev_questions, max_len=1500, size="ada"):
             engine= deployment_name,
             messages=[  
                 {"role": "system", "content": "You are a doctor in obstetrics."},
-                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
+                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question_en}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
             ]     
         )
         time.sleep(0.1)
@@ -199,6 +243,148 @@ def create_context_es(question, prev_questions, max_len=1500, size="ada"):
     # Return the context and sources
     return(("\n\n###\n\n".join(returns)), sources, question_en)
 
+# Create a context relevant to a given question: Take the question in English and 
+# the history in input and return a context of a defined maximum length with the 
+# corresponding sources
+def create_context_en(question_en, prev_questions, max_len=1500, size="ada"):
+    global current_sources
+    current_sources = []
+
+    # HyDE:
+    first_response = openai.ChatCompletion.create(
+            engine= deployment_name, 
+            messages=[
+                {"role": "system", "content": "You are a doctor in obstetrics."},
+                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question considering the previous asked questions. In your answer you must include the previous reword question and the answer. \n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question_en}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
+            ]        
+        )
+    
+    # Pass the question into a vector (Embedding)
+    q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine=deployment_embeddings_name)['data'][0]['embedding']
+
+    # Get the more similar embeddings from the database
+    results = collection.query(query_embeddings=q_embeddings, n_results=50)
+
+    returns = []
+    sources = []
+    cur_len = 0
+
+    # Add the chunk to the context until the context is too long
+    for i in range(len(results['ids'][0])):
+        document = results['documents'][0][i]
+        title = results['metadatas'][0][i]['title']
+        page = results['metadatas'][0][i]['page']
+        coords = results['metadatas'][0][i]['coords']
+        tokens= results['metadatas'][0][i]['tokens']
+        if(cur_len > max_len):
+            break
+        temp = []
+        context_chunk = document
+
+        # Check if the context chunk is relevant to the query
+        response = openai.ChatCompletion.create(
+            engine= deployment_name,
+            messages=[  
+                {"role": "system", "content": "You are a doctor in obstetrics."},
+                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question_en}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
+            ]     
+        )
+        time.sleep(0.1)
+    
+        # Add the chunk to the context if relevant
+        if ("yes" in (response['choices'][0]['message']['content'].lower())):
+            cur_len += int(tokens) + 4
+            returns.append(document)
+            temp.append(title)
+            temp.append(page)
+            temp.append(coords)
+            sources.append(temp)
+    
+    # Treat the sources typing
+    for i in range(len(sources)):
+        src = sources[i][1].replace('(', '').replace(')', '').split(', ')
+        for j in range(len(src)):
+            src[j]=int(src[j])
+        if src[0]==src[1]:
+            sources[i][1] = "("+str(src[0])+")"
+            
+    # Return the context and sources
+    return(("\n\n###\n\n".join(returns)), sources, question_en)
+
+# Create a context relevant to a given question: Take the question in French and 
+# the history in input and return a context of a defined maximum length with the 
+# corresponding sources
+def create_context_fr(question, prev_questions, max_len=1500, size="ada"):
+    global current_sources
+    current_sources = []
+
+    # French to English translation
+    question_en = translate_fr_en(question)
+    if 'An error occurred' in question_en:
+        return('', [], question_en)
+
+    # HyDE:
+    first_response = openai.ChatCompletion.create(
+            engine= deployment_name, 
+            messages=[
+                {"role": "system", "content": "You are a doctor in obstetrics."},
+                {"role": "user", "content": f"Reword the question to correct the grammatical errors and then answer the question considering the previous asked questions. In your answer you must include the previous reword question and the answer. \n\n---\n\nPrevious questions and their answers: {prev_questions}\n\nQuestion: {question_en}\nAnswer after the colon, with the reword question and the answer, without making a separation between the reword question and the answer:"},
+            ]        
+        )
+    
+    # Pass the question into a vector (Embedding)
+    q_embeddings = openai.Embedding.create(input=first_response['choices'][0]['message']['content'], engine=deployment_embeddings_name)['data'][0]['embedding']
+
+    # Get the more similar embeddings from the database
+    results = collection.query(query_embeddings=q_embeddings, n_results=50)
+
+    returns = []
+    sources = []
+    cur_len = 0
+
+    # Add the chunk to the context until the context is too long
+    for i in range(len(results['ids'][0])):
+        document = results['documents'][0][i]
+        title = results['metadatas'][0][i]['title']
+        page = results['metadatas'][0][i]['page']
+        coords = results['metadatas'][0][i]['coords']
+        tokens= results['metadatas'][0][i]['tokens']
+        if(cur_len > max_len):
+            break
+        temp = []
+        context_chunk = document
+
+        # Check if the context chunk is relevant to the query
+        response = openai.ChatCompletion.create(
+            engine= deployment_name,
+            messages=[  
+                {"role": "system", "content": "You are a doctor in obstetrics."},
+                {"role": "user", "content": f"Evaluate the relevance of the following context snippet to answer the following question in the field of obstetrics: {context_chunk}\n\nThe question is: {question_en}\nDo you consider it relevant for providing an accurate response in this field? Respond with a 'yes' or 'no' only."},
+            ]     
+        )
+        time.sleep(0.1)
+    
+        # Add the chunk to the context if relevant
+        if ("yes" in (response['choices'][0]['message']['content'].lower())):
+            cur_len += int(tokens) + 4
+            returns.append(document)
+            temp.append(title)
+            temp.append(page)
+            temp.append(coords)
+            sources.append(temp)
+    
+    # Treat the sources typing
+    for i in range(len(sources)):
+        src = sources[i][1].replace('(', '').replace(')', '').split(', ')
+        for j in range(len(src)):
+            src[j]=int(src[j])
+        if src[0]==src[1]:
+            sources[i][1] = "("+str(src[0])+")"
+            
+    # Return the context and sources
+    return(("\n\n###\n\n".join(returns)), sources, question_en)
+
+
 # Get the previous questions from history: Take the history in input and return the 
 # questions it contains
 def get_previous_questions(history):
@@ -212,19 +398,40 @@ def get_previous_questions(history):
 # Generate an answer to a question: Take the Spanish question and the history in input
 # and return the answers (in English and in Spanish) and the sources used in the RAG process
 # to ground the answer.
-def generate_answer(question_es, history, deployment=deployment_name):
+def generate_answer(question, history, deployment=deployment_name):
     # Retrieve the previous questions from the history
     prev_questions = get_previous_questions(history)
 
     role_sys = {"role": "system", "content": "You are a specialized obstetric chatbot. You respond to questions from other doctors regarding obstetrical emergencies."}
     
-    # Create a context to ground the answer
-    context, sources, question_en = create_context_es(question_es, prev_questions, max_len=1800, size="ada")
+    # Discover the language
+    lang = langid.classify(question)[0]
+    if lang == 'es':
+        context, sources, question_en = create_context_es(question, prev_questions, max_len=1800, size="ada")
+    
+    elif lang == 'fr':
+        context, sources, question_en = create_context_fr(question, prev_questions, max_len=1800, size="ada")
+    
+    elif lang == 'en':
+        context, sources, question_en = create_context_en(question, prev_questions, max_len=1800, size="ada")
+    else:
+        # Create a context to ground the answer
+        context, sources, question_en = create_context_es(question, prev_questions, max_len=1800, size="ada")
+    
+
     nb_tokens=0
     
     if 'An error occurred:' in question_en:
-        answer_es = 'Ocurrió un error: La respuesta fue filtrada debido a que la solicitud activó la política de gestión de contenido de Azure OpenAI. Por favor, modifica tu solicitud y vuelve a intentarlo. Para obtener más información sobre nuestras políticas de filtrado de contenido, por favor lee nuestra documentación: https://go.microsoft.com/fwlink/?linkid=2198766'
-        return (answer_es, question_en, '', sources)
+        if lang == 'es':
+            answer = 'Ocurrió un error: La respuesta fue filtrada debido a que la solicitud activó la política de gestión de contenido de Azure OpenAI. Por favor, modifica tu solicitud y vuelve a intentarlo. Para obtener más información sobre nuestras políticas de filtrado de contenido, por favor lee nuestra documentación: https://go.microsoft.com/fwlink/?linkid=2198766'
+        elif lang == 'en':
+            answer = 'An error occurred: The response was filtered because the request activated the Azure OpenAI content management policy. Please edit your request and try again. For more information about our content filtering policies, please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766'
+        elif lang == 'fr':
+            answer = 'Une erreur s’est produite : la réponse a été filtrée car la requête a activé la stratégie de gestion du contenu Azure OpenAI. Veuillez modifier votre demande et réessayer. Pour plus d’informations sur nos politiques de filtrage de contenu, veuillez lire notre documentation : https://go.microsoft.com/fwlink/?linkid=2198766'
+        else:
+            answer = 'Ocurrió un error: La respuesta fue filtrada debido a que la solicitud activó la política de gestión de contenido de Azure OpenAI. Por favor, modifica tu solicitud y vuelve a intentarlo. Para obtener más información sobre nuestras políticas de filtrado de contenido, por favor lee nuestra documentación: https://go.microsoft.com/fwlink/?linkid=2198766'
+        
+        return (answer, question_en, '', sources)
 
     for quest, ans in prev_questions:
         nb_tokens+=len(quest.split())+len(ans.split())
@@ -258,8 +465,17 @@ def generate_answer(question_es, history, deployment=deployment_name):
             messages= prev_questions
         )
         answer_en = response['choices'][0]['message']['content']
-        answer_es = translate_en_es(answer_en)
-        return (answer_es, answer_en, question_en, sources)
+
+        if lang == 'es':
+            answer = translate_en_es(answer_en)
+        elif lang == 'en':
+            answer = answer_en
+        elif lang == 'fr':
+            answer = translate_en_fr(answer_en)
+        else:
+            answer = translate_en_es(answer_en)
+
+        return (answer, answer_en, question_en, sources)
     except Exception as e:
         if "4096 tokens" in str(e):
             return("Ha alcanzado el límite máximo de una conversación: por favor elimine mensajes anteriores o inicie una nueva conversación.",
